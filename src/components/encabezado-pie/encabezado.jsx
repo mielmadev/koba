@@ -11,7 +11,7 @@ const Encabezado = () => {
       </div>
       <div className="encabezado-derecha">
         <div className="navegador">
-          <Navegador /> {/* Asegúrate de que el componente Navegador esté correctamente estilizado */}
+          <Navegador /> {/* Aquí se incluye el componente Navegador */}
         </div>
         <div className="entradas">
           {/* Aquí debería ir el contenido o componente relacionado con "entradas" */}
