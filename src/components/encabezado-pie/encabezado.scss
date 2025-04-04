@@ -1,0 +1,54 @@
+@use '../../estilos/_variables.scss' as var;
+@use '../../estilos/mixins/_mixins.scss' as mix;
+
+.encabezado-container {
+  @include mix.bordes;
+  @include mix.encabezado;
+  height: 150px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0; // Punto donde se activará el efecto sticky
+  background-color: var.$negro;
+}
+
+.logo-encabezado {
+  @include mix.bordes;
+  @include mix.margen0;
+  height: 100%;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-encabezado img {
+  @include mix.tamañoCompleto;
+  object-fit: contain;
+}
+
+.encabezado-derecha {
+  @include mix.bordes;
+  @include mix.encabezado;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.navegador {
+  @include mix.bordes;
+  @include mix.encabezado;
+}
+
+.entradas {
+  @include mix.bordes;
+  @include mix.encabezado;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}

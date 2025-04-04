@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  publicDir: 'public', // Asegura que Vite use la carpeta public
+  server: {
+    open: true, // Abre el navegador automáticamente al iniciar el servidor
+  },
 })

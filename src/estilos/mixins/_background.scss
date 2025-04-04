@@ -1,0 +1,10 @@
+@use '../variables' as var;
+
+@mixin background-completo {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow: hidden;
+}

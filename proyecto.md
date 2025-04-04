@@ -70,6 +70,38 @@
    ```
    Los archivos de producción estarán en la carpeta `dist/`.
 
+## Usar SCSS en lugar de CSS en Vite
+
+1. **Instalar Dependencias**
+   Instala `sass`, el compilador necesario para trabajar con SCSS:
+   ```bash
+   npm install sass
+   ```
+
+2. **Actualizar Archivos de Estilo**
+   Cambia las extensiones de tus archivos `.scss` a `.scss` y ajusta las importaciones en tu código. Por ejemplo:
+   ```javascript
+   import './styles/main.scss';
+   ```
+
+3. **Configurar Vite (opcional)**
+   Vite soporta SCSS de forma nativa, por lo que no necesitas configuraciones adicionales. Simplemente importa los archivos `.scss` en tus componentes o en `main.js`/`main.ts`.
+
+4. **Ejemplo de Archivo SCSS**
+   Crea un archivo SCSS, por ejemplo, `src/styles/main.scss`:
+   ```scss
+   $primary-color: #3498db;
+
+   body {
+       font-family: Arial, sans-serif;
+       background-color: $primary-color;
+       color: white;
+   }
+   ```
+
+5. **Importar el Archivo SCSS**
+   Asegúrate de importar el archivo SCSS en tu punto de entrada o en los componentes donde lo necesites.
+
 ## Recursos Adicionales
 - [Documentación de React](https://reactjs.org/)
 - [Documentación de Vite](https://vitejs.dev/)
