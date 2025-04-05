@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // Cambiar Link por NavLink
 import './navegador.scss';
 
 const Navegador = () => {
   return (
     <nav>
       <div className="navegador-contenedor">
-        <Link to="/inicio-pag">Inicio</Link>
-        <Link to="/faq-pag">FAQ</Link>
-        <Link to="/about-pag">Acerca de</Link>
-        <Link to="/merchan-pag">Merchandising</Link>
-        <Link to="/contacto-pag">Contacto</Link>
+        <NavLink to="/inicio-pag" activeClassName="active">Inicio</NavLink>
+        <NavLink to="/faq-pag" activeClassName="active">FAQ</NavLink>
+        <NavLink to="/about-pag" activeClassName="active">Acerca de</NavLink>
+        <NavLink to="/merchan-pag" activeClassName="active">Merchandising</NavLink>
+        <NavLink to="/contacto-pag" activeClassName="active">Contacto</NavLink>
       </div>
     </nav>
   );

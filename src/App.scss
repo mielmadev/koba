@@ -1,10 +1,9 @@
-@use './estilos/_variables' as var; // Corrige la ruta eliminando el guion bajo y la extensión
-@use './estilos/background' as mix; // Corrige la ruta eliminando el guion bajo y la extensión
+@use './estilos/_variables' as var;
+@use './estilos/background' as mix;
 
 body {
   box-sizing: border-box;
   margin: 0;
-  cursor: url('./assets/images/cursor/KobaPua_32x32.png') 16 0, auto;
   color: var.$blanco;
   background-color: var.$negro;
 }

@@ -1,16 +1,19 @@
+@use './estilos/_variables.scss' as var;
+
 :root {
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var.$blanco;
+  background-color: var.$negro;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: url('../src/assets/imagenes/cursor/KobaPua_32x32.png') 16 0, auto;
 }
 
 body {
@@ -24,13 +27,15 @@ body {
 @media (prefers-color-scheme: light) {
   :root {
     font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
-    color: #213547;
-    background-color: #ffffff;
+    color: var.$negro;
+    background-color: var.$blanco;
   }
+
   a:hover {
-    color: #747bff;
+    color: var.$negro;
   }
+
   button {
-    background-color: #f9f9f9;
+    background-color: var.$blanco;
   }
 }

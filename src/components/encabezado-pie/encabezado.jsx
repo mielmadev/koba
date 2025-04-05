@@ -2,6 +2,7 @@ import React from "react";
 import './encabezado.scss';
 import { logoKoba } from '../../assets/imagenes/images.js';
 import Navegador from '../navegador/navegador'; // Importación del componente Navegador
+import Entradas from '../navegador/entradas'; // Importación del componente Entradas
 
 const Encabezado = () => {
   return (
@@ -11,10 +12,10 @@ const Encabezado = () => {
       </div>
       <div className="encabezado-derecha">
         <div className="navegador">
-          <Navegador /> {/* Aquí se incluye el componente Navegador */}
+          <Navegador />
         </div>
         <div className="entradas">
-          {/* Aquí debería ir el contenido o componente relacionado con "entradas" */}
+          <Entradas />
         </div>
       </div>
     </header>

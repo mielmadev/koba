@@ -1,7 +1,6 @@
-@use '../../estilos/_variables.scss' as var;
 @use '../../estilos/_mixins.scss' as mix;
 
-.navegador-contenedor {
+.entradas-container {
   @include mix.contenedorCompleto;
   @include mix.bordes;
   display: flex;
@@ -9,14 +8,4 @@
   justify-content: flex-end;
   gap: 20px;
   align-items: center;
-
-  a {
-    text-decoration: none;
-    color: inherit;
-
-    &.active {
-      color: var.$rojo;
-    }
-  }
 }
-
