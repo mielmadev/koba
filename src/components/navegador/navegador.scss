@@ -1,3 +1,7 @@
+@use '../../estilos/_variables.scss' as var;
+@use '../../estilos/mixins.scss' as mix;
 .navegador-contenedor {
-  color: aliceblue;
+ @include mix.contenedorCompleto;
+ @include mix.bordes;
+ display: flex;
 }

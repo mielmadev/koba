@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Merchan = () => {
+const MerchanPag = () => {
     return (
         <div>
             <h1>Merchandising</h1>
@@ -9,4 +9,4 @@ const Merchan = () => {
     );
 };
 
-export default Merchan;
+export default MerchanPag;

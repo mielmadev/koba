@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = () => {
+const AboutPag = () => {
   return (
     <div>
       <h1>Acerca de nosotros</h1>
@@ -9,4 +9,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPag;

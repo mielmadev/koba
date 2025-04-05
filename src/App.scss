@@ -1,5 +1,5 @@
-@use './estilos/variables' as var; // Corrige la ruta eliminando el guion bajo y la extensión
-@use './estilos/mixins/background' as mix; // Corrige la ruta eliminando el guion bajo y la extensión
+@use './estilos/_variables' as var; // Corrige la ruta eliminando el guion bajo y la extensión
+@use './estilos/background' as mix; // Corrige la ruta eliminando el guion bajo y la extensión
 
 body {
   box-sizing: border-box;

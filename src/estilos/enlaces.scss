@@ -1,0 +1,15 @@
+@use './variables.scss' as var;
+
+a {
+  color: var.$blanco;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var.$gris;
+}
+
+a:active {
+  text-shadow: var.$negro 0px 0px 5px, var.$gris 0px 0px 5px;
+}
+

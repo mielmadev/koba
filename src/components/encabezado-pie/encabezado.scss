@@ -1,9 +1,9 @@
 @use '../../estilos/_variables.scss' as var;
-@use '../../estilos/mixins/_mixins.scss' as mix;
+@use '../../estilos/_mixins.scss' as mix;
 
 .encabezado-container {
   @include mix.bordes;
-  @include mix.encabezado;
+  @include mix.contenedorCompleto;
   height: 150px;
   width: 100vw;
   display: flex;
@@ -32,7 +32,7 @@
 
 .encabezado-derecha {
   @include mix.bordes;
-  @include mix.encabezado;
+  @include mix.contenedorCompleto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -41,12 +41,12 @@
 
 .navegador {
   @include mix.bordes;
-  @include mix.encabezado;
+  @include mix.contenedorCompleto;
 }
 
 .entradas {
   @include mix.bordes;
-  @include mix.encabezado;
+  @include mix.contenedorCompleto;
   display: flex;
   flex-direction: column;
   justify-content: center;
