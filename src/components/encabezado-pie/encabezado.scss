@@ -4,7 +4,7 @@
 .encabezado-container {
   //@include mix.bordes;
   @include mix.contenedorCompleto;
-  height: 150px;
+  height: var.$alturaEncabezado;
   width: 100vw;
   display: flex;
   flex-direction: row;
