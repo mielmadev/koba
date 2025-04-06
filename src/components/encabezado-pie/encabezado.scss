@@ -2,7 +2,7 @@
 @use '../../estilos/_mixins.scss' as mix;
 
 .encabezado-container {
-  @include mix.bordes;
+  //@include mix.bordes;
   @include mix.contenedorCompleto;
   height: 150px;
   width: 100vw;
@@ -16,22 +16,24 @@
 }
 
 .logo-encabezado {
-  @include mix.bordes;
+  //@include mix.bordes;
   @include mix.margen0;
   height: 100%;
   width: 200px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  flex-shrink: 0; // Evita que el contenedor se reduzca
 }
 
 .logo-encabezado img {
-  @include mix.tamañoCompleto;
-  object-fit: contain;
+  @include mix.contenedorCompleto;
+  //@include mix.bordes;
+  width: 100%;
+  height: auto; // Mantiene la proporción de la imagen
 }
 
 .encabezado-derecha {
-  @include mix.bordes;
+  //@include mix.bordes;
   @include mix.contenedorCompleto;
   display: flex;
   flex-direction: column;

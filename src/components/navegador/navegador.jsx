@@ -8,7 +8,7 @@ const Navegador = () => {
       <div className="navegador-contenedor">
         <NavLink to="/inicio-pag" activeClassName="active">Inicio</NavLink>
         <NavLink to="/faq-pag" activeClassName="active">FAQ</NavLink>
-        <NavLink to="/about-pag" activeClassName="active">Acerca de</NavLink>
+        <NavLink to="/about-pag" activeClassName="active">About</NavLink>
         <NavLink to="/merchan-pag" activeClassName="active">Merchandising</NavLink>
         <NavLink to="/contacto-pag" activeClassName="active">Contacto</NavLink>
       </div>

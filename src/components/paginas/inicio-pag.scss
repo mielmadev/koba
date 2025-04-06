@@ -1,9 +1,11 @@
 @use '../../estilos/_variables.scss' as var;
-@use '../../estilos/background.scss' as mix;
+@use '../../estilos/background.scss' as back;
+@use '../../estilos/_mixins.scss' as mix;
 
 .inicio-container {
   box-sizing: border-box;
   margin: 0;
-  background-image: url('../../assets/images/fondos/volcan.jpg');
-  @include mix.background-completo;
+  @include back.background-completo;
+  
+
 }

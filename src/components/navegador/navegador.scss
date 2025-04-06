@@ -3,7 +3,7 @@
 
 .navegador-contenedor {
   @include mix.contenedorCompleto;
-  @include mix.bordes;
+  //@include mix.bordes;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -15,8 +15,7 @@
     color: inherit;
 
     &.active {
-      color: var.$rojo;
+      color: var.$marron;
     }
   }
 }
-
