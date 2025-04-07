@@ -2,7 +2,6 @@
 
 .entradas-container {
   @include mix.contenedorCompleto;
-  //@include mix.bordes;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

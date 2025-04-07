@@ -9,7 +9,6 @@ const FechaContenedor = () => {
       <div className='fecha'>Irailaren 20a</div>
       <div className='fecha'>September 20</div>
       <div className='lugar'>Matiena (Adabiño)</div>
-      <div className='lugar'>dirección</div>
     </div>
   );
 };
