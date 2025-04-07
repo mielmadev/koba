@@ -27,6 +27,6 @@
 }
 
 @mixin sombra {
-  mask-image: radial-gradient(circle at center, #000000D8 0%, #000000B3 30%, var.$negro 60%, #0000004D 100%);
-  -webkit-mask-image: radial-gradient(circle at center, #000000D8 0%, #000000B3 30%, #00000080 60%, #0000004D 100%); // Compatibilidad con navegadores WebKit
+  mask-image: radial-gradient(ellipse at center, #292421 10%, #29242100 50%, #29242100 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, #292421 10%, #29242100 50%, #29242100 100%); // Compatibilidad con navegadores WebKit
 }

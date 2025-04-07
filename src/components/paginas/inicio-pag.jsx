@@ -1,8 +1,8 @@
 import React from 'react';
 import './inicio-pag.scss';
 import FechaContenedor from '../fecha/fecha';
+import Bandas from '../encabezado-pie/bandas/bandas';
 import Volcan from '../../assets/imagenes/fondos/volcan1620x1080.jpg';
-import Suicidal from '../../assets/imagenes/bandas/Suicidal_Angels_Logo.png';
 
 export default function InicioPag() {
   return (
@@ -12,36 +12,10 @@ export default function InicioPag() {
       </div>
       <div className="inicio-contenido">
         <div className="fecha">
-          <FechaContenedor/>
+          <FechaContenedor />
         </div>
         <div className='bandas-container'>
-          <div className='bandas'>
-            <img src={Suicidal} alt="Volcán" />
-          </div>
-          <div className='bandas'>
-            <img src={Suicidal} alt="Volcán" />
-          </div>
-          <div className='bandas'>
-            <img src={Suicidal} alt="Volcán" />
-          </div>
-          <div className='bandas'>
-            <img src={Suicidal} alt="Volcán" />
-          </div>
-          <div className='bandas'>
-            <img src={Suicidal} alt="Volcán" />
-          </div>
-          <div className='bandas'>
-            <img src={Suicidal} alt="Volcán" />
-          </div>
-          <div className='bandas'>
-            <img src={Suicidal} alt="Volcán" />
-          </div>
-          <div className='bandas'>
-            <img src={Suicidal} alt="Volcán" />
-          </div>
-          <div className='bandas'>
-            <img src={Suicidal} alt="Volcán" />
-          </div>
+          <Bandas />
         </div>
       </div>
     </div>

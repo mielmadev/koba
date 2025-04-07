@@ -59,11 +59,5 @@
 
     
 
-    img {
-      @include mix.margen0;
-      max-width: 100%; // Ajustar el ancho máximo
-      height: auto; // Mantener proporción
-
-    }
   }
 }
