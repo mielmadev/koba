@@ -1,5 +1,6 @@
 import React from 'react';
 import './inicio-pag.scss';
+import FechaContenedor from '../fecha/fecha';
 import Volcan from '../../assets/imagenes/fondos/volcan1620x1080.jpg';
 import Suicidal from '../../assets/imagenes/bandas/Suicidal_Angels_Logo.png';
 
@@ -11,7 +12,7 @@ export default function InicioPag() {
       </div>
       <div className="inicio-contenido">
         <div className="fecha">
-          <h1>Fecha</h1>
+          <FechaContenedor/>
         </div>
         <div className='bandas-container'>
           <div className='bandas'>

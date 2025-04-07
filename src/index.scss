@@ -7,13 +7,12 @@
 
   color-scheme: light dark;
   color: var.$blanco;
-  background-color: var.$negro;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url('../src/assets/imagenes/cursor/KobaPua_32x32.png') 16 0, auto;
+  cursor: url('../src/assets/imagenes/cursor/KobaPua_32x32_Blanco.png') 16 0, auto;
 }
 
 body {
