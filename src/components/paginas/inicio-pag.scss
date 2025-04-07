@@ -3,7 +3,7 @@
 @use '../../estilos/_mixins.scss' as mix;
 
 .inicio-container {
-  min-height: calc(100vh - var.$alturaEncabezado); // Altura mínima igual a la ventana menos el encabezado
+  height: calc(100vh - var.$alturaEncabezado); // Altura igual a la ventana menos el encabezado
   position: relative; // Asegurar que el contenedor sea relativo
   @include mix.bordes;
 }
@@ -27,6 +27,41 @@
 }
 
 .inicio-contenido {
+  @include mix.bordes;
+  height: calc(100vh - var.$alturaEncabezado); // Altura igual a la ventana menos el encabezado
   position: relative;
   color: var.$blanco;
+  display: flex;
+  flex-direction: row;
+
+  > :first-child {
+    // Primer contenedor
+    flex: 0 0 15%; // Ocupa el 15% del ancho
+    height: calc(100vh - var.$alturaEncabezado); // Altura igual a la ventana menos el encabezado
+    max-width: 15%; // Limitar el ancho máximo al 15%
+    box-sizing: border-box; // Incluir bordes y padding en el tamaño total
+  }
+
+  > :nth-child(2) {
+    // Segundo contenedor
+    flex: 1; // Ocupa el resto del espacio disponible
+    height: calc(100vh - var.$alturaEncabezado); // Altura igual a la ventana menos el encabezado    box-sizing: border-box; // Incluir bordes y padding en el tamaño total
+  }
+
+  .bandas-container {
+    @include mix.bordes;
+    @include mix.margen0;
+    @include mix.padgap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; // Permitir que los elementos se distribuyan en varias líneas
+    .bandas{
+      @include mix.bordes;
+    }
+
+    img {
+      max-width: 100%; // Ajustar el ancho máximo
+      height: auto; // Mantener proporción
+    }
+  }
 }
