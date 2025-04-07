@@ -12,21 +12,21 @@
   @include mix.margen0;
   height: 100%;
   width: 100%;
-  position:fixed;
-  z-index: 0; // Colocar detrás del contenido
-  min-height: calc(100vh - var.$alturaEncabezado); // Altura mínima igual a la ventana menos el encabezado
+  position: fixed;
+  z-index: 0;
+
   img {
     width: 100%;
     height: 100%;
-    max-width: 100%; // No permitir que la imagen sea más ancha que el contenedor
-    max-height: 100%; // No permitir que la imagen sea más alta que el contenedor
-    object-fit: scale-down; // Escalar la imagen para que no exceda el contenedor
-    object-position: center; // Centrar la imagen dentro del contenedor
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: top;
+    @include mix.sombra;
   }
 }
 
 .inicio-contenido {
   position: relative;
-  color: var.$blanco; // Asegurar que el texto sea visible
-  z-index: 1; // Asegurar que el contenido esté delante del fondo
+  color: var.$blanco;
 }

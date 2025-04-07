@@ -1,6 +1,6 @@
 import React from 'react';
 import './inicio-pag.scss';
-import Volcan from '../../assets/imagenes/fondos/volcan.jpg';
+import Volcan from '../../assets/imagenes/fondos/volcan1620x1080.jpg';
 
 export default function InicioPag() {
   return (
