@@ -11,6 +11,7 @@
   justify-content: space-between;
   position: sticky;
   top: 0; // Punto donde se activará el efecto sticky
+  z-index: 10; // Colocar el encabezado delante del fondo
 }
 
 .logo-encabezado {

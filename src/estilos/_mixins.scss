@@ -26,7 +26,3 @@
   @include padgap;
 }
 
-@mixin sombra {
-  mask-image: radial-gradient(ellipse at center, #292421 10%, #29242100 50%, #29242100 100%);
-  -webkit-mask-image: radial-gradient(ellipse at center, #292421 10%, #29242100 50%, #29242100 100%); // Compatibilidad con navegadores WebKit
-}

@@ -5,13 +5,16 @@
   //@include mix.bordes;
   height: 100vh;
   position: relative;
+  z-index: 1; // Asegurar que el contenido esté delante del fondo
 }
 
 .inicio-fondo {
-  @include mix.margen0;
-  height: calc(100vh - var.$alturaEncabezado);
-  width: 100%;
+  @include mix.margen0; // Asegurar que no haya márgenes
+  height: 100vh; // Ocupa toda la altura de la ventana
+  width: 100%; // Ocupa todo el ancho de la ventana
   position: fixed;
+  top: 0; // Inicia desde el borde superior
+  left: 0; // Inicia desde el borde izquierdo
   z-index: 0;
 
   img {
@@ -21,8 +24,8 @@
     max-height: 100%;
     object-fit: cover;
     object-position: top;
-    @include mix.sombra;
-  }
+    filter: brightness(15%); // Aplica un desenfoque a la imagen
+    }
 }
 
 .inicio-contenido {
@@ -57,7 +60,12 @@
     justify-content: center; // Centrar horizontalmente
     align-items: center; // Centrar verticalmente
 
-    
+
 
   }
+}
+
+nav {
+  position: relative; // Asegurar que el navegador tenga posición relativa
+  z-index: 2; // Colocar el navegador delante del fondo y del contenido
 }
