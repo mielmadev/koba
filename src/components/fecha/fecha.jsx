@@ -1,7 +1,7 @@
 import React from 'react';
 import './fecha.scss';
 
-const FechaContenedor = () => {
+const Fecha = () => {
   return (
     <div className='fecha-container'>
       <div className='año'>2025</div>
@@ -13,4 +13,4 @@ const FechaContenedor = () => {
   );
 };
 
-export default FechaContenedor;
+export default Fecha;

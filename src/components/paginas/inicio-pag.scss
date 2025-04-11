@@ -5,16 +5,16 @@
   //@include mix.bordes;
   height: 100vh;
   position: relative;
-  z-index: 1; // Asegurar que el contenido esté delante del fondo
+  z-index: 1;
 }
 
 .inicio-fondo {
-  @include mix.margen0; // Asegurar que no haya márgenes
-  height: 100vh; // Ocupa toda la altura de la ventana
-  width: 100%; // Ocupa todo el ancho de la ventana
+  @include mix.margen0;
+  height: 100vh;
+  width: 100%;
   position: fixed;
-  top: 0; // Inicia desde el borde superior
-  left: 0; // Inicia desde el borde izquierdo
+  top: 0;
+  left: 0;
   z-index: 0;
 
   img {
@@ -24,8 +24,8 @@
     max-height: 100%;
     object-fit: cover;
     object-position: top;
-    filter: brightness(15%); // Aplica un desenfoque a la imagen
-    }
+    @include mix.sombra;
+  }
 }
 
 .inicio-contenido {
@@ -35,29 +35,17 @@
   color: var.$blanco;
   display: flex;
   flex-direction: row;
-
-  > :first-child {
-    // Primer contenedor
-    flex: 0 0 20%; // Ocupa el 15% del ancho
-    height: calc(100vh - var.$alturaEncabezado);
-    max-width: 20%; // Limitar el ancho máximo al 15%
-    box-sizing: border-box; // Incluir bordes y padding en el tamaño total
-  }
-
-  > :nth-child(2) {
-    // Segundo contenedor
-    flex: 1; // Ocupa el resto del espacio disponible
-    height: calc(100vh - var.$alturaEncabezado); // Altura igual a la ventana menos el encabezado    box-sizing: border-box; // Incluir bordes y padding en el tamaño total
-  }
-
-  .bandas-container {
-    @include mix.bordes;
-    @include mix.tamañoCompleto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; // Permitir que los elementos se distribuyan en varias líneas
-    justify-content: center; // Centrar horizontalmente
-    align-items: center; // Centrar verticalmente
-  }
+  align-items: stretch; // Asegurar que los hijos ocupen toda la altura
 }
 
+/* .fecha-componente {
+  //@include mix.bordes;
+  @include mix.tamañoCompleto;
+  flex: 0 0 250px; // Ancho fijo de 250px
+}
+ */
+/* .bandas-componente {
+  //@include mix.bordes;
+  @include mix.tamañoCompleto;
+  display: block; // Cambiar a block ya que no hay múltiples elementos para distribuir
+} */

@@ -1,6 +1,6 @@
 import React from 'react';
 import './inicio-pag.scss';
-import FechaContenedor from '../fecha/fecha';
+import Fecha from '../fecha/fecha';
 import Bandas from '../encabezado-pie/bandas/bandas';
 import Volcan from '../../assets/imagenes/fondos/volcan1620x1080.jpg';
 
@@ -11,10 +11,10 @@ export default function InicioPag() {
         <img src={Volcan} alt="Volcán" />
       </div>
       <div className="inicio-contenido">
-        <div className="fecha">
-          <FechaContenedor />
+        <div className="fecha-componente">
+          <Fecha />
         </div>
-        <div className='bandas-container'>
+        <div className='bandas-componente'>
           <Bandas />
         </div>
       </div>
