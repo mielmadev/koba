@@ -1,6 +1,6 @@
 import Suicidal from '../assets/imagenes/bandas/Suicidal_Angels_Logo.png';
 
-const bandas = [
+const bandaDatos = [
   { nombre: 'Suicidal Angels', imagen: Suicidal },
   { nombre: 'Wolfheart Angels', imagen:  Suicidal  },
   { nombre: 'The Electric Alley', imagen: Suicidal },
@@ -11,4 +11,4 @@ const bandas = [
   { nombre: 'Ehun Kilo ', imagen: Suicidal },
 ];
 
-export default bandas;
+export default bandaDatos;

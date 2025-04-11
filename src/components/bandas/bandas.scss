@@ -1,0 +1,17 @@
+@use '../../estilos/_variables.scss' as var;
+@use '../../estilos/_mixins.scss' as mix;
+
+.bandas {
+  @include mix.tamañoCompleto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch; // Asegurar que los hijos ocupen toda la altura
+  flex-wrap: wrap;
+}
+
+.banda-nombre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

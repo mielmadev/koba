@@ -1,7 +1,7 @@
 import React from 'react';
 import './inicio-pag.scss';
 import Fecha from '../fecha/fecha';
-import Bandas from '../encabezado-pie/bandas/bandas';
+import Bandas from '../bandas/bandas';
 import Volcan from '../../assets/imagenes/fondos/volcan1620x1080.jpg';
 
 export default function InicioPag() {
