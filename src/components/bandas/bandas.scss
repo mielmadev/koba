@@ -5,12 +5,20 @@
   @include mix.tamañoCompleto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: stretch; // Asegurar que los hijos ocupen toda la altura
   flex-wrap: wrap;
 }
 
+.banda {
+  @include mix.padgap;
+}
+
+.banda-imagen img{
+  height: 100%;
+}
 .banda-nombre {
+  @include mix.padgap;
   display: flex;
   justify-content: center;
   align-items: center;

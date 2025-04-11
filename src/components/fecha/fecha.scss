@@ -5,29 +5,26 @@
   @include mix.contenedorCompleto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
   color: var.$blanco;
   text-shadow: var.$blanco 0px 0px 15px;
-  font-size: 4vh; 
-  height: 100%; 
+  font-size: 4vh;
+  height: 100%;
   text-align: center;
-  word-wrap: break-word; 
   white-space: normal;
-  line-height: 1.5;
+  line-height: 1;
+  display: flex;
+  justify-content: space-evenly;
 
-  .año{
+  .año {
     @include mix.contenedorCompleto;
     font-size: 6vh;
   }
 
-  .fecha {
-    @include mix.contenedorCompleto;
-    font-size: 4vh;
-  }
-
+  .fecha,
   .lugar {
     @include mix.contenedorCompleto;
+    overflow-wrap: break-word;
     font-size: 4vh;
   }
 }

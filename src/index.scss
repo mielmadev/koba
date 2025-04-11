@@ -5,9 +5,6 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: var.$blanco;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -18,23 +15,10 @@
 body {
   box-sizing: border-box;
   margin: 0;
+  background-color: var.$negro;
+  color: var.$blanco;
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
-    color: var.$negro;
-    background-color: var.$blanco;
-  }
-
-  a:hover {
-    color: var.$negro;
-  }
-
-  button {
-    background-color: var.$blanco;
-  }
 }
