@@ -1,0 +1,31 @@
+@use '../../estilos/_variables.scss' as var;
+@use '../../estilos/_mixins.scss' as mix;
+
+.faq-container {
+  //@include mix.bordes;
+  @include mix.tamañoCompleto;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-fondo {
+  @include mix.margen0;
+  @include mix.tamañoCompleto;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: top;
+    @include mix.sombra;
+  }
+}
