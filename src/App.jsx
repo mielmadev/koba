@@ -7,7 +7,6 @@ import AboutPag from './componentes/paginas/about-pag';
 import MerchanPag from './componentes/paginas/merchan-pag';
 import ContactoPag from './componentes/paginas/contacto-pag';
 import './App.scss';
-import './estilos/enlaces.scss'
 
 function App() {
   return (
