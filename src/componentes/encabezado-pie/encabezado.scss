@@ -1,7 +1,7 @@
 @use '../../estilos/_variables.scss' as var;
 @use '../../estilos/_mixins.scss' as mix;
 
-.encabezado-container {
+.encabezado-contenedor {
   @include mix.contenedorCompleto;
   height: var.$alturaEncabezado;
   width: 100vw;

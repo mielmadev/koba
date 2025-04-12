@@ -1,7 +1,7 @@
 @use '../../estilos/_variables.scss' as var;
 @use '../../estilos/_mixins.scss' as mix;
 
-.fecha-container {
+.fecha-contenedor {
   @include mix.contenedorCompleto;
   display: flex;
   flex-direction: column;

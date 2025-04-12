@@ -1,7 +1,7 @@
 @use '../../estilos/_variables.scss' as var;
 @use '../../estilos/_mixins.scss' as mix;
 
-.inicio-container {
+.inicio-contenedor {
   //@include mix.bordes;
   @include mix.tamañoCompleto;
   height: 100vh;

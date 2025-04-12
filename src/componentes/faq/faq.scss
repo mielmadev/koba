@@ -1,0 +1,41 @@
+@use '../../estilos/_variables.scss' as var;
+@use '../../estilos/_mixins.scss' as mix;
+
+.faq-contenedor {
+  //@include mix.bordes;
+  @include mix.padgap;
+  margin: 0% 5%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-pregunta {
+  //@include mix.bordes;
+  @include mix.padgap;
+  color: var.$gris;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-pregunta-texto {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.faq-icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.faq-respuesta {
+  //@include mix.bordes;
+  @include mix.padgap;
+  color: var.$blanco;
+  font-size: 1rem;
+}

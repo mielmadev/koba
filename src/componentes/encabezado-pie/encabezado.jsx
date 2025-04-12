@@ -6,7 +6,7 @@ import Entradas from '../navegador/entradas'; // Importación del componente Ent
 
 const Encabezado = () => {
   return (
-    <header className="encabezado-container">
+    <header className="encabezado-contenedor">
       <div className="logo-encabezado">
         <img src={logoKoba} alt="Logo Koba" className="logo-img" />
       </div>

@@ -6,7 +6,7 @@ import Volcan from '../../assets/imagenes/fondos/volcan1620x1080.jpg';
 
 export default function InicioPag() {
   return (
-    <div className="inicio-container">
+    <div className="inicio-contenedor">
       <div className="inicio-fondo">
         <img src={Volcan} alt="Volcán" />
       </div>

@@ -3,7 +3,7 @@ import './fecha.scss';
 
 const Fecha = () => {
   return (
-    <div className='fecha-container'>
+    <div className='fecha-contenedor'>
       <div className='año'>2025</div>
       <div className='fecha'>20 Septiembre</div>
       <div className='fecha'>Irailaren 20a</div>
