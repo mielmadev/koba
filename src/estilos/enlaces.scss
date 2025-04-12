@@ -15,3 +15,10 @@ a:hover {
 a:active {
   text-shadow: var.$negro 0px 0px 5px, var.$gris 0px 0px 5px;
 }
+
+a:active:hover {
+  color: var.$marron;
+  cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+  transition: cursor 0.3s ease;
+  color: var.$gris; // Mantener el color del hover si es necesario.
+}

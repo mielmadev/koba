@@ -2,21 +2,37 @@
 @use '../../estilos/_mixins.scss' as mix;
 
 .bandas {
-  @include mix.tamañoCompleto;
+  @include mix.margen0;
+  @include mix.padgap;
+  height: calc(100vh - var.$alturaEncabezado);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: stretch; // Asegurar que los hijos ocupen toda la altura
   flex-wrap: wrap;
+  overflow-y: auto;
 }
 
 .banda {
+  @include mix.margen0;
   @include mix.padgap;
 }
 
-.banda-imagen img{
-  height: 100%;
+.banda-imagen {
+  width: 250px;
+  /* Ajusta el tamaño según sea necesario */
+  height: auto;
 }
+
+.banda-imagen img {
+  width: 10%;
+  height: 10%;
+  max-width: 10%;
+  max-height: 10%;
+  object-fit: cover;
+  object-position: center;
+  @include mix.sombra;
+}
+
 .banda-nombre {
   @include mix.padgap;
   display: flex;

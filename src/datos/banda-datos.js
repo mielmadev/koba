@@ -1,14 +1,14 @@
-import Suicidal from '../assets/imagenes/bandas/Suicidal_Angels_Logo.png';
+import LogoKoba from '../assets/imagenes/logos/LogoKoba.png';
 
 const bandaDatos = [
-  { nombre: 'Suicidal Angels', imagen: Suicidal },
-  { nombre: 'Wolfheart Angels', imagen:  Suicidal  },
-  { nombre: 'The Electric Alley', imagen: Suicidal },
-  { nombre: 'Eclipse', imagen: Suicidal },
-  { nombre: 'Before The Dawn', imagen: Suicidal },
-  { nombre: 'Asgarth', imagen: Suicidal },
-  { nombre: 'Moonshinerds ', imagen: Suicidal },
-  { nombre: 'Ehun Kilo ', imagen: Suicidal },
+  { nombre: 'Suicidal Angels', imagen: LogoKoba},
+  { nombre: 'Wolfheart Angels', imagen:  LogoKoba  },
+  { nombre: 'The Electric Alley', imagen: LogoKoba },
+  { nombre: 'Eclipse', imagen: LogoKoba },
+  { nombre: 'Before The Dawn', imagen: LogoKoba },
+  { nombre: 'Asgarth', imagen: LogoKoba },
+  { nombre: 'Moonshinerds ', imagen: LogoKoba },
+  { nombre: 'Ehun Kilo ', imagen: LogoKoba },
 ];
 
 export default bandaDatos;
