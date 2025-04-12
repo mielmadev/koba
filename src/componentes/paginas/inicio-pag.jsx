@@ -11,12 +11,8 @@ export default function InicioPag() {
         <img src={Volcan} alt="Volcán" />
       </div>
       <div className="inicio-contenido">
-        <div className="fecha-componente">
           <Fecha />
-        </div>
-        <div className='bandas-componente'>
           <Bandas />
-        </div>
       </div>
     </div>
   );

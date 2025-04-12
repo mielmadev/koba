@@ -14,12 +14,13 @@
 }
 
 .fecha-contenedor {
+  height: 75px;
+  @include mix.bordes;
   @include mix.margen0;
   @include mix.padgap;
   color: var.$blanco;
   text-shadow: var.$blanco 0px 0px 10px, var.$blanco 0px 0px 20px; // Ajusta el desenfoque
   font-size: 4vh;
-  height: 100%;
   text-align: center;
   white-space: normal;
   line-height: 1;
@@ -27,6 +28,7 @@
   justify-content: space-evenly;
 
   .fecha {
+    @include mix.bordes;
     @include mix.margen0;
     padding: 5px 15px;
     font-size: 4vh;
