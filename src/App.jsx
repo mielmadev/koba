@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Encabezado from './components/encabezado-pie/encabezado'; // Importación del componente Encabezado
-import InicioPag from './components/paginas/inicio-pag';
-import FaqPag from './components/paginas/faq-pag';
-import AboutPag from './components/paginas/about-pag';
-import MerchanPag from './components/paginas/merchan-pag';
-import ContactoPag from './components/paginas/contacto-pag';
+import Encabezado from './componentes/encabezado-pie/encabezado'; // Importación del componente Encabezado
+import InicioPag from './componentes/paginas/inicio-pag';
+import FaqPag from './componentes/paginas/faq-pag';
+import AboutPag from './componentes/paginas/about-pag';
+import MerchanPag from './componentes/paginas/merchan-pag';
+import ContactoPag from './componentes/paginas/contacto-pag';
 import './App.scss';
 import './estilos/enlaces.scss'
 
