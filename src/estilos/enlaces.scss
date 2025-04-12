@@ -3,13 +3,15 @@
 a {
   color: var.$blanco;
   text-decoration: none;
+  cursor: auto; // Se define el cursor base para evitar el cambio momentáneo.
 }
 
 a:hover {
   color: var.$gris;
+  cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Gris.png') 16 0, auto;
+  transition: cursor 0.3s ease;
 }
 
 a:active {
   text-shadow: var.$negro 0px 0px 5px, var.$gris 0px 0px 5px;
 }
-
