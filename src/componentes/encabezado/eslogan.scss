@@ -1,0 +1,16 @@
+@use '../../estilos/_mixins.scss' as mix;
+
+.eslogan-contenedor {
+  //@include mix.bordes;
+  @include mix.margen0;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 3vw;
+  text-align: left;
+
+
+
+}

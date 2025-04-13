@@ -2,7 +2,7 @@
 @use '../../estilos/_mixins.scss' as mix;
 
 .inicio-contenedor {
-  @include mix.bordes;
+  //@include mix.bordes;
   @include mix.margen0;
   display: grid;
   position: fixed; // O fixed si quieres que sea fijo
@@ -31,7 +31,7 @@
 }
 
 .inicio-contenido {
-  @include mix.bordes;
+  //@include mix.bordes;
   @include mix.margen0;
   height: calc(100vh - var.$alturaEncabezado);
   position: relative;

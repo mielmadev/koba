@@ -2,13 +2,14 @@
 @use '../../estilos/_mixins.scss' as mix;
 
 .bandas {
-  @include mix.bordes;
+  //@include mix.bordes;
   @include mix.margen0;
   @include mix.padgap;
-  height: calc(100vh - var.$alturaEncabezado - 75px);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); // 4 columnas de igual tamaño
-  gap: 10px; // Espaciado entre imágenes
+  height: calc(100vh - var.$alturaEncabezado);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   overflow-y: auto;
 }
 
@@ -19,8 +20,8 @@
 
 .banda-imagen {
   @include mix.margen0;
-  width: 100%; // Se ajusta automáticamente al tamaño de la celda
-  height: auto;
+  height: 100px;
+  width: auto;
 }
 
 .banda-imagen img {
@@ -34,7 +35,6 @@
 
 .banda-nombre {
   @include mix.margen0;
-  @include mix.padgap;
   display: flex;
   justify-content: center;
   align-items: center;

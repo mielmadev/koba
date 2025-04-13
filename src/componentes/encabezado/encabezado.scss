@@ -2,14 +2,13 @@
 @use '../../estilos/_mixins.scss' as mix;
 
 .encabezado-contenedor {
-  @include mix.bordes;
+  //@include mix.bordes;
   @include mix.margen0;
   height: var.$alturaEncabezado;
   width: 100vw;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   position: sticky;
   top: 0; // Punto donde se activará el efecto sticky
   z-index: 10; // Colocar el encabezado delante del fondo
@@ -24,16 +23,18 @@
 }
 
 .logo-encabezado img {
-  @include mix.bordes;
+  //@include mix.bordes;
   @include mix.margen0;
   @include mix.padgap;
 }
 
 .encabezado-derecha {
-  @include mix.bordes;
+  //@include mix.bordes;
   @include mix.margen0;
+  @include mix.padgap;
   height: var.$alturaEncabezado;
   width: 100%;
-  display: grid;
-  grid-template-row: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import './encabezado.scss';
 import { logoKoba } from '../../assets/imagenes/images.js';
-import Navegador from '../navegador/navegador'; // Importación del componente Navegador
-import Eslogan from '../navegador/eslogan'; // Importación del componente Entradas
+import Navegador from "./navegador.jsx";
+import Eslogan from "./eslogan.jsx";
 
 const Encabezado = () => {
   return (

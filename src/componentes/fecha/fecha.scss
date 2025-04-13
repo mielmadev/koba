@@ -14,10 +14,9 @@
 }
 
 .fecha-contenedor {
-  height: 75px;
-  @include mix.bordes;
+  //@include mix.bordes;
   @include mix.margen0;
-  @include mix.padgap;
+  height: 25px;
   color: var.$blanco;
   text-shadow: var.$blanco 0px 0px 10px, var.$blanco 0px 0px 20px; // Ajusta el desenfoque
   text-align: center;
@@ -25,11 +24,12 @@
   line-height: 1;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 
   .fecha {
-    @include mix.bordes;
+    //@include mix.bordes;
     @include mix.margen0;
-    padding: 5px 15px;
+    font-size: clamp(1rem, 2vw, 2rem);
     animation: parpadeo 3s infinite;
   }
 }
