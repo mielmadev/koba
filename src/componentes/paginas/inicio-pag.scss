@@ -2,8 +2,9 @@
 @use '../../estilos/_mixins.scss' as mix;
 
 .inicio-contenedor {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.margen0;
+  display: grid;
   position: fixed; // O fixed si quieres que sea fijo
   top: var.$alturaEncabezado; // Comenzar justo debajo del encabezado
   z-index: 1;
@@ -30,13 +31,11 @@
 }
 
 .inicio-contenido {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.margen0;
-  @include mix.padgap;
   height: calc(100vh - var.$alturaEncabezado);
   position: relative;
   color: var.$blanco;
   display: flex;
   flex-direction: column;
 }
-

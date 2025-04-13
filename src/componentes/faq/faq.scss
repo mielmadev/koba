@@ -2,7 +2,7 @@
 @use '../../estilos/_mixins.scss' as mix;
 
 .faq-contenedor {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.padgap;
   margin: 0% 5%;
   height: 100vh;
@@ -14,10 +14,9 @@
 }
 
 .faq-pregunta {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.padgap;
   color: var.$gris;
-  font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,8 +33,7 @@
 }
 
 .faq-respuesta {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.padgap;
   color: var.$blanco;
-  font-size: 1rem;
 }

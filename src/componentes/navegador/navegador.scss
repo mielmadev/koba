@@ -2,11 +2,12 @@
 @use '../../estilos/_mixins.scss' as mix;
 
 .navegador-contenedor {
-  @include mix.contenedorCompleto;
+  @include mix.bordes;
+  @include mix.margen0;
+  @include mix.padgap;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 20px;
   align-items: center;
 
   a {
@@ -17,4 +18,9 @@
       color: var.$marron;
     }
   }
+}
+
+.navlink {
+  @include mix.margen0;
+  @include mix.bordes;
 }

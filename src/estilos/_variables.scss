@@ -11,9 +11,7 @@ $negro: #292421;
 $marron: #c49c74;
 $gris: #9ca6b1;
 //Tamaño letra
-$letra: clamp(1.5rem, 2vw, 3rem);
-$tamaño-fuente-base: 62.5%;
-$tamaño-fuente-nav: 3rem;
+$fuenteBase: 62.5%;
 //Bordes
 $border-radius: 25px;
 // Sombras
@@ -24,5 +22,5 @@ $sombra-texto-hover: 5px 5px 2px;
 // Transiciones
 $transicion-predeterminada: all 0.3s ease;
 // Encabezado
-$alturaEncabezado: 150px;
+$alturaEncabezado: 100px;
 
