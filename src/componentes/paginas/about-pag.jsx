@@ -1,12 +1,14 @@
 import React from 'react';
+import './about-pag.scss';
+import '../../estilos/fondos.scss';
+import AboutFondo from '../../assets/imagenes/fondos/aboutFondo.webp';
 
-const AboutPag = () => {
+export default function AboutPag() {
   return (
-    <div>
-      <h1>Sobre nosotros</h1>
-      <p>Bienvenido a nuestra página de información.</p>
+    <div className="about-contenedor">
+      <div className="about-fondo">
+        <img src={AboutFondo} alt="Volcán" />
+      </div>
     </div>
   );
-};
-
-export default AboutPag;
+}

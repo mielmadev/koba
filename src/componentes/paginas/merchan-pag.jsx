@@ -1,12 +1,14 @@
 import React from 'react';
+import './merchan-pag.scss';
+import '../../estilos/fondos.scss';
+import MerchanFondo from '../../assets/imagenes/fondos/merchanFondo.webp';
 
-const MerchanPag = () => {
+export default function MerchanPag() {
     return (
-        <div>
-            <h1>Merchandising</h1>
-            <p>Explora nuestra colección de productos exclusivos.</p>
+        <div className="merchan-contenedor">
+            <div className="merchan-fondo">
+                <img src={MerchanFondo} alt="Volcán" />
+            </div>
         </div>
     );
-};
-
-export default MerchanPag;
+}

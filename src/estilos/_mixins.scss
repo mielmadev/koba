@@ -7,7 +7,7 @@
 
 @mixin bordes {
   border: var.$amarillo 1px solid;
-  border-radius: var.$border-radius;
+  borderRadius: var.$borderRadius;
 }
 
 @mixin tamañoCompleto {

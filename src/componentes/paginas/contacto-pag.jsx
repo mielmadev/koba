@@ -1,12 +1,14 @@
 import React from 'react';
+import './contacto-pag.scss';
+import '../../estilos/fondos.scss';
+import ContactoFondo from '../../assets/imagenes/fondos/contactoFondo.webp';
 
-const ContactoPag = () => {
+export default function ContactoPag() {
   return (
-    <div>
-      <h1>Contacto</h1>
-      <p>Ponte en contacto con nosotros a través de este formulario.</p>
+    <div className="contacto-contenedor">
+      <div className="contacto-fondo">
+        <img src={ContactoFondo} alt="Volcán" />
+      </div>
     </div>
   );
-};
-
-export default ContactoPag;
+}
