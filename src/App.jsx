@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Encabezado from './componentes/encabezado/encabezado'; // Importación del componente Encabezado
+import Encabezado from './componentes/encabezado/encabezado';
 import InicioPag from './componentes/paginas/inicio-pag';
 import FaqPag from './componentes/paginas/faq-pag';
 import AboutPag from './componentes/paginas/about-pag';

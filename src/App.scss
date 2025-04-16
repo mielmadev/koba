@@ -1,9 +1,9 @@
 @use './estilos/_variables' as var;
 
 body {
-  min-width: 1024px; // Ancho mínimo
-  min-height: 768px; // Alto mínimo
+  min-width: 1024px; 
+  min-height: 768px; 
   box-sizing: border-box;
   margin: 0;
-  overflow: hidden; // Deshabilitar scroll global
+  overflow: hidden; 
   }

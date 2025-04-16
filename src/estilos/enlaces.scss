@@ -3,7 +3,7 @@
 a {
   color: var.$blanco;
   text-decoration: none;
-  cursor: auto; // Se define el cursor base para evitar el cambio momentáneo.
+  cursor: auto;
 }
 
 a:hover {
@@ -20,5 +20,5 @@ a:active:hover {
   color: var.$marron;
   cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Marron.png') 16 0, auto;
   transition: cursor 0.3s ease;
-  color: var.$gris; // Mantener el color del hover si es necesario.
+  color: var.$gris;
 }

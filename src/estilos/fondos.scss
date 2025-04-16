@@ -23,7 +23,7 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
-    object-position: top center; // Cambiar para fijar la imagen siempre arriba
+    object-position: top center;
     @include mix.sombra;
   }
 }

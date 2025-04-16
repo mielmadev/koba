@@ -10,8 +10,8 @@
   flex-direction: row;
   align-items: center;
   position: sticky;
-  top: 0; // Punto donde se activará el efecto sticky
-  z-index: 10; // Colocar el encabezado delante del fondo
+  top: 0; 
+  z-index: 10; 
 }
 
 .logo-encabezado {
@@ -19,7 +19,7 @@
   height: var.$alturaEncabezado;
   display: flex;
   justify-content: center;
-  flex-shrink: 0; // Evita que el contenedor se reduzca
+  flex-shrink: 0; 
 }
 
 .logo-encabezado img {

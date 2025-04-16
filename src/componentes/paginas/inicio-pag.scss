@@ -5,8 +5,8 @@
   //@include mix.bordes;
   @include mix.margen0;
   display: grid;
-  position: fixed; // O fixed si quieres que sea fijo
-  top: var.$alturaEncabezado; // Comenzar justo debajo del encabezado
+  position: fixed; 
+  top: var.$alturaEncabezado; 
   z-index: 1;
 }
 
