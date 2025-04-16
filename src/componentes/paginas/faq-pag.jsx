@@ -2,7 +2,7 @@ import React from 'react';
 import './faq-pag.scss';
 import '../../estilos/fondos.scss';
 
-import FaqFondo from '../../assets/imagenes/fondos/faqFondo.webp'; 
+import FaqFondo from '../../assets/imagenes/fondos/faqFondo.webp';
 import FAQ from '../faq/faq';
 
 export default function FaqPag() {
@@ -11,9 +11,7 @@ export default function FaqPag() {
       <div className="faq-fondo">
         <img src={FaqFondo} alt="Preguntas frecuentes" />
       </div>
-      <div className="faq-contenido">
-        <FAQ />
-      </div>
+      <FAQ />
     </div>
   );
 }
