@@ -3,22 +3,31 @@
 a {
   color: var.$blanco;
   text-decoration: none;
-  cursor: auto;
-}
+  font-size: var.$fuenteNavegador;
+  font-weight: var.$fuenteNavegadorPeso;
+  text-shadow: 2px 1px 5px var.$blanco;
 
-a:hover {
-  color: var.$gris;
-  cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Gris.png') 16 0, auto;
-  transition: cursor 0.3s ease;
-}
+  &:hover {
+    color: var.$gris;
+    text-shadow: var.$sombra;
+    cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Gris.png') 16 0, auto;
+    transition: cursor 0.3s ease;
+  }
 
-a:active {
-  text-shadow: var.$negro 0px 0px 5px, var.$gris 0px 0px 5px;
-}
+  &:active {
+    color: var.$negro;
 
-a:active:hover {
-  color: var.$marron;
-  cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Marron.png') 16 0, auto;
-  transition: cursor 0.3s ease;
-  color: var.$gris;
+    &:hover {
+      cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+      transition: cursor 0.3s ease;
+    }
+  }
+
+  &.navlink {
+    &.active {
+      color: var.$marron;
+      cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+      transition: cursor 0.3s ease;
+    }
+  }
 }

@@ -12,10 +12,14 @@ $marron: #c49c74;
 $gris: #9ca6b1;
 //Tamaño letra
 $fuenteBase: 62.5%;
-$fuenteNav: 100%;
+$fuentePreguntas: $fuenteBase * 3;
+$fuenteRespuestas: $fuenteBase * 2;
+$fuenteNavegador: $fuenteBase * 1.5;
 $fuenteBasePeso: 100;
-$fuenteNavPeso: 600;
+$fuenteNavegadorPeso: $fuenteBasePeso * 2;
 //Bordes
 $borderRadius: 25px;
 // Encabezado
 $alturaEncabezado: 100px;
+// Sombras
+$sombra: 2px 2px 5px $negro;
