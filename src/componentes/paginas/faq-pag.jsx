@@ -2,7 +2,7 @@ import React from 'react';
 import './faq-pag.scss';
 import '../../estilos/fondos.scss';
 
-import FaqFondo from '../../assets/imagenes/fondos/faqFondo.webp'; 7
+import FaqFondo from '../../assets/imagenes/fondos/faqFondo.webp'; 
 import FAQ from '../faq/faq';
 
 export default function FaqPag() {
