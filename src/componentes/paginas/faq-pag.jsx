@@ -9,9 +9,11 @@ export default function FaqPag() {
   return (
     <div className="faq-contenedor">
       <div className="faq-fondo">
-        <img src={FaqFondo} alt="Preguntas frecuentes" />
+        <img src={FaqFondo} alt="Faq Fondo" />
       </div>
-      <FAQ />
+      <div className="faq-contenido">
+        <FAQ />
+      </div>
     </div>
   );
 }

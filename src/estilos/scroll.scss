@@ -1,0 +1,60 @@
+@use './variables.scss' as var;
+
+/* Estilo general del scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Ancho del scroll vertical */
+  height: 10px;
+  /* Altura del scroll horizontal */
+}
+
+/* Fondo del scrollbar */
+::-webkit-scrollbar-track {
+  background: var.$negro;
+  /* Color del fondo del track */
+  border-radius: 10px;
+  /* Bordes redondeados */
+}
+
+/* Barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background: var.$gris;
+  /* Color de la barra */
+  border-radius: 10px;
+  /* Bordes redondeados */
+}
+
+/* Barra de desplazamiento al pasar el mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: var.$marron;
+  /* Color al pasar el mouse */
+}
+
+/* Quitar las flechas predeterminadas */
+::-webkit-scrollbar-button {
+  display: none;
+  /* Oculta las flechas predeterminadas */
+}
+
+/* Personalizar la flecha hacia arriba */
+::-webkit-scrollbar-button:single-button:decrement {
+  display: block;
+  /* Muestra solo la flecha personalizada */
+  background: url('../assets/imagenes/cursor/KobaPua_32x32_Marron.png') no-repeat center center;
+  background-size: contain;
+  height: 20px;
+  /* Ajusta el tamaño según tu imagen */
+  width: 20px;
+}
+
+/* Personalizar la flecha hacia abajo */
+::-webkit-scrollbar-button:single-button:increment {
+  display: block;
+  /* Muestra solo la flecha personalizada */
+  background: url('../assets/imagenes/cursor/KobaPua_32x32_MarronAbajo.png') no-repeat center center;
+  background-size: contain;
+  height: 20px;
+  /* Ajusta el tamaño según tu imagen */
+  width: 20px;
+
+}

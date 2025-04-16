@@ -7,8 +7,10 @@ export default function AboutPag() {
   return (
     <div className="about-contenedor">
       <div className="about-fondo">
-        <img src={AboutFondo} alt="Volcán" />
+        <img src={AboutFondo} alt="About Fondo" />
       </div>
+      <div className="about-contenido">about</div> 
+
     </div>
   );
 }

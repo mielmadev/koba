@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import faqDatos from '../../datos/faq-datos';
 import './faq.scss';
+import '../../estilos/scroll.scss'
 
 const FAQ = () => {
   const [preguntaActiva, setPreguntaActiva] = useState(null);

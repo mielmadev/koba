@@ -7,8 +7,9 @@ export default function MerchanPag() {
     return (
         <div className="merchan-contenedor">
             <div className="merchan-fondo">
-                <img src={MerchanFondo} alt="Volcán" />
+                <img src={MerchanFondo} alt="Merchan Fondo" />
             </div>
+            <h1>hola</h1>
         </div>
     );
 }

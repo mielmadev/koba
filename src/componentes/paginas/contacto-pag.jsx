@@ -7,8 +7,10 @@ export default function ContactoPag() {
   return (
     <div className="contacto-contenedor">
       <div className="contacto-fondo">
-        <img src={ContactoFondo} alt="Volcán" />
+        <img src={ContactoFondo} alt="Contacto Fondo" />
       </div>
+      <div className="contacto-contenido">contacto</div> 
+   
     </div>
   );
 }
