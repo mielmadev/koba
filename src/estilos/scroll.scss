@@ -22,13 +22,22 @@
   /* Color de la barra */
   border-radius: 10px;
   /* Bordes redondeados */
+
+  &:hover {
+    background: var.$marron;
+    /* Color al pasar el mouse */
+    cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+    transition: cursor 0.3s ease;
+  }
+
+  &:active {
+    background: var.$negro;
+    cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Negro.png') 16 0, auto;
+    transition: cursor 0.3s ease;
+  }
 }
 
-/* Barra de desplazamiento al pasar el mouse */
-::-webkit-scrollbar-thumb:hover {
-  background: var.$marron;
-  /* Color al pasar el mouse */
-}
+/* Cambia el color de la barra al color negro activo */
 
 /* Quitar las flechas predeterminadas */
 ::-webkit-scrollbar-button {
@@ -40,21 +49,48 @@
 ::-webkit-scrollbar-button:single-button:decrement {
   display: block;
   /* Muestra solo la flecha personalizada */
-  background: url('../assets/imagenes/cursor/KobaPua_32x32_Marron.png') no-repeat center center;
+  background: url('../assets/imagenes/cursor/KobaPua_32x32_Gris.png') no-repeat center center;
   background-size: contain;
   height: 20px;
   /* Ajusta el tamaño según tu imagen */
   width: 20px;
+
+  &:hover {
+    background: url('../assets/imagenes/cursor/KobaPua_32x32_Marron.png') no-repeat center center;
+    background-size: contain;
+    cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+    transition: cursor 0.3s ease;
+  }
+
+  &:active {
+    background: url('../assets/imagenes/cursor/KobaPua_32x32_Negro.png') no-repeat center center;
+    background-size: contain;
+    cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Negro.png') 16 0, auto;
+    transition: cursor 0.3s ease;
+  }
 }
 
 /* Personalizar la flecha hacia abajo */
 ::-webkit-scrollbar-button:single-button:increment {
   display: block;
   /* Muestra solo la flecha personalizada */
-  background: url('../assets/imagenes/cursor/KobaPua_32x32_MarronAbajo.png') no-repeat center center;
+  background: url('../assets/imagenes/cursor/KobaPua_32x32_GrisAbajo.png') no-repeat center center;
   background-size: contain;
   height: 20px;
   /* Ajusta el tamaño según tu imagen */
   width: 20px;
 
+  &:hover {
+    background: url('../assets/imagenes/cursor/KobaPua_32x32_MarronAbajo.png') no-repeat center center;
+    background-size: contain;
+    cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+    transition: cursor 0.3s ease;
+  }
+
+  &:active {
+    background: url('../assets/imagenes/cursor/KobaPua_32x32_NegroAbajo.png') no-repeat center center;
+    background-size: contain;
+    cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Negro.png') 16 0, auto;
+    transition: cursor 0.3s ease;
+  }
 }
