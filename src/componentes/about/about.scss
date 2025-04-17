@@ -1,0 +1,34 @@
+@use '../../estilos/_variables.scss' as var;
+@use '../../estilos/_mixins.scss' as mix;
+
+.about-contenedor {
+  //@include mix.bordes;
+  @include mix.margen0;
+  height: calc(100vh - var.$alturaEncabezado);
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.about-h1,
+.about-h2,
+.about-h3,
+.about-texto,
+.about-video {
+  margin: 0 10%;
+}
+
+.about-h1 {
+  font-size: var.$fuenteBase * 3;
+}
+
+.about-h2 {
+  font-size: var.$fuenteBase * 2.5;
+}
+
+.about-h3 {
+  font-size: var.$fuenteBase * 2;
+}

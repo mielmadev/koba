@@ -9,7 +9,7 @@ export default function MerchanPag() {
             <div className="merchan-fondo">
                 <img src={MerchanFondo} alt="Merchan Fondo" />
             </div>
-            <h1>hola</h1>
-        </div>
+            <1>hola</1 >
+        </div >
     );
 }
