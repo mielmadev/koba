@@ -11,20 +11,19 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  
-
 }
 
 .faq-pregunta {
   //@include mix.bordes;
   @include mix.padgap;
   box-sizing: border-box;
-  margin: 0 10%;
+  margin: var.$margenParrafo;
   color: var.$gris;
-  font-size: var.$fuenteBase * 3;
+  font-size: var.$fuentePreguntas;
   display: flex;
   justify-content: space-between;
-  text-align: justify;}
+  text-align: justify;
+}
 
 .faq-pregunta-texto {
   //@include mix.bordes;
@@ -44,9 +43,9 @@
   //@include mix.bordes;
   @include mix.padgap;
   box-sizing: border-box;
-  margin: 0 10%;
+  margin: var.$margenParrafo;
   color: var.$blanco;
-    font-size: var.$fuenteBase * 2;
+  font-size: var.$fuenteRespuestas;
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;

@@ -4,18 +4,19 @@ a {
   color: var.$blanco;
   text-decoration: none;
   font-size: var.$fuenteNavegador;
-  font-weight: var.$fuenteNavegadorPeso;
-  text-shadow: 2px 1px 5px var.$blanco;
+  font-weight: var.$pesoNavegador;
+  text-shadow: var.$sombraBlanca;
 
   &:hover {
     color: var.$gris;
-    text-shadow: var.$sombra;
+    text-shadow: var.$sombraGris;
     cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Gris.png') 16 0, auto;
     transition: cursor 0.3s ease;
   }
 
   &:active {
     color: var.$negro;
+    text-shadow: var.$sombraBlanca;
     cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Negro.png') 16 0, auto;
     transition: cursor 0.3s ease;
   }
@@ -23,6 +24,7 @@ a {
   &.navlink {
     &.active {
       color: var.$marron;
+      text-shadow: var.$sombraMarron;
       cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Marron.png') 16 0, auto;
       transition: cursor 0.3s ease;
 

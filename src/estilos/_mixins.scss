@@ -20,12 +20,21 @@
   gap: 10px;
 }
 
-@mixin contenedorCompleto {
-  @include margen0;
-  @include tamañoCompleto;
-  @include padgap;
+@mixin sombra {
+  filter: brightness(25%);
 }
 
-@mixin sombra {
-  filter: brightness(15%);
+@mixin fuenteH1 {
+  font-size: clamp(2rem, 4vw, var.$fuenteBase * 4); // Ajuste dinámico según el tamaño de la ventana
+  font-weight: 900;
+}
+
+@mixin fuenteH2 {
+  font-size: clamp(1.5rem, 3vw, var.$fuenteBase * 2.5); // Ajuste dinámico según el tamaño de la ventana
+  font-weight: 800;
+}
+
+@mixin fuenteH3 {
+  font-size: clamp(1.25rem, 2.5vw, var.$fuenteBase * 2); // Ajuste dinámico según el tamaño de la ventana
+  font-weight: 700;
 }

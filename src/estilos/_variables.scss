@@ -1,27 +1,28 @@
-// Triadic Color
-$celeste: #55eed7;
-$azul: #556cee;
-$rojo: #ee556c;
-$granate: #800000;
+//Colores
 $amarillo: #eed755;
-$morado: #d755ee;
-//kobalive
 $blanco: aliceblue; // #F0F8FF
 $negro: #292421;
 $marron: #c49c74;
 $gris: #9ca6b1;
-//Tamaño letra
+//Fuente tamaño
 $fuenteBase: 62.5%;
 $fuentePreguntas: $fuenteBase * 3;
 $fuenteRespuestas: $fuenteBase * 2;
 $fuenteNavegador: $fuenteBase * 1.5;
-$fuenteBasePeso: 100;
-$fuenteNavegadorPeso: $fuenteBasePeso * 2;
+// Fuente peso
+$pesoBase: 400;
+$pesoNavegador: 600;
+// h1, h2, h3 generada en mixins
 //Bordes
 $borderRadius: 25px;
 // Encabezado
 $alturaEncabezado: 100px;
 // Sombras
-$sombra: 2px 2px 5px $negro;
+$sombraBlanca: 2px 1px 3px $blanco;
+$sombraNegra: 2px 1px 5px $negro; 
+$sombraGris: 2px 1px 5px $gris;
+$sombraMarron: 2px 1px 5px $marron;
+// Margen
+$margenParrafo: 0 15%;
 
 

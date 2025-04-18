@@ -1,6 +1,12 @@
 @use '../../estilos/_variables.scss' as var;
 @use '../../estilos/_mixins.scss' as mix;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box; // Asegura que el modelo de caja incluya padding y borde
+}
+
 .about-contenedor {
   //@include mix.bordes;
   @include mix.margen0;
@@ -11,6 +17,8 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  overflow-x: hidden;
+  
 }
 
 .about-h1,
@@ -18,17 +26,31 @@
 .about-h3,
 .about-texto,
 .about-video {
-  margin: 0 10%;
+  margin: var.$margenParrafo;
+  text-align: justify;
+  padding: 2px;
 }
 
 .about-h1 {
-  font-size: var.$fuenteBase * 3;
+  @include mix.fuenteH1;
+  color: var.$gris;
+  text-align: center;
+
 }
 
 .about-h2 {
-  font-size: var.$fuenteBase * 2.5;
+  @include mix.fuenteH2;
+  color: var.$marron;
+
 }
 
 .about-h3 {
-  font-size: var.$fuenteBase * 2;
+  @include mix.fuenteH3;
+  color: var.$marron;
+
+}
+
+.about-texto {
+  font-size: var.$fuenteBase * 1.5;
+
 }
