@@ -33,7 +33,8 @@
 
 .about-h1 {
   @include mix.fuenteH1;
-  color: var.$gris;
+  color: var.$negro;
+  text-shadow: 3px 3px 5px var.$blanco, -3px -3px 5px var.$blanco ;
   text-align: center;
 
 }
@@ -51,6 +52,6 @@
 }
 
 .about-texto {
-  font-size: var.$fuenteBase * 1.5;
+  font-size: var.$fuenteBase * 1.75;
 
 }
