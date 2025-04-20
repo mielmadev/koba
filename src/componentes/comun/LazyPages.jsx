@@ -7,7 +7,6 @@ const PAGES = [
   { key: 'ABOUT', path: '/about-pag', label: 'About', component: lazy(() => import('../paginas/about-pag')) },
   { key: 'MERCHAN', path: '/merchan-pag', label: 'Merchandising', component: lazy(() => import('../paginas/merchan-pag')) },
   { key: 'CONTACTO', path: '/contacto-pag', label: 'Contacto', component: lazy(() => import('../paginas/contacto-pag')) },
-  { key: 'NUEVA_PAGINA', path: '/nueva-pagina', label: 'Nueva Página', component: lazy(() => import('../paginas/nueva-pagina')) },
 ];
 
 export default PAGES;
