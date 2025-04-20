@@ -1,4 +1,4 @@
-import LogoKoba from '../assets/imagenes/logos/LogoKoba.png';
+import LogoKoba from '../../assets/imagenes/logos/LogoKoba.png';
 
 const bandasDatos = [
   { nombre: 'Suicidal Angels', imagen: LogoKoba},

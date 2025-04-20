@@ -5,7 +5,7 @@ import './bandas.scss';
 const Bandas = () => {
   return (
     <div className="bandas">
-      {bandaDatos.map((banda, index) => (
+      {bandasDatos.map((banda, index) => (
         <div key={index} className="banda">
           <img src={banda.imagen} alt={banda.nombre} className="banda-imagen" />
           <h3 className="banda-nombre">{banda.nombre}</h3>
