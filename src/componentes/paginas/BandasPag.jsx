@@ -1,11 +1,20 @@
 import React from 'react';
-import './BandasPag.scss';
+import '../../estilos/fondos.scss';
+import '../../estilos/scroll.scss';
+import BandasLista2025 from '../bandas/BandasLista2025';
+import ContactoFondo from '../../assets/imagenes/fondos/bandasFondo.webp';
 
 export default function BandasPag() {
   return (
-    <div className="bandas-container">
-      <h1>Bandas Musicales</h1>
-      <p>Bienvenido a la página de bandas.</p>
+    <div className="contacto-contenedor">
+      <div className="contacto-fondo">
+        <img src={ContactoFondo} alt="Contacto Fondo" />
+      </div>
+      <div className="contacto-contenido">
+        <BandasLista2025 />
+
+      </div>
+
     </div>
   );
 }
