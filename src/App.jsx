@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Encabezado from './componentes/encabezado/encabezado';
 import Fallback from './componentes/comun/Fallback';
 import PAGES from './componentes/comun/LazyPages'; // Asegúrate de que PAGES esté actualizado
+import AsgarthPag from './componentes/paginas/bandas/AsgarthPag';
+import BANDAS_ROUTES from './componentes/bandas/BandasRouteConfig';
 
 // Estilos
 import './App.scss';
@@ -21,6 +23,10 @@ function App() {
             {PAGES.map(({ path, component: Component }) => (
               <Route key={path} path={path} element={<Component />} />
             ))}
+            {BANDAS_ROUTES.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+            <Route path="/bandas/asgarth" element={<AsgarthPag />} />
             <Route path="*" element={<Navigate to={PAGES[0].path} />} /> {/* Redirigir a la primera ruta */}
           </Routes>
         </Suspense>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import bandasDatos2025 from './bandasDatos2025';
 import './bandasLista2025.scss';
 
@@ -13,7 +14,9 @@ const BandasLista2025 = () => {
       {bandasOrdenadas.map((banda, index) => (
         <div key={index} className="banda">
           <div className="banda-nombre">
-            <a href="#">{banda.nombre}</a>
+            <Link to={`/bandas/${banda.nombre.toLowerCase().replace(/\s+/g, '-')}`}>
+              {banda.nombre}
+            </Link>
           </div>
         </div>
       ))}
