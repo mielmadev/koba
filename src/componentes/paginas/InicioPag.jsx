@@ -7,7 +7,7 @@ import '../../estilos/scroll.scss';
 
 // Componentes
 import Fecha from '../fecha/Fecha';
-import Bandas from '../bandas/bandas';
+import Bandas from '../bandas/Bandas2025';
 
 // Imágenes
 import VolcanFondo from '../../assets/imagenes/fondos/volcanFondo.webp';

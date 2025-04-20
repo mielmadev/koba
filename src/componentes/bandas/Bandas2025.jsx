@@ -1,8 +1,8 @@
 import React from 'react';
 import bandasDatos2025 from './bandasDatos2025';
-import './bandas.scss';
+import './bandas2025.scss';
 
-const Bandas = () => {
+const Bandas2025 = () => {
   return (
     <div className="bandas">
       {bandasDatos2025.map((banda, index) => (
@@ -15,4 +15,4 @@ const Bandas = () => {
   );
 };
 
-export default Bandas;
+export default Bandas2025;
