@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutPag.scss';
+import './aboutPag.scss';
 import '../../estilos/fondos.scss';
 import AboutFondo from '../../assets/imagenes/fondos/aboutFondo.webp';
 import About from '../about/About';

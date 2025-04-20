@@ -1,7 +1,6 @@
-// Dinámica, se cambia mediante datos en LazyPage
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import PAGES from '../comun/LazyPages'; 
+import PAGES from '../comun/LazyPages';
 import './navegador.scss';
 import '../../estilos/enlaces.scss';
 
@@ -9,6 +8,7 @@ const Navegador = () => {
   return (
     <nav>
       <div className="navegador-contenedor">
+        {/* Generar enlaces de navegación dinámicamente */}
         {PAGES.map(({ path, label }) => (
           <NavLink
             key={path}

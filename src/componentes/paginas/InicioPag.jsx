@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Estilos
-import './InicioPag.scss';
+import './inicioPag.scss';
 import '../../estilos/fondos.scss';
 import '../../estilos/scroll.scss';
 

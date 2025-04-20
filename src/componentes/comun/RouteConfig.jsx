@@ -1,4 +1,3 @@
-// Dinámica, se cambia mediante datos en LazyPage
 import PAGES from './LazyPages';
 
 // Generar rutas dinámicamente

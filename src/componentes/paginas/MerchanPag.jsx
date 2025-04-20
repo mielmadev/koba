@@ -1,5 +1,5 @@
 import React from 'react';
-import './MerchanPag.scss';
+import './merchanPag.scss';
 import '../../estilos/fondos.scss';
 import MerchanFondo from '../../assets/imagenes/fondos/merchanFondo.webp';
 
@@ -9,7 +9,7 @@ export default function MerchanPag() {
             <div className="merchan-fondo">
                 <img src={MerchanFondo} alt="Merchan Fondo" />
             </div>
-            <h1>hola</h1 >
+            <h1>Merchan</h1 >
         </div >
     );
 }
