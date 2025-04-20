@@ -6,10 +6,13 @@
   @include mix.margen0;
   @include mix.padgap;
   width: 100%;
+  height: calc(var.$alturaEncabezado - 50px);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
 }
-

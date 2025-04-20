@@ -13,7 +13,7 @@ const Navegador = () => {
           <NavLink
             key={path}
             to={path}
-            className={({ isActive }) => isActive ? `navlink ${label.toLowerCase()} active` : `navlink ${label.toLowerCase()}`}
+            className={({ isActive }) => isActive ? 'navlink active' : 'navlink'}
           >
             {label}
           </NavLink>

@@ -1,4 +1,5 @@
 @use './variables.scss' as var;
+@use './_mixins.scss' as mix;
 
 a {
   color: var.$blanco;
@@ -6,6 +7,7 @@ a {
   font-size: var.$fuenteNavegador;
   font-weight: var.$pesoNavegador;
   text-shadow: var.$sombraBlanca;
+  height: 100%;
 
   &:hover {
     color: var.$gris;
