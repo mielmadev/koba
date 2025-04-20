@@ -1,32 +1,27 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Encabezado from './componentes/encabezado/encabezado';
 
+// Componentes
+import Encabezado from './componentes/encabezado/encabezado';
+import Fallback from './componentes/comun/Fallback';
+import PAGES from './componentes/comun/LazyPages'; // Asegúrate de que PAGES esté actualizado
+
+// Estilos
 import './App.scss';
 import './estilos/enlaces.scss';
-import Fallback from './componentes/comun/Fallback';
-
-// Lazy loading de las páginas
-const InicioPag = lazy(() => import('./componentes/paginas/inicio-pag'));
-const FaqPag = lazy(() => import('./componentes/paginas/faq-pag'));
-const AboutPag = lazy(() => import('./componentes/paginas/about-pag'));
-const MerchanPag = lazy(() => import('./componentes/paginas/merchan-pag'));
-const ContactoPag = lazy(() => import('./componentes/paginas/contacto-pag'));
 
 function App() {
   return (
     <Router>
-      <Encabezado /> {/* Componente Encabezado */}
+      <Encabezado /> {/* Componente de navegación principal */}
       <main>
-        {/* Suspense para manejar la carga diferida */}
+        {/* Suspense para manejar la carga diferida de las páginas */}
         <Suspense fallback={<Fallback />}>
           <Routes>
-            <Route path="/inicio-pag" element={<InicioPag />} />
-            <Route path="/faq-pag" element={<FaqPag />} />
-            <Route path="/about-pag" element={<AboutPag />} />
-            <Route path="/merchan-pag" element={<MerchanPag />} />
-            <Route path="/contacto-pag" element={<ContactoPag />} />
-            <Route path="*" element={<Navigate to="/inicio-pag" />} /> {/* Ruta comodín */}
+            {PAGES.map(({ path, component: Component }) => (
+              <Route key={path} path={path} element={<Component />} />
+            ))}
+            <Route path="*" element={<Navigate to={PAGES[0].path} />} /> {/* Redirigir a la primera ruta */}
           </Routes>
         </Suspense>
       </main>

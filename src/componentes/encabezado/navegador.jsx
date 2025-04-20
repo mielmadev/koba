@@ -1,42 +1,23 @@
+// Dinámica, se cambia mediante datos en LazyPage
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PAGES from '../comun/LazyPages'; 
 import './navegador.scss';
-import '../../estilos/enlaces.scss'
+import '../../estilos/enlaces.scss';
 
 const Navegador = () => {
   return (
     <nav>
       <div className="navegador-contenedor">
-        <NavLink
-          to="/inicio-pag"
-          className={({ isActive }) => isActive ? 'navlink inicio active' : 'navlink inicio'}
-        >
-          Inicio
-        </NavLink>
-        <NavLink
-          to="/faq-pag"
-          className={({ isActive }) => isActive ? 'navlink faq active' : 'navlink faq'}
-        >
-          FAQ
-        </NavLink>
-        <NavLink
-          to="/about-pag"
-          className={({ isActive }) => isActive ? 'navlink about active' : 'navlink about'}
-        >
-          About
-        </NavLink>
-        <NavLink
-          to="/merchan-pag"
-          className={({ isActive }) => isActive ? 'navlink merchan active' : 'navlink merchan'}
-        >
-          Merchandising
-        </NavLink>
-        <NavLink
-          to="/contacto-pag"
-          className={({ isActive }) => isActive ? 'navlink contacto active' : 'navlink contacto'}
-        >
-          Contacto
-        </NavLink>
+        {PAGES.map(({ path, label }) => (
+          <NavLink
+            key={path}
+            to={path}
+            className={({ isActive }) => isActive ? `navlink ${label.toLowerCase()} active` : `navlink ${label.toLowerCase()}`}
+          >
+            {label}
+          </NavLink>
+        ))}
       </div>
     </nav>
   );

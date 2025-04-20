@@ -11,8 +11,8 @@ const Encabezado = () => {
         <img src={logoKoba} alt="Logo Koba" className="logo-img" />
       </div>
       <div className="encabezado-derecha">
-          <Navegador />
-          <Eslogan />
+        <Navegador />
+        <Eslogan />
       </div>
     </header>
   );
