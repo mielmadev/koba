@@ -2,7 +2,7 @@ import React from 'react';
 import './about-pag.scss';
 import '../../estilos/fondos.scss';
 import AboutFondo from '../../assets/imagenes/fondos/aboutFondo.webp';
-import About from '../about/about';
+import About from '../about/About';
 
 export default function AboutPag() {
   return (
@@ -12,7 +12,7 @@ export default function AboutPag() {
       </div>
       <div className="about-contenido">
         <About />
-      </div> 
+      </div>
 
     </div>
   );

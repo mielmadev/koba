@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import faqDatos from '../../datos/faq-datos';
+import faqDatos from './faqDatos';
 import './faq.scss';
 import '../../estilos/scroll.scss'
 

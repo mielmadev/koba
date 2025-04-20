@@ -1,5 +1,5 @@
 import React from 'react';
-import bandaDatos from '../../datos/banda-datos';
+import bandasDatos from './bandasDatos';
 import './bandas.scss';
 
 const Bandas = () => {

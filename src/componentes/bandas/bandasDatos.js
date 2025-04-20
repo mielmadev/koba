@@ -1,6 +1,6 @@
 import LogoKoba from '../assets/imagenes/logos/LogoKoba.png';
 
-const bandaDatos = [
+const bandasDatos = [
   { nombre: 'Suicidal Angels', imagen: LogoKoba},
   { nombre: 'Wolfheart Angels', imagen:  LogoKoba  },
   { nombre: 'The Electric Alley', imagen: LogoKoba },
@@ -11,4 +11,4 @@ const bandaDatos = [
   { nombre: 'Ehun Kilo ', imagen: LogoKoba },
 ];
 
-export default bandaDatos;
+export default bandasDatos;

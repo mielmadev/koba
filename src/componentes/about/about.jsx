@@ -1,8 +1,8 @@
 import React from 'react';
 import './about.scss';
 import '../../estilos/scroll.scss';
-import { aboutDatos } from '../../datos/about-datos';
-import AboutVideo from '../../datos/about-video.jsx';
+import { aboutDatos } from './aboutDatos';
+import AboutVideo from './AboutVideo.jsx';
 
 export default function About() {
   return (
@@ -44,7 +44,7 @@ export default function About() {
       </div>
 
       {/* Usar el componente AboutVideo */}
-      <AboutVideo videoUrl={aboutDatos.videoUrl} />
+      <AboutVideo />
     </div>
   );
 }

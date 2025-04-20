@@ -3,7 +3,7 @@ import './faq-pag.scss';
 import '../../estilos/fondos.scss';
 
 import FaqFondo from '../../assets/imagenes/fondos/faqFondo.webp';
-import FAQ from '../faq/faq';
+import FAQ from '../faq/Faq';
 
 export default function FaqPag() {
   return (

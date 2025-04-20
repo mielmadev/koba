@@ -25,6 +25,5 @@ Dioses, mitología, naturaleza y música metal; una mezcla explosiva con la que 
 
 Aquí, en Abadiño, te espera la Koba Family al completo y la mismísima diosa Mari subida en su carro de fuego, peinando su melena a la entrada de su cueva.`,
   pregunta: "¿Vienes?",
-  subtitulo3: "Echa un ojo a este mini-documental y descúbrelo todo sobre el Koba Live.",
-  videoUrl: "https://www.youtube.com/embed/Bq7QldlGt2U"
+  subtitulo3: "Echa un ojo a este mini-documental y descúbrelo todo sobre el Koba Live."
 };

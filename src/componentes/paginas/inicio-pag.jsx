@@ -6,7 +6,7 @@ import '../../estilos/fondos.scss';
 import '../../estilos/scroll.scss';
 
 // Componentes
-import Fecha from '../fecha/fecha';
+import Fecha from '../fecha/Fecha';
 import Bandas from '../bandas/bandas';
 
 // Imágenes
