@@ -1,9 +1,10 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Encabezado from './componentes/encabezado/encabezado';
-import Pua from './assets/imagenes/pua/KobaPua_300x300.png';
+
 import './App.scss';
 import './estilos/enlaces.scss';
+import Fallback from './componentes/comun/Fallback';
 
 // Lazy loading de las páginas
 const InicioPag = lazy(() => import('./componentes/paginas/inicio-pag'));
@@ -18,11 +19,7 @@ function App() {
       <Encabezado /> {/* Componente Encabezado */}
       <main>
         {/* Suspense para manejar la carga diferida */}
-        <Suspense fallback={
-          <div className="fallback-container">
-            <img src={Pua} alt="Cargando..." className="fallback-image" />
-          </div>
-        }>
+        <Suspense fallback={<Fallback />}>
           <Routes>
             <Route path="/inicio-pag" element={<InicioPag />} />
             <Route path="/faq-pag" element={<FaqPag />} />
