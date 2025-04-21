@@ -6,7 +6,7 @@ import AboutVideo from './AboutVideo.jsx';
 
 export default function About() {
   return (
-    <div className="about-contenedor">
+    <div className="contenedor-scroll">
       <div className='about-h1'>
         {aboutDatos.titulo}
       </div>

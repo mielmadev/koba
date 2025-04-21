@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 
 // Componentes
 import Encabezado from './componentes/encabezado/encabezado';
-import Fallback from './componentes/comun/Fallback';
-import PAGES from './componentes/comun/LazyPages';
+import Fallback from './componentes/AppComponentes/Fallback';
+import PAGES from './componentes/AppComponentes/LazyPages';
 import BANDAS_ROUTES from './componentes/bandas/BandasRouteConfig';
 
 // Estilos
