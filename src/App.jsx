@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 // Componentes
 import Encabezado from './componentes/encabezado/encabezado';
 import Fallback from './componentes/comun/Fallback';
-import PAGES from './componentes/comun/LazyPages'; // Asegúrate de que PAGES esté actualizado
-import AsgarthPag from './componentes/paginas/bandas/AsgarthPag';
+import PAGES from './componentes/comun/LazyPages';
 import BANDAS_ROUTES from './componentes/bandas/BandasRouteConfig';
 
 // Estilos
@@ -15,9 +14,8 @@ import './estilos/enlaces.scss';
 function App() {
   return (
     <Router>
-      <Encabezado /> {/* Componente de navegación principal */}
+      <Encabezado />
       <main>
-        {/* Suspense para manejar la carga diferida de las páginas */}
         <Suspense fallback={<Fallback />}>
           <Routes>
             {PAGES.map(({ path, component: Component }) => (
@@ -26,8 +24,7 @@ function App() {
             {BANDAS_ROUTES.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />
             ))}
-            <Route path="/bandas/asgarth" element={<AsgarthPag />} />
-            <Route path="*" element={<Navigate to={PAGES[0].path} />} /> {/* Redirigir a la primera ruta */}
+            <Route path="*" element={<Navigate to={PAGES[0].path} />} />
           </Routes>
         </Suspense>
       </main>

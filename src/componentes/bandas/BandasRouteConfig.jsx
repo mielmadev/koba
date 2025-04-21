@@ -1,3 +1,4 @@
+import React from 'react';
 import AsgarthPag from '../paginas/bandas/AsgarthPag';
 // Importa aquí otros componentes de bandas según los vayas creando
 
