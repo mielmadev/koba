@@ -10,7 +10,7 @@
   z-index: 1;
 }
 
-.contenido-pag {
+.contenido-pag, .contenido {
   //@include mix.bordes;
   @include mix.margen0;
   height: calc(100vh - var.$alturaEncabezado);

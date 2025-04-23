@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutFondo from '@imagenes/fondos/aboutFondo.webp';
-import About from './about';
-import AboutVideo from './AboutVideo';
+import About from '@componentes/about/about';
+import AboutVideo from '@componentes/about/AboutVideo';
 
 export default function AboutPag() {
   return (

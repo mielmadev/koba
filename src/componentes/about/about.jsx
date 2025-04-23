@@ -1,11 +1,10 @@
 import React from 'react';
 import './about.scss';
-import '../../estilos/scroll.scss';
 import { aboutDatos } from './aboutDatos';
 
 export default function About() {
   return (
-    <div className="contenedor-scroll">
+    <div className="contenido">
       <div className='about-h1'>
         {aboutDatos.titulo}
       </div>

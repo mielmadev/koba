@@ -4,7 +4,7 @@ import { lazy } from 'react';
 const PAGES = [
   { key: 'INICIO', path: '/', label: 'Inicio', component: lazy(() => import('../paginas/InicioPag')) },
   { key: 'FAQ', path: '/faq', label: 'FAQ', component: lazy(() => import('../paginas/FaqPag')) },
-  { key: 'ABOUT', path: '/about', label: 'About', component: lazy(() => import('../about/AboutPag')) },
+  { key: 'ABOUT', path: '/about', label: 'About', component: lazy(() => import('../paginas/AboutPag')) },
   { key: 'MERCHANDISING', path: '/merchandising', label: 'Merchandising', component: lazy(() => import('../paginas/MerchanPag')) },
   { key: 'CONTACTO', path: '/contacto', label: 'Contacto', component: lazy(() => import('../paginas/ContactoPag')) },
   { key: 'BANDAS', path: '/bandas', label: 'Bandas', component: lazy(() => import('../paginas/BandasPag')) },

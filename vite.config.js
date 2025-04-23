@@ -16,7 +16,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@imagenes': '/src/assets/imagenes',
-      '@estilos': '/src/estilos'
+      '@estilos': '/src/estilos',
+      '@componentes': '/src/componentes'
     }
   }
 })
