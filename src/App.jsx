@@ -9,7 +9,7 @@ import BANDAS_ROUTES from './componentes/bandas/BandasRouteConfig';
 
 // Estilos
 import './App.scss';
-import './estilos/enlaces.scss';
+import './estilos/global.scss'; // Consolidado
 
 function App() {
   return (

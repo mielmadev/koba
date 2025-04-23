@@ -1,5 +1,4 @@
 import React from 'react';
-import './contactoPag.scss';
 import '../../estilos/fondos.scss';
 import ContactoFondo from '../../assets/imagenes/fondos/contactoFondo.webp';
 

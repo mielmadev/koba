@@ -1,5 +1,4 @@
 import React from 'react';
-import './merchanPag.scss';
 import '../../estilos/fondos.scss';
 import MerchanFondo from '../../assets/imagenes/fondos/merchanFondo.webp';
 

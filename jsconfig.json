@@ -1,0 +1,14 @@
+// filepath: c:\Users\paco\GitHub\koba\jsconfig.json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@imagenes/*": [
+        "src/assets/imagenes/*"
+      ],
+      "@estilos/*": [
+        "src/estilos/*"
+      ]
+    }
+  }
+}

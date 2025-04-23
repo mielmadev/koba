@@ -1,16 +1,16 @@
-@use '../../estilos/_variables.scss' as var;
-@use '../../estilos/_mixins.scss' as mix;
+@use './_variables.scss' as var;
+@use './_mixins.scss' as mix;
 
-.inicio-contenedor {
-  //@include mix.bordes;
+.contenedor-pag {
+  @include mix.bordes;
   @include mix.margen0;
-  display: grid;
-  position: fixed; 
-  top: var.$alturaEncabezado; 
+  display: flex; // Cambiado de grid a flex
+  position: fixed;
+  top: var.$alturaEncabezado;
   z-index: 1;
 }
 
-.inicio-contenido {
+.contenido-pag {
   //@include mix.bordes;
   @include mix.margen0;
   height: calc(100vh - var.$alturaEncabezado);

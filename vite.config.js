@@ -3,14 +3,20 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  publicDir: 'public', // Asegura que Vite use la carpeta public
+  publicDir: 'public',
   server: {
-    open: true, // Abre el navegador automáticamente al iniciar el servidor
-    port: 3000, // Puerto para desarrollo
+    open: true,
+    port: 3000,
   },
   build: {
-    outDir: 'dist', // Carpeta de salida
-    sourcemap: true, // Opcional: genera mapas de fuente
+    outDir: 'dist',
+    sourcemap: true,
   },
-  base: '/koba/', // Reemplaza <nombre-del-repositorio> con el nombre de tu repositorio
+  base: '/koba/',
+  resolve: {
+    alias: {
+      '@imagenes': '/src/assets/imagenes',
+      '@estilos': '/src/estilos'
+    }
+  }
 })
