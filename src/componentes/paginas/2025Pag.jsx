@@ -1,6 +1,6 @@
 import React from 'react';
 import Fecha from '../fecha/Fecha';
-import Bandas2025 from '../bandas/Bandas2025';
+import Contenido2025 from '../bandas/Contenido2025';
 import VolcanFondo from '../../assets/imagenes/fondos/volcanFondo.webp';
 
 export default function InicioPag() {
@@ -11,7 +11,7 @@ export default function InicioPag() {
       </div>
       <div className="contenido-pag">
         <Fecha />
-        <Bandas2025 />
+        <Contenido2025 />
       </div>
     </div>
   );
