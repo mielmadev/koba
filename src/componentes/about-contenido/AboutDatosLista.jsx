@@ -1,10 +1,10 @@
 import React from 'react';
-import './about.scss';
+import './aboutDatosLista.scss';
 import { aboutDatos } from './aboutDatos';
 
-export default function About() {
+export default function AboutDatosLista() {
   return (
-    <div className="contenido">
+    <div className="about-datos-lista">
       <div className='about-h1'>
         {aboutDatos.titulo}
       </div>

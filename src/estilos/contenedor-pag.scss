@@ -14,8 +14,12 @@
   //@include mix.bordes;
   @include mix.margen0;
   height: calc(100vh - var.$alturaEncabezado);
+  width: 100vw;
   position: relative;
+  z-index: 1;
   color: var.$blanco;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
+

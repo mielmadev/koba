@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bandasDatos2025 from './bandasDatos2025';
-import './bandasLista2025.scss';
+import bandasDatos2025 from '../año-2025-contenido/bandasDatosAño2025';
 
 const BandasLista2025 = () => {
   // Ordenar alfabéticamente por nombre
@@ -10,7 +9,7 @@ const BandasLista2025 = () => {
   );
 
   return (
-    <div className="bandas">
+    <div className="contenido">
       {bandasOrdenadas.map((banda, index) => (
         <div key={index} className="banda">
           <div className="banda-nombre">

@@ -1,9 +1,11 @@
+@use '@estilos/_variables.scss' as var;
+
 .fallback-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh; // Asegúrate de que el contenedor ocupe toda la pantalla
-  background-color: #f9f9f9; // Fondo claro para mejor visibilidad
+  background-color: var.$blanco; // Fondo claro para mejor visibilidad
 }
 
 .fallback-image {

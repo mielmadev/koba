@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import faqDatos from './faqDatos';
-import './faq.scss';
-import '../../estilos/scroll.scss'
+import './faqContenido.scss';
 
 const FAQ = () => {
   const [preguntaActiva, setPreguntaActiva] = useState(null);
@@ -11,7 +10,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="faq-contenedor">
+    <div className="contenido">
       {faqDatos.map((item, index) => (
         <div key={index} className="faq-item">
           <div

@@ -1,14 +1,14 @@
 import React from "react";
 import './encabezado.scss';
-import { logoKoba } from '../../assets/imagenes/images.js';
-import Navegador from "./Navegador.jsx";
+import LogoKoba from '@imagenes/logos/logoKoba.png';
 import Eslogan from "./Eslogan.jsx";
+import Navegador from "./Navegador.jsx";
 
 const Encabezado = () => {
   return (
     <header className="encabezado-contenedor">
       <div className="logo-encabezado">
-        <img src={logoKoba} alt="Logo Koba" className="logo-img" />
+        <img src={LogoKoba} alt="Logo Koba" className="logo-img" />
       </div>
       <div className="encabezado-derecha">
         <Navegador />

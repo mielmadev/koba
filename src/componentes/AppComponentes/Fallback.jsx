@@ -1,5 +1,5 @@
 import React from 'react';
-import Pua from '../../assets/imagenes/pua/KobaPua_300x300.png';
+import Pua from '@imagenes/pua/KobaPua_300x300.png';
 import './Fallback.scss';
 
 function Fallback() {

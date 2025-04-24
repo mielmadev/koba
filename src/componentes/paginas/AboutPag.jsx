@@ -1,7 +1,6 @@
 import React from 'react';
+import AboutContenido from '../about-contenido/AboutContenido';
 import AboutFondo from '@imagenes/fondos/aboutFondo.webp';
-import About from '@componentes/about/about';
-import AboutVideo from '@componentes/about/AboutVideo';
 
 export default function AboutPag() {
   return (
@@ -10,8 +9,7 @@ export default function AboutPag() {
         <img src={AboutFondo} alt="About Fondo" />
       </div>
       <div className="contenido-pag">
-        <About />
-        <AboutVideo />
+        <AboutContenido />
       </div>
 
     </div>

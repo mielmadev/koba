@@ -2,10 +2,10 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 // Componentes
-import Encabezado from './componentes/encabezado/encabezado';
+import Encabezado from './componentes/encabezado/Encabezado';
 import Fallback from './componentes/AppComponentes/Fallback';
 import PAGES from './componentes/AppComponentes/LazyPages';
-import BANDAS_ROUTES from './componentes/bandas/BandasRouteConfig';
+import BANDAS_ROUTES from './componentes/bandas-contenido/BandasRouteConfig';
 
 // Estilos
 import './App.scss';

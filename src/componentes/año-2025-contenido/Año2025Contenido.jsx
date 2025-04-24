@@ -1,10 +1,10 @@
 import React from 'react';
-import bandasDatos2025 from './bandasDatos2025';
-import './contenido2025.scss';
+import bandasDatos2025 from './bandasDatosAño2025';
+import './año2025Contenido.scss';
 
 const Contenido2025 = () => {
   return (
-    <div className="bandas">
+    <div className="contenido-2025">
       {bandasDatos2025.map((banda, index) => (
         <div key={index} className="banda">
           <img src={banda.imagen} alt={banda.nombre} className="banda-imagen" />

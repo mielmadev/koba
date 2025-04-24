@@ -1,7 +1,7 @@
 import React from 'react';
 import Fecha from '../fecha/Fecha';
-import Contenido2025 from '../bandas/Contenido2025';
-import VolcanFondo from '../../assets/imagenes/fondos/volcanFondo.webp';
+import Contenido2025 from '../año-2025-contenido/Año2025Contenido';
+import VolcanFondo from '@imagenes/fondos/volcanFondo.webp';
 
 export default function InicioPag() {
   return (
