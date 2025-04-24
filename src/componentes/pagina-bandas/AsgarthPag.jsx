@@ -10,17 +10,19 @@ const AsgarthPag = () => {
       <h1>{banda.nombre}</h1>
       {/* Aquí puedes agregar más datos del grupo, como descripción, integrantes, etc. */}
       <p>Información sobre el grupo Asgarth.</p>
-      <div className='reproductor' >
-      <iframe
-        style={{ borderRadius: '12px' }}
-        src={banda.spotify}
-        width="100%"
-        height="352"
-        frameBorder="0"
-        allowFullScreen
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        >spotify</iframe>
+      <div className='reproductor'>
+        <iframe
+          style={{ borderRadius: '12px' }}
+          src={banda.spotify}
+          width="100%"
+          height="352"
+          frameBorder="0"
+          allowFullScreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        >
+          Tu navegador no soporta iframes. Por favor, visita el enlace directamente en Spotify.
+        </iframe>
       </div>
     </div>
   );
