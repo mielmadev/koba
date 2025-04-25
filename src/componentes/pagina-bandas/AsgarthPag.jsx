@@ -7,9 +7,12 @@ const AsgarthPag = () => {
 
   return (
     <div className='contenido'>
-      <h1>{banda.nombre}</h1>
-      {/* Aquí puedes agregar más datos del grupo, como descripción, integrantes, etc. */}
-      <p>Información sobre el grupo Asgarth.</p>
+      <div className='banda-datos'>
+        <img src={banda.imagen} alt={banda.nombre} />
+        <h1>{banda.nombre}</h1>
+        {/* Aquí puedes agregar más datos del grupo, como descripción, integrantes, etc. */}
+        <p>Información sobre el grupo Asgarth.</p>
+      </div>
       <div className='reproductor'>
         <iframe
           style={{ borderRadius: '12px' }}

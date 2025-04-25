@@ -1,7 +1,6 @@
 import React from 'react';
-import '../../estilos/fondos.scss';
-import '../../estilos/scroll.scss';
-import BandasLista2025 from '../bandas-contenido/BandasLista2025';
+import '@estilos/global.scss';
+import BandasContenido from '../bandas-contenido/BandasContenido';
 import ContactoFondo from '../../assets/imagenes/fondos/bandasFondo.webp';
 
 export default function BandasPag() {
@@ -11,7 +10,7 @@ export default function BandasPag() {
         <img src={ContactoFondo} alt="Contacto Fondo" />
       </div>
       <div className="contenido-pag">
-        <BandasLista2025 />
+        <BandasContenido />
 
       </div>
 
