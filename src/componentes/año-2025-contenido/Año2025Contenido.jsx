@@ -8,7 +8,6 @@ const Contenido2025 = () => {
       {bandasDatos2025.map((banda, index) => (
         <div key={index} className="banda">
           <img src={banda.imagen} alt={banda.nombre} className="banda-imagen" />
-          <h3 className="banda-nombre">{banda.nombre}</h3>
         </div>
       ))}
     </div>
