@@ -4,14 +4,15 @@
 .contenedor-pag {
   //@include mix.bordes;
   @include mix.margen0;
-  display: flex; 
+  display: flex;
   position: fixed;
   top: var.$alturaEncabezado;
   z-index: 1;
   width: 100%;
 }
 
-.contenido-pag, .contenido {
+.contenido-pag,
+.contenido {
   //@include mix.bordes;
   @include mix.margen0;
   height: calc(100vh - var.$alturaEncabezado);
@@ -24,4 +25,3 @@
   overflow-y: auto;
   overflow-x: hidden;
 }
-

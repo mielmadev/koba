@@ -4,10 +4,21 @@ const bandasDatos2025 = [
   {
     nombre: 'Suicidal Angels',
     imagen: bandasLogo.suicidalsAngelsLogo,
-    spotify: 'https://open.spotify.com/embed/artist/5Qb7CFfWNE9rlymfrFp5A2?utm_source=generator',
+    spotify: 'https://open.spotify.com/embed/artist/2bDXRtcRp5hO0JuwV3s8ef?utm_source=generator&theme=0',
     estilo: 'Thrash Metal',
     origen: { pais: 'Grecia', provincia: 'Ática', ciudad: 'Atenas' },
     año: 2001,
+    resumen: 'Banda griega de Thrash Metal conocida por su energía y riffs agresivos. Su música está influenciada por el sonido clásico del thrash de los años 80, con letras que abordan temas sociales y políticos. Han participado en festivales internacionales como Wacken Open Air y han compartido escenario con bandas icónicas como Kreator y Exodus.',
+    integrantes: {
+      cantante: 'Nick Melissourgos',
+      guitarra: 'Nick Melissourgos',
+      bajo: 'Aggelos Lelikakis',
+      bateria: 'Orfeas Tzortzopoulos',
+    },
+    albums: [
+      { nombre: 'Eternal Domination', año: 2007, descripcion: 'Álbum debut con un sonido clásico de Thrash Metal.' },
+      { nombre: 'Division of Blood', año: 2016, descripcion: 'Un trabajo agresivo y lleno de energía.' },
+    ],
   },
   {
     nombre: 'Wolfheart Angels',
@@ -16,6 +27,17 @@ const bandasDatos2025 = [
     estilo: 'Melodic Death Metal',
     origen: { pais: 'Finlandia', provincia: 'Uusimaa', ciudad: 'Helsinki' },
     año: 2013,
+    resumen: 'Banda finlandesa que combina melodías épicas con la intensidad del Death Metal. Sus composiciones destacan por su atmósfera melancólica y arreglos orquestales que enriquecen su sonido. Han lanzado varios álbumes aclamados por la crítica y son reconocidos por su capacidad para fusionar elementos sinfónicos con riffs contundentes.',
+    integrantes: {
+      cantante: 'Tuomas Saukkonen',
+      guitarra: 'Lauri Silvonen',
+      bajo: 'Joonas Kauppinen',
+      bateria: 'Joonas Kauppinen',
+    },
+    albums: [
+      { nombre: 'Winterborn', año: 2013, descripcion: 'Un álbum que mezcla melodías épicas con Death Metal.' },
+      { nombre: 'Wolves of Karelia', año: 2020, descripcion: 'Inspirado en la historia y paisajes de Finlandia.' },
+    ],
   },
   {
     nombre: 'The Electric Alley',
@@ -24,6 +46,17 @@ const bandasDatos2025 = [
     estilo: 'Hard Rock',
     origen: { pais: 'España', provincia: 'Cádiz', ciudad: 'Cádiz' },
     año: 2012,
+    resumen: 'Grupo español de Hard Rock con influencias clásicas y modernas. Su estilo combina riffs potentes, voces melódicas y una energía que recuerda a las grandes bandas de los años 70 y 80. Han realizado giras por Europa y América, consolidándose como una de las bandas emergentes más prometedoras del género.',
+    integrantes: {
+      cantante: 'Jaime Moreno',
+      guitarra: 'Nando Perfumo',
+      bajo: 'Sergio Reyes',
+      bateria: 'Rafa G. Benítez',
+    },
+    albums: [
+      { nombre: 'Backward States of Society', año: 2013, descripcion: 'Primer álbum con un sonido fresco de Hard Rock.' },
+      { nombre: 'Turning Wheels', año: 2015, descripcion: 'Un disco que consolida su estilo clásico y moderno.' },
+    ],
   },
   {
     nombre: 'Eclipse',
@@ -32,6 +65,18 @@ const bandasDatos2025 = [
     estilo: 'Melodic Rock',
     origen: { pais: 'Suecia', provincia: 'Estocolmo', ciudad: 'Estocolmo' },
     año: 1999,
+    resumen: 'Banda sueca de Melodic Rock con un sonido potente y pegadizo. Sus canciones están llenas de coros memorables y una producción impecable que los ha llevado a ser referentes del género. Han encabezado festivales de rock melódico y cuentan con una base de fans leal en todo el mundo.',
+    integrantes: {
+      cantante: 'Erik Mårtensson',
+      guitarra: 'Magnus Henriksson',
+      bajo: 'Victor Crusner',
+      bateria: 'Philip Crusner',
+      teclado: 'Johan Berlin',
+    },
+    albums: [
+      { nombre: 'Bleed & Scream', año: 2012, descripcion: 'Un álbum lleno de himnos de rock melódico.' },
+      { nombre: 'Paradigm', año: 2019, descripcion: 'Un trabajo que muestra su evolución musical.' },
+    ],
   },
   {
     nombre: 'Before The Dawn',
@@ -40,6 +85,17 @@ const bandasDatos2025 = [
     estilo: 'Melodic Death Metal',
     origen: { pais: 'Finlandia', provincia: 'Uusimaa', ciudad: 'Espoo' },
     año: 1999,
+    resumen: 'Proyecto finlandés que mezcla melancolía y agresividad en su música. Con letras introspectivas y una combinación de voces limpias y guturales, han creado un estilo único dentro del género. Su discografía incluye álbumes conceptuales que exploran temas como la pérdida, la naturaleza y la redención.',
+    integrantes: {
+      cantante: 'Tuomas Saukkonen',
+      guitarra: 'Juho Räihä',
+      bajo: 'Pyry Hanski',
+      bateria: 'Joonas Kauppinen',
+    },
+    albums: [
+      { nombre: 'Deadlight', año: 2007, descripcion: 'Un álbum melancólico y poderoso.' },
+      { nombre: 'Rise of the Phoenix', año: 2012, descripcion: 'Un disco que marca un nuevo comienzo para la banda.' },
+    ],
   },
   {
     nombre: 'Asgarth',
@@ -48,6 +104,18 @@ const bandasDatos2025 = [
     estilo: 'Folk Metal',
     origen: { pais: 'España', provincia: 'Guipúzcoa', ciudad: 'San Sebastián' },
     año: 1995,
+    resumen: 'Banda española de Folk Metal con letras en euskera y sonidos tradicionales. Su música combina instrumentos folclóricos con guitarras eléctricas, creando un puente entre la tradición y el metal moderno. Han sido pioneros en la escena del Folk Metal en España y su legado sigue inspirando a nuevas generaciones.',
+    integrantes: {
+      cantante: 'Aitor Iñurrieta',
+      guitarra: 'Iñigo Llorente',
+      bajo: 'Mikel Arregi',
+      bateria: 'Julen Goikoetxea',
+      teclado: 'Ane Gutiérrez',
+    },
+    albums: [
+      { nombre: 'Gernika', año: 1997, descripcion: 'Un homenaje musical a la historia vasca.' },
+      { nombre: 'Barruan', año: 2000, descripcion: 'Un álbum que mezcla tradición y modernidad.' },
+    ],
   },
   {
     nombre: 'Moonshinerds',
@@ -56,6 +124,17 @@ const bandasDatos2025 = [
     estilo: 'Blues Rock',
     origen: { pais: 'Estados Unidos', provincia: 'Tennessee', ciudad: 'Nashville' },
     año: 2010,
+    resumen: 'Grupo estadounidense que fusiona el Blues con el Rock clásico. Sus presentaciones en vivo son conocidas por su autenticidad y pasión, evocando el espíritu del sur de los Estados Unidos. Han lanzado varios álbumes independientes que han sido elogiados por su honestidad y calidad musical.',
+    integrantes: {
+      cantante: 'John Doe',
+      guitarra: 'Jane Smith',
+      bajo: 'Jim Brown',
+      bateria: 'Jake White',
+    },
+    albums: [
+      { nombre: 'Southern Blues', año: 2011, descripcion: 'Un disco que captura la esencia del blues sureño.' },
+      { nombre: 'Whiskey & Guitars', año: 2015, descripcion: 'Un álbum lleno de energía y autenticidad.' },
+    ],
   },
   {
     nombre: 'Ehun Kilo',
@@ -64,6 +143,17 @@ const bandasDatos2025 = [
     estilo: 'Rock Vasco',
     origen: { pais: 'España', provincia: 'Vizcaya', ciudad: 'Bilbao' },
     año: 1985,
+    resumen: 'Pioneros del Rock Vasco con un estilo único y letras reivindicativas. Su música ha sido un símbolo de identidad cultural y resistencia, marcando una época en la escena musical española. Han influido en numerosos artistas y su legado sigue vivo en la actualidad.',
+    integrantes: {
+      cantante: 'Fito Cabrales',
+      guitarra: 'Juan Carlos Ramos',
+      bajo: 'Carlos Raya',
+      bateria: 'Andoni Montero',
+    },
+    albums: [
+      { nombre: 'Rocka', año: 1986, descripcion: 'Un álbum pionero en el Rock Vasco.' },
+      { nombre: 'Bizirik', año: 1990, descripcion: 'Un disco que celebra la resistencia cultural.' },
+    ],
   },
 ];
 

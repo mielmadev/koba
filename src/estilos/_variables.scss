@@ -1,30 +1,38 @@
-//Colores
+// Colores
 $amarillo: #eed755;
 $blanco: aliceblue; // #F0F8FF
 $negro: #292421;
 $marron: #c49c74;
 $gris: #9ca6b1;
-//Fuente tamaño
+
+// Fuente tamaño
 $fuenteBase: 62.5%;
 $fuentePreguntas: $fuenteBase * 3;
 $fuenteRespuestas: $fuenteBase * 2;
 $fuenteNavegador: $fuenteBase * 1.75;
 $fuenteNombresBandas: $fuenteBase * 2.5;
+
 // Fuente peso
 $pesoBase: 400;
 $pesoNavegador: 600;
-// h1, h2, h3 generada en mixins
-//Bordes
+
+// Bordes
 $borderRadius: 25px;
+
 // Encabezado
 $alturaEncabezado: 100px;
-// Sombras
-$sombraBlanca: 2px 1px 3px $blanco;
-$sombraNegra: 2px 1px 3px $negro; 
-$sombraGris: 2px 1px 3px $gris;
-$sombraMarron: 2px 1px 3px $marron;
+
 // Margen
-$margenTexto: 15%;
+$margenTexto: 10%;
 $margenParrafo: 0 $margenTexto;
 
+// Altura y Ancho
+$alturaContenido: calc(100vh - $alturaEncabezado);
+$anchoParrafo: calc(100vw - $margenTexto * 2);
+
+// Sombras
+$sombraBlanca: 2px 1px 3px $blanco;
+$sombraNegra: 2px 1px 3px $negro;
+$sombraGris: 2px 1px 3px $gris;
+$sombraMarron: 2px 1px 3px $marron;
 
