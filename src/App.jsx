@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Encabezado from './componentes/encabezado/Encabezado';
 import Fallback from './componentes/AppComponentes/Fallback';
 import PAGES from './componentes/AppComponentes/LazyPages';
-import BANDAS_ROUTES from './componentes/pagina-bandas/BandasRouteConfig';
+import BANDAS_ROUTES from './componentes/paginas-grupos/BandasRouteConfig';
 
 // Estilos
 import './App.scss';

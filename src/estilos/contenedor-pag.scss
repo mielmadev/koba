@@ -4,7 +4,7 @@
 .contenedor-pag {
   //@include mix.bordes;
   @include mix.margen0;
-  display: flex; // Cambiado de grid a flex
+  display: flex; 
   position: fixed;
   top: var.$alturaEncabezado;
   z-index: 1;

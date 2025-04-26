@@ -24,6 +24,7 @@ $sombraNegra: 2px 1px 3px $negro;
 $sombraGris: 2px 1px 3px $gris;
 $sombraMarron: 2px 1px 3px $marron;
 // Margen
-$margenParrafo: 0 15%;
+$margenTexto: 15%;
+$margenParrafo: 0 $margenTexto;
 
 
