@@ -1,14 +1,16 @@
 import { bandasLogo } from '@imagenes/imagenes.js';
+import resumenesBandas from './resumenesBandas2025.js';
+import { bandasSpotifyUrls } from './bandasUrls2025.js';
 
 const bandasDatos2025 = [
   { // Asgarth
     nombre: 'Asgarth',
     imagen: bandasLogo.asgarthLogo,
-    spotify: 'https://open.spotify.com/embed/artist/2bDXRtcRp5hO0JuwV3s8ef?utm_source=generator',
-    estilo: '',
-    origen: { pais: '', provincia: '', ciudad: '' },
-    año: null,
-    resumen: '',
+    spotify: bandasSpotifyUrls.asgarth,
+    estilo: 'Hard Rock, Power Metal',
+    origen: { pais: 'España', provincia: 'Gipuzkoa', ciudad: 'Donosti' },
+    año: 1998,
+    resumen: resumenesBandas.Asgarth,
     integrantes: {
       cantante: '',
       guitarra: '',
@@ -24,7 +26,7 @@ const bandasDatos2025 = [
   { // Before The Dawn
     nombre: 'Before The Dawn',
     imagen: bandasLogo.beforeTheDawnLogo,
-    spotify: '',
+    spotify: bandasSpotifyUrls.beforeTheDawn,
     estilo: '',
     origen: { pais: '', provincia: '', ciudad: '' },
     año: null,
@@ -44,7 +46,7 @@ const bandasDatos2025 = [
   { // Eclipse
     nombre: 'Eclipse',
     imagen: bandasLogo.eclipseLogo,
-    spotify: '',
+    spotify: bandasSpotifyUrls.eclipse,
     estilo: '',
     origen: { pais: '', provincia: '', ciudad: '' },
     año: null,
@@ -64,7 +66,7 @@ const bandasDatos2025 = [
   { // Ehun Kilo
     nombre: 'Ehun Kilo',
     imagen: bandasLogo.ehunKiloLogo,
-    spotify: '',
+    spotify: bandasSpotifyUrls.ehunKilo,
     estilo: '',
     origen: { pais: '', provincia: '', ciudad: '' },
     año: null,
@@ -84,7 +86,7 @@ const bandasDatos2025 = [
   { // Moonshinerds
     nombre: 'Moonshinerds',
     imagen: bandasLogo.moonshinerdsLogo,
-    spotify: '',
+    spotify: bandasSpotifyUrls.moonshinerds,
     estilo: '',
     origen: { pais: '', provincia: '', ciudad: '' },
     año: null,
@@ -104,7 +106,7 @@ const bandasDatos2025 = [
   { // Suicidal Angels
     nombre: 'Suicidal Angels',
     imagen: bandasLogo.suicidalsAngelsLogo,
-    spotify: '',
+    spotify: bandasSpotifyUrls.suicidalAngels,
     estilo: '',
     origen: { pais: '', provincia: '', ciudad: '' },
     año: null,
@@ -124,7 +126,7 @@ const bandasDatos2025 = [
   { // The Electric Alley
     nombre: 'The Electric Alley',
     imagen: bandasLogo.theElectricAlleyLogo,
-    spotify: '',
+    spotify: bandasSpotifyUrls.theElectricAlley,
     estilo: '',
     origen: { pais: '', provincia: '', ciudad: '' },
     año: null,
@@ -144,7 +146,7 @@ const bandasDatos2025 = [
   { // Wolfheart Angels
     nombre: 'Wolfheart Angels',
     imagen: bandasLogo.wolfhearthLogo,
-    spotify: '',
+    spotify: bandasSpotifyUrls.wolfheartAngels,
     estilo: '',
     origen: { pais: '', provincia: '', ciudad: '' },
     año: null,

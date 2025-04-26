@@ -65,6 +65,33 @@
         align-items: center;
       }
     }
+    .grupo-encabezado-derecha {
+      //@include mix.bordes;
+      @include mix.margen0;
+      @include mix.padgap;
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+      justify-content: space-between;
+
+      .grupo-imagen {
+        //@include mix.bordes;
+        @include mix.margen0;
+        @include mix.padgap;
+        width: 100%;
+        height: 100%;
+      }
+
+      .grupo-descripcion {
+        //@include mix.bordes;
+        @include mix.margen0;
+        @include mix.padgap;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
 
   }
 
