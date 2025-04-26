@@ -41,21 +41,6 @@ const AsgarthContenido = () => {
             </div>
           </div>
           <div className='grupo-encabezado-derecha'>
-            <iframe
-              className='grupo-reproductor'
-              style={{ borderRadius: '12px' }}
-              src={banda.spotify}
-              frameBorder="0"
-              allowFullScreen
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            >
-              Tu navegador no soporta iframes. Por favor, visita el enlace directamente en Spotify.
-            </iframe>
-          </div>
-        </div>
-
-        <div className='grupo-descripcion'>
           <div className='banda-resumen'>
             {banda.resumen}
           </div>
@@ -69,7 +54,23 @@ const AsgarthContenido = () => {
                 </li>
               ))}
             </ul>
+            </div>
           </div>
+        </div>
+
+        <div className='grupo-pie'>
+            <iframe
+              className='grupo-reproductor'
+              style={{ borderRadius: '12px', height: '100px' }} // Altura ajustada
+              src={banda.spotify}
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            >
+              Tu navegador no soporta iframes. Por favor, visita el enlace directamente en Spotify.
+            </iframe>
+
         </div>
       </div>
     </div>
