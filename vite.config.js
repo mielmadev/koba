@@ -18,7 +18,8 @@ export default defineConfig({
       '@imagenes': '/src/assets/imagenes',
       '@estilos': '/src/estilos',
       '@componentes': '/src/componentes',
-      '@logos': '/src/assets/logos'
+      '@logos': '/src/assets/logos',
+      '@datos': '/src/datos' 
     }
   }
 })
