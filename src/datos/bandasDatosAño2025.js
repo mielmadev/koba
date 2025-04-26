@@ -12,15 +12,19 @@ const bandasDatos2025 = [
     año: 1998,
     resumen: resumenesBandas.Asgarth,
     integrantes: {
-      cantante: '',
-      guitarra: '',
-      bajo: '',
-      bateria: '',
-      teclado: '', // Opcional según la banda
+      cantante: 'Asier Enbil',
+      guitarra: ['Ander Cañas', 'Unai Zabala'],
+      bajo: 'Mikel Yarza',
+      bateria: 'Etxahun Urkizu',
+      teclado: 'Asier Enbil', // Opcional según la banda
     },
     albums: [
-      { nombre: '', año: null, descripcion: '' },
-      { nombre: '', año: null, descripcion: '' },
+      { nombre: 'Asgarth Zuzenean', año: 2024 },
+      { nombre: 'Zeldatik', año: 2021 },
+      { nombre: 'Garrasia...', año: 2006 },
+      { nombre: 'III', año: 2002 },
+      { nombre: 'Etorkizunaren sustraia', año: 2000 },
+      { nombre: 'Jainkoen egoitza', año: 1999 },
     ],
   },
   { // Before The Dawn
@@ -39,8 +43,8 @@ const bandasDatos2025 = [
       teclado: '', // Opcional según la banda
     },
     albums: [
-      { nombre: '', año: null, descripcion: '' },
-      { nombre: '', año: null, descripcion: '' },
+      { nombre: '', año: null },
+      { nombre: '', año: null },
     ],
   },
   { // Eclipse
@@ -59,8 +63,8 @@ const bandasDatos2025 = [
       teclado: '', // Opcional según la banda
     },
     albums: [
-      { nombre: '', año: null, descripcion: '' },
-      { nombre: '', año: null, descripcion: '' },
+      { nombre: '', año: null },
+      { nombre: '', año: null },
     ],
   },
   { // Ehun Kilo
@@ -79,8 +83,8 @@ const bandasDatos2025 = [
       teclado: '', // Opcional según la banda
     },
     albums: [
-      { nombre: '', año: null, descripcion: '' },
-      { nombre: '', año: null, descripcion: '' },
+      { nombre: '', año: null },
+      { nombre: '', año: null },
     ],
   },
   { // Moonshinerds
@@ -99,8 +103,8 @@ const bandasDatos2025 = [
       teclado: '', // Opcional según la banda
     },
     albums: [
-      { nombre: '', año: null, descripcion: '' },
-      { nombre: '', año: null, descripcion: '' },
+      { nombre: '', año: null },
+      { nombre: '', año: null },
     ],
   },
   { // Suicidal Angels
@@ -119,8 +123,8 @@ const bandasDatos2025 = [
       teclado: '', // Opcional según la banda
     },
     albums: [
-      { nombre: '', año: null, descripcion: '' },
-      { nombre: '', año: null, descripcion: '' },
+      { nombre: '', año: null },
+      { nombre: '', año: null },
     ],
   },
   { // The Electric Alley
@@ -139,8 +143,8 @@ const bandasDatos2025 = [
       teclado: '', // Opcional según la banda
     },
     albums: [
-      { nombre: '', año: null, descripcion: '' },
-      { nombre: '', año: null, descripcion: '' },
+      { nombre: '', año: null },
+      { nombre: '', año: null },
     ],
   },
   { // Wolfheart Angels
@@ -159,8 +163,8 @@ const bandasDatos2025 = [
       teclado: '', // Opcional según la banda
     },
     albums: [
-      { nombre: '', año: null, descripcion: '' },
-      { nombre: '', año: null, descripcion: '' },
+      { nombre: '', año: null },
+      { nombre: '', año: null },
     ],
   },
 ];
