@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bandasDatos2025 from '../año-2025-contenido/bandasDatosAño2025';
+import bandasDatos2025 from '../../datos/bandasDatosAño2025';
 
 const BandasLista2025 = () => {
   // Ordenar alfabéticamente por nombre

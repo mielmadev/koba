@@ -1,5 +1,5 @@
 import React from 'react';
-import bandasDatos2025 from '../año-2025-contenido/bandasDatosAño2025';
+import bandasDatos2025 from '../../datos/bandasDatosAño2025';
 import './asgarthContenido.scss'
 
 const AsgarthContenido = () => {
@@ -38,7 +38,7 @@ const AsgarthContenido = () => {
           </div>
         </div>
         <div className='banda-descripcion'>
-          descripción: 
+          descripción:
         </div>
 
       </div>
