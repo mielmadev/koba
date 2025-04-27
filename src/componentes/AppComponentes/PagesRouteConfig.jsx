@@ -1,4 +1,4 @@
-import PAGES from './LazyPages';
+import PAGES from './PagesLazy';
 
 // Generar rutas dinámicamente
 const RUTAS = PAGES.reduce((acc, { key, path }) => {
