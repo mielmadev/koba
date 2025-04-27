@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 // Componentes
 import Encabezado from './componentes/encabezado/Encabezado';
 import Fallback from './componentes/AppComponentes/Fallback';
-import PAGES from './componentes/AppComponentes/PagesLazy';
+import PAGES_LAZY from './componentes/AppComponentes/PagesLazy';
 import BANDAS_ROUTES from './componentes/paginas-grupos/BandasRouteConfig';
 
 // Estilos
@@ -18,13 +18,13 @@ function App() {
       <main>
         <Suspense fallback={<Fallback />}>
           <Routes>
-            {PAGES.map(({ path, component: Component }) => (
+            {PAGES_LAZY.map(({ path, component: Component }) => (
               <Route key={path} path={path} element={<Component />} />
             ))}
             {BANDAS_ROUTES.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />
             ))}
-            <Route path="*" element={<Navigate to={PAGES[0].path} />} />
+            <Route path="*" element={<Navigate to={PAGES_LAZY[0].path} />} />
           </Routes>
         </Suspense>
       </main>

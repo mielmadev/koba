@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import PAGES from '../AppComponentes/PagesLazy';
+import PAGES_LAZY from '../AppComponentes/PagesLazy';
 import './navegador.scss';
 import '@estilos/enlaces.scss';
 
@@ -9,7 +9,7 @@ const Navegador = () => {
     <nav>
       <div className="navegador-contenedor">
         {/* Generar enlaces de navegación dinámicamente */}
-        {PAGES.map(({ path, label }) => (
+        {PAGES_LAZY.map(({ path, label }) => (
           <NavLink
             key={path}
             to={path}
