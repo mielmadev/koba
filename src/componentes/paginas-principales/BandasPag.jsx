@@ -1,6 +1,6 @@
 import React from 'react';
 import '@estilos/global.scss';
-import BandasContenido from '../bandas-contenido/BandasContenido';
+import BandasContenido from '../contenido-paginas/bandas-contenido/BandasContenido';
 import ContactoFondo from '../../assets/imagenes/fondos/bandasFondo.webp';
 
 export default function BandasPag() {
