@@ -13,7 +13,7 @@ const BandasLista2025 = () => {
       {bandasOrdenadas.map((banda, index) => (
         <div key={index} className="banda">
           <div className="banda-nombre">
-            <Link to={`/bandas/${banda.nombre.toLowerCase().replace(/\s+/g, '-')}`}>
+            <Link to={`/bandas/${banda.nombre.toLowerCase().replace(/\s+/g, '')}`}>
               {banda.nombre}
             </Link>
           </div>

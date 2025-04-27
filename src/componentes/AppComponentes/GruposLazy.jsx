@@ -1,3 +1,6 @@
+// El campo 'component' indica qué componente React se muestra para esa ruta.
+// Por ejemplo, para '/bandas/beforethedawn' se muestra el componente BeforeTheDawnPag.
+
 import { lazy } from 'react';
 
 const GRUPOS_LAZY = [
@@ -6,6 +9,12 @@ const GRUPOS_LAZY = [
     path: '/bandas/asgarth',
     label: 'Asgarth',
     component: lazy(() => import('../paginas-grupos/AsgarthPag'))
+  },
+  {
+    key: 'BEFORETHEDAWN',
+    path: '/bandas/beforethedawn',
+    label: 'Before The Dawn',
+    component: lazy(() => import('../paginas-grupos/BeforeTheDawnPag'))
   },
   // Agrega aquí más bandas siguiendo el mismo formato
 ];

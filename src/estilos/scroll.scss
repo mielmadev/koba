@@ -32,12 +32,12 @@
 
   &:active {
     background: var.$negro;
+    border: 1px solid var.$blanco;
     cursor: url('../assets/imagenes/cursor/KobaPua_32x32_Negro.png') 16 0, auto;
     transition: cursor 0.3s ease;
   }
 }
 
-/* Cambia el color de la barra al color negro activo */
 
 /* Quitar las flechas predeterminadas */
 ::-webkit-scrollbar-button {
