@@ -2,7 +2,7 @@ import React from 'react';
 import '../../estilos/fondos.scss';
 
 import FaqFondo from '../../assets/imagenes/fondos/faqFondo.webp';
-import FAQ from '../faq-contenido/faqContenido';
+import FAQ from '../faq-contenido/FaqContenido';
 
 export default function FaqPag() {
   return (

@@ -4,7 +4,8 @@ const GrupoAlbumsMapeo = ({ albums }) => (
   <>
     {albums.map((album, index) => (
       <div key={index}>
-        <strong>{album.nombre}</strong> ({album.año})
+        <span className="album-nombre">{album.nombre}</span>{' '}
+        (<span className="album-año">{album.año}</span>)
       </div>
     ))}
   </>
