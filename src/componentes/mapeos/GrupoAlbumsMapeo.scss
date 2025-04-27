@@ -1,1 +1,6 @@
+@use '@estilos/_variables.scss' as var;
 
+.grupo-nombre {
+  color:var.$marron;
+  font-weight: var.$superNegrita;
+}

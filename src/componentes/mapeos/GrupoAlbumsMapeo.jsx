@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './GrupoAlbumsMapeo.scss';
 const GrupoAlbumsMapeo = ({ albums }) => (
   <>
     {albums.map((album, index) => (
