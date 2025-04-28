@@ -4,12 +4,28 @@
 .contenido {
   //@include mix.bordes;
   @include mix.margen0;
+  @include mix.padgap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+  .bandas-click {
+    color: var.$gris;
+    font-size: var.$fuenteClickBandas;
+  }
+
+.bandas-lista {
+  //@include mix.bordes;
+  @include mix.margen0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-    align-items: center;
-    font-size: var.$fuenteNombresBandas;
-    line-height: 1.5;
-    
+  align-items: center;
+  font-size: var.$fuenteNombresBandas;
+  line-height: 1.5;
+
 
 }

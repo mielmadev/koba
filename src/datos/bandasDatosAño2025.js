@@ -1,6 +1,6 @@
 import { bandasLogo } from '@imagenes/imagenes.js';
 import resumenesBandas from './resumenesBandas2025.js';
-import { bandasSpotifyUrls } from './bandasUrls2025.js';
+import { bandasSpotifyUrls } from './bandasSpotify2025.js';
 
 const bandasDatos2025 = [
   { // Asgarth
@@ -83,19 +83,19 @@ const bandasDatos2025 = [
     nombre: 'Ehun Kilo',
     imagen: bandasLogo.ehunKiloLogo,
     spotify: bandasSpotifyUrls.ehunKilo,
-    estilo: '',
-    origen: { pais: '', provincia: '', ciudad: '' },
-    año: null,
+    estilo: 'Melodic Heavy Metal',
+    origen: { pais: 'España', provincia: 'Gipuzkoa', ciudad: 'Elgoibar' },
+    año: 1991,
     resumen: resumenesBandas.EhunKilo || '',
     integrantes: {
-      cantante: '',
-      guitarra: '',
-      bajo: '',
-      bateria: '',
+      cantante: 'Jon Zabala',
+      guitarra: ['Jon Iturrino', 'Patxi Zabaleta'],
+      bajo: 'Kristian Etxabe',
+      bateria: 'Iñigo “Fiñi” Barrenetxea',
     },
     albums: [
-      { nombre: '', año: null },
-      { nombre: '', año: null },
+      { nombre: 'Euli artean', año: 1994 },
+      { nombre: 'Esaiek... Esaien', año: 1995 }
     ],
   },
   { // Moonshinerds

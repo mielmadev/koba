@@ -5,7 +5,12 @@ import './bandasContenido.scss';
 const BandasContenido = () => {
   return (
     <div className='contenido'>
-      <BandasLista2025 />
+      <div className="bandas-click">
+        Haz clic en el nombre de cada banda para ver más información sobre ella.
+      </div>
+      <div className="bandas-lista">
+        <BandasLista2025 />
+      </div>
     </div>
   );
 };
