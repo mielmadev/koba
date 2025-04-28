@@ -16,6 +16,12 @@ const GRUPOS_LAZY = [
     label: 'Before The Dawn',
     component: lazy(() => import('../paginas-grupos/BeforeTheDawnPag'))
   },
+  {
+    key: 'ECLIPSE',
+    path: '/bandas/eclipse',
+    label: 'Eclipse',
+    component: lazy(() => import('../paginas-grupos/EclipsePag'))
+  },
   // Agrega aquí más bandas siguiendo el mismo formato
 ];
 

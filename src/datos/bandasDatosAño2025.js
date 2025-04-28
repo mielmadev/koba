@@ -7,7 +7,7 @@ const bandasDatos2025 = [
     nombre: 'Asgarth',
     imagen: bandasLogo.asgarthLogo,
     spotify: bandasSpotifyUrls.asgarth,
-    estilo: 'Hard Rock, Power Metal',
+    estilo: 'Melodic Power Metal',
     origen: { pais: 'España', provincia: 'Gipuzkoa', ciudad: 'Donosti' },
     año: 1998,
     resumen: resumenesBandas.Asgarth,
@@ -16,7 +16,6 @@ const bandasDatos2025 = [
       guitarra: ['Ander Cañas', 'Unai Zabala'],
       bajo: 'Mikel Yarza',
       bateria: 'Etxahun Urkizu',
-      teclado: 'Asier Enbil', // Opcional según la banda
     },
     albums: [
       { nombre: 'Asgarth Zuzenean', año: 2024 },
@@ -40,7 +39,6 @@ const bandasDatos2025 = [
       guitarra: ['Juho Räihä'],
       bajo: 'Pyry Hanski',
       bateria: 'Tuomas Saukonen',
-      teclado: 'Saku Moilanen', // Opcional según la banda
     },
     albums: [
       { nombre: 'Stormbringers', año: 2023 },
@@ -57,20 +55,28 @@ const bandasDatos2025 = [
     nombre: 'Eclipse',
     imagen: bandasLogo.eclipseLogo,
     spotify: bandasSpotifyUrls.eclipse,
-    estilo: '',
-    origen: { pais: '', provincia: '', ciudad: '' },
-    año: null,
-    resumen: '',
+    estilo: 'Melodic Hard Rock',
+    origen: { pais: 'Suecia', provincia: 'Estocolmo', ciudad: 'Estocolmo' },
+    año: 1999,
+    resumen: resumenesBandas.Eclipse,
     integrantes: {
-      cantante: '',
-      guitarra: '',
-      bajo: '',
-      bateria: '',
-      teclado: '', // Opcional según la banda
+      cantante: 'Erik Mårtensson',
+      guitarra: 'Magnus Henriksson',
+      bajo: 'Victor Crusner',
+      bateria: 'Philip Crusner',
     },
     albums: [
-      { nombre: '', año: null },
-      { nombre: '', año: null },
+      { nombre: 'The Truth and a Little More', año: 2001 },
+      { nombre: 'Second to None', año: 2004 },
+      { nombre: 'Are You Ready to Rock', año: 2008 },
+      { nombre: 'Bleed & Scream', año: 2012 },
+      { nombre: 'Armageddonize', año: 2015 },
+      { nombre: 'Monumentum', año: 2017 },
+      { nombre: 'Paradigm', año: 2019 },
+      { nombre: 'Viva La Victoria', año: 2021 },
+      { nombre: 'Wired', año: 2021 },
+      { nombre: 'Megalomanium', año: 2023 },
+      { nombre: 'Megalomanium II', año: 2024 },
     ],
   },
   { // Ehun Kilo
@@ -80,13 +86,12 @@ const bandasDatos2025 = [
     estilo: '',
     origen: { pais: '', provincia: '', ciudad: '' },
     año: null,
-    resumen: '',
+    resumen: resumenesBandas.EhunKilo || '',
     integrantes: {
       cantante: '',
       guitarra: '',
       bajo: '',
       bateria: '',
-      teclado: '', // Opcional según la banda
     },
     albums: [
       { nombre: '', año: null },
@@ -100,13 +105,12 @@ const bandasDatos2025 = [
     estilo: '',
     origen: { pais: '', provincia: '', ciudad: '' },
     año: null,
-    resumen: '',
+    resumen: resumenesBandas.Moonshinerds || '',
     integrantes: {
       cantante: '',
       guitarra: '',
       bajo: '',
       bateria: '',
-      teclado: '', // Opcional según la banda
     },
     albums: [
       { nombre: '', año: null },
@@ -120,13 +124,12 @@ const bandasDatos2025 = [
     estilo: '',
     origen: { pais: '', provincia: '', ciudad: '' },
     año: null,
-    resumen: '',
+    resumen: resumenesBandas.SuicidalAngels || '',
     integrantes: {
       cantante: '',
       guitarra: '',
       bajo: '',
       bateria: '',
-      teclado: '', // Opcional según la banda
     },
     albums: [
       { nombre: '', año: null },
@@ -140,13 +143,12 @@ const bandasDatos2025 = [
     estilo: '',
     origen: { pais: '', provincia: '', ciudad: '' },
     año: null,
-    resumen: '',
+    resumen: resumenesBandas.TheElectricAlley || '',
     integrantes: {
       cantante: '',
       guitarra: '',
       bajo: '',
       bateria: '',
-      teclado: '', // Opcional según la banda
     },
     albums: [
       { nombre: '', año: null },
@@ -160,13 +162,12 @@ const bandasDatos2025 = [
     estilo: '',
     origen: { pais: '', provincia: '', ciudad: '' },
     año: null,
-    resumen: '',
+    resumen: resumenesBandas.WolfheartAngels || '',
     integrantes: {
       cantante: '',
       guitarra: '',
       bajo: '',
       bateria: '',
-      teclado: '', // Opcional según la banda
     },
     albums: [
       { nombre: '', año: null },
