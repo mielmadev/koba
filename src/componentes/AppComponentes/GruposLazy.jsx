@@ -26,7 +26,7 @@ const GRUPOS_LAZY = [
     key: 'EHUNKILO',
     path: '/bandas/ehunkilo',
     label: 'Ehun Kilo',
-    component: lazy(() => import('../paginas-grupos/EhunkiloPag'))
+    component: lazy(() => import('../paginas-grupos/EhunKiloPag'))
   },
   // Agrega aquí más bandas siguiendo el mismo formato
 ];
