@@ -28,6 +28,12 @@ const GRUPOS_LAZY = [
     label: 'Ehun Kilo',
     component: lazy(() => import('../paginas-grupos/EhunKiloPag'))
   },
+  {
+    key: 'MOONSHINERDS',
+    path: '/bandas/moonshinerds',
+    label: 'Moonshinerds',
+    component: lazy(() => import('../paginas-grupos/MoonshinerdsPag'))
+  },
   // Agrega aquí más bandas siguiendo el mismo formato
 ];
 
