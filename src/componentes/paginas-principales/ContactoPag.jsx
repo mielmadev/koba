@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../estilos/fondos.scss';
+import ContactoContenido from '../contenido-paginas/contacto-contenido/ContactoContenido';
 import ContactoFondo from '../../assets/imagenes/fondos/contactoFondo.webp';
 
 export default function ContactoPag() {
@@ -9,7 +10,7 @@ export default function ContactoPag() {
         <img src={ContactoFondo} alt="Contacto Fondo" />
       </div>
       <div className="contenido-pag">
-        contacto
+        <ContactoContenido />
       </div>
 
     </div>
