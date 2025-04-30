@@ -167,9 +167,9 @@ const bandasDatos2025 = [
     imagen: bandasLogo.wolfhearthLogo,
     spotify: bandasSpotifyUrls.wolfheart,
     estilo: 'Melodic Death Metal',
-    origen: { pais: '', provincia: '', ciudad: '' },
+    origen: { pais: 'Finlandia', provincia: 'Päijät-Häme', ciudad: 'Lahti' },
     año: 2013,
-    resumen: resumenesBandas.WolfheartAngels || '',
+    resumen: resumenesBandas.Wolfheart || '',
     integrantes: {
       cantante: 'Tuomas Saukkonen',
       guitarra: ['Tuomas Saukkonen', 'Vagelis Karzis'],

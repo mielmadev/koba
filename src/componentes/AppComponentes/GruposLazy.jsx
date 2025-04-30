@@ -34,7 +34,24 @@ const GRUPOS_LAZY = [
     label: 'Moonshinerds',
     component: lazy(() => import('../paginas-grupos/MoonshinerdsPag'))
   },
-  // Agrega aquí más bandas siguiendo el mismo formato
+  {
+    key: 'THEELECTRICALLEY',
+    path: '/bandas/theelectricalley',
+    label: 'The Electric Alley',
+    component: lazy(() => import('../paginas-grupos/TheElectricAlleyPag'))
+  },
+  {
+    key: 'SUICIDALANGELS',
+    path: '/bandas/suicidalangels',
+    label: 'Suicidal Angels',
+    component: lazy(() => import('../paginas-grupos/SuicidalAngelsPag'))
+  },
+  {
+    key: 'WOLFHEART',
+    path: '/bandas/wolfheart',
+    label: 'Wolfheart',
+    component: lazy(() => import('../paginas-grupos/WolfheartPag'))
+  },
 ];
 
 export default GRUPOS_LAZY;
