@@ -20,10 +20,6 @@
   gap: 10px;
 }
 
-@mixin sombra {
-  filter: brightness(25%);
-}
-
 @mixin fuenteH1 {
   font-size: clamp(2rem, 4vw, var.$fuenteBase * 4); // Ajuste dinámico según el tamaño de la ventana
   font-weight: 900;

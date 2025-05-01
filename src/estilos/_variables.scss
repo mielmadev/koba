@@ -1,3 +1,7 @@
+// Base tipográfica
+$fuenteBase: 62.5%; // (1rem = 10px)
+$pesoBase: 400;
+
 // Colores
 $amarillo: #eed755;
 $blanco: aliceblue; // #F0F8FF
@@ -5,23 +9,20 @@ $gris: #9ca6b1;
 $marron: #c49c74;
 $negro: #292421;
 
-// Fuente tamaño
+// Fuentes específicas
 $fuenteAboutTexto: $fuenteBase * 1.75;
 $fuenteBandasClick: $fuenteBase * 2;
 $fuenteBandasNombre: $fuenteBase * 2.5;
-$fuenteBase: 62.5%;
-$fuenteContactoIconos: $fuenteBase * 2.5;
-$fuenteEslogan: 3vw;
+$fuenteContactoIconos: $fuenteBase * 3;
+$fuenteEslogan: clamp(1.8rem, 3vw, 3rem);
 $fuenteFaqPreguntas: $fuenteBase * 3;
 $fuenteFaqRespuestas: $fuenteBase * 2;
 $fuenteFecha: clamp(1rem, 2vw, 2rem);
 $fuenteGruposEstiloAño: $fuenteBase *2.5;
 $fuenteGruposResumen: $fuenteBase * 2;
-$fuenteNavegador: $fuenteBase * 1.75;
 $fuentesEnlaces: $fuenteBase * 1.5;
 
 // Fuente peso
-$pesoBase: 400;
 $pesoNavegador: 600;
 $superNegrita: 900;
 
@@ -32,8 +33,8 @@ $borderRadius: 25px;
 $alturaEncabezado: 100px;
 
 // Margen
-$margenParrafo: 0 $margenTexto;
 $margenTexto: 10%;
+$margenParrafo: 0 $margenTexto;
 
 // Altura y Ancho
 $alturaContenido: calc(100vh - $alturaEncabezado);
@@ -44,3 +45,6 @@ $sombraBlanca: 2px 1px 3px $blanco;
 $sombraGris: 2px 1px 3px $gris;
 $sombraMarron: 2px 1px 3px $marron;
 $sombraNegra: 2px 1px 3px $negro;
+
+// Filtros
+$filtroFondos: brightness(25%); // filter
