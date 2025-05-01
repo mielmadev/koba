@@ -1,17 +1,24 @@
 // Colores
 $amarillo: #eed755;
 $blanco: aliceblue; // #F0F8FF
-$negro: #292421;
-$marron: #c49c74;
 $gris: #9ca6b1;
+$marron: #c49c74;
+$negro: #292421;
 
 // Fuente tamaño
+$fuenteAboutTexto: $fuenteBase * 1.75;
+$fuenteBandasClick: $fuenteBase * 2;
+$fuenteBandasNombre: $fuenteBase * 2.5;
 $fuenteBase: 62.5%;
-$fuentePreguntas: $fuenteBase * 3;
-$fuenteRespuestas: $fuenteBase * 2;
+$fuenteContactoIconos: $fuenteBase * 2.5;
+$fuenteEslogan: 3vw;
+$fuenteFaqPreguntas: $fuenteBase * 3;
+$fuenteFaqRespuestas: $fuenteBase * 2;
+$fuenteFecha: clamp(1rem, 2vw, 2rem);
+$fuenteGruposEstiloAño: $fuenteBase *2.5;
+$fuenteGruposResumen: $fuenteBase * 2;
 $fuenteNavegador: $fuenteBase * 1.75;
-$fuenteNombresBandas: $fuenteBase * 2.5;
-$fuenteClickBandas: $fuenteBase * 2;
+$fuentesEnlaces: $fuenteBase * 1.5;
 
 // Fuente peso
 $pesoBase: 400;
@@ -25,8 +32,8 @@ $borderRadius: 25px;
 $alturaEncabezado: 100px;
 
 // Margen
-$margenTexto: 10%;
 $margenParrafo: 0 $margenTexto;
+$margenTexto: 10%;
 
 // Altura y Ancho
 $alturaContenido: calc(100vh - $alturaEncabezado);
@@ -34,7 +41,6 @@ $anchoParrafo: calc(100vw - $margenTexto * 2);
 
 // Sombras
 $sombraBlanca: 2px 1px 3px $blanco;
-$sombraNegra: 2px 1px 3px $negro;
 $sombraGris: 2px 1px 3px $gris;
 $sombraMarron: 2px 1px 3px $marron;
-
+$sombraNegra: 2px 1px 3px $negro;

@@ -8,7 +8,7 @@
   box-sizing: border-box;
   margin: var.$margenParrafo;
   color: var.$gris;
-  font-size: var.$fuentePreguntas;
+  font-size: var.$fuenteFaqPreguntas;
   display: flex;
   justify-content: space-between;
   text-align: justify;
@@ -34,7 +34,7 @@
   box-sizing: border-box;
   margin: var.$margenParrafo;
   color: var.$blanco;
-  font-size: var.$fuenteRespuestas;
+  font-size: var.$fuenteFaqRespuestas;
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;

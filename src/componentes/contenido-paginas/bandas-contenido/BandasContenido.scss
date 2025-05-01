@@ -12,10 +12,10 @@
   height: 100%;
 }
 
-  .bandas-click {
-    color: var.$gris;
-    font-size: var.$fuenteClickBandas;
-  }
+.bandas-click {
+  color: var.$gris;
+  font-size: var.$fuenteBandasClick;
+}
 
 .bandas-lista {
   //@include mix.bordes;
@@ -24,7 +24,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  font-size: var.$fuenteNombresBandas;
+  font-size: var.$fuenteBandasNombre;
   line-height: 1.5;
 
 

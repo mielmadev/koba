@@ -28,7 +28,7 @@
   .fecha {
     //@include mix.bordes;
     @include mix.margen0;
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: var.$fuenteFecha;
     animation: parpadeo 3s infinite;
   }
 }
