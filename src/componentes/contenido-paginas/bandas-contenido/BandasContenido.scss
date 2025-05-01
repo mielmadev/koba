@@ -2,7 +2,7 @@
 @use '@estilos/_mixins.scss' as mix;
 
 .contenido {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.margen0;
   @include mix.padgap;
   display: flex;
@@ -18,7 +18,7 @@
 }
 
 .bandas-lista {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.margen0;
   display: flex;
   flex-direction: column;

@@ -14,19 +14,19 @@
 }
 
 .fecha-contenedor {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.margen0;
-  height: 25px;
   color: var.$blanco;
-  text-shadow: var.$blanco 0px 0px 10px, var.$blanco 0px 0px 20px; 
+  text-shadow: var.$blanco 0px 0px 10px, var.$blanco 0px 0px 20px;
   text-align: center;
   white-space: normal;
-  line-height: 1;
+  line-height: 1.1;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
   .fecha {
-    //@include mix.bordes;
+    @include mix.bordes;
     @include mix.margen0;
     font-size: var.$fuenteFecha;
     animation: parpadeo 3s infinite;

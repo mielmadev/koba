@@ -3,7 +3,7 @@
 
 
 .faq-pregunta {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.padgap;
   box-sizing: border-box;
   margin: var.$margenParrafo;
@@ -15,7 +15,7 @@
 }
 
 .faq-pregunta-texto {
-  //@include mix.bordes;
+  @include mix.bordes;
   box-sizing: border-box;
   flex-grow: 1;
   text-align: left;
@@ -29,7 +29,7 @@
 }
 
 .faq-respuesta {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.padgap;
   box-sizing: border-box;
   margin: var.$margenParrafo;

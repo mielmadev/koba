@@ -3,23 +3,42 @@
 
 .contenido {
   @include mix.bordes;
-  justify-content: center;
-  align-items: center;
+  @include mix.padgap;
+  flex-direction: row;
   font-size: var.$fuenteContactoIconos;
 }
 
 .contacto {
+  @include mix.bordes;
+  @include mix.padgap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
 
   >* {
+    gap: 1rem;
+    width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
+}
+
+.redes-sociales {
+  @include mix.bordes;
+  @include mix.tamañoCompleto;
+
 }
 
 .icono-social {
   font-size: var.$fuenteContactoIconos;
   width: 1em;
   height: 1em;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   vertical-align: middle;
 }

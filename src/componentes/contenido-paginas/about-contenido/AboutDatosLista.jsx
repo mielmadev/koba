@@ -1,6 +1,6 @@
 import React from 'react';
 import './aboutDatosLista.scss';
-import { aboutDatos } from './aboutDatos';
+import { aboutDatos } from '../../../datos/aboutDatos';
 
 export default function AboutDatosLista() {
   return (

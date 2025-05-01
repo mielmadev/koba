@@ -2,7 +2,7 @@
 @use './_mixins.scss' as mix;
 
 .contenedor-pag {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.margen0;
   display: flex;
   position: fixed;
@@ -13,7 +13,7 @@
 
 .contenido-pag,
 .contenido {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.margen0;
   height: calc(100vh - var.$alturaEncabezado);
   width: 100%;

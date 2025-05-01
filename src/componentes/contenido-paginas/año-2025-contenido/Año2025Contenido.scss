@@ -2,7 +2,7 @@
 @use '@estilos/_mixins.scss' as mix;
 
 .contenido-2025 {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.margen0;
   @include mix.padgap;
   height: calc(100vh - var.$alturaEncabezado);
@@ -14,7 +14,7 @@
 }
 
 .banda-imagen {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.margen0;
   height: 150px;
   width: 200px;

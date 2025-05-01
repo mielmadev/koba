@@ -1,10 +1,15 @@
 @use './variables.scss' as var;
 @use './_mixins.scss' as mix;
 
+.navlink {
+  @include mix.bordes;
+
+}
+
 a {
   color: var.$blanco;
   text-decoration: none;
-  font-size: var.$fuentesEnlaces;
+  font-size: var.$fuenteEnlaces;
   font-weight: var.$pesoNavegador;
   text-shadow: var.$sombraBlanca;
   height: 100%;

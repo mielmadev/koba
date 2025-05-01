@@ -16,21 +16,21 @@
 }
 
 @mixin padgap {
-  padding: 10px;
-  gap: 10px;
+  padding: 1rem;
+  gap: 1.5rem;
 }
 
 @mixin fuenteH1 {
-  font-size: clamp(2rem, 4vw, var.$fuenteBase * 4); // Ajuste dinámico según el tamaño de la ventana
+  font-size: clamp(2rem, 4vw, var.$fuenteH1); // Ajuste dinámico según el tamaño de la ventana
   font-weight: 900;
 }
 
 @mixin fuenteH2 {
-  font-size: clamp(1.5rem, 3vw, var.$fuenteBase * 2.5); // Ajuste dinámico según el tamaño de la ventana
+  font-size: clamp(1.5rem, 3vw, var.$fuenteH2); // Ajuste dinámico según el tamaño de la ventana
   font-weight: 800;
 }
 
 @mixin fuenteH3 {
-  font-size: clamp(1.25rem, 2.5vw, var.$fuenteBase * 2); // Ajuste dinámico según el tamaño de la ventana
+  font-size: clamp(1.25rem, 2.5vw, var.$fuenteH3); // Ajuste dinámico según el tamaño de la ventana
   font-weight: 700;
 }

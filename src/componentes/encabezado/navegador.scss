@@ -2,17 +2,13 @@
 @use '@estilos/_mixins.scss' as mix;
 
 .navegador-contenedor {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.margen0;
   @include mix.padgap;
-  width: 100%;
-  height: calc(var.$alturaEncabezado - 50px);
+  @include mix.tamañoCompleto;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  align-items: center;
   z-index: 1000;
 }

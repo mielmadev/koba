@@ -2,10 +2,9 @@
 @use '@estilos/_variables.scss' as var;
 
 .eslogan-contenedor {
-  //@include mix.bordes;
+  @include mix.bordes;
   @include mix.margen0;
-  height: 50px;
-  width: 100%;
+  @include mix.tamañoCompleto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
