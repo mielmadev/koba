@@ -1,0 +1,46 @@
+/* 
+| h1 | 2em | bold | 0.67em | 0.67em | block |
+| h2 | 1.5em | bold | 0.83em | 0.83em | block |
+| h3 | 1.17em | bold | 1em | 1em | block | 
+| h4 | 1em | bold | 1.33em | 1.33em | block | 
+| h5 | 0.83em | bold | 1.67em | 1.67em | block | 
+| h6 | 0.67em | bold | 2.33em | 2.33em | block | */
+
+// =========================
+// DECLARACIÓN DE FUENTES BASE
+// =========================
+$fuenteBase: 1rem; // 16px
+$fuenteH1: 2rem;
+$fuenteH2: 1.5rem;
+$fuenteH3: 1.17rem;
+$fuenteParrafo: 1rem;
+$fuenteH4: 1rem;
+$fuenteH5: 0.83rem;
+$fuenteH6: 0.67rem;
+
+// =========================
+// CLAMP TIPOGRÁFICO PARA HEADINGS Y PÁRRAFO
+// =========================ç
+$clampBase: clamp(1rem, 1.2vw, 1.1rem);
+$clampH1: clamp(2.2rem, 6vw, 3.5rem);
+$clampH2: clamp(1.7rem, 4vw, 2.5rem);
+$clampH3: clamp(1.3rem, 3vw, 1.8rem);
+$clampParrafo: clamp(1rem, 1.5vw, 1.2rem);
+$clampH4: clamp(1.1rem, 2vw, 1.4rem);
+$clampH5: clamp(0.95rem, 1.5vw, 1.1rem);
+$clampH6: clamp(0.8rem, 1vw, 0.95rem);
+
+// =========================
+// FUENTES ESPECÍFICAS
+// =========================
+$fuenteAboutTexto: $fuenteH1;
+$fuenteBandasClick: $fuenteH2;
+$fuenteBandasNombre: $clampH1;
+$fuenteContactoIconos: $fuenteH1;
+$fuenteEnlaces: $fuenteParrafo;
+$fuenteEslogan: $clampH1;
+$fuenteFaqPreguntas: $fuenteH2;
+$fuenteFaqRespuestas: $fuenteParrafo;
+$fuenteFecha: $clampH2;
+$fuenteGruposEstiloAño: $fuenteH2;
+$fuenteGruposResumen: $fuenteH3;

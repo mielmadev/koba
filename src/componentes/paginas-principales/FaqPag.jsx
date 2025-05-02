@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../estilos/fondos.scss';
+import '@estilos/fondos.scss';
 
 import FaqFondo from '../../assets/imagenes/fondos/faqFondo.webp';
 import FAQ from '../contenido-paginas/faq-contenido/FaqContenido';

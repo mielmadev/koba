@@ -1,5 +1,6 @@
 @use '@estilos/_variables.scss' as var;
 @use '@estilos/_mixins.scss' as mix;
+@use '@estilos/_font-size.scss' as fs;
 
 .grupo-contenido {
   @include mix.bordes;
@@ -56,7 +57,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    font-size: var.$fuenteGruposEstiloAño;
+    font-size: fs.$fuenteGruposEstiloAño;
   }
 }
 
@@ -113,7 +114,7 @@
       text-align: justify;
       width: 100%;
       height: 100%;
-      font-size: var.$fuenteGruposResumen;
+      font-size: fs.$fuenteGruposResumen;
       line-height: 2;
     }
 

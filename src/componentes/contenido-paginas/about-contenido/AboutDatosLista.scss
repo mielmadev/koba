@@ -1,5 +1,6 @@
 @use '@estilos/_variables.scss' as var;
 @use '@estilos/_mixins.scss' as mix;
+@use '@estilos/_font-size.scss' as fs;
 
 .about-h1,
 .about-h2,
@@ -32,6 +33,6 @@
 }
 
 .about-texto {
-  font-size: var.$fuenteAboutTexto;
+  font-size: fs.$fuenteAboutTexto;
 
 }

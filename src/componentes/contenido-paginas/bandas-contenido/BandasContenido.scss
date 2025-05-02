@@ -1,5 +1,6 @@
 @use '@estilos/_variables.scss' as var;
 @use '@estilos/_mixins.scss' as mix;
+@use '@estilos/_font-size.scss' as fs;
 
 .contenido {
   @include mix.bordes;
@@ -14,7 +15,7 @@
 
 .bandas-click {
   color: var.$gris;
-  font-size: var.$fuenteBandasClick;
+  font-size: fs.$fuenteBandasClick;
 }
 
 .bandas-lista {
@@ -24,7 +25,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  font-size: var.$fuenteBandasNombre;
+  font-size: fs.$fuenteBandasNombre;
   line-height: 1.5;
 
 

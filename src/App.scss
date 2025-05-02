@@ -1,9 +1,9 @@
-@use './estilos/_variables' as var;
+@use '@estilos/_variables' as var;
 
 body {
-  min-width: 1024px; 
-  min-height: 768px; 
+  min-width: 1024px;
+  min-height: 768px;
   box-sizing: border-box;
   margin: 0;
-  overflow: hidden; 
-  }
+  overflow: hidden;
+}

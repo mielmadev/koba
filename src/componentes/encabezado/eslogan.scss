@@ -1,5 +1,6 @@
 @use '@estilos/_mixins.scss' as mix;
 @use '@estilos/_variables.scss' as var;
+@use '@estilos/_font-size.scss' as fs;
 
 .eslogan-contenedor {
   @include mix.bordes;
@@ -8,7 +9,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: var.$fuenteEslogan;
+  font-size: fs.$fuenteEslogan;
   text-align: left;
   color: var.$marron;
 

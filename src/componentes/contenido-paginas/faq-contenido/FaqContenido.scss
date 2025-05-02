@@ -1,5 +1,6 @@
 @use '@estilos/_variables.scss' as var;
 @use '@estilos/_mixins.scss' as mix;
+@use '@estilos/_font-size.scss' as fs;
 
 
 .faq-pregunta {
@@ -8,7 +9,7 @@
   box-sizing: border-box;
   margin: var.$margenParrafo;
   color: var.$gris;
-  font-size: var.$fuenteFaqPreguntas;
+  font-size: fs.$fuenteFaqPreguntas;
   display: flex;
   justify-content: space-between;
   text-align: justify;
@@ -34,7 +35,7 @@
   box-sizing: border-box;
   margin: var.$margenParrafo;
   color: var.$blanco;
-  font-size: var.$fuenteFaqRespuestas;
+  font-size: fs.$fuenteFaqRespuestas;
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;

@@ -1,4 +1,5 @@
 @use './_variables' as var;
+@use '@estilos/_font-size.scss' as fs;
 
 @mixin margen0 {
   box-sizing: border-box;
@@ -21,16 +22,16 @@
 }
 
 @mixin fuenteH1 {
-  font-size: clamp(2rem, 4vw, var.$fuenteH1); // Ajuste dinámico según el tamaño de la ventana
+  font-size: clamp(2rem, 4vw, fs.$fuenteH1); // Ajuste dinámico según el tamaño de la ventana
   font-weight: 900;
 }
 
 @mixin fuenteH2 {
-  font-size: clamp(1.5rem, 3vw, var.$fuenteH2); // Ajuste dinámico según el tamaño de la ventana
+  font-size: clamp(1.5rem, 3vw, fs.$fuenteH2); // Ajuste dinámico según el tamaño de la ventana
   font-weight: 800;
 }
 
 @mixin fuenteH3 {
-  font-size: clamp(1.25rem, 2.5vw, var.$fuenteH3); // Ajuste dinámico según el tamaño de la ventana
+  font-size: clamp(1.25rem, 2.5vw, fs.$fuenteH3); // Ajuste dinámico según el tamaño de la ventana
   font-weight: 700;
 }

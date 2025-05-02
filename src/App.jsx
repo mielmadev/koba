@@ -9,7 +9,7 @@ import GRUPOS_LAZY from './componentes/AppComponentes/GruposLazy';
 
 // Estilos
 import './App.scss';
-import './estilos/global.scss'; // Consolidado
+import '@estilos/global.scss'; // Consolidado
 
 function App() {
   return (
