@@ -1,0 +1,38 @@
+/* 
+| 100 | Thin | Fino | 
+| 200 | Extra Light | Ultra ligero | 
+| 300 | Light | Ligero | 
+| 400 | Normal / Regular | Normal / Regular | 
+| 500 | Medium | Medio | 
+| 600 | Semi Bold | Semi negrita | 
+| 700 | Bold | Negrita | 
+| 800 | Extra Bold | Extra negrita | 
+| 900 | Black | Super negrita / Negro |
+*/
+
+// =========================
+// DECLARACIÓN DE pesoS BASE
+// =========================
+$pesoBase: 400;
+$pesoH1: 700;
+$pesoH2: 600;
+$pesoH3: 500;
+$pesoParrafo: 400;
+$pesoH4: 400;
+$pesoH5: 0.83rem;
+$pesoH6: 0.67rem;
+
+// =========================
+// pesoS ESPECÍFICAS
+// =========================
+$pesoAboutTexto: $pesoH1;
+$pesoBandasClick: $pesoH2;
+$pesoBandasNombre: $pesoH1;
+$pesoContactoIconos: $pesoH1;
+$pesoEnlaces: $pesoParrafo;
+$pesoEslogan: $pesoH1;
+$pesoFaqPreguntas: $pesoH2;
+$pesoFaqRespuestas: $pesoParrafo;
+$pesoFecha: $pesoH2;
+$pesoGruposEstiloAño: $pesoH2;
+$pesoGruposResumen: $pesoH3;
