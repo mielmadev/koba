@@ -1,10 +1,6 @@
 @use './_variables' as var;
 @use '@estilos/_font-size.scss' as fs;
 
-@mixin margen0 {
-  box-sizing: border-box;
-  margin: 0;
-}
 
 @mixin bordes {
   border: var.$amarillo 1px solid;

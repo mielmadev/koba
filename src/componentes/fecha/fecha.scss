@@ -16,7 +16,7 @@
 
 .fecha-contenedor {
   @include mix.bordes;
-  @include mix.margen0;
+  
   color: var.$blanco;
   text-shadow: var.$blanco 0px 0px 10px, var.$blanco 0px 0px 20px;
   text-align: center;
@@ -28,7 +28,7 @@
 
   .fecha {
     @include mix.bordes;
-    @include mix.margen0;
+    
     font-size: fs.$fuenteFecha;
     animation: parpadeo 3s infinite;
   }

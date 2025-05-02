@@ -7,7 +7,7 @@
 .merchan-fondo,
 .contacto-fondo,
 .bandas-fondo {
-  @include mix.margen0;
+
   @include mix.tamañoCompleto;
   height: 100%;
   width: 100%;

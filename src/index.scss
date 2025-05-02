@@ -13,6 +13,13 @@
   cursor: url('../src/assets/imagenes/cursor/KobaPua_32x32_Blanco.png') 16 0, auto;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;

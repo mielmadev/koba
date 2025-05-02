@@ -3,7 +3,7 @@
 
 .contenido-2025 {
   @include mix.bordes;
-  @include mix.margen0;
+
   @include mix.padgap;
   height: calc(100vh - var.$alturaEncabezado);
   display: flex;
@@ -15,13 +15,11 @@
 
 .banda-imagen {
   @include mix.bordes;
-  @include mix.margen0;
+
   height: 150px;
   width: 200px;
   object-fit: contain;
 
 }
 
-.banda-imagen img {
-  @include mix.margen0;
-}
+.banda-imagen img {}
