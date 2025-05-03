@@ -1,0 +1,31 @@
+@use '@estilos/variables/_variables' as var;
+
+/* Estilo general del scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Ancho del scroll vertical */
+  height: 10px;
+  /* Altura del scroll horizontal */
+}
+
+/* Fondo del scrollbar */
+::-webkit-scrollbar-track {
+  background: var.$negro;
+  /* Color del fondo del track */
+  border-radius: 10px;
+  /* Bordes redondeados */
+}
+
+/* Barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background: var.$negro;
+  /* Color de la barra de desplazamiento */
+  border-radius: 10px;
+  /* Bordes redondeados */
+}
+
+/* Barra de desplazamiento al pasar el mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: var.$gris;
+  /* Color de la barra de desplazamiento al pasar el mouse */
+}
