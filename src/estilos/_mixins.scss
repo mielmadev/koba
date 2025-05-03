@@ -1,6 +1,6 @@
 @use './_variables' as var;
-@use '@estilos/_font-size.scss' as fs;
-
+@use '@estilos/_media-queries.scss' as media;
+@forward '@estilos/_media-queries.scss';
 
 @mixin bordes {
   border: var.$amarillo 1px solid;
@@ -16,4 +16,3 @@
   padding: 1rem;
   gap: 1.5rem;
 }
-

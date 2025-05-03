@@ -1,4 +1,7 @@
-
+@use '@estilos/_font-size.scss' as *;
+@use '@estilos/_font-weight.scss' as *;
+@forward '@estilos/_font-size.scss';
+@forward '@estilos/_font-weight.scss';
 
 // Base tipográfica
 
@@ -8,7 +11,6 @@ $blanco: aliceblue; // #F0F8FF
 $gris: #9ca6b1;
 $marron: #c49c74;
 $negro: #292421;
-
 
 // Fuente peso
 $pesoNavegador: 600;
@@ -36,4 +38,3 @@ $sombraNegra: 2px 1px 3px $negro;
 
 // Filtros
 $filtroFondos: brightness(25%); // filter
-

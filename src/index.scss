@@ -1,10 +1,9 @@
 @use '@estilos/_variables.scss' as var;
-@use '@estilos/_font-size.scss' as fs;
 
 :root {
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.7;
-  font-size: fs.$fuenteBase;
+  font-size: var.$fuenteBase;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
