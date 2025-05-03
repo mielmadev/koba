@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PAGES_LAZY from '../AppComponentes/PagesLazy';
 import './navegador.scss';
-import '@estilos/enlaces.scss';
 
 const Navegador = () => {
   return (
