@@ -3,7 +3,6 @@
 
 .encabezado-contenedor {
   @include mix.bordes;
-
   height: var.$alturaEncabezado;
   width: 100vw;
   display: flex;
@@ -12,55 +11,58 @@
   position: sticky;
   top: 0;
   z-index: 10;
-}
 
-.logo-encabezado {
-  @include mix.bordes;
-  @include mix.padgap;
-
-  height: var.$alturaEncabezado;
-  display: flex;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.logo-encabezado img {
-  @include mix.bordes;
-
-  @include mix.tamañoCompleto;
-}
-
-.encabezado-derecha {
-  @include mix.bordes;
-
-  @include mix.tamañoCompleto;
-  height: var.$alturaEncabezado;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  >* {
+  .logo-encabezado {
     @include mix.bordes;
-
-  }
-
-  .encabezado-navegador {
-    @include mix.bordes;
-
-    @include mix.tamañoCompleto;
+    @include mix.padgap;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    height: var.$alturaEncabezado;
+    width: auto;
+    justify-content: center;
+    flex-shrink: 0;
+
+    .logo-encabezado img {
+      @include mix.bordes;
+      @include mix.tamañoCompleto;
+    }
   }
 
-  .encabezado-eslogan {
+  .encabezado-derecha {
     @include mix.bordes;
-
     @include mix.tamañoCompleto;
+    flex: 1;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+
+    >* {
+      @include mix.bordes;
+
+    }
+
+    .encabezado-navegador {
+      @include mix.bordes;
+      @include mix.tamañoCompleto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1;
+    }
+
+    .encabezado-eslogan {
+      @include mix.bordes;
+      @include mix.tamañoCompleto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex:1;
+    }
   }
+
+
+
+
+
+
 }

@@ -3,9 +3,7 @@
 @use '@estilos/_font-size.scss' as fs;
 
 .eslogan-contenedor {
-  @include mix.bordes;
-  
-  @include mix.tamañoCompleto;
+  @include mix.bordes; 
   display: flex;
   justify-content: flex-start;
   align-items: center;

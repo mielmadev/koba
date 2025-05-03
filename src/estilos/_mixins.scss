@@ -17,17 +17,3 @@
   gap: 1.5rem;
 }
 
-@mixin fuenteH1 {
-  font-size: clamp(2rem, 4vw, fs.$fuenteH1); // Ajuste dinámico según el tamaño de la ventana
-  font-weight: 900;
-}
-
-@mixin fuenteH2 {
-  font-size: clamp(1.5rem, 3vw, fs.$fuenteH2); // Ajuste dinámico según el tamaño de la ventana
-  font-weight: 800;
-}
-
-@mixin fuenteH3 {
-  font-size: clamp(1.25rem, 2.5vw, fs.$fuenteH3); // Ajuste dinámico según el tamaño de la ventana
-  font-weight: 700;
-}

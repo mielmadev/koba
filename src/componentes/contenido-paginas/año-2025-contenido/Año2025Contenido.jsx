@@ -6,8 +6,8 @@ const Contenido2025 = () => {
   return (
     <div className="contenido-2025">
       {bandasDatos2025.map((banda, index) => (
-        <div key={index} className="banda">
-          <img src={banda.imagen} alt={banda.nombre} className="banda-imagen" />
+        <div key={index} className="banda-imagen">
+          <img src={banda.imagen} alt={banda.nombre} />
         </div>
       ))}
     </div>

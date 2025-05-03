@@ -3,23 +3,59 @@
 
 .contenido-2025 {
   @include mix.bordes;
-
   @include mix.padgap;
   height: calc(100vh - var.$alturaEncabezado);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  gap: 1rem;
+  justify-content: center;
   overflow-y: auto;
 }
 
 .banda-imagen {
   @include mix.bordes;
-
-  height: 150px;
-  width: 200px;
+  flex: 0 1 100%; // 1 por línea en móvil
+  min-width: 140px;
+  max-width: 100%;
+  height: 140px;
   object-fit: contain;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  img {
+    @include mix.tamañoCompleto;
+    object-fit: contain;
+    display: block;
+  }
 }
 
-.banda-imagen img {}
+@media (min-width: 600px) {
+  .banda-imagen {
+    flex: 0 1 48%; // 2 en línea en tablet
+    min-width: 180px;
+    max-width: 48%;
+    height: 160px;
+  }
+}
+
+@media (min-width: 900px) {
+  .banda-imagen {
+    flex: 0 1 32%; // 3 en línea en portátil
+    min-width: 200px;
+    max-width: 32%;
+    height: 180px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .banda-imagen {
+    flex: 0 1 22%; // 4 en línea en PC
+    min-width: 220px;
+    max-width: 22%;
+    height: 200px;
+  }
+}
