@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import PAGES_LAZY from '../AppComponentes/PagesLazy';
+import PAGES_LAZY from '@AppComponentes/PagesLazy';
 import './navegador.scss';
 
 const Navegador = () => {

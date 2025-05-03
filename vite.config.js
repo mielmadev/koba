@@ -15,11 +15,20 @@ export default defineConfig({
   base: '/koba/',
   resolve: {
     alias: {
-      '@imagenes': '/src/assets/imagenes',
-      '@estilos': '/src/estilos',
       '@componentes': '/src/componentes',
+      '@datos': '/src/datos',
+      '@estilos': '/src/estilos',
+      '@imagenes': '/src/assets/imagenes',
       '@logos': '/src/assets/logos',
-      '@datos': '/src/datos' 
+      '@mapeos': '/src/componentes/mapeos',
+      '@paginas-grupos': '/src/componentes/paginas-grupos',
+      '@paginas-principales': '/src/componentes/paginas-principales',
+      '@iconos': '/src/componentes/iconos',
+      '@contenido-grupos': '/src/componentes/contenido-grupos',
+      '@contenido-paginas': '/src/componentes/contenido-paginas',
+      '@cursor': '/src/assets/imagenes/cursor',
+      '@fecha': '/src/componentes/fecha',
+      '@AppComponentes': '/src/componentes/AppComponentes',
     }
   }
 })

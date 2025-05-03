@@ -1,8 +1,8 @@
 import React from 'react';
 import bandasDatos2025 from '@datos/bandasDatosAño2025';
 import './gruposContenido.scss'
-import GrupoIntegrantesMapeo from '../mapeos/GrupoIntegrantesMapeo';
-import GrupoAlbumsMapeo from '../mapeos/GrupoAlbumsMapeo';
+import GrupoIntegrantesMapeo from '@mapeos/GrupoIntegrantesMapeo';
+import GrupoAlbumsMapeo from '@mapeos/GrupoAlbumsMapeo';
 
 const TheElectricAlleyContenido = () => {
   const banda = bandasDatos2025.find(b => b.nombre === 'The Electric Alley');

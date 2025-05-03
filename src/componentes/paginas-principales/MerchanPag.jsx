@@ -1,5 +1,5 @@
 import React from 'react';
-import MerchanFondo from '../../assets/imagenes/fondos/merchanFondo.webp';
+import MerchanFondo from '@imagenes/fondos/merchanFondo.webp';
 
 export default function MerchanPag() {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import MoonshinerdsContenido from '../contenido-grupos/MoonshinerdsContenido';
+import MoonshinerdsContenido from '@contenido-grupos/MoonshinerdsContenido';
 import MoonshinerdsFondo from '@imagenes/fondos/moonshinerdsFondo.webp';
 
 export default function MoonshinerdsPag() {

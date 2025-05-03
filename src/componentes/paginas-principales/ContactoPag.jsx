@@ -1,6 +1,6 @@
 import React from 'react';
-import ContactoContenido from '../contenido-paginas/contacto-contenido/ContactoContenido';
-import ContactoFondo from '../../assets/imagenes/fondos/contactoFondo.webp';
+import ContactoContenido from '@contenido-paginas/contacto-contenido/ContactoContenido';
+import ContactoFondo from '@imagenes/fondos/contactoFondo.webp';
 
 export default function ContactoPag() {
   return (

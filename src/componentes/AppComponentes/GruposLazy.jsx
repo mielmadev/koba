@@ -8,49 +8,49 @@ const GRUPOS_LAZY = [
     key: 'ASGARTH',
     path: '/bandas/asgarth',
     label: 'Asgarth',
-    component: lazy(() => import('../paginas-grupos/AsgarthPag'))
+    component: lazy(() => import('@paginas-grupos/AsgarthPag'))
   },
   {
     key: 'BEFORETHEDAWN',
     path: '/bandas/beforethedawn',
     label: 'Before The Dawn',
-    component: lazy(() => import('../paginas-grupos/BeforeTheDawnPag'))
+    component: lazy(() => import('@paginas-grupos/BeforeTheDawnPag'))
   },
   {
     key: 'ECLIPSE',
     path: '/bandas/eclipse',
     label: 'Eclipse',
-    component: lazy(() => import('../paginas-grupos/EclipsePag'))
+    component: lazy(() => import('@paginas-grupos/EclipsePag'))
   },
   {
     key: 'EHUNKILO',
     path: '/bandas/ehunkilo',
     label: 'Ehun Kilo',
-    component: lazy(() => import('../paginas-grupos/EhunKiloPag'))
+    component: lazy(() => import('@paginas-grupos/EhunKiloPag'))
   },
   {
     key: 'MOONSHINERDS',
     path: '/bandas/moonshinerds',
     label: 'Moonshinerds',
-    component: lazy(() => import('../paginas-grupos/MoonshinerdsPag'))
+    component: lazy(() => import('@paginas-grupos/MoonshinerdsPag'))
   },
   {
     key: 'THEELECTRICALLEY',
     path: '/bandas/theelectricalley',
     label: 'The Electric Alley',
-    component: lazy(() => import('../paginas-grupos/TheElectricAlleyPag'))
+    component: lazy(() => import('@paginas-grupos/TheElectricAlleyPag'))
   },
   {
     key: 'SUICIDALANGELS',
     path: '/bandas/suicidalangels',
     label: 'Suicidal Angels',
-    component: lazy(() => import('../paginas-grupos/SuicidalAngelsPag'))
+    component: lazy(() => import('@paginas-grupos/SuicidalAngelsPag'))
   },
   {
     key: 'WOLFHEART',
     path: '/bandas/wolfheart',
     label: 'Wolfheart',
-    component: lazy(() => import('../paginas-grupos/WolfheartPag'))
+    component: lazy(() => import('@paginas-grupos/WolfheartPag'))
   },
 ];
 

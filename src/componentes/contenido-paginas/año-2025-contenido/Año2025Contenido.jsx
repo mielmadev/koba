@@ -1,15 +1,12 @@
 import React from 'react';
 import bandasDatos2025 from '@datos/bandasDatosAño2025';
+import BandasImagenesMapeo from '@mapeos/BandasImagenesMapeo';
 import './año2025Contenido.scss';
 
 const Contenido2025 = () => {
   return (
     <div className="contenido-2025">
-      {bandasDatos2025.map((banda, index) => (
-        <div key={index} className="banda-imagen">
-          <img src={banda.imagen} alt={banda.nombre} />
-        </div>
-      ))}
+      <BandasImagenesMapeo bandas={bandasDatos2025} />
     </div>
   );
 };

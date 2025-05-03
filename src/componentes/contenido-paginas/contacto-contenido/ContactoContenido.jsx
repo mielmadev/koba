@@ -1,9 +1,9 @@
 import React from 'react';
 import { FaEnvelope } from "react-icons/fa";
 import './ContactoContenido.scss';
-import FacebookIcono from "../../iconos/FacebookIcono";
-import InstagramIcono from "../../iconos/InstagramIcono";
-import WhatsappIcono from "../../iconos/WhatsappIcono";
+import FacebookIcono from "@iconos/FacebookIcono";
+import InstagramIcono from "@iconos/InstagramIcono";
+import WhatsappIcono from "@iconos/WhatsappIcono";
 
 
 
@@ -12,7 +12,7 @@ export default function ContactoContenido() {
     <div className='contenido'>
       <div className='contacto'>
         <div className='whatsapp'>
-            <WhatsappIcono className="icono-contacto" /> +34 12345678
+          <WhatsappIcono className="icono-contacto" /> +34 12345678
         </div>
         <div className='email'>
           <FaEnvelope className="icono-contacto" /> info@koba-live.com
