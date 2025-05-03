@@ -1,6 +1,6 @@
-@use './_variables' as var;
-@use '@estilos/_media-queries.scss' as media;
-@forward '@estilos/_media-queries.scss';
+@use '@estilos/variables/_variables' as var;
+@use '@estilos/mixins/_media-queries.scss' as media;
+@forward '@estilos/mixins/_media-queries.scss';
 
 @mixin bordes {
   border: var.$amarillo 1px solid;

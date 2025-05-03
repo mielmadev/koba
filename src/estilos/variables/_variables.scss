@@ -1,7 +1,7 @@
-@use '@estilos/_font-size.scss' as *;
-@use '@estilos/_font-weight.scss' as *;
-@forward '@estilos/_font-size.scss';
-@forward '@estilos/_font-weight.scss';
+@use '@estilos/variables/_font-size.scss' as *;
+@use '@estilos/variables/_font-weight.scss' as *;
+@forward '@estilos/variables/_font-size.scss';
+@forward '@estilos/variables/_font-weight.scss';
 
 // Base tipográfica
 

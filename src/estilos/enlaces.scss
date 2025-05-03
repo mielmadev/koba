@@ -1,5 +1,6 @@
-@use './variables.scss' as var;
-@use './_mixins.scss' as mix;
+@use '@estilos/variables/_variables' as var;
+@use '@estilos/mixins/_mixins.scss' as mix;
+
 
 
 .navlink {
