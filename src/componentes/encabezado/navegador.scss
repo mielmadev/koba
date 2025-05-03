@@ -3,7 +3,6 @@
 
 .navegador-contenedor {
   @include mix.bordes;
-
   @include mix.padgap;
   @include mix.tamañoCompleto;
   display: flex;
