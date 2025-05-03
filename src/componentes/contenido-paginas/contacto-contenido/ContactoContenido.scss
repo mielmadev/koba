@@ -1,12 +1,12 @@
 @use '@estilos/variables' as var;
 @use '@estilos/mixins' as mix;
-@use '@estilos/_font-size.scss' as fs;
+
 
 .contenido {
   @include mix.bordes;
   @include mix.padgap;
   flex-direction: row;
-  font-size: fs.$fuenteContactoIconos;
+  font-size: var.$fuenteContactoIconos;
 }
 
 .contacto {
@@ -35,7 +35,7 @@
 }
 
 .icono-social {
-  font-size: fs.$fuenteContactoIconos;
+  font-size: var.$fuenteContactoIconos;
   width: 1em;
   height: 1em;
   display: flex;

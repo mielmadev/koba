@@ -1,7 +1,5 @@
 @use '@estilos/_variables.scss' as var;
 @use '@estilos/_mixins.scss' as mix;
-@use '@estilos/_font-size.scss' as fs;
-@use '@estilos/_font-weight.scss' as fw;
 
 .about-titulo,
 .about-subtitulo,
@@ -14,8 +12,8 @@
 }
 
 .about-titulo {
-  font-size: fs.$fuenteAboutTitulo;
-  font-weight: fw.$pesoAboutTitulo;
+  font-size: var.$fuenteAboutTitulo;
+  font-weight: var.$pesoAboutTitulo;
   color: var.$negro;
   text-shadow: 3px 3px 5px var.$blanco, -3px -3px 5px var.$blanco ;
   text-align: center;
@@ -23,18 +21,18 @@
 }
 
 .about-subtitulo {
-  font-size: fs.$fuenteAboutSubtitulo;
-  font-weight: fw.$pesoAboutSubtitulo;
+  font-size: var.$fuenteAboutSubtitulo;
+  font-weight: var.$pesoAboutSubtitulo;
   color: var.$marron;
   white-space: nowrap;
 }
 
 .about-seccion {
-  font-size: fs.$fuenteAboutSeccion;
-  font-weight: fw.$pesoAboutSeccion;
+  font-size: var.$fuenteAboutSeccion;
+  font-weight: var.$pesoAboutSeccion;
   color: var.$marron;
 }
 
 .about-texto {
-  font-size: fs.$fuenteAboutTexto;
+  font-size: var.$fuenteAboutTexto;
 }

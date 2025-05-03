@@ -1,6 +1,6 @@
 @use '@estilos/_variables.scss' as var;
 @use '@estilos/_mixins.scss' as mix;
-@use '@estilos/_font-size.scss' as fs;
+
 
 @keyframes parpadeo {
 
@@ -16,7 +16,7 @@
 
 .fecha-contenedor {
   @include mix.bordes;
-  
+
   color: var.$blanco;
   text-shadow: var.$blanco 0px 0px 10px, var.$blanco 0px 0px 20px;
   text-align: center;
@@ -28,8 +28,8 @@
 
   .fecha {
     @include mix.bordes;
-    
-    font-size: fs.$fuenteFecha;
+
+    font-size: var.$fuenteFecha;
     animation: parpadeo 3s infinite;
   }
 }
