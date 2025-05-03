@@ -1,10 +1,11 @@
 @use '@estilos/_variables.scss' as var;
 @use '@estilos/_mixins.scss' as mix;
 @use '@estilos/_font-size.scss' as fs;
+@use '@estilos/_font-weight.scss' as fw;
 
-.about-h1,
-.about-h2,
-.about-h3,
+.about-titulo,
+.about-subtitulo,
+.about-seccion,
 .about-texto,
 .about-video {
   margin: var.$margenParrafo;
@@ -12,27 +13,28 @@
   padding: 2px;
 }
 
-.about-h1 {
-  @include mix.fuenteH1;
+.about-titulo {
+  font-size: fs.$fuenteAboutTitulo;
+  font-weight: fw.$pesoAboutTitulo;
   color: var.$negro;
   text-shadow: 3px 3px 5px var.$blanco, -3px -3px 5px var.$blanco ;
   text-align: center;
-
+  white-space: nowrap;
 }
 
-.about-h2 {
-  @include mix.fuenteH2;
+.about-subtitulo {
+  font-size: fs.$fuenteAboutSubtitulo;
+  font-weight: fw.$pesoAboutSubtitulo;
   color: var.$marron;
-
+  white-space: nowrap;
 }
 
-.about-h3 {
-  @include mix.fuenteH3;
+.about-seccion {
+  font-size: fs.$fuenteAboutSeccion;
+  font-weight: fw.$pesoAboutSeccion;
   color: var.$marron;
-
 }
 
 .about-texto {
   font-size: fs.$fuenteAboutTexto;
-
 }
