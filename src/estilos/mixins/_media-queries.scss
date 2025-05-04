@@ -1,28 +1,30 @@
-@mixin contenido2025 {
-  .banda-imagen {
+// Variables de breakpoints y tamaños
+$breakpoint-tablet: 600px;
+$breakpoint-laptop: 900px;
+$breakpoint-desktop: 1200px;
+
+@mixin contenido2025($selector: '.banda-imagen') {
+  #{$selector} {
     flex: 0 1 100%;
     min-width: 120px;
     max-width: 100%;
     height: 120px;
 
-    // Tablet
-    @media (min-width: 600px) and (max-width: 899px) {
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop - 1) {
       flex: 0 1 48%;
       min-width: 180px;
       max-width: 48%;
       height: 160px;
     }
 
-    // Laptop
-    @media (min-width: 900px) and (max-width: 1199px) {
+    @media (min-width: $breakpoint-laptop) and (max-width: $breakpoint-desktop - 1) {
       flex: 0 1 32%;
       min-width: 200px;
       max-width: 32%;
       height: 180px;
     }
 
-    // Desktop
-    @media (min-width: 1200px) {
+    @media (min-width: $breakpoint-desktop) {
       flex: 0 1 22%;
       min-width: 220px;
       max-width: 22%;
