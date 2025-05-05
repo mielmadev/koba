@@ -14,7 +14,6 @@
 .contenido-pag,
 .contenido {
   @include bordes;
-  @include bordes;
 
   height: calc(100vh - $alturaEncabezado);
   width: 100%;

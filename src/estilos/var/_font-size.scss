@@ -1,34 +1,42 @@
-/* 
-| h1 | 2em | bold | 0.67em | 0.67em | block |
-| h2 | 1.5em | bold | 0.83em | 0.83em | block |
-| h3 | 1.17em | bold | 1em | 1em | block | 
-| h4 | 1em | bold | 1.33em | 1.33em | block | 
-| h5 | 0.83em | bold | 1.67em | 1.67em | block | 
-| h6 | 0.67em | bold | 2.33em | 2.33em | block | */
-
 // =========================
 // DECLARACIÓN DE FUENTES BASE
 // =========================
-$fuenteBase: 1rem; // 16px
-$fuenteH1: 2rem;
-$fuenteH2: 1.5rem;
-$fuenteH3: 1.17rem;
-$fuenteParrafo: 1rem;
-$fuenteH4: 1rem;
-$fuenteH5: 0.83rem;
-$fuenteH6: 0.67rem;
+//$fuenteBase: 1rem; // 16px escritorio
+$fuenteBase: 0.95rem; // móvil
+//$fuenteH1: 2rem;
+$fuenteH1: 1.5rem;
+//$fuenteH2: 1.5rem;
+$fuenteH2: 1.2rem;
+//$fuenteH3: 1.17rem;
+$fuenteH3: 1rem;
+//$fuenteParrafo: 1rem;
+$fuenteParrafo: 0.95rem;
+//$fuenteH4: 1rem;
+$fuenteH4: 0.95rem;
+//$fuenteH5: 0.83rem;
+$fuenteH5: 0.8rem;
+//$fuenteH6: 0.67rem;
+$fuenteH6: 0.7rem;
 
 // =========================
 // CLAMP TIPOGRÁFICO PARA HEADINGS Y PÁRRAFO
 // =========================
-$clampBase: clamp(1rem, 1.2vw, 1.1rem);
-$clampH1: clamp($fuenteH1, 8vw, 3.5rem);
-$clampH2: clamp($fuenteH2, 6vw, 2.5rem);
-$clampH3: clamp($fuenteH3, 4vw, 1.8rem);
-$clampParrafo: clamp($fuenteParrafo, 2.5vw, 1.1rem);
-$clampH4: clamp($fuenteH4, 3vw, 1.4rem);
-$clampH5: clamp($fuenteH5, 2vw, 1.1rem);
-$clampH6: clamp($fuenteH6, 1vw, 0.95rem);
+//$clampBase: clamp(1rem, 1.2vw, 1.1rem);
+$clampBase: clamp(0.95rem, 2vw, 1.05rem);
+//$clampH1: clamp($fuenteH1, 8vw, 3.5rem);
+$clampH1: clamp($fuenteH1, 6vw, 2.2rem);
+//$clampH2: clamp($fuenteH2, 6vw, 2.5rem);
+$clampH2: clamp($fuenteH2, 4vw, 1.7rem);
+//$clampH3: clamp($fuenteH3, 4vw, 1.8rem);
+$clampH3: clamp($fuenteH3, 3vw, 1.3rem);
+//$clampParrafo: clamp($fuenteParrafo, 2.5vw, 1.1rem);
+$clampParrafo: clamp($fuenteParrafo, 2vw, 1.05rem);
+//$clampH4: clamp($fuenteH4, 3vw, 1.4rem);
+$clampH4: clamp($fuenteH4, 2vw, 1.1rem);
+//$clampH5: clamp($fuenteH5, 2vw, 1.1rem);
+$clampH5: clamp($fuenteH5, 1.5vw, 0.95rem);
+//$clampH6: clamp($fuenteH6, 1vw, 0.95rem);
+$clampH6: clamp($fuenteH6, 1vw, 0.8rem);
 
 // =========================
 // FUENTES ESPECÍFICAS POR PÁGINA/SECCIÓN

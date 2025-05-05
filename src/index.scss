@@ -1,4 +1,5 @@
 @use '@estilos/_base.scss' as *;
+
 :root {
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.7;
@@ -24,7 +25,7 @@ body {
   background-color: $negro;
   color: $blanco;
   display: flex;
-  min-width: 320px;
+  min-width: 0;
   min-height: 100vh;
-
+  overflow-x: hidden;
 }

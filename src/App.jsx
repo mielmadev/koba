@@ -7,8 +7,6 @@ import Fallback from './componentes/AppComponentes/Fallback';
 import PAGES_LAZY from './componentes/AppComponentes/PagesLazy';
 import GRUPOS_LAZY from './componentes/AppComponentes/GruposLazy';
 
-// Estilos
-import './App.scss';
 import '@estilos/app/appEstilosIndex.scss'; // Consolidado
 
 function App() {

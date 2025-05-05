@@ -1,4 +1,3 @@
-
 // Base tipográfica
 
 // Colores
@@ -8,23 +7,20 @@ $gris: #9ca6b1;
 $marron: #c49c74;
 $negro: #292421;
 
-// Fuente peso
-$pesoNavegador: 600;
-$superNegrita: 900;
-
 // Bordes
-$borderRadius: 25px;
+$borderRadius: 20px;
 
 // Encabezado
-$alturaEncabezado: 150px;
+//$alturaEncabezado: 150px; // Valor original escritorio
+$alturaEncabezado: 70px;
 
 // Margen
-$margenTexto: 10%;
-$margenParrafo: 0 $margenTexto;
+$margenTexto: 5%; //Calcular 
+$margenParrafo: 0 $margenTexto; 
 
 // Altura y Ancho
 $alturaContenido: calc(100vh - $alturaEncabezado);
-$anchoParrafo: calc(100vw - $margenTexto * 2);
+$anchoParrafo: calc(100vw - $margenTexto);
 
 // Sombras
 $sombraBlanca: 2px 1px 3px $blanco;
