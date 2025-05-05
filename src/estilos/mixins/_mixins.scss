@@ -1,17 +1,19 @@
 @use '@estilos/variables/_variables' as var;
-@use '@estilos/mixins/_media-queries.scss' as media;
-@forward '@estilos/mixins/_media-queries.scss';
+@forward '@estilos/mixins/_breakpoints.scss';
 
+// Mixin para aplicar bordes con color y radio definidos en variables
 @mixin bordes {
   border: var.$amarillo 1px solid;
-  borderRadius: var.$borderRadius;
+  border-radius: var.$borderRadius;
 }
 
+// Mixin para tamaño completo
 @mixin tamañoCompleto {
   width: 100%;
   height: 100%;
 }
 
+// Mixin para padding y gap estándar
 @mixin padgap {
   padding: 1rem;
   gap: 1.5rem;

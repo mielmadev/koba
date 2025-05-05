@@ -1,0 +1,36 @@
+// Mixins de breakpoints reutilizables para responsividad
+// Uso: @include respond-to(movil) { ... }
+// Puedes modificar los valores según tus necesidades
+
+// Breakpoints por dispositivo
+$breakpoint-movil: 480px; // Móviles
+$breakpoint-tablet: 768px; // Tablets
+$breakpoint-laptop: 1024px; // Laptops
+$breakpoint-pc: 1200px; // PC de escritorio
+
+// Mixin para usar en cualquier SCSS
+@mixin respond-to($device) {
+  @if $device ==movil {
+    @media (max-width: #{$breakpoint-movil}) {
+      @content;
+    }
+  }
+
+  @else if $device ==tablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+      @content;
+    }
+  }
+
+  @else if $device ==laptop {
+    @media (max-width: #{$breakpoint-laptop}) {
+      @content;
+    }
+  }
+
+  @else if $device ==pc {
+    @media (max-width: #{$breakpoint-pc}) {
+      @content;
+    }
+  }
+}
