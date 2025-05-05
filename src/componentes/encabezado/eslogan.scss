@@ -1,17 +1,12 @@
-@use '@estilos/mixins/_mixins.scss' as mix;
-@use '@estilos/variables/_variables.scss' as var;
-
+@use '@estilos/_base.scss' as *;
 
 .eslogan-contenedor {
-  @include mix.bordes;
-  @include mix.tamañoCompleto;
+  @include bordes;
+  @include tamañoCompleto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: var.$fuenteEslogan;
+  font-size: $fuenteEslogan;
   text-align: left;
-  color: var.$marron;
-
-
-
+  color: $marron;
 }

@@ -1,9 +1,8 @@
-@use '@estilos/variables/_variables.scss' as var;
-@use '@estilos/mixins/_mixins.scss' as mix;
+@use '@estilos/_base.scss' as *;
 
 .encabezado-contenedor {
-  @include mix.bordes;
-  height: var.$alturaEncabezado;
+  @include bordes;
+  height: $alturaEncabezado;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -13,23 +12,23 @@
   z-index: 10;
 
   .logo-encabezado {
-    @include mix.bordes;
-    @include mix.padgap;
+    @include bordes;
+    @include padgap;
     display: flex;
-    height: var.$alturaEncabezado;
+    height: $alturaEncabezado;
     width: auto;
     justify-content: center;
     flex-shrink: 0;
 
     .logo-encabezado img {
-      @include mix.bordes;
-      @include mix.tamañoCompleto;
+      @include bordes;
+      @include tamañoCompleto;
     }
   }
 
   .encabezado-derecha {
-    @include mix.bordes;
-    @include mix.tamañoCompleto;
+    @include bordes;
+    @include tamañoCompleto;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -37,13 +36,13 @@
     align-items: center;
 
     >* {
-      @include mix.bordes;
+      @include bordes;
 
     }
 
     .encabezado-navegador {
-      @include mix.bordes;
-      @include mix.tamañoCompleto;
+      @include bordes;
+      @include tamañoCompleto;
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -51,18 +50,12 @@
     }
 
     .encabezado-eslogan {
-      @include mix.bordes;
-      @include mix.tamañoCompleto;
+      @include bordes;
+      @include tamañoCompleto;
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      flex:1;
+      flex: 1;
     }
   }
-
-
-
-
-
-
 }

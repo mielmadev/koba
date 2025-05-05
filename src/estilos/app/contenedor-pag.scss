@@ -1,0 +1,28 @@
+@use '@estilos/_base.scss' as *;
+
+
+.contenedor-pag {
+  @include bordes;
+
+  display: flex;
+  position: fixed;
+  top: $alturaEncabezado;
+  z-index: 1;
+  width: 100%;
+}
+
+.contenido-pag,
+.contenido {
+  @include bordes;
+  @include bordes;
+
+  height: calc(100vh - $alturaEncabezado);
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  color: $blanco;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

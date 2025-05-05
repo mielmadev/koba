@@ -1,11 +1,9 @@
-@use '@estilos/variables/_variables.scss' as var;
-@use '@estilos/mixins/_mixins.scss' as mix;
-
+@use '@estilos/_base.scss' as *;
 
 .contenido {
-  @include mix.bordes;
+  @include bordes;
 
-  @include mix.padgap;
+  @include padgap;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,18 +12,18 @@
 }
 
 .bandas-click {
-  color: var.$gris;
-  font-size: var.$fuenteBandasClick;
+  color: $gris;
+  font-size: $fuenteBandasClick;
 }
 
 .bandas-lista {
-  @include mix.bordes;
+  @include bordes;
 
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  font-size: var.$fuenteBandasNombre;
+  font-size: $fuenteBandasNombre;
   line-height: 1.5;
 
 

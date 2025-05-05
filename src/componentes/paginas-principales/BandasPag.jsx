@@ -1,5 +1,4 @@
 import React from 'react';
-import '@estilos/global.scss';
 import BandasContenido from '@contenido-paginas/bandas-contenido/BandasContenido';
 import ContactoFondo from '@imagenes/fondos/bandasFondo.webp';
 

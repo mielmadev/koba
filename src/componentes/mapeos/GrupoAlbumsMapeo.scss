@@ -1,10 +1,10 @@
-@use '@estilos/variables/_variables.scss' as var;
+@use '@estilos/_base.scss' as *;
 
 .album-nombre {
-  color: var.$marron;
-  font-weight: var.$superNegrita;
+  color: $marron;
+  font-weight: $superNegrita;
 }
 
 .album-año {
-  color: var.$gris;
+  color: $gris;
 }

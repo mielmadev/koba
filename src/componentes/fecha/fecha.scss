@@ -1,6 +1,4 @@
-@use '@estilos/variables/_variables.scss' as var;
-@use '@estilos/mixins/_mixins.scss' as mix;
-
+@use '@estilos/_base.scss' as *;
 
 @keyframes parpadeo {
 
@@ -15,10 +13,10 @@
 }
 
 .fecha-contenedor {
-  @include mix.bordes;
+  @include bordes;
 
-  color: var.$blanco;
-  text-shadow: var.$blanco 0px 0px 10px, var.$blanco 0px 0px 20px;
+  color: $blanco;
+  text-shadow: $blanco 0px 0px 10px, $blanco 0px 0px 20px;
   text-align: center;
   white-space: normal;
   line-height: 1.1;
@@ -27,9 +25,9 @@
   align-items: center;
 
   .fecha {
-    @include mix.bordes;
+    @include bordes;
 
-    font-size: var.$fuenteFecha;
+    font-size: $fuenteFecha;
     animation: parpadeo 3s infinite;
   }
 }

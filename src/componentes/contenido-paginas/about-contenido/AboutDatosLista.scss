@@ -1,38 +1,37 @@
-@use '@estilos/variables/_variables.scss' as var;
-@use '@estilos/mixins/_mixins.scss' as mix;
+@use '@estilos/_base.scss' as *;
 
 .about-titulo,
 .about-subtitulo,
 .about-seccion,
 .about-texto,
 .about-video {
-  margin: var.$margenParrafo;
+  margin: $margenParrafo;
   text-align: justify;
   padding: 2px;
 }
 
 .about-titulo {
-  font-size: var.$fuenteAboutTitulo;
-  font-weight: var.$pesoAboutTitulo;
-  color: var.$negro;
-  text-shadow: 3px 3px 5px var.$blanco, -3px -3px 5px var.$blanco ;
+  font-size: $fuenteAboutTitulo;
+  font-weight: $pesoAboutTitulo;
+  color: $negro;
+  text-shadow: 3px 3px 5px $blanco, -3px -3px 5px $blanco ;
   text-align: center;
   white-space: nowrap;
 }
 
 .about-subtitulo {
-  font-size: var.$fuenteAboutSubtitulo;
-  font-weight: var.$pesoAboutSubtitulo;
-  color: var.$marron;
+  font-size: $fuenteAboutSubtitulo;
+  font-weight: $pesoAboutSubtitulo;
+  color: $marron;
   white-space: nowrap;
 }
 
 .about-seccion {
-  font-size: var.$fuenteAboutSeccion;
-  font-weight: var.$pesoAboutSeccion;
-  color: var.$marron;
+  font-size: $fuenteAboutSeccion;
+  font-weight: $pesoAboutSeccion;
+  color: $marron;
 }
 
 .about-texto {
-  font-size: var.$fuenteAboutTexto;
+  font-size: $fuenteAboutTexto;
 }

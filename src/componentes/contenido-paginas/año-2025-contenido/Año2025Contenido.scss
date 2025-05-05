@@ -1,10 +1,9 @@
-@use '@estilos/variables/_variables.scss' as var;
-@use '@estilos/mixins/_mixins.scss' as mix;
+@use '@estilos/_base.scss' as *;
 
 .contenido-2025 {
-  @include mix.bordes;
-  @include mix.padgap;
-  height: calc(100vh - var.$alturaEncabezado);
+  @include bordes;
+  @include padgap;
+  height: calc(100vh - $alturaEncabezado);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -14,17 +13,15 @@
 }
 
 .banda-imagen {
-  @include mix.bordes;
+  @include bordes;
   object-fit: contain;
   display: flex;
   align-items: center;
   justify-content: center;
 
   img {
-    @include mix.tamañoCompleto;
+    @include tamañoCompleto;
     object-fit: contain;
     display: block;
   }
 }
-
-

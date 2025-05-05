@@ -1,10 +1,10 @@
-@use '@estilos/variables/_variables.scss' as var;
+@use '@estilos/_base.scss' as *;
 
 .integrante-nombre {
-  color: var.$marron;
-  font-weight: var.$superNegrita;
+  color: $marron;
+  font-weight: $superNegrita;
 }
 
 .integrante-rol {
-  color: var.$gris;
+  color: $gris;
 }

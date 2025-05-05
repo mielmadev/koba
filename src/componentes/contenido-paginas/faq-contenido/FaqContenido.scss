@@ -1,22 +1,19 @@
-@use '@estilos/variables/_variables.scss' as var;
-@use '@estilos/mixins/_mixins.scss' as mix;
-
-
+@use '@estilos/_base.scss' as *;
 
 .faq-pregunta {
-  @include mix.bordes;
-  @include mix.padgap;
+  @include bordes;
+  @include padgap;
   box-sizing: border-box;
-  margin: var.$margenParrafo;
-  color: var.$gris;
-  font-size: var.$fuenteFaqPreguntas;
+  margin: $margenParrafo;
+  color: $gris;
+  font-size: $fuenteFaqPreguntas;
   display: flex;
   justify-content: space-between;
   text-align: justify;
 }
 
 .faq-pregunta-texto {
-  @include mix.bordes;
+  @include bordes;
   box-sizing: border-box;
   flex-grow: 1;
   text-align: left;
@@ -30,12 +27,12 @@
 }
 
 .faq-respuesta {
-  @include mix.bordes;
-  @include mix.padgap;
+  @include bordes;
+  @include padgap;
   box-sizing: border-box;
-  margin: var.$margenParrafo;
-  color: var.$blanco;
-  font-size: var.$fuenteFaqRespuestas;
+  margin: $margenParrafo;
+  color: $blanco;
+  font-size: $fuenteFaqRespuestas;
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;

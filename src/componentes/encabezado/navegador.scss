@@ -1,10 +1,9 @@
-@use '@estilos/variables/_variables.scss' as var;
-@use '@estilos/mixins/_mixins.scss' as mix;
+@use '@estilos/_base.scss' as *;
 
 .navegador-contenedor {
-  @include mix.bordes;
-  @include mix.padgap;
-  @include mix.tamañoCompleto;
+  @include bordes;
+  @include padgap;
+  @include tamañoCompleto;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

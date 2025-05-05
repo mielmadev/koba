@@ -1,4 +1,4 @@
-@use '@estilos/variables/_variables' as var;
+@use '@estilos/_base.scss' as *;
 
 body {
   min-width: 1024px;

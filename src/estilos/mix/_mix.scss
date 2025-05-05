@@ -1,10 +1,8 @@
-@use '@estilos/variables/_variables' as var;
-@forward '@estilos/mixins/_breakpoints.scss';
-
+@use '@estilos/var/_var.scss' as *;
 // Mixin para aplicar bordes con color y radio definidos en variables
 @mixin bordes {
-  border: var.$amarillo 1px solid;
-  border-radius: var.$borderRadius;
+  border: $amarillo 1px solid;
+  border-radius: $borderRadius;
 }
 
 // Mixin para tamaño completo

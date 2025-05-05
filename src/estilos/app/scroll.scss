@@ -1,4 +1,6 @@
-@use '@estilos/variables/_variables' as var;
+@use '@estilos/_base.scss' as *;
+
+
 
 /* Estilo general del scrollbar */
 ::-webkit-scrollbar {
@@ -10,7 +12,7 @@
 
 /* Fondo del scrollbar */
 ::-webkit-scrollbar-track {
-  background: var.$negro;
+  background: $negro;
   /* Color del fondo del track */
   border-radius: 10px;
   /* Bordes redondeados */
@@ -18,21 +20,21 @@
 
 /* Barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
-  background: var.$gris;
+  background: $gris;
   /* Color de la barra */
   border-radius: 10px;
   /* Bordes redondeados */
 
   &:hover {
-    background: var.$marron;
+    background: $marron;
     /* Color al pasar el mouse */
     cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
     transition: cursor 0.3s ease;
   }
 
   &:active {
-    background: var.$negro;
-    border: 1px solid var.$blanco;
+    background: $negro;
+    border: 1px solid $blanco;
     cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
     transition: cursor 0.3s ease;
   }

@@ -1,17 +1,15 @@
-@use '@estilos/variables/_variables' as var;
-@use '@estilos/mixins/_mixins' as mix;
-
+@use '@estilos/_base.scss' as *;
 
 .contenido {
-  @include mix.bordes;
-  @include mix.padgap;
+  @include bordes;
+  @include padgap;
   flex-direction: row;
-  font-size: var.$fuenteContactoIconos;
+  font-size: $fuenteContactoIconos;
 }
 
 .contacto {
-  @include mix.bordes;
-  @include mix.padgap;
+  @include bordes;
+  @include padgap;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,13 +27,13 @@
 }
 
 .redes-sociales {
-  @include mix.bordes;
-  @include mix.tamañoCompleto;
+  @include bordes;
+  @include tamañoCompleto;
 
 }
 
 .icono-social {
-  font-size: var.$fuenteContactoIconos;
+  font-size: $fuenteContactoIconos;
   width: 1em;
   height: 1em;
   display: flex;

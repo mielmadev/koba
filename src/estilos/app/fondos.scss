@@ -1,5 +1,6 @@
-@use '@estilos/variables/_variables' as var;
-@use '@estilos/mixins/_mixins.scss' as mix;
+@use '@estilos/_base.scss' as *;
+
+
 
 .about-fondo,
 .inicio-fondo,
@@ -8,14 +9,14 @@
 .contacto-fondo,
 .bandas-fondo {
 
-  @include mix.tamañoCompleto;
+  @include tamañoCompleto;
   height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
-  background-color: var.$negro;
+  background-color: $negro;
 
   img {
     width: 100%;
@@ -24,6 +25,6 @@
     max-height: 100%;
     object-fit: cover;
     object-position: top center;
-    filter: var.$filtroFondos;
+    filter: $filtroFondos;
   }
 }
