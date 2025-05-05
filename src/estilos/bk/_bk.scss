@@ -1,7 +1,3 @@
-// Mixins de breakpoints reutilizables para responsividad
-// Uso: @include respond-to(movil) { ... }
-// Puedes modificar los valores según tus necesidades
-
 // Breakpoints por dispositivo
 $breakpoint-movil: 480px; // Móviles
 $breakpoint-tablet: 768px; // Tablets

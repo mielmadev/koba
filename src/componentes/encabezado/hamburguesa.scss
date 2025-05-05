@@ -1,0 +1,46 @@
+@use '@estilos/_base.scss' as *;
+
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+
+  .linea {
+    width: 28px;
+    height: 4px;
+    background: $blanco;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+}
+
+.hamburguesa.abierto {
+  .linea1 {
+    transform: translateY(8px) rotate(45deg);
+    background: #888; // gris
+  }
+
+  .linea2 {
+    opacity: 0;
+  }
+
+  .linea3 {
+    transform: translateY(-8px) rotate(-45deg);
+    background: #888; // gris
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: flex;
+  }
+}

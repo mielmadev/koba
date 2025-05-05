@@ -1,42 +1,63 @@
+@use '@estilos/bk/_bk.scss' as bk;
 // =========================
 // DECLARACIÓN DE FUENTES BASE
 // =========================
-//$fuenteBase: 1rem; // 16px escritorio
 $fuenteBase: 0.95rem; // móvil
-//$fuenteH1: 2rem;
 $fuenteH1: 1.5rem;
-//$fuenteH2: 1.5rem;
 $fuenteH2: 1.2rem;
-//$fuenteH3: 1.17rem;
 $fuenteH3: 1rem;
-//$fuenteParrafo: 1rem;
 $fuenteParrafo: 0.95rem;
-//$fuenteH4: 1rem;
 $fuenteH4: 0.95rem;
-//$fuenteH5: 0.83rem;
 $fuenteH5: 0.8rem;
-//$fuenteH6: 0.67rem;
 $fuenteH6: 0.7rem;
 
 // =========================
 // CLAMP TIPOGRÁFICO PARA HEADINGS Y PÁRRAFO
 // =========================
-//$clampBase: clamp(1rem, 1.2vw, 1.1rem);
-$clampBase: clamp(0.95rem, 2vw, 1.05rem);
-//$clampH1: clamp($fuenteH1, 8vw, 3.5rem);
-$clampH1: clamp($fuenteH1, 6vw, 2.2rem);
-//$clampH2: clamp($fuenteH2, 6vw, 2.5rem);
-$clampH2: clamp($fuenteH2, 4vw, 1.7rem);
-//$clampH3: clamp($fuenteH3, 4vw, 1.8rem);
-$clampH3: clamp($fuenteH3, 3vw, 1.3rem);
-//$clampParrafo: clamp($fuenteParrafo, 2.5vw, 1.1rem);
-$clampParrafo: clamp($fuenteParrafo, 2vw, 1.05rem);
-//$clampH4: clamp($fuenteH4, 3vw, 1.4rem);
-$clampH4: clamp($fuenteH4, 2vw, 1.1rem);
-//$clampH5: clamp($fuenteH5, 2vw, 1.1rem);
-$clampH5: clamp($fuenteH5, 1.5vw, 0.95rem);
-//$clampH6: clamp($fuenteH6, 1vw, 0.95rem);
-$clampH6: clamp($fuenteH6, 1vw, 0.8rem);
+$clampBase: clamp(0.95rem, 2vw, 2rem);
+$clampH1: clamp($fuenteH1, 6vw, 4rem);
+$clampH2: clamp($fuenteH2, 4vw, 3rem);
+$clampH3: clamp($fuenteH3, 3vw, 2.5rem);
+$clampParrafo: clamp($fuenteParrafo, 2vw, 2rem);
+$clampH4: clamp($fuenteH4, 2vw, 2rem);
+$clampH5: clamp($fuenteH5, 1.5vw, 1.5rem);
+$clampH6: clamp($fuenteH6, 1vw, 1.2rem);
+
+// Tablet
+@include bk.respond-to(tablet) {
+  $clampBase: clamp(1.05rem, 2vw, 2.2rem) !global;
+  $clampH1: clamp($fuenteH1, 5vw, 4.5rem) !global;
+  $clampH2: clamp($fuenteH2, 3vw, 3.5rem) !global;
+  $clampH3: clamp($fuenteH3, 2vw, 3rem) !global;
+  $clampParrafo: clamp($fuenteParrafo, 2vw, 2.2rem) !global;
+  $clampH4: clamp($fuenteH4, 2vw, 2.2rem) !global;
+  $clampH5: clamp($fuenteH5, 1.5vw, 1.7rem) !global;
+  $clampH6: clamp($fuenteH6, 1vw, 1.3rem) !global;
+}
+
+// Laptop
+@include bk.respond-to(laptop) {
+  $clampBase: clamp(1.1rem, 2vw, 2.5rem) !global;
+  $clampH1: clamp($fuenteH1, 4vw, 5rem) !global;
+  $clampH2: clamp($fuenteH2, 2.5vw, 4rem) !global;
+  $clampH3: clamp($fuenteH3, 2vw, 3.5rem) !global;
+  $clampParrafo: clamp($fuenteParrafo, 2vw, 2.5rem) !global;
+  $clampH4: clamp($fuenteH4, 2vw, 2.5rem) !global;
+  $clampH5: clamp($fuenteH5, 1.5vw, 2rem) !global;
+  $clampH6: clamp($fuenteH6, 1vw, 1.5rem) !global;
+}
+
+// PC
+@include bk.respond-to(pc) {
+  $clampBase: clamp(1.15rem, 2vw, 3rem) !global;
+  $clampH1: clamp($fuenteH1, 3vw, 6rem) !global;
+  $clampH2: clamp($fuenteH2, 2vw, 5rem) !global;
+  $clampH3: clamp($fuenteH3, 1.5vw, 4rem) !global;
+  $clampParrafo: clamp($fuenteParrafo, 2vw, 3rem) !global;
+  $clampH4: clamp($fuenteH4, 2vw, 3rem) !global;
+  $clampH5: clamp($fuenteH5, 1vw, 2.5rem) !global;
+  $clampH6: clamp($fuenteH6, 1vw, 2rem) !global;
+}
 
 // =========================
 // FUENTES ESPECÍFICAS POR PÁGINA/SECCIÓN
