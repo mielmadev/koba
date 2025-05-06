@@ -1,11 +1,13 @@
 import React from 'react';
-import { FaEnvelope } from "react-icons/fa";
 import './ContactoContenido.scss';
-import FacebookIcono from "@iconos/FacebookIcono";
-import InstagramIcono from "@iconos/InstagramIcono";
-import WhatsappIcono from "@iconos/WhatsappIcono";
-
-
+import WhatsappIcono from '@iconos/WhatsappIcono';
+import EmailIcono from '@iconos/EmailIcono';
+import FacebookIcono from '@iconos/FacebookIcono';
+import InstagramIcono from '@iconos/InstagramIcono';
+import XTwitterIcono from '@iconos/XTwitterIcono';
+import SpotifyIcono from '@iconos/SpotifyIcono';
+import YoutubeIcono from '@iconos/YoutubeIcono';
+import TikTokIcono from '@iconos/TiktokIcono';
 
 export default function ContactoContenido() {
   return (
@@ -15,16 +17,16 @@ export default function ContactoContenido() {
           <WhatsappIcono className="icono-contacto" /> +34 12345678
         </div>
         <div className='email'>
-          <FaEnvelope className="icono-contacto" /> info@koba-live.com
+          <EmailIcono className="icono-contacto" /> info@koba-live.com
         </div>
       </div>
       <div className='redes-sociales'>
-        <a href="https://www.facebook.com/kobalive.metal/" target="_blank" rel="noopener noreferrer">
-          <FacebookIcono className="icono-social" />
-        </a>
-        <a href="https://www.instagram.com/kobalive/?hl=es" target="_blank" rel="noopener noreferrer">
-          <InstagramIcono className="icono-social" />
-        </a>
+        <FacebookIcono as='a' href="https://www.facebook.com/kobalive.metal/" target="_blank" rel="noopener noreferrer" className="icono-social" />
+        <InstagramIcono as='a' href="https://www.instagram.com/kobalive/?hl=es" target="_blank" rel="noopener noreferrer" className="icono-social" />
+        <XTwitterIcono as='a' href="https://twitter.com/kobalive" target="_blank" rel="noopener noreferrer" className="icono-social" />
+        <SpotifyIcono as='a' href="https://open.spotify.com/user/kobalive" target="_blank" rel="noopener noreferrer" className="icono-social" />
+        <YoutubeIcono as='a' href="https://www.youtube.com/@kobalive" target="_blank" rel="noopener noreferrer" className="icono-social" />
+        <TikTokIcono as='a' href="https://www.tiktok.com/@kobalive" target="_blank" rel="noopener noreferrer" className="icono-social" />
       </div>
 
     </div>
