@@ -1,4 +1,4 @@
-@use '@estilos/bk/_bk.scss' as bk;
+@use '@estilos/bp/_bp.scss' as bp;
 // =========================
 // DECLARACIÓN DE FUENTES BASE
 // =========================
@@ -24,7 +24,7 @@ $clampH5: clamp($fuenteH5, 1.5vw, 1.5rem);
 $clampH6: clamp($fuenteH6, 1vw, 1.2rem);
 
 // Tablet
-@include bk.respond-to(tablet) {
+@include bp.respond-to(tablet) {
   $clampBase: clamp(1.05rem, 2vw, 2.2rem) !global;
   $clampH1: clamp($fuenteH1, 5vw, 4.5rem) !global;
   $clampH2: clamp($fuenteH2, 3vw, 3.5rem) !global;
@@ -36,7 +36,7 @@ $clampH6: clamp($fuenteH6, 1vw, 1.2rem);
 }
 
 // Laptop
-@include bk.respond-to(laptop) {
+@include bp.respond-to(laptop) {
   $clampBase: clamp(1.1rem, 2vw, 2.5rem) !global;
   $clampH1: clamp($fuenteH1, 4vw, 5rem) !global;
   $clampH2: clamp($fuenteH2, 2.5vw, 4rem) !global;
@@ -48,7 +48,7 @@ $clampH6: clamp($fuenteH6, 1vw, 1.2rem);
 }
 
 // PC
-@include bk.respond-to(pc) {
+@include bp.respond-to(pc) {
   $clampBase: clamp(1.15rem, 2vw, 3rem) !global;
   $clampH1: clamp($fuenteH1, 3vw, 6rem) !global;
   $clampH2: clamp($fuenteH2, 2vw, 5rem) !global;

@@ -1,4 +1,4 @@
-@use '@estilos/bk/_bk.scss' as bk;
+@use '@estilos/bp/_bp.scss' as bp;
 
 // Colores
 $amarillo: #eed755;
@@ -13,15 +13,15 @@ $borderRadius: 20px;
 // Encabezado
 $alturaEncabezado: 56px; // Base móvil
 
-@include bk.respond-to(tablet) {
+@include bp.respond-to(tablet) {
   $alturaEncabezado: 72px !global;
 }
 
-@include bk.respond-to(laptop) {
+@include bp.respond-to(laptop) {
   $alturaEncabezado: 88px !global;
 }
 
-@include bk.respond-to(pc) {
+@include bp.respond-to(pc) {
   $alturaEncabezado: 100px !global;
 }
 
@@ -29,17 +29,17 @@ $alturaEncabezado: 56px; // Base móvil
 $margenTexto: 5vw; // Base móvil
 $margenParrafo: 0 $margenTexto;
 
-@include bk.respond-to(tablet) {
+@include bp.respond-to(tablet) {
   $margenTexto: 3vw !global;
   $margenParrafo: 0 $margenTexto !global;
 }
 
-@include bk.respond-to(laptop) {
+@include bp.respond-to(laptop) {
   $margenTexto: 2vw !global;
   $margenParrafo: 0 $margenTexto !global;
 }
 
-@include bk.respond-to(pc) {
+@include bp.respond-to(pc) {
   $margenTexto: 1.5vw !global;
   $margenParrafo: 0 $margenTexto !global;
 }
@@ -48,17 +48,17 @@ $margenParrafo: 0 $margenTexto;
 $alturaContenido: calc(100vh - $alturaEncabezado);
 $anchoParrafo: calc(100vw - $margenTexto);
 
-@include bk.respond-to(tablet) {
+@include bp.respond-to(tablet) {
   $alturaContenido: calc(100vh - $alturaEncabezado) !global;
   $anchoParrafo: calc(90vw - $margenTexto) !global;
 }
 
-@include bk.respond-to(laptop) {
+@include bp.respond-to(laptop) {
   $alturaContenido: calc(100vh - $alturaEncabezado) !global;
   $anchoParrafo: calc(70vw - $margenTexto) !global;
 }
 
-@include bk.respond-to(pc) {
+@include bp.respond-to(pc) {
   $alturaContenido: calc(100vh - $alturaEncabezado) !global;
   $anchoParrafo: calc(60vw - $margenTexto) !global;
 }
