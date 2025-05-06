@@ -23,8 +23,22 @@ $clampH4: clamp($fuenteH4, 2vw, 2rem);
 $clampH5: clamp($fuenteH5, 1.5vw, 1.5rem);
 $clampH6: clamp($fuenteH6, 1vw, 1.2rem);
 
+// XS: móviles muy pequeños
+@include bp.respond-to(xs) {
+  $clampBase: clamp(0.9rem, 2vw, 1.5rem) !global;
+  $clampH1: clamp($fuenteH1, 7vw, 3.5rem) !global;
+  $clampH2: clamp($fuenteH2, 5vw, 2.5rem) !global;
+}
+
+// SM: móviles estándar
+@include bp.respond-to(sm) {
+  $clampBase: clamp(0.95rem, 2vw, 2rem) !global;
+  $clampH1: clamp($fuenteH1, 6vw, 4rem) !global;
+  $clampH2: clamp($fuenteH2, 4vw, 3rem) !global;
+}
+
 // Tablet
-@include bp.respond-to(tablet) {
+@include bp.respond-to(md) {
   $clampBase: clamp(1.05rem, 2vw, 2.2rem) !global;
   $clampH1: clamp($fuenteH1, 5vw, 4.5rem) !global;
   $clampH2: clamp($fuenteH2, 3vw, 3.5rem) !global;
@@ -36,7 +50,7 @@ $clampH6: clamp($fuenteH6, 1vw, 1.2rem);
 }
 
 // Laptop
-@include bp.respond-to(laptop) {
+@include bp.respond-to(lg) {
   $clampBase: clamp(1.1rem, 2vw, 2.5rem) !global;
   $clampH1: clamp($fuenteH1, 4vw, 5rem) !global;
   $clampH2: clamp($fuenteH2, 2.5vw, 4rem) !global;
@@ -48,7 +62,7 @@ $clampH6: clamp($fuenteH6, 1vw, 1.2rem);
 }
 
 // PC
-@include bp.respond-to(pc) {
+@include bp.respond-to(xl) {
   $clampBase: clamp(1.15rem, 2vw, 3rem) !global;
   $clampH1: clamp($fuenteH1, 3vw, 6rem) !global;
   $clampH2: clamp($fuenteH2, 2vw, 5rem) !global;
@@ -57,6 +71,20 @@ $clampH6: clamp($fuenteH6, 1vw, 1.2rem);
   $clampH4: clamp($fuenteH4, 2vw, 3rem) !global;
   $clampH5: clamp($fuenteH5, 1vw, 2.5rem) !global;
   $clampH6: clamp($fuenteH6, 1vw, 2rem) !global;
+}
+
+// 2XL: ultra-wide/QHD
+@include bp.respond-to(2xl) {
+  $clampBase: clamp(1.2rem, 2vw, 3.5rem) !global;
+  $clampH1: clamp($fuenteH1, 2vw, 7rem) !global;
+  $clampH2: clamp($fuenteH2, 1.5vw, 6rem) !global;
+}
+
+// 4K: pantallas 4K
+@include bp.respond-to(4k) {
+  $clampBase: clamp(1.3rem, 2vw, 4rem) !global;
+  $clampH1: clamp($fuenteH1, 1vw, 8rem) !global;
+  $clampH2: clamp($fuenteH2, 1vw, 7rem) !global;
 }
 
 // =========================

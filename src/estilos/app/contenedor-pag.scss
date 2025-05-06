@@ -13,10 +13,10 @@
 
 .contenido-pag,
 .contenido {
-  @include bordes;
-
   height: calc(100vh - $alturaEncabezado);
+  min-height: 0;
   width: 100%;
+  max-width: 100vw;
   position: relative;
   z-index: 1;
   color: $blanco;
