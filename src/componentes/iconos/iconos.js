@@ -1,0 +1,9 @@
+// Centralización de los iconos
+export { default as EmailIcono } from './EmailIcono.jsx';
+export { default as FacebookIcono } from './FacebookIcono.jsx';
+export { default as InstagramIcono } from './InstagramIcono.jsx';
+export { default as SpotifyIcono } from './SpotifyIcono.jsx';
+export { default as TikTokIcono } from './TiktokIcono.jsx';
+export { default as WhatsappIcono } from './WhatsappIcono.jsx';
+export { default as XTwitterIcono } from './XTwitterIcono.jsx';
+export { default as YoutubeIcono } from './YoutubeIcono.jsx';
