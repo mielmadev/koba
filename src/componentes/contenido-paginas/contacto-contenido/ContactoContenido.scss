@@ -38,10 +38,56 @@
 
 .icono-social {
   font-size: $fuenteContactoIconos;
-  width: 1em;
-  height: 1em;
+  width: 1.4em;
+  height: 1.4em;
   display: flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
+  filter: drop-shadow(0 0 6px $blanco);
+}
+
+.icono-social:hover {
+  color: $marron !important;
+  filter: drop-shadow(0 0 18px var(--icono-color-original, $facebook));
+}
+
+.icono-social:active {
+  color: transparent !important;
+  filter: drop-shadow(0 0 18px transparent);
+}
+
+.icono-facebook {
+  color: $facebook !important;
+  --icono-color-original: #{$facebook};
+}
+
+.icono-instagram {
+  color: $instagram !important;
+  --icono-color-original: #{$instagram};
+}
+
+.icono-spotify {
+  color: $spotify !important;
+  --icono-color-original: #{$spotify};
+}
+
+.icono-tiktok {
+  color: $tiktok !important;
+  --icono-color-original: #{$tiktok};
+}
+
+.icono-twitter {
+  color: $twitter !important;
+  --icono-color-original: #{$twitter};
+}
+
+.icono-youtube {
+  color: $youtube !important;
+  --icono-color-original: #{$youtube};
+}
+
+.icono-whatsapp {
+  color: $whatsapp !important;
+  --icono-color-original: #{$whatsapp};
 }

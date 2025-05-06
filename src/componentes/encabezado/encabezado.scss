@@ -1,5 +1,5 @@
 @use '@estilos/_base.scss' as *;
-@use '@estilos/bp/_bp.scss' as bp;
+@use '@estilos/_bp.scss' as bp;
 
 .encabezado-contenedor {
   @include bordes;
