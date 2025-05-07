@@ -2,9 +2,9 @@
 
 .faq-pregunta {
   @include bordes;
-  @include padgap;
+  @include pad-gap;
   box-sizing: border-box;
-  margin: $margenLaterales;
+  margin: $margen-laterales;
   color: $gris;
   font-size: $fuenteFaqPreguntas;
   display: flex;
@@ -28,9 +28,9 @@
 
 .faq-respuesta {
   @include bordes;
-  @include padgap;
+  @include pad-gap;
   box-sizing: border-box;
-  margin: $margenLaterales;
+  margin: $margen-laterales;
   color: $blanco;
   font-size: $fuenteFaqRespuestas;
   white-space: normal;

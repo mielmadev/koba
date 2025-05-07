@@ -2,7 +2,7 @@
 
 .contenido-2025 {
   @include bordes;
-  height: calc(100vh - $alturaEncabezado);
+  height: calc(100vh - $altura-encabezado);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -17,12 +17,12 @@
   align-items: center;
   justify-content: center;
   object-fit: contain;
-  @include tamañoBandaImagen;
+  @include tamaño-banda-imagen;
   border-radius: 12px;
 
   img {
     @include bordes;
-    @include tamañoCompleto;
+    @include tamaño-completo;
     display: block;
     object-fit: contain;
     max-width: 90%;

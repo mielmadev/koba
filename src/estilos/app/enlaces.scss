@@ -14,19 +14,19 @@ a {
   text-decoration: none;
   font-size: $fuenteEnlaces;
   font-weight: $pesoNavegador;
-  text-shadow: $sombraBlanca;
+  text-shadow: $sombra-blanca;
   height: 100%;
 
   &:hover {
     color: $gris;
-    text-shadow: $sombraGris;
+    text-shadow: $sombra-gris;
     cursor: url('@cursor/KobaPua_32x32_Gris.png') 16 0, auto;
     transition: cursor 0.3s ease;
   }
 
   &:active {
     color: $negro;
-    text-shadow: $sombraBlanca;
+    text-shadow: $sombra-blanca;
     cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
     transition: cursor 0.3s ease;
   }
@@ -34,7 +34,7 @@ a {
   &.navlink {
     &.active {
       color: $marron;
-      text-shadow: $sombraMarron;
+      text-shadow: $sombra-marron;
       cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
       transition: cursor 0.3s ease;
 

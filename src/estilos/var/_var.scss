@@ -17,61 +17,61 @@ $spotify: #1DB954;
 $tiktok: #25F4EE;
 
 // Bordes
-$borderRadius: 20px;
+$border_radius: 20px;
 
 // Encabezado
-$alturaEncabezado: 48px; // XS: móviles muy pequeños
+$altura-encabezado: 48px; // XS: móviles muy pequeños
 
 @include bp.respond-to(sm) {
-  $alturaEncabezado: 56px !global; // SM: móviles estándar
+  $altura-encabezado: 56px !global; // SM: móviles estándar
 }
 
 @include bp.respond-to(md) {
-  $alturaEncabezado: 72px !global; // MD: tablets
+  $altura-encabezado: 72px !global; // MD: tablets
 }
 
 @include bp.respond-to(lg) {
-  $alturaEncabezado: 88px !global; // LG: laptops
+  $altura-encabezado: 88px !global; // LG: laptops
 }
 
 @include bp.respond-to(xl) {
-  $alturaEncabezado: 100px !global; // XL: escritorio
+  $altura-encabezado: 100px !global; // XL: escritorio
 }
 
 @include bp.respond-to(2xl) {
-  $alturaEncabezado: 112px !global; // 2XL: ultra-wide
+  $altura-encabezado: 112px !global; // 2XL: ultra-wide
 }
 
 @include bp.respond-to(4k) {
-  $alturaEncabezado: 128px !global; // 4K
+  $altura-encabezado: 128px !global; // 4K
 }
 
 // Margen
-$margenCompleto: 16px; // Margen fijo recomendado para móvil
-$margenLaterales: 0 $margenCompleto;
+$margen-completo: 16px; // Margen fijo recomendado para móvil
+$margen-laterales: 0 $margen-completo;
 
 // Altura y Ancho
-$alturaContenido: calc(100vh - $alturaEncabezado);
-$anchoParrafo: calc(100vw - $margenCompleto);
+$altura-contenido: calc(100vh - $altura-encabezado);
+$ancho-parrafo: calc(100vw - $margen-completo);
 
 @include bp.respond-to(md) {
-  $anchoParrafo: calc(90vw - $margenCompleto) !global;
+  $ancho-parrafo: calc(90vw - $margen-completo) !global;
 }
 
 @include bp.respond-to(lg) {
-  $anchoParrafo: calc(70vw - $margenCompleto) !global;
+  $ancho-parrafo: calc(70vw - $margen-completo) !global;
 }
 
 @include bp.respond-to(xl) {
-  $anchoParrafo: calc(60vw - $margenCompleto) !global;
+  $ancho-parrafo: calc(60vw - $margen-completo) !global;
 }
 
 // Sombras
-$sombraBlanca: 2px 1px 3px $blanco;
-$sombraGris: 2px 1px 3px $gris;
-$sombraMarron: 2px 1px 3px $marron;
-$sombraNegra: 2px 1px 3px $negro;
-$dropShadowBlanco: drop-shadow(0 0 6px $blanco);
+$sombra-blanca: 2px 1px 3px $blanco;
+$sombra-gris: 2px 1px 3px $gris;
+$sombra-marron: 2px 1px 3px $marron;
+$sombra-negra: 2px 1px 3px $negro;
+$drop-shadow-blanco: drop-shadow(0 0 6px $blanco);
 
 // Filtros
-$filtroFondos: brightness(25%); // filter
+$filtro-fondos: brightness(25%); // filter

@@ -4,22 +4,22 @@
 // Mixin para aplicar bordes con color y radio definidos en variables
 @mixin bordes {
   border: $amarillo 1px solid;
-  border-radius: $borderRadius;
+  border-radius: $border_radius;
 }
 
 // Mixin para tamaño completo
-@mixin tamañoCompleto {
+@mixin tamaño-completo {
   width: 100%;
   height: 100%;
 }
 
 // Mixin para padding y gap estándar
-@mixin padgap {
+@mixin pad-gap {
   padding: 0.5rem;
   gap: 1rem;
 }
 
-@mixin tamañoBandaImagen {
+@mixin tamaño-banda-imagen {
   width: clamp(100px, 100%, 350px);
   height: clamp(100px, 100%, 250px);
 }

@@ -2,8 +2,8 @@
 
 .navegador-contenedor {
   @include bordes;
-  @include padgap;
-  @include tamañoCompleto;
+  @include pad-gap;
+  @include tamaño-completo;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

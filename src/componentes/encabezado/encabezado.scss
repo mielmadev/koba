@@ -3,7 +3,7 @@
 
 .encabezado-contenedor {
   @include bordes;
-  height: $alturaEncabezado;
+  height: $altura-encabezado;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -15,16 +15,16 @@
 
   .logo-encabezado {
     @include bordes;
-    @include padgap;
+    @include pad-gap;
     display: flex;
-    height: $alturaEncabezado;
+    height: $altura-encabezado;
     width: auto;
     justify-content: center;
     flex-shrink: 0;
 
     .logo-encabezado img {
       @include bordes;
-      @include tamañoCompleto;
+      @include tamaño-completo;
     }
   }
 
@@ -39,7 +39,7 @@
 
     .encabezado-navegador {
       @include bordes;
-      @include tamañoCompleto;
+      @include tamaño-completo;
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -47,7 +47,7 @@
 
     .encabezado-eslogan {
       @include bordes;
-      @include tamañoCompleto;
+      @include tamaño-completo;
       display: flex;
       justify-content: flex-start;
       align-items: center;

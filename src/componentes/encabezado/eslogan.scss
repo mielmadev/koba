@@ -2,7 +2,7 @@
 
 .eslogan-contenedor {
   @include bordes;
-  @include tamañoCompleto;
+  @include tamaño-completo;
   display: flex;
   justify-content: center;
   align-items: center;

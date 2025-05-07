@@ -3,7 +3,7 @@
 .grupo-contenido {
   @include bordes;
 
-  margin: $margenLaterales;
+  margin: $margen-laterales;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 .grupo-encabezado-superior {
   @include bordes;
 
-  @include padgap;
+  @include pad-gap;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,7 +30,7 @@
   .grupo-encabezado-superior-izquierda {
     @include bordes;
 
-    @include padgap;
+    @include pad-gap;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -47,7 +47,7 @@
   .grupo-encabezado-superior-derecha {
     @include bordes;
 
-    @include padgap;
+    @include pad-gap;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -61,7 +61,7 @@
 .grupo-encabezado-inferior {
   @include bordes;
 
-  @include padgap;
+  @include pad-gap;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -72,7 +72,7 @@
   .grupo-encabezado-inferior-izquierda {
     @include bordes;
 
-    @include padgap;
+    @include pad-gap;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -97,7 +97,7 @@
   .grupo-encabezado-inferior-derecha {
     @include bordes;
 
-    @include padgap;
+    @include pad-gap;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

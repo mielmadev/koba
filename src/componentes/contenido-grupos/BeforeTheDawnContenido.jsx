@@ -41,7 +41,7 @@ const BeforeTheDawnContenido = () => {
         <div className='grupo-pie'>
           <iframe
             className='grupo-reproductor'
-            style={{ borderRadius: '12px', height: '100px' }}
+            style={{ border_radius: '12px', height: '100px' }}
             src={banda.spotify}
             frameBorder="0"
             allowFullScreen

@@ -3,7 +3,7 @@
 
 .contenido {
   @include bordes;
-  @include padgap;
+  @include pad-gap;
   flex-direction: column;
   font-size: $fuenteContactoIconos;
   align-items: stretch;
@@ -11,7 +11,7 @@
 
 .contacto {
   @include bordes;
-  @include padgap;
+  @include pad-gap;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +24,7 @@
 
 .redes-sociales {
   @include bordes;
-  @include tamañoCompleto;
+  @include tamaño-completo;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly; // Espaciado entre iconos
@@ -44,7 +44,7 @@
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  filter: $dropShadowBlanco;
+  filter: $drop-shadow-blanco;
 }
 
 .icono-social:hover {
