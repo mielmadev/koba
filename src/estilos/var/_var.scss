@@ -47,53 +47,23 @@ $alturaEncabezado: 48px; // XS: móviles muy pequeños
 }
 
 // Margen
-$margenTexto: 5vw; // Base móvil
-$margenParrafo: 0 $margenTexto;
-
-@include bp.respond-to(sm) {
-  $margenTexto: 4vw !global;
-  $margenParrafo: 0 $margenTexto !global;
-}
-
-@include bp.respond-to(md) {
-  $margenTexto: 3vw !global;
-  $margenParrafo: 0 $margenTexto !global;
-}
-
-@include bp.respond-to(lg) {
-  $margenTexto: 2vw !global;
-  $margenParrafo: 0 $margenTexto !global;
-}
-
-@include bp.respond-to(xl) {
-  $margenTexto: 1.5vw !global;
-  $margenParrafo: 0 $margenTexto !global;
-}
-
-@include bp.respond-to(2xl) {
-  $margenTexto: 1vw !global;
-  $margenParrafo: 0 $margenTexto !global;
-}
-
-@include bp.respond-to(4k) {
-  $margenTexto: 0.5vw !global;
-  $margenParrafo: 0 $margenTexto !global;
-}
+$margenCompleto: 16px; // Margen fijo recomendado para móvil
+$margenLaterales: 0 $margenCompleto;
 
 // Altura y Ancho
 $alturaContenido: calc(100vh - $alturaEncabezado);
-$anchoParrafo: calc(100vw - $margenTexto);
+$anchoParrafo: calc(100vw - $margenCompleto);
 
 @include bp.respond-to(md) {
-  $anchoParrafo: calc(90vw - $margenTexto) !global;
+  $anchoParrafo: calc(90vw - $margenCompleto) !global;
 }
 
 @include bp.respond-to(lg) {
-  $anchoParrafo: calc(70vw - $margenTexto) !global;
+  $anchoParrafo: calc(70vw - $margenCompleto) !global;
 }
 
 @include bp.respond-to(xl) {
-  $anchoParrafo: calc(60vw - $margenTexto) !global;
+  $anchoParrafo: calc(60vw - $margenCompleto) !global;
 }
 
 // Sombras
@@ -101,6 +71,7 @@ $sombraBlanca: 2px 1px 3px $blanco;
 $sombraGris: 2px 1px 3px $gris;
 $sombraMarron: 2px 1px 3px $marron;
 $sombraNegra: 2px 1px 3px $negro;
+$dropShadowBlanco: drop-shadow(0 0 6px $blanco);
 
 // Filtros
 $filtroFondos: brightness(25%); // filter

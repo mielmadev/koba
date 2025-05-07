@@ -4,7 +4,7 @@
   @include bordes;
   @include padgap;
   box-sizing: border-box;
-  margin: $margenParrafo;
+  margin: $margenLaterales;
   color: $gris;
   font-size: $fuenteFaqPreguntas;
   display: flex;
@@ -30,7 +30,7 @@
   @include bordes;
   @include padgap;
   box-sizing: border-box;
-  margin: $margenParrafo;
+  margin: $margenLaterales;
   color: $blanco;
   font-size: $fuenteFaqRespuestas;
   white-space: normal;

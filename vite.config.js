@@ -7,8 +7,8 @@ export default defineConfig({
   server: {
     open: true,
     port: 3000,
-    host: '192.168.0.24', // Pc
-
+/*     host: '192.168.0.24', // Pc
+ */
 /*     host: '192.168.0.20', // Laptop
  */    
   },

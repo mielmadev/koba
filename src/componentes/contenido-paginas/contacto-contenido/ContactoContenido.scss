@@ -44,7 +44,7 @@
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  filter: drop-shadow(0 0 6px $blanco);
+  filter: $dropShadowBlanco;
 }
 
 .icono-social:hover {

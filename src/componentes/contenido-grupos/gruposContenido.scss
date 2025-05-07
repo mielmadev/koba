@@ -3,7 +3,7 @@
 .grupo-contenido {
   @include bordes;
 
-  margin: $margenParrafo;
+  margin: $margenLaterales;
   width: 100%;
   display: flex;
   flex-direction: column;
