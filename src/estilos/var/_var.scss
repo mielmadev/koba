@@ -22,30 +22,6 @@ $border_radius: 20px;
 // Encabezado
 $altura-encabezado: 48px; // XS: móviles muy pequeños
 
-@include bp.respond-to(sm) {
-  $altura-encabezado: 56px !global; // SM: móviles estándar
-}
-
-@include bp.respond-to(md) {
-  $altura-encabezado: 72px !global; // MD: tablets
-}
-
-@include bp.respond-to(lg) {
-  $altura-encabezado: 88px !global; // LG: laptops
-}
-
-@include bp.respond-to(xl) {
-  $altura-encabezado: 100px !global; // XL: escritorio
-}
-
-@include bp.respond-to(2xl) {
-  $altura-encabezado: 112px !global; // 2XL: ultra-wide
-}
-
-@include bp.respond-to(4k) {
-  $altura-encabezado: 128px !global; // 4K
-}
-
 // Margen
 $margen-completo: 16px; // Margen fijo recomendado para móvil
 $margen-laterales: 0 $margen-completo;
@@ -53,18 +29,6 @@ $margen-laterales: 0 $margen-completo;
 // Altura y Ancho
 $altura-contenido: calc(100vh - $altura-encabezado);
 $ancho-parrafo: calc(100vw - $margen-completo);
-
-@include bp.respond-to(md) {
-  $ancho-parrafo: calc(90vw - $margen-completo) !global;
-}
-
-@include bp.respond-to(lg) {
-  $ancho-parrafo: calc(70vw - $margen-completo) !global;
-}
-
-@include bp.respond-to(xl) {
-  $ancho-parrafo: calc(60vw - $margen-completo) !global;
-}
 
 // Sombras
 $sombra-blanca: 2px 1px 3px $blanco;
