@@ -13,7 +13,7 @@
 }
 
 .fecha-contenedor {
-  @include bordes;
+  //@include bordes;
   color: $blanco;
   text-shadow: $blanco 0px 0px 10px, $blanco 0px 0px 20px;
   text-align: center;
@@ -24,8 +24,7 @@
   align-items: center;
 
   .fecha {
-    @include bordes;
-
+    //@include bordes;
     font-size: $fuente-fecha;
     animation: parpadeo 3s infinite;
   }

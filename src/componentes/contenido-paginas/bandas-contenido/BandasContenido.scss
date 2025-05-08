@@ -1,14 +1,13 @@
 @use '@estilos/_core.scss' as *;
 
 .contenido {
-  @include bordes;
-
-  @include gad-pad-responsive($gad-pad);
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%;
+  @include bordes;
+  @include pad-gap-bp($pad-gap);
 }
 
 .bandas-click {

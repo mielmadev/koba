@@ -31,8 +31,8 @@
   }
 }
 
-// @include gad-pad-responsive($gad-pad);
-@mixin gad-pad-responsive($mapa) {
+// @include pad-gap-bp($pad-gap);
+@mixin pad-gap-bp($mapa) {
   @each $breakpoint, $valores in $mapa {
     @include bp.bp($breakpoint) {
       gap: map-get($valores, gap);

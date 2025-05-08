@@ -2,13 +2,13 @@
 
 .contenido-2025 {
   @include bordes;
-  @include responsive-calc-height($altura-encabezado);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   overflow-y: auto;
+  @include altura-contenido-bp($altura-encabezado);
 }
 
 .banda-imagen {

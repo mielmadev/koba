@@ -1,7 +1,7 @@
 @use '@estilos/_core.scss' as *;
 
 .eslogan-contenedor {
-  @include bordes;
+  //@include bordes;
   @include tamaño-completo;
   display: flex;
   justify-content: center;

@@ -2,7 +2,7 @@
 
 .faq-pregunta {
   @include bordes;
-  @include gad-pad-responsive($gad-pad);
+  @include pad-gap-bp($pad-gap);
   box-sizing: border-box;
   margin: $margen_laterales;
   color: $gris;
@@ -28,7 +28,7 @@
 
 .faq-respuesta {
   @include bordes;
-  @include gad-pad-responsive($gad-pad);
+  @include pad-gap-bp($pad-gap);
   box-sizing: border-box;
   margin: $margen_laterales;
   color: $blanco;

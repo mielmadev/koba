@@ -2,15 +2,15 @@
 
 .contenido {
   @include bordes;
-  @include gad-pad-responsive($gad-pad);
   flex-direction: column;
   font-size: $fuenteContactoIconos;
   align-items: stretch;
+  @include pad-gap-bp($pad-gap);
 }
 
 .contacto {
   @include bordes;
-  @include gad-pad-responsive($gad-pad);
+  @include pad-gap-bp($pad-gap);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,46 +47,46 @@
 }
 
 .icono-social:hover {
-  color: $marron !important;
+  color: $marron ;
   filter: drop-shadow(0 0 18px var(--icono-color-original, $facebook));
 }
 
 .icono-social:active {
-  color: transparent !important;
+  color: transparent ;
   filter: drop-shadow(0 0 18px transparent);
 }
 
 .icono-facebook {
-  color: $facebook !important;
+  color: $facebook ;
   --icono-color-original: #{$facebook};
 }
 
 .icono-instagram {
-  color: $instagram !important;
+  color: $instagram ;
   --icono-color-original: #{$instagram};
 }
 
 .icono-spotify {
-  color: $spotify !important;
+  color: $spotify ;
   --icono-color-original: #{$spotify};
 }
 
 .icono-tiktok {
-  color: $tiktok !important;
+  color: $tiktok ;
   --icono-color-original: #{$tiktok};
 }
 
 .icono-twitter {
-  color: $twitter !important;
+  color: $twitter ;
   --icono-color-original: #{$twitter};
 }
 
 .icono-youtube {
-  color: $youtube !important;
+  color: $youtube ;
   --icono-color-original: #{$youtube};
 }
 
 .icono-whatsapp {
-  color: $whatsapp !important;
+  color: $whatsapp ;
   --icono-color-original: #{$whatsapp};
 }

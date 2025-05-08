@@ -1,8 +1,8 @@
 @use '@estilos/_core.scss' as *;
 
 .navegador-contenedor {
-  @include bordes;
-  @include gad-pad-responsive($gad-pad);
+  //@include bordes;
+  @include pad-gap;
   @include tamaño-completo;
   display: flex;
   flex-direction: row;
