@@ -2,7 +2,7 @@
 
 .navegador-contenedor {
   @include bordes;
-  @include pad-gap;
+  @include gad-pad-responsive($gad-pad);
   @include tamaño-completo;
   display: flex;
   flex-direction: row;

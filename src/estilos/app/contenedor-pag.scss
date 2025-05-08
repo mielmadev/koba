@@ -4,14 +4,12 @@
   @include bordes;
   display: flex;
   position: fixed;
-  @include altura-encabezado-bp($altura-encabezado, top);
   z-index: 1;
   width: 100%;
 }
 
 .contenido-pag,
 .contenido {
-  @include responsive-calc-height($altura-encabezado);
   min-height: 0;
   width: 100%;
   max-width: 100vw;

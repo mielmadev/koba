@@ -20,7 +20,7 @@
 .grupo-encabezado-superior {
   @include bordes;
 
-  @include pad-gap;
+  @include gad-pad-responsive($gad-pad);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,7 +30,7 @@
   .grupo-encabezado-superior-izquierda {
     @include bordes;
 
-    @include pad-gap;
+    @include gad-pad-responsive($gad-pad);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -47,7 +47,7 @@
   .grupo-encabezado-superior-derecha {
     @include bordes;
 
-    @include pad-gap;
+    @include gad-pad-responsive($gad-pad);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -61,7 +61,7 @@
 .grupo-encabezado-inferior {
   @include bordes;
 
-  @include pad-gap;
+  @include gad-pad-responsive($gad-pad);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -72,7 +72,7 @@
   .grupo-encabezado-inferior-izquierda {
     @include bordes;
 
-    @include pad-gap;
+    @include gad-pad-responsive($gad-pad);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -97,7 +97,7 @@
   .grupo-encabezado-inferior-derecha {
     @include bordes;
 
-    @include pad-gap;
+    @include gad-pad-responsive($gad-pad);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -132,6 +132,7 @@
 .grupo-pie {
   @include bordes;
 
+  @include gad-pad-responsive($gad-pad);
   width: 100%;
   display: flex;
   flex-direction: row;

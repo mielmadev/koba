@@ -2,7 +2,7 @@
 
 .contenido {
   @include bordes;
-  @include pad-gap;
+  @include gad-pad-responsive($gad-pad);
   flex-direction: column;
   font-size: $fuenteContactoIconos;
   align-items: stretch;
@@ -10,7 +10,7 @@
 
 .contacto {
   @include bordes;
-  @include pad-gap;
+  @include gad-pad-responsive($gad-pad);
   display: flex;
   flex-direction: column;
   align-items: center;

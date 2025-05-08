@@ -1,6 +1,7 @@
 @use '@estilos/bp.scss' as bp;
 @use '@estilos/var.scss' as var;
 
+// @include altura-encabezado-bp($altura-encabezado);
 @mixin altura-encabezado-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
     @if $bp ==xs {
@@ -15,8 +16,8 @@
   }
 }
 
-// Mixin para height: calc(100vh - altura-encabezado) responsivo
-@mixin responsive-calc-height($mapa, $propiedad: height) {
+// @include altura-contenido-bp($altura-encabezado);
+@mixin altura-contenido-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
     @if $bp ==xs {
       #{$propiedad}: calc(100vh - map-get($mapa, $bp));
@@ -26,6 +27,16 @@
       @include bp.bp($bp) {
         #{$propiedad}: calc(100vh - map-get($mapa, $bp));
       }
+    }
+  }
+}
+
+// @include gad-pad-responsive($gad-pad);
+@mixin gad-pad-responsive($mapa) {
+  @each $breakpoint, $valores in $mapa {
+    @include bp.bp($breakpoint) {
+      gap: map-get($valores, gap);
+      padding: map-get($valores, padding);
     }
   }
 }

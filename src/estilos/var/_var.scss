@@ -5,22 +5,28 @@ $border-radius: 20px;
 
 // Encabezado mapa
 $altura-encabezado: (
-  xs: 90px,
-  s: 100px,
-  m: 120px,
-  tablet: 120px,
-  laptop: 120px,
+  xs: 64px,
+  s: 72px,
+  m: 80px,
+  tablet: 88px,
+  laptop: 104px,
   pc: 120px,
-  full: 120px,
+  full: 132px
 );
 
-// Margen
-$margen-completo: 12px;
-$margen-laterales: 0 $margen-completo;
+// Margen responsive
+$margen-completo: (
+  xs: 8px,
+  md: 12px,
+  lg: 16px,
+  tablet: 16px,
+  laptop: 20px,
+  pc: 24px,
+  full: 32px
+);
 
-// Altura y Ancho
-// $altura-contenido: calc(100vh - $altura-encabezado); // Eliminado porque no se puede usar un mapa en un cálculo directo
-$ancho-parrafo: calc(100vw - $margen-completo);
+// Margen lateral (puedes adaptarlo si lo necesitas responsive también)
+$margen-laterales: 0 map-get($margen-completo, md);
 
 // Sombras
 $sombra-blanca: 2px 1px 3px $blanco;
@@ -31,3 +37,14 @@ $drop-shadow-blanco: drop-shadow(0 0 6px $blanco);
 
 // Filtros
 $filtro-fondos: brightness(25%); // filter
+
+
+$gad-pad: (
+  xs: (gap: 0.5rem, padding: 0.5rem),
+  md: (gap: 1rem, padding: 1.5rem),
+  lg: (gap: 2rem, padding: 2.5rem),
+  tablet: (gap: 2rem, padding: 2.5rem),
+  laptop: (gap: 2rem, padding: 2.5rem),
+  pc: (gap: 2rem, padding: 2.5rem),
+  full: (gap: 2rem, padding: 2.5rem)
+);
