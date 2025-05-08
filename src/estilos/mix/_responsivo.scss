@@ -1,34 +1,13 @@
 @use '@estilos/_bp.scss' as bp;
 @use '@estilos/var.scss' as var;
 
-// Mixin para aplicar bordes con color y radio definidos en variables
-@mixin bordes {
-  border: var.$amarillo 1px solid;
-  border-radius: var.$border-radius;
-}
-
-// Mixin para tamaño completo
-@mixin tamaño-completo {
-  width: 100%;
-  height: 100%;
-}
-
-// Mixin para padding y gap estándar
-@mixin pad-gap {
-  padding: 0.5rem;
-  gap: 1rem;
-}
-
-@mixin tamaño-banda-imagen {
-  width: clamp(60px, 80vw, 120px);
-  height: clamp(30px, 40vw, 80px);
-}
-
 @mixin altura-encabezado-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
-    @if $bp == xs {
+    @if $bp ==xs {
       #{$propiedad}: map-get($mapa, $bp);
-    } @else {
+    }
+
+    @else {
       @include bp.bp($bp) {
         #{$propiedad}: map-get($mapa, $bp);
       }
@@ -39,9 +18,11 @@
 // Mixin para height: calc(100vh - altura-encabezado) responsivo
 @mixin responsive-calc-height($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
-    @if $bp == xs {
+    @if $bp ==xs {
       #{$propiedad}: calc(100vh - map-get($mapa, $bp));
-    } @else {
+    }
+
+    @else {
       @include bp.bp($bp) {
         #{$propiedad}: calc(100vh - map-get($mapa, $bp));
       }

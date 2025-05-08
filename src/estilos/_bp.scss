@@ -1,61 +1,26 @@
-// Breakpoints semánticos y mobile-first
-// $bp-xs: Extra pequeño (móviles muy pequeños, ej: iPhone SE)
-$bp-xs: 320px;
-// $bp-s: Pequeño (móviles modernos, ej: iPhone X/12/13, Pixel 5)
-$bp-s: 375px;
-// $bp-m: Mediano (móviles grandes, ej: Galaxy S20)
-$bp-m: 425px;
-// $bp-tablet: Tablet (ej: iPad vertical)
-$bp-tablet: 768px;
-// $bp-laptop: Portátil (ej: iPad Air horizontal, laptops pequeños)
-$bp-laptop: 1024px;
-// $bp-pc: Escritorio (laptops grandes, monitores estándar)
-$bp-pc: 1440px;
-// $bp-full: Ultra grande (pantallas full, ej: 2560px)
-$bp-full: 2560px;
+$bp-xs: 320px; // Extra pequeño (móviles muy pequeños, ej: iPhone SE)
+$bp-s: 375px; // Pequeño (móviles modernos, ej: iPhone X/12/13, Pixel 5)
+$bp-m: 425px; // Mediano (móviles grandes, ej: Galaxy S20)
+$bp-tablet: 768px; // Tablet (ej: iPad vertical)
+$bp-laptop: 1024px; // Portátil (ej: iPad Air horizontal, laptops pequeños)
+$bp-pc: 1440px; // Escritorio (laptops grandes, monitores estándar)
+$bp-full: 2560px; // Ultra grande (pantallas full, ej: 2560px)
+
+// Mapa de breakpoints para uso dinámico
+$breakpoints: (
+  xs: $bp-xs,
+  s: $bp-s,
+  m: $bp-m,
+  tablet: $bp-tablet,
+  laptop: $bp-laptop,
+  pc: $bp-pc,
+  full: $bp-full
+);
 
 // Mixin mobile-first para breakpoints
-// Uso: @include responsivo(xs) { ... }
+// Uso: @include bp(xs) { ... }
 @mixin bp($bp) {
-  @if $bp ==xs {
-    @media (min-width: #{$bp-xs}) {
-      @content;
-    }
-  }
-
-  @else if $bp ==s {
-    @media (min-width: #{$bp-s}) {
-      @content;
-    }
-  }
-
-  @else if $bp ==m {
-    @media (min-width: #{$bp-m}) {
-      @content;
-    }
-  }
-
-  @else if $bp ==tablet {
-    @media (min-width: #{$bp-tablet}) {
-      @content;
-    }
-  }
-
-  @else if $bp ==laptop {
-    @media (min-width: #{$bp-laptop}) {
-      @content;
-    }
-  }
-
-  @else if $bp ==pc {
-    @media (min-width: #{$bp-pc}) {
-      @content;
-    }
-  }
-
-  @else if $bp ==full {
-    @media (min-width: #{$bp-full}) {
-      @content;
-    }
+  @media (min-width: map-get($breakpoints, $bp)) {
+    @content;
   }
 }
