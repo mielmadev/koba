@@ -1,4 +1,4 @@
-@use '@estilos/var/_var.scss' as var;
+@use '@estilos/var.scss' as var;
 
 // Mixin para aplicar bordes con color y radio definidos en variables
 @mixin bordes {
@@ -18,7 +18,8 @@
   gap: 1rem;
 }
 
+
 @mixin tamaño-banda-imagen {
-  width: clamp(100px, 100%, 350px);
-  height: clamp(100px, 100%, 250px);
+  width: clamp(60px, 80vw, 120px);
+  height: clamp(30px, 40vw, 80px);
 }

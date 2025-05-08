@@ -1,14 +1,8 @@
 @use '@estilos/var.scss' as var;
-@use '@estilos/_bp.scss' as bp;
 @use '@estilos/_mix.scss' as mix;
-
-
-
-
 
 .navlink {
   @include mix.bordes;
-
 }
 
 a {

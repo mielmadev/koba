@@ -1,11 +1,9 @@
 @use '@estilos/var.scss' as var;
-@use '@estilos/_bp.scss' as bp;
 @use '@estilos/_mix.scss' as mix;
 
 
 .contenedor-pag {
   @include mix.bordes;
-
   display: flex;
   position: fixed;
   top: var.$altura-encabezado;

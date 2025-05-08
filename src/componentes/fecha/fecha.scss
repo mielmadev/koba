@@ -16,7 +16,6 @@
 
 .fecha-contenedor {
   @include mix.bordes;
-
   color: var.$blanco;
   text-shadow: var.$blanco 0px 0px 10px, var.$blanco 0px 0px 20px;
   text-align: center;
