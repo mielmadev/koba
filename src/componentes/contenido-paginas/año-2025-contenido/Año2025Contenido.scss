@@ -4,7 +4,7 @@
 
 .contenido-2025 {
   @include mix.bordes;
-  height: calc(100vh - var.$altura-encabezado);
+  @include mix.responsive-calc-height(var.$altura-encabezado);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

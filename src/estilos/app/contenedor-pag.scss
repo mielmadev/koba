@@ -6,14 +6,14 @@
   @include mix.bordes;
   display: flex;
   position: fixed;
-  top: var.$altura-encabezado;
+  @include mix.altura-encabezado-bp(var.$altura-encabezado, top);
   z-index: 1;
   width: 100%;
 }
 
 .contenido-pag,
 .contenido {
-  height: calc(100vh - var.$altura-encabezado);
+  @include mix.responsive-calc-height(var.$altura-encabezado);
   min-height: 0;
   width: 100%;
   max-width: 100vw;

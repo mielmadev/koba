@@ -3,15 +3,23 @@
 // Bordes
 $border-radius: 20px;
 
-// Encabezado
-$altura-encabezado: 56px;
+// Encabezado mapa
+$altura-encabezado: (
+  xs: 90px,
+  s: 100px,
+  m: 120px,
+  tablet: 120px,
+  laptop: 120px,
+  pc: 120px,
+  full: 120px,
+);
 
 // Margen
-$margen-completo: 12px; 
+$margen-completo: 12px;
 $margen-laterales: 0 $margen-completo;
 
 // Altura y Ancho
-$altura-contenido: calc(100vh - $altura-encabezado);
+// $altura-contenido: calc(100vh - $altura-encabezado); // Eliminado porque no se puede usar un mapa en un cálculo directo
 $ancho-parrafo: calc(100vw - $margen-completo);
 
 // Sombras

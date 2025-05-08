@@ -3,8 +3,8 @@
 @use '@estilos/_mix.scss' as mix;
 
 .encabezado-contenedor {
+  @include mix.altura-encabezado-bp(var.$altura-encabezado);
   @include mix.bordes;
-  height: var.$altura-encabezado;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -18,7 +18,7 @@
     @include mix.bordes;
     @include mix.pad-gap;
     display: flex;
-    height: var.$altura-encabezado;
+    height: 100%;
     width: auto;
     justify-content: center;
     flex-shrink: 0;
@@ -35,8 +35,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1 1 0%;
-    min-width: 0;
+    height: 100%;
+    width: 100%;
 
     .encabezado-navegador {
       @include mix.bordes;
@@ -44,6 +44,7 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      flex: 1;
     }
 
     .encabezado-eslogan {
@@ -52,6 +53,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      flex: 1;
     }
   }
 }

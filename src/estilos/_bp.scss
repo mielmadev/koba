@@ -11,12 +11,12 @@ $bp-tablet: 768px;
 $bp-laptop: 1024px;
 // $bp-pc: Escritorio (laptops grandes, monitores estándar)
 $bp-pc: 1440px;
-// $bp-4k: Ultra grande (pantallas 4K, ej: 2560px)
-$bp-4k: 2560px;
+// $bp-full: Ultra grande (pantallas full, ej: 2560px)
+$bp-full: 2560px;
 
 // Mixin mobile-first para breakpoints
-// Uso: @include respond-to(xs) { ... }
-@mixin respond-to($bp) {
+// Uso: @include responsivo(xs) { ... }
+@mixin bp($bp) {
   @if $bp ==xs {
     @media (min-width: #{$bp-xs}) {
       @content;
@@ -53,8 +53,8 @@ $bp-4k: 2560px;
     }
   }
 
-  @else if $bp ==4k {
-    @media (min-width: #{$bp-4k}) {
+  @else if $bp ==full {
+    @media (min-width: #{$bp-full}) {
       @content;
     }
   }
