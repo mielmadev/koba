@@ -1,25 +1,23 @@
-@use '@estilos/var.scss' as var;
-@use '@estilos/mix.scss' as mix;
-
+@use '@estilos/_core.scss' as *;
 
 .contenedor-pag {
-  @include mix.bordes;
+  @include bordes;
   display: flex;
   position: fixed;
-  @include mix.altura-encabezado-bp(var.$altura-encabezado, top);
+  @include altura-encabezado-bp($altura-encabezado, top);
   z-index: 1;
   width: 100%;
 }
 
 .contenido-pag,
 .contenido {
-  @include mix.responsive-calc-height(var.$altura-encabezado);
+  @include responsive-calc-height($altura-encabezado);
   min-height: 0;
   width: 100%;
   max-width: 100vw;
   position: relative;
   z-index: 1;
-  color: var.$blanco;
+  color: $blanco;
   display: flex;
   flex-direction: column;
   overflow-y: auto;

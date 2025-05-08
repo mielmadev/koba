@@ -1,4 +1,4 @@
-@use '@estilos/_bp.scss' as bp;
+@use '@estilos/bp.scss' as bp;
 @use '@estilos/var.scss' as var;
 
 @mixin altura-encabezado-bp($mapa, $propiedad: height) {

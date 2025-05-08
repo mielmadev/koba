@@ -24,3 +24,11 @@ $breakpoints: (
     @content;
   }
 }
+
+// Mixin para max-width (hasta cierto breakpoint)
+// Uso: @include bp-max(xs) { ... }
+@mixin bp-max($bp) {
+  @media (max-width: map-get($breakpoints, $bp)) {
+    @content;
+  }
+}

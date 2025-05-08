@@ -1,12 +1,10 @@
-@use '@estilos/var.scss' as var;
-@use '@estilos/_bp.scss' as bp;
-@use '@estilos/mix.scss' as mix;
+@use '@estilos/_core.scss' as *;
 
 .integrante-nombre {
-  color: var.$marron;
-  font-weight: var.$pesoGrupoIntegrante;
+  color: $marron;
+  font-weight: $pesoGrupoIntegrante;
 }
 
 .integrante-rol {
-  color: var.$gris;
+  color: $gris;
 }

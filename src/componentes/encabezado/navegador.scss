@@ -1,11 +1,9 @@
-@use '@estilos/var.scss' as var;
-@use '@estilos/_bp.scss' as bp;
-@use '@estilos/mix.scss' as mix;
+@use '@estilos/_core.scss' as *;
 
 .navegador-contenedor {
-  @include mix.bordes;
-  @include mix.pad-gap;
-  @include mix.tamaño-completo;
+  @include bordes;
+  @include pad-gap;
+  @include tamaño-completo;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -35,7 +33,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include bp-max(m) {
   .hamburguesa {
     display: flex;
   }

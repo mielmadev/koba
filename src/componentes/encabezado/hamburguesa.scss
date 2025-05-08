@@ -1,6 +1,4 @@
-@use '@estilos/var.scss' as var;
-@use '@estilos/_bp.scss' as bp;
-@use '@estilos/mix.scss' as mix;
+@use '@estilos/_core.scss' as *;
 
 .hamburguesa {
   display: none;
@@ -17,7 +15,7 @@
   .linea {
     width: 28px;
     height: 4px;
-    background: var.$blanco;
+    background: $blanco;
     margin: 4px 0;
     border-radius: 2px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
