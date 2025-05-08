@@ -1,17 +1,19 @@
-@use '@estilos/_base.scss' as *;
+@use '@estilos/var.scss' as var;
+@use '@estilos/_bp.scss' as bp;
+@use '@estilos/_mix.scss' as mix;
 // Para movil 480px
 
 .contenido {
-  @include bordes;
-  @include pad-gap;
+  @include mix.bordes;
+  @include mix.pad-gap;
   flex-direction: column;
-  font-size: $fuenteContactoIconos;
+  font-size: var.$fuenteContactoIconos;
   align-items: stretch;
 }
 
 .contacto {
-  @include bordes;
-  @include pad-gap;
+  @include mix.bordes;
+  @include mix.pad-gap;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +25,8 @@
 }
 
 .redes-sociales {
-  @include bordes;
-  @include tamaño-completo;
+  @include mix.bordes;
+  @include mix.tamaño-completo;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly; // Espaciado entre iconos
@@ -37,19 +39,19 @@
 }
 
 .icono-social {
-  font-size: $fuenteContactoIconos;
+  font-size: var.$fuenteContactoIconos;
   width: 1.4em;
   height: 1.4em;
   display: flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  filter: $drop-shadow-blanco;
+  filter: var.$drop_shadow_blanco;
 }
 
 .icono-social:hover {
-  color: $marron !important;
-  filter: drop-shadow(0 0 18px var(--icono-color-original, $facebook));
+  color: var.$marron !important;
+  filter: drop-shadow(0 0 18px var(--icono-color-original, var.$facebook));
 }
 
 .icono-social:active {
@@ -58,36 +60,36 @@
 }
 
 .icono-facebook {
-  color: $facebook !important;
+  color: var.$facebook !important;
   --icono-color-original: #{$facebook};
 }
 
 .icono-instagram {
-  color: $instagram !important;
+  color: var.$instagram !important;
   --icono-color-original: #{$instagram};
 }
 
 .icono-spotify {
-  color: $spotify !important;
+  color: var.$spotify !important;
   --icono-color-original: #{$spotify};
 }
 
 .icono-tiktok {
-  color: $tiktok !important;
+  color: var.$tiktok !important;
   --icono-color-original: #{$tiktok};
 }
 
 .icono-twitter {
-  color: $twitter !important;
+  color: var.$twitter !important;
   --icono-color-original: #{$twitter};
 }
 
 .icono-youtube {
-  color: $youtube !important;
+  color: var.$youtube !important;
   --icono-color-original: #{$youtube};
 }
 
 .icono-whatsapp {
-  color: $whatsapp !important;
+  color: var.$whatsapp !important;
   --icono-color-original: #{$whatsapp};
 }

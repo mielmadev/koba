@@ -2,26 +2,26 @@
 // =========================
 // DECLARACIÓN DE FUENTES BASE
 // =========================
-$fuenteBase: 0.95rem; // móvil
-$fuenteH1: 1.5rem;
-$fuenteH2: 1.2rem;
-$fuenteH3: 1rem;
-$fuenteParrafo: 0.95rem;
-$fuenteH4: 0.95rem;
-$fuenteH5: 0.8rem;
-$fuenteH6: 0.7rem;
+$fuente-base: 0.95rem; // móvil
+$fuente-h1: 1.5rem;
+$fuente-h2: 1.2rem;
+$fuente-h3: 1rem;
+$fuente-parrafo: 0.95rem;
+$fuente-h4: 0.95rem;
+$fuente-h5: 0.8rem;
+$fuente-h6: 0.7rem;
 
 // =========================
 // CLAMP TIPOGRÁFICO PARA HEADINGS Y PÁRRAFO
 // =========================
-$clampBase: clamp(0.95rem, 2vw, 2rem);
-$clampH1: clamp($fuenteH1, 6vw, 4rem);
-$clampH2: clamp($fuenteH2, 4vw, 3rem);
-$clampH3: clamp($fuenteH3, 3vw, 2.5rem);
-$clampParrafo: clamp($fuenteParrafo, 2vw, 2rem);
-$clampH4: clamp($fuenteH4, 2vw, 2rem);
-$clampH5: clamp($fuenteH5, 1.5vw, 1.5rem);
-$clampH6: clamp($fuenteH6, 1vw, 1.2rem);
+$clamp-base: clamp(0.95rem, 2vw, 2rem);
+$clamp-h1: clamp($fuente-h1, 6vw, 4rem);
+$clamp-h2: clamp($fuente-h2, 4vw, 3rem);
+$clamp-h3: clamp($fuente-h3, 3vw, 2.5rem);
+$clamp-parrafo: clamp($fuente-parrafo, 2vw, 2rem);
+$clamp-h4: clamp($fuente-h4, 2vw, 2rem);
+$clamp-h5: clamp($fuente-h5, 1.5vw, 1.5rem);
+$clamp-h6: clamp($fuente-h6, 1vw, 1.2rem);
 
 // Eliminados los breakpoints responsivos para fuentes
 
@@ -30,32 +30,32 @@ $clampH6: clamp($fuenteH6, 1vw, 1.2rem);
 // =========================
 
 // About
-$fuenteAboutTitulo: $clampH1;
-$fuenteAboutSubtitulo: $clampH2;
-$fuenteAboutSeccion: $clampH3;
-$fuenteAboutTexto: $fuenteParrafo;
+$fuente-about-titulo: $clamp-h1;
+$fuente-about-subtitulo: $clamp-h2;
+$fuente-about-seccion: $clamp-h3;
+$fuente-about-texto: $fuente-parrafo;
 
 // Bandas
-$fuenteBandasNombre: $clampH1;
-$fuenteBandasClick: $clampH2;
+$fuente-bandas-nombre: $clamp-h1;
+$fuente-bandas-click: $clamp-h2;
 
 //Grupos
-$fuenteGruposEstiloAño: $clampH2;
-$fuenteGruposResumen: $clampH3;
+$fuente-grupos-estilo-año: $clamp-h2;
+$fuente-grupos-resumen: $clamp-h3;
 
 // Contacto
-$fuenteContactoIconos: $fuenteH1;
-$fuenteContactoTexto: $fuenteParrafo;
+$fuente-contacto-iconos: $fuente-h1;
+$fuente-contacto-texto: $fuente-parrafo;
 
 // Enlaces generales
-$fuenteEnlaces: $fuenteParrafo;
+$fuente-enlaces: $fuente-parrafo;
 
 // Eslogan
-$fuenteEslogan: $clampH2;
+$fuente-eslogan: $clamp-h2;
 
 // FAQ
-$fuenteFaqPreguntas: $clampH3;
-$fuenteFaqRespuestas: $fuenteParrafo;
+$fuente-faq-preguntas: $clamp-h3;
+$fuente-faq-respuestas: $fuente-parrafo;
 
 // Fecha
-$fuenteFecha: $clampH2;
+$fuente-fecha: $clamp-h2;

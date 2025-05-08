@@ -1,8 +1,10 @@
-@use '@estilos/_base.scss' as *;
+@use '@estilos/var.scss' as var;
+@use '@estilos/_bp.scss' as bp;
+@use '@estilos/_mix.scss' as mix;
 
 .contenido-2025 {
-  @include bordes;
-  height: calc(100vh - $altura-encabezado);
+  @include mix.bordes;
+  height: calc(100vh - var.$altura-encabezado);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -12,17 +14,17 @@
 }
 
 .banda-imagen {
-  @include bordes;
+  @include mix.bordes;
   display: flex;
   align-items: center;
   justify-content: center;
   object-fit: contain;
-  @include tamaño-banda-imagen;
+  @include mix.tamaño-banda-imagen;
   border-radius: 12px;
 
   img {
-    @include bordes;
-    @include tamaño-completo;
+    @include mix.bordes;
+    @include mix.tamaño-completo;
     display: block;
     object-fit: contain;
     max-width: 90%;

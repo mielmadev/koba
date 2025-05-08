@@ -2,35 +2,35 @@
 // DECLARACIÓN DE pesoS BASE
 // =========================
 //$pesoBase: 400; // escritorio
-$pesoBase: 400;
+$peso-base: 400;
 //$pesoH1: 700;
-$pesoH1: 600; // móvil
+$peso-h1: 600; // móvil
 //$pesoH2: 600;
-$pesoH2: 500; // móvil
+$peso-h2: 500; // móvil
 //$pesoH3: 500;
-$pesoH3: 400; // móvil
-$pesoParrafo: 400;
-$pesoH4: 400;
-$pesoH5: 400; // Corregido, antes estaba en rem
-$pesoH6: 400; // Corregido, antes estaba en rem
+$peso-h3: 400; // móvil
+$peso-parrafo: 400;
+$peso-h4: 400;
+$peso-h5: 400; // Corregido, antes estaba en rem
+$peso-h6: 400; // Corregido, antes estaba en rem
 
 // =========================
-// pesoS ESPECÍFICAS
+// pesos específicas
 // =========================
-$pesoAboutTexto: $pesoParrafo;
-$pesoAboutTitulo: $pesoH1;
-$pesoAboutSubtitulo: $pesoH2;
-$pesoAboutSeccion: $pesoH3;
-$pesoGrupoAlbum: $pesoH1;
-$pesoGrupoIntegrante: $pesoH1;
-$pesoBandasClick: $pesoH2;
-$pesoBandasNombre: $pesoH1;
-$pesoContactoIconos: $pesoH1;
-$pesoEnlaces: $pesoParrafo;
-$pesoEslogan: $pesoH1;
-$pesoNavegador: $pesoParrafo;
-$pesoFaqPreguntas: $pesoH2;
-$pesoFaqRespuestas: $pesoParrafo;
-$pesoFecha: $pesoH2;
-$pesoGruposEstiloAño: $pesoH2;
-$pesoGruposResumen: $pesoH3;
+$peso-about-texto: $peso-parrafo;
+$peso-about-titulo: $peso-h1;
+$peso-about-subtitulo: $peso-h2;
+$peso-about-seccion: $peso-h3;
+$peso-grupo-album: $peso-h1;
+$peso-grupo-integrante: $peso-h1;
+$peso-bandas-click: $peso-h2;
+$peso-bandas-nombre: $peso-h1;
+$peso-contacto-iconos: $peso-h1;
+$peso-enlaces: $peso-parrafo;
+$peso-eslogan: $peso-h1;
+$peso-navegador: $peso-parrafo;
+$peso-faq-preguntas: $peso-h2;
+$peso-faq-respuestas: $peso-parrafo;
+$peso-fecha: $peso-h2;
+$peso-grupos-estilo-año: $peso-h2;
+$peso-grupos-resumen: $peso-h3;

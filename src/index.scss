@@ -1,9 +1,11 @@
-@use '@estilos/_base.scss' as *;
+@use '@estilos/var.scss' as var;
+@use '@estilos/_bp.scss' as bp;
+@use '@estilos/_mix.scss' as mix;
 
 :root {
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.7;
-  font-size: $fuenteBase;
+  font-size: var.$fuente-base;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,8 +24,8 @@
 body {
   box-sizing: border-box;
   margin: 0;
-  background-color: $negro;
-  color: $blanco;
+  background-color: var.$negro;
+  color: var.$blanco;
   display: flex;
   min-width: 0;
   min-height: 100vh;

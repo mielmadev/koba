@@ -1,4 +1,6 @@
-@use '@estilos/_base.scss' as *;
+@use '@estilos/var.scss' as var;
+@use '@estilos/_bp.scss' as bp;
+@use '@estilos/_mix.scss' as mix;
 
 
 
@@ -9,14 +11,14 @@
 .contacto-fondo,
 .bandas-fondo {
 
-  @include tamaño-completo;
+  @include mix.tamaño-completo;
   height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
-  background-color: $negro;
+  background-color: var.$negro;
 
   img {
     width: 100%;
@@ -25,6 +27,6 @@
     max-height: 100%;
     object-fit: cover;
     object-position: top center;
-    filter: $filtro-fondos;
+    filter: var.$filtro_fondos;
   }
 }

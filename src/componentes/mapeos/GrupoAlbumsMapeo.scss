@@ -1,10 +1,12 @@
-@use '@estilos/_base.scss' as *;
+@use '@estilos/var.scss' as var;
+@use '@estilos/_bp.scss' as bp;
+@use '@estilos/_mix.scss' as mix;
 
 .album-nombre {
-  color: $marron;
-  font-weight: $pesoGrupoAlbum;
+  color: var.$marron;
+  font-weight: var.$pesoGrupoAlbum;
 }
 
 .album-año {
-  color: $gris;
+  color: var.$gris;
 }

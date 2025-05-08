@@ -1,9 +1,10 @@
-@use '@estilos/_base.scss' as *;
+@use '@estilos/var.scss' as var;
 @use '@estilos/_bp.scss' as bp;
+@use '@estilos/_mix.scss' as mix;
 
 .encabezado-contenedor {
-  @include bordes;
-  height: $altura-encabezado;
+  @include mix.bordes;
+  height: var.$altura-encabezado;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -14,22 +15,22 @@
   justify-content: flex-start;
 
   .logo-encabezado {
-    @include bordes;
-    @include pad-gap;
+    @include mix.bordes;
+    @include mix.pad-gap;
     display: flex;
-    height: $altura-encabezado;
+    height: var.$altura-encabezado;
     width: auto;
     justify-content: center;
     flex-shrink: 0;
 
     .logo-encabezado img {
-      @include bordes;
-      @include tamaño-completo;
+      @include mix.bordes;
+      @include mix.tamaño-completo;
     }
   }
 
   .encabezado-derecha {
-    @include bordes;
+    @include mix.bordes;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,16 +39,16 @@
     min-width: 0;
 
     .encabezado-navegador {
-      @include bordes;
-      @include tamaño-completo;
+      @include mix.bordes;
+      @include mix.tamaño-completo;
       display: flex;
       justify-content: flex-end;
       align-items: center;
     }
 
     .encabezado-eslogan {
-      @include bordes;
-      @include tamaño-completo;
+      @include mix.bordes;
+      @include mix.tamaño-completo;
       display: flex;
       justify-content: flex-start;
       align-items: center;

@@ -1,16 +1,18 @@
-@use '@estilos/_base.scss' as *;
+@use '@estilos/var.scss' as var;
+@use '@estilos/_bp.scss' as bp;
+@use '@estilos/_mix.scss' as mix;
 
 .grupo-contenido {
-  @include bordes;
+  @include mix.bordes;
 
-  margin: $margen-laterales;
+  margin: var.$margen_laterales;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .grupo-encabezado {
-  @include bordes;
+  @include mix.bordes;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -18,9 +20,9 @@
 }
 
 .grupo-encabezado-superior {
-  @include bordes;
+  @include mix.bordes;
 
-  @include pad-gap;
+  @include mix.pad-gap;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -28,9 +30,9 @@
   height: 150px;
 
   .grupo-encabezado-superior-izquierda {
-    @include bordes;
+    @include mix.bordes;
 
-    @include pad-gap;
+    @include mix.pad-gap;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -45,23 +47,23 @@
   }
 
   .grupo-encabezado-superior-derecha {
-    @include bordes;
+    @include mix.bordes;
 
-    @include pad-gap;
+    @include mix.pad-gap;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
     height: 100%;
-    font-size: $fuenteGruposEstiloAño;
+    font-size: var.$fuenteGruposEstiloAño;
   }
 }
 
 .grupo-encabezado-inferior {
-  @include bordes;
+  @include mix.bordes;
 
-  @include pad-gap;
+  @include mix.pad-gap;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -70,9 +72,9 @@
   height: 100%;
 
   .grupo-encabezado-inferior-izquierda {
-    @include bordes;
+    @include mix.bordes;
 
-    @include pad-gap;
+    @include mix.pad-gap;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -81,7 +83,7 @@
     height: 100%;
 
     .grupo-integrantes {
-      @include bordes;
+      @include mix.bordes;
 
       display: flex;
       flex-direction: column;
@@ -95,9 +97,9 @@
   }
 
   .grupo-encabezado-inferior-derecha {
-    @include bordes;
+    @include mix.bordes;
 
-    @include pad-gap;
+    @include mix.pad-gap;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -106,17 +108,17 @@
     height: 100%;
 
     .grupo-resumen {
-      @include bordes;
+      @include mix.bordes;
 
       text-align: justify;
       width: 100%;
       height: 100%;
-      font-size: $fuenteGruposResumen;
+      font-size: var.$fuenteGruposResumen;
       line-height: 2;
     }
 
     .grupo-albums {
-      @include bordes;
+      @include mix.bordes;
 
       display: flex;
       flex-direction: row;
@@ -130,7 +132,7 @@
 }
 
 .grupo-pie {
-  @include bordes;
+  @include mix.bordes;
 
   width: 100%;
   display: flex;

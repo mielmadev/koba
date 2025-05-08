@@ -1,9 +1,11 @@
-@use '@estilos/_base.scss' as *;
+@use '@estilos/var.scss' as var;
+@use '@estilos/_bp.scss' as bp;
+@use '@estilos/_mix.scss' as mix;
 
 .navegador-contenedor {
-  @include bordes;
-  @include pad-gap;
-  @include tamaño-completo;
+  @include mix.bordes;
+  @include mix.pad-gap;
+  @include mix.tamaño-completo;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

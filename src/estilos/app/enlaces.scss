@@ -1,45 +1,47 @@
-@use '@estilos/_base.scss' as *;
+@use '@estilos/var.scss' as var;
+@use '@estilos/_bp.scss' as bp;
+@use '@estilos/_mix.scss' as mix;
 
 
 
 
 
 .navlink {
-  @include bordes;
+  @include mix.bordes;
 
 }
 
 a {
-  color: $blanco;
+  color: var.$blanco;
   text-decoration: none;
-  font-size: $fuenteEnlaces;
-  font-weight: $pesoNavegador;
-  text-shadow: $sombra-blanca;
+  font-size: var.$fuente-enlaces;
+  font-weight: var.$peso-navegador;
+  text-shadow: var.$sombra_blanca;
   height: 100%;
 
   &:hover {
-    color: $gris;
-    text-shadow: $sombra-gris;
+    color: var.$gris;
+    text-shadow: var.$sombra_gris;
     cursor: url('@cursor/KobaPua_32x32_Gris.png') 16 0, auto;
     transition: cursor 0.3s ease;
   }
 
   &:active {
-    color: $negro;
-    text-shadow: $sombra-blanca;
+    color: var.$negro;
+    text-shadow: var.$sombra_blanca;
     cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
     transition: cursor 0.3s ease;
   }
 
   &.navlink {
     &.active {
-      color: $marron;
-      text-shadow: $sombra-marron;
+      color: var.$marron;
+      text-shadow: var.$sombra_marron;
       cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
       transition: cursor 0.3s ease;
 
       &:active {
-        color: $negro;
+        color: var.$negro;
         cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
         transition: cursor 0.3s ease;
       }
