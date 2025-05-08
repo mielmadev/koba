@@ -5,7 +5,7 @@ import './fecha.scss';
 const Fecha = () => {
   return (
     <div className='fecha-contenedor'>
-      <div className='fecha'>{fecha} en {ubicacion}</div>
+      <div className='fecha'>{fecha} - {ubicacion}</div>
     </div>
   );
 };
