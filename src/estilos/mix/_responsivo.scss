@@ -1,3 +1,5 @@
+// Para compatibilidad futura con Sass: usar map.get en vez de map-get
+@use 'sass:map';
 @use '@estilos/bp.scss' as bp;
 @use '@estilos/var.scss' as var;
 
@@ -5,12 +7,12 @@
 @mixin altura-encabezado-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
     @if $bp ==xs {
-      #{$propiedad}: map-get($mapa, $bp);
+      #{$propiedad}: map.get($mapa, $bp);
     }
 
     @else {
       @include bp.bp($bp) {
-        #{$propiedad}: map-get($mapa, $bp);
+        #{$propiedad}: map.get($mapa, $bp);
       }
     }
   }
@@ -20,12 +22,12 @@
 @mixin altura-contenido-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
     @if $bp ==xs {
-      #{$propiedad}: calc(100vh - map-get($mapa, $bp));
+      #{$propiedad}: calc(100vh - map.get($mapa, $bp));
     }
 
     @else {
       @include bp.bp($bp) {
-        #{$propiedad}: calc(100vh - map-get($mapa, $bp));
+        #{$propiedad}: calc(100vh - map.get($mapa, $bp));
       }
     }
   }
@@ -35,8 +37,8 @@
 @mixin pad-gap-bp($mapa) {
   @each $breakpoint, $valores in $mapa {
     @include bp.bp($breakpoint) {
-      gap: map-get($valores, gap);
-      padding: map-get($valores, padding);
+      gap: map.get($valores, gap);
+      padding: map.get($valores, padding);
     }
   }
 }

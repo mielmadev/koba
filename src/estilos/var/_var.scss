@@ -1,3 +1,5 @@
+// Para compatibilidad futura con Sass: usar map.get en vez de map-get
+@use 'sass:map';
 @use '@estilos/var/_colores.scss' as *;
 
 // Bordes
@@ -26,7 +28,7 @@ $margen-completo: (
 );
 
 // Margen lateral (puedes adaptarlo si lo necesitas bp también)
-$margen-laterales: 0 map-get($margen-completo, md);
+$margen-laterales: 0 map.get($margen-completo, md);
 
 // Sombras
 $sombra-blanca: 2px 1px 3px $blanco;

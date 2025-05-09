@@ -1,3 +1,6 @@
+// Para compatibilidad futura con Sass: usar map.get en vez de map-get
+@use 'sass:map';
+
 $bp-xs: 320px; // Extra pequeño (móviles muy pequeños, ej: iPhone SE)
 $bp-s: 375px; // Pequeño (móviles modernos, ej: iPhone X/12/13, Pixel 5)
 $bp-m: 425px; // Mediano (móviles grandes, ej: Galaxy S20)
@@ -20,7 +23,7 @@ $breakpoints: (
 // Mixin mobile-first para breakpoints
 // Uso: @include bp(xs) { ... }
 @mixin bp($bp) {
-  @media (min-width: map-get($breakpoints, $bp)) {
+  @media (min-width: map.get($breakpoints, $bp)) {
     @content;
   }
 }
@@ -28,7 +31,7 @@ $breakpoints: (
 // Mixin para max-width (hasta cierto breakpoint)
 // Uso: @include bp-max(xs) { ... }
 @mixin bp-max($bp) {
-  @media (max-width: map-get($breakpoints, $bp)) {
+  @media (max-width: map.get($breakpoints, $bp)) {
     @content;
   }
 }
