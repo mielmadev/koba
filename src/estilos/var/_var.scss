@@ -1,6 +1,6 @@
 // Para compatibilidad futura con Sass: usar map.get en vez de map-get
 @use 'sass:map';
-@use '@estilos/var/_colores.scss' as *;
+@use '@estilos/var/colores.scss' as *;
 
 // Bordes
 $border-radius: 20px;

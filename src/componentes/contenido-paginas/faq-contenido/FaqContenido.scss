@@ -1,21 +1,23 @@
-@use '@estilos/_core.scss' as *;
+@use '@estilos/core.scss' as *;
 
 .faq-pregunta {
   @include bordes;
   @include pad-gap-bp($pad-gap);
-  box-sizing: border-box;
-  margin: $margen_laterales;
-  color: $gris;
-  font-size: $fuenteFaqPreguntas;
+
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
+  margin: $margen_laterales;
+  font-size: $fuenteFaqPreguntas;
   text-align: justify;
+  color: $gris;
 }
 
 .faq-pregunta-texto {
   @include bordes;
-  box-sizing: border-box;
+
   flex-grow: 1;
+  box-sizing: border-box;
   text-align: left;
   white-space: normal;
   word-wrap: break-word;
@@ -29,12 +31,13 @@
 .faq-respuesta {
   @include bordes;
   @include pad-gap-bp($pad-gap);
+
   box-sizing: border-box;
   margin: $margen_laterales;
-  color: $blanco;
   font-size: $fuenteFaqRespuestas;
+  text-align: justify;
+  color: $blanco;
+  overflow-wrap: break-word;
   white-space: normal;
   word-wrap: break-word;
-  overflow-wrap: break-word;
-  text-align: justify;
 }

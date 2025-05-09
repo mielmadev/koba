@@ -6,11 +6,9 @@
 // @include altura-encabezado-bp($altura-encabezado);
 @mixin altura-encabezado-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
-    @if $bp ==xs {
+    @if $bp == xs {
       #{$propiedad}: map.get($mapa, $bp);
-    }
-
-    @else {
+    } @else {
       @include bp.bp($bp) {
         #{$propiedad}: map.get($mapa, $bp);
       }
@@ -21,11 +19,9 @@
 // @include altura-contenido-bp($altura-encabezado);
 @mixin altura-contenido-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
-    @if $bp ==xs {
+    @if $bp == xs {
       #{$propiedad}: calc(100vh - map.get($mapa, $bp));
-    }
-
-    @else {
+    } @else {
       @include bp.bp($bp) {
         #{$propiedad}: calc(100vh - map.get($mapa, $bp));
       }
@@ -37,8 +33,8 @@
 @mixin pad-gap-bp($mapa) {
   @each $breakpoint, $valores in $mapa {
     @include bp.bp($breakpoint) {
-      gap: map.get($valores, gap);
       padding: map.get($valores, padding);
+      gap: map.get($valores, gap);
     }
   }
 }

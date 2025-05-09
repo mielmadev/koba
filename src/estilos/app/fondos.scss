@@ -1,4 +1,4 @@
-@use '@estilos/_core.scss' as *;
+@use '@estilos/core.scss' as *;
 
 .about-fondo,
 .inicio-fondo,
@@ -6,23 +6,23 @@
 .merchan-fondo,
 .contacto-fondo,
 .bandas-fondo {
-
   @include tamaño-completo;
-  height: 100%;
-  width: 100%;
+
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
+  width: 100%;
+  height: 100%;
   background-color: $negro;
 
   img {
     width: 100%;
-    height: 100%;
     max-width: 100%;
+    height: 100%;
     max-height: 100%;
+    filter: $filtro_fondos;
     object-fit: cover;
     object-position: top center;
-    filter: $filtro_fondos;
   }
 }

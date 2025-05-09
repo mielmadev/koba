@@ -1,15 +1,14 @@
-@use '@estilos/_core.scss' as *;
+@use '@estilos/core.scss' as *;
 
 :root {
-  font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.7;
+  font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: $fuente-base;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  line-height: 1.7;
+  cursor: url('@imagenes/cursor/KobaPua_32x32_Blanco.png') 16 0, auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url('@imagenes/cursor/KobaPua_32x32_Blanco.png') 16 0, auto;
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
 }
 
 *,
@@ -20,12 +19,12 @@
 }
 
 body {
-  box-sizing: border-box;
-  margin: 0;
-  background-color: $negro;
-  color: $blanco;
   display: flex;
+  box-sizing: border-box;
   min-width: 0;
   min-height: 100vh;
+  margin: 0;
+  color: $blanco;
+  background-color: $negro;
   overflow-x: hidden;
 }

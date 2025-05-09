@@ -1,49 +1,53 @@
-@use '@estilos/_core.scss' as *; // Para movil 480px
+@use '@estilos/core.scss' as *; // Para movil 480px
 
 .contenido {
   @include bordes;
+
   flex-direction: column;
-  font-size: $fuenteContactoIconos;
   align-items: stretch;
+  font-size: $fuenteContactoIconos;
+
   @include pad-gap-bp($pad-gap);
 }
 
 .contacto {
   @include bordes;
   @include pad-gap-bp($pad-gap);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 1rem;
-  min-height: 0;
   height: 100%; // Ahora ocupa el alto completo disponible
+  min-height: 0;
+  gap: 1rem;
 
 }
 
 .redes-sociales {
   @include bordes;
   @include tamaño-completo;
+
   display: flex;
   flex-direction: row;
   justify-content: space-evenly; // Espaciado entre iconos
   align-items: center;
   width: 100%;
-  gap: 0.5em;
-  padding: 0.5em 0;
-  min-height: unset;
   height: auto;
+  min-height: unset;
+  padding: 0.5em 0;
+  gap: 0.5em;
 }
 
 .icono-social {
-  font-size: $fuenteContactoIconos;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1.4em;
   height: 1.4em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
+  font-size: $fuenteContactoIconos;
   filter: $drop_shadow_blanco;
+  vertical-align: middle;
 }
 
 .icono-social:hover {
@@ -58,35 +62,42 @@
 
 .icono-facebook {
   color: $facebook ;
+
   --icono-color-original: #{$facebook};
 }
 
 .icono-instagram {
   color: $instagram ;
+
   --icono-color-original: #{$instagram};
 }
 
 .icono-spotify {
   color: $spotify ;
+
   --icono-color-original: #{$spotify};
 }
 
 .icono-tiktok {
   color: $tiktok ;
+
   --icono-color-original: #{$tiktok};
 }
 
 .icono-twitter {
   color: $twitter ;
+
   --icono-color-original: #{$twitter};
 }
 
 .icono-youtube {
   color: $youtube ;
+
   --icono-color-original: #{$youtube};
 }
 
 .icono-whatsapp {
   color: $whatsapp ;
+
   --icono-color-original: #{$whatsapp};
 }

@@ -1,6 +1,7 @@
-@use '@estilos/_core.scss' as *;
+@use '@estilos/core.scss' as *;
 
 .hamburguesa {
+  z-index: 1100;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -10,23 +11,22 @@
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1100;
 
   .linea {
+    position: relative;
     width: 28px;
     height: 4px;
-    background: $blanco;
     margin: 4px 0;
+    background: $blanco;
     border-radius: 2px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
   }
 }
 
 .hamburguesa.abierto {
   .linea1 {
-    transform: translateY(8px) rotate(45deg);
     background: $gris;
+    transform: translateY(8px) rotate(45deg);
   }
 
   .linea2 {
@@ -34,8 +34,8 @@
   }
 
   .linea3 {
-    transform: translateY(-8px) rotate(-45deg);
     background: $gris;
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
 

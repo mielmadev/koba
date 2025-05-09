@@ -1,17 +1,19 @@
-@use '@estilos/_core.scss' as *;
+@use '@estilos/core.scss' as *;
 
 .navegador-contenedor {
-  //@include bordes;
+  // @include bordes;
   @include pad-gap;
   @include tamaño-completo;
+
+  z-index: 1000;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  z-index: 1000;
 }
 
 .hamburguesa {
+  z-index: 1100;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -21,13 +23,12 @@
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1100;
 
   .linea {
     width: 28px;
     height: 4px;
-    background: #fff;
     margin: 4px 0;
+    background: #fff;
     border-radius: 2px;
     transition: all 0.3s;
   }
@@ -42,13 +43,13 @@
     position: absolute;
     top: 60px;
     right: 0;
-    background: #222;
+    display: none;
     flex-direction: column;
     align-items: flex-end;
     width: 200px;
     padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    display: none;
+    background: #222;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
   }
 
   .navegador-contenedor.abierto {

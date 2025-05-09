@@ -1,8 +1,8 @@
-@use '@estilos/_core.scss' as *;
+@use '@estilos/core.scss' as *;
 
 .integrante-nombre {
-  color: $marron;
   font-weight: $pesoGrupoIntegrante;
+  color: $marron;
 }
 
 .integrante-rol {

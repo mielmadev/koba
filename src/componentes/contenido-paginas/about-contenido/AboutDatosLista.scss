@@ -1,4 +1,4 @@
-@use '@estilos/_core.scss' as *;
+@use '@estilos/core.scss' as *;
 
 .about-titulo,
 .about-subtitulo,
@@ -6,16 +6,16 @@
 .about-texto,
 .about-video {
   margin: $margen_laterales;
-  text-align: justify;
   padding: 2px;
+  text-align: justify;
 }
 
 .about-titulo {
   font-size: $fuenteAboutTitulo;
   font-weight: $pesoAboutTitulo;
-  color: $negro;
-  text-shadow: 3px 3px 5px $blanco, -3px -3px 5px $blanco ;
   text-align: center;
+  text-shadow: 3px 3px 5px $blanco, -3px -3px 5px $blanco ;
+  color: $negro;
   white-space: nowrap;
 }
 

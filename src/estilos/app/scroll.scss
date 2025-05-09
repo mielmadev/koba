@@ -1,4 +1,4 @@
-@use '@estilos/_core.scss' as *;
+@use '@estilos/core.scss' as *;
 @use '@estilos/bp.scss' as bp;
 
 
@@ -6,38 +6,45 @@
 /* Estilo general del scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
+
   /* Ancho del scroll vertical */
   height: 10px;
+
   /* Altura del scroll horizontal */
 }
 
 /* Fondo del scrollbar */
 ::-webkit-scrollbar-track {
   background: $negro;
+
   /* Color del fondo del track */
   border-radius: 10px;
+
   /* Bordes redondeados */
 }
 
 /* Barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
   background: $gris;
+
   /* Color de la barra */
   border-radius: 10px;
+
   /* Bordes redondeados */
 
   &:hover {
     background: $marron;
+    transition: cursor 0.3s ease;
+
     /* Color al pasar el mouse */
     cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
-    transition: cursor 0.3s ease;
   }
 
   &:active {
     background: $negro;
     border: 1px solid $blanco;
-    cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
     transition: cursor 0.3s ease;
+    cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
   }
 }
 
@@ -45,55 +52,62 @@
 /* Quitar las flechas predeterminadas */
 ::-webkit-scrollbar-button {
   display: none;
+
   /* Oculta las flechas predeterminadas */
 }
 
 /* Personalizar la flecha hacia arriba */
 ::-webkit-scrollbar-button:single-button:decrement {
   display: block;
+
+  /* Ajusta el tamaño según tu imagen */
+  width: 20px;
+  height: 20px;
+
   /* Muestra solo la flecha personalizada */
   background: url('@cursor/KobaPua_32x32_Gris.png') no-repeat center center;
   background-size: contain;
-  height: 20px;
-  /* Ajusta el tamaño según tu imagen */
-  width: 20px;
-
-  &:hover {
-    background: url('@cursor/KobaPua_32x32_Marron.png') no-repeat center center;
-    background-size: contain;
-    cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
-    transition: cursor 0.3s ease;
-  }
-
-  &:active {
-    background: url('@cursor/KobaPua_32x32_Negro.png') no-repeat center center;
-    background-size: contain;
-    cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
-    transition: cursor 0.3s ease;
-  }
 }
 
 /* Personalizar la flecha hacia abajo */
 ::-webkit-scrollbar-button:single-button:increment {
   display: block;
+
+  /* Ajusta el tamaño según tu imagen */
+  width: 20px;
+  height: 20px;
+
   /* Muestra solo la flecha personalizada */
   background: url('@cursor/KobaPua_32x32_GrisAbajo.png') no-repeat center center;
   background-size: contain;
-  height: 20px;
-  /* Ajusta el tamaño según tu imagen */
-  width: 20px;
+}
 
-  &:hover {
-    background: url('@cursor/KobaPua_32x32_MarronAbajo.png') no-repeat center center;
-    background-size: contain;
-    cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
-    transition: cursor 0.3s ease;
-  }
+/* Modificadores de decrement */
+::-webkit-scrollbar-button:single-button:decrement:hover {
+  background: url('@cursor/KobaPua_32x32_Marron.png') no-repeat center center;
+  background-size: contain;
+  transition: cursor 0.3s ease;
+  cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+}
 
-  &:active {
-    background: url('@cursor/KobaPua_32x32_NegroAbajo.png') no-repeat center center;
-    background-size: contain;
-    cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
-    transition: cursor 0.3s ease;
-  }
+::-webkit-scrollbar-button:single-button:decrement:active {
+  background: url('@cursor/KobaPua_32x32_Negro.png') no-repeat center center;
+  background-size: contain;
+  transition: cursor 0.3s ease;
+  cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
+}
+
+/* Modificadores de increment */
+::-webkit-scrollbar-button:single-button:increment:hover {
+  background: url('@cursor/KobaPua_32x32_MarronAbajo.png') no-repeat center center;
+  background-size: contain;
+  transition: cursor 0.3s ease;
+  cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+}
+
+::-webkit-scrollbar-button:single-button:increment:active {
+  background: url('@cursor/KobaPua_32x32_NegroAbajo.png') no-repeat center center;
+  background-size: contain;
+  transition: cursor 0.3s ease;
+  cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
 }

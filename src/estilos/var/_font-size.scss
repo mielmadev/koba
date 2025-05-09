@@ -1,4 +1,5 @@
 @use '@estilos/bp.scss' as bp;
+
 // =========================
 // DECLARACIÓN DE FUENTES BASE
 // =========================
@@ -39,8 +40,8 @@ $fuente-about-texto: $fuente-parrafo;
 $fuente-bandas-nombre: $clamp-h1;
 $fuente-bandas-click: $clamp-h2;
 
-//Grupos
-$fuente-grupos-estilo-año: $clamp-h2;
+// Grupos
+$fuente-grupos-estilo-anio: $clamp-h2;
 $fuente-grupos-resumen: $clamp-h3;
 
 // Contacto

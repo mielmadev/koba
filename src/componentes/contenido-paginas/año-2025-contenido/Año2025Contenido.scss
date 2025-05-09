@@ -1,31 +1,35 @@
-@use '@estilos/_core.scss' as *;
+@use '@estilos/core.scss' as *;
 
 .contenido-2025 {
   @include bordes;
+
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
   overflow-y: auto;
+
   @include altura-contenido-bp($altura-encabezado);
 }
 
 .banda-imagen {
   @include bordes;
+
   display: flex;
-  align-items: center;
   justify-content: center;
-  object-fit: contain;
-  @include tamaño-banda-imagen;
+  align-items: center;
   border-radius: 12px;
+  object-fit: contain;
+
+  @include tamaño-banda-imagen;
 
   img {
     @include bordes;
     @include tamaño-completo;
+
     display: block;
-    object-fit: contain;
     max-width: 90%;
     max-height: 90%;
+    object-fit: contain;
   }
 }

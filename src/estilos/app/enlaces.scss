@@ -1,42 +1,42 @@
-@use '@estilos/_core.scss' as *;
+@use '@estilos/core.scss' as *;
 
 .navlink {
   @include bordes;
 }
 
 a {
-  color: $blanco;
-  text-decoration: none;
+  height: 100%;
   font-size: $fuente-enlaces;
   font-weight: $peso-navegador;
+  text-decoration: none;
   text-shadow: $sombra_blanca;
-  height: 100%;
+  color: $blanco;
 
   &:hover {
-    color: $gris;
     text-shadow: $sombra_gris;
-    cursor: url('@cursor/KobaPua_32x32_Gris.png') 16 0, auto;
+    color: $gris;
     transition: cursor 0.3s ease;
+    cursor: url('@cursor/KobaPua_32x32_Gris.png') 16 0, auto;
   }
 
   &:active {
-    color: $negro;
     text-shadow: $sombra_blanca;
-    cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
+    color: $negro;
     transition: cursor 0.3s ease;
+    cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
   }
 
   &.navlink {
     &.active {
-      color: $marron;
       text-shadow: $sombra_marron;
-      cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+      color: $marron;
       transition: cursor 0.3s ease;
+      cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
 
       &:active {
         color: $negro;
-        cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
         transition: cursor 0.3s ease;
+        cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
       }
     }
   }
