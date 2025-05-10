@@ -12,6 +12,7 @@
 .contacto {
   @include bordes;
 @include pad-gap;
+
   display: flex;
   flex-direction: column;
   align-items: center;

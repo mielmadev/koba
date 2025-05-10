@@ -1,4 +1,4 @@
-@use '@estilos/core.scss' as *;
+@use "@estilos/core.scss" as *;
 
 @keyframes parpadeo {
   0%,
@@ -19,12 +19,14 @@
   text-align: center;
   text-shadow: $blanco 0 0 10px, $blanco 0 0 20px;
 
-  // @include bordes;
+  @include bordes;
+
   color: $blanco;
   white-space: normal;
 
   .fecha {
-    // @include bordes;
+    @include bordes;
+
     font-size: $fuente-fecha;
     animation: parpadeo 3s infinite;
   }

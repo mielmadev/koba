@@ -1,4 +1,5 @@
-@use '@estilos/core.scss' as *;
+@use "sass:map";
+@use "@estilos/core.scss" as *;
 
 .hamburguesa {
   z-index: 1100;
@@ -13,15 +14,15 @@
   cursor: pointer;
 
   .linea {
-    position: relative;
     width: 28px;
     height: 4px;
     margin: 4px 0;
     background: $blanco;
     border-radius: 2px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s;
   }
 }
+
 
 .hamburguesa.abierto {
   .linea1 {

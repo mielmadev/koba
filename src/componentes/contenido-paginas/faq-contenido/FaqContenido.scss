@@ -30,6 +30,7 @@
 .faq-respuesta {
   @include bordes;
 @include pad-gap;
+
   box-sizing: border-box;
   margin: $margen-laterales;
   font-size: $fuente-faq-respuestas;

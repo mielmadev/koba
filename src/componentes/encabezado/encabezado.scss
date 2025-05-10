@@ -1,4 +1,4 @@
-@use '@estilos/core.scss' as *;
+@use "@estilos/core.scss" as *;
 
 .encabezado-contenedor {
   position: sticky;
@@ -10,11 +10,11 @@
   align-items: center;
   width: 100vw;
 
-  // @include bordes;
+  @include bordes;
   @include altura-encabezado-bp($altura-encabezado);
 
   .logo-encabezado {
-    // @include bordes;
+    @include bordes;
     @include pad-gap;
 
     display: flex;
@@ -24,13 +24,14 @@
     height: 100%;
 
     .logo-encabezado img {
-      // @include bordes;
+      @include bordes;
       @include tamanio-completo;
     }
   }
 
   .encabezado-derecha {
-    // @include bordes;
+    @include bordes;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +40,7 @@
     height: 100%;
 
     .encabezado-navegador {
-      // @include bordes;
+      @include bordes;
       @include tamanio-completo;
 
       display: flex;
@@ -49,7 +50,7 @@
     }
 
     .encabezado-eslogan {
-      // @include bordes;
+      @include bordes;
       @include tamanio-completo;
 
       display: flex;
