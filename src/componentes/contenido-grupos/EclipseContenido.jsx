@@ -1,5 +1,5 @@
 import React from 'react';
-import bandasDatos2025 from '@datos/bandasDatosAño2025';
+import bandasDatos2025 from '@datos/bandasDatosAnio2025';
 import './gruposContenido.scss'
 import GrupoIntegrantesMapeo from '@mapeos/GrupoIntegrantesMapeo';
 import GrupoAlbumsMapeo from '@mapeos/GrupoAlbumsMapeo';

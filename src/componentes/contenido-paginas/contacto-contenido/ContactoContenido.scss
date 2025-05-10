@@ -5,15 +5,13 @@
 
   flex-direction: column;
   align-items: stretch;
-  font-size: $fuenteContactoIconos;
+  font-size: $fuente-contacto-iconos;
 
-  @include pad-gap-bp($pad-gap);
-}
+@include pad-gap;}
 
 .contacto {
   @include bordes;
-  @include pad-gap-bp($pad-gap);
-
+@include pad-gap;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +24,7 @@
 
 .redes-sociales {
   @include bordes;
-  @include tamaño-completo;
+  @include tamanio-completo;
 
   display: flex;
   flex-direction: row;
@@ -45,8 +43,8 @@
   align-items: center;
   width: 1.4em;
   height: 1.4em;
-  font-size: $fuenteContactoIconos;
-  filter: $drop_shadow_blanco;
+  font-size: $fuente-contacto-iconos;
+  filter: $drop-shadow-blanco;
   vertical-align: middle;
 }
 

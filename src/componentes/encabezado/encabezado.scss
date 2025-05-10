@@ -1,8 +1,6 @@
 @use '@estilos/core.scss' as *;
 
 .encabezado-contenedor {
-  @include altura-encabezado-bp($altura-encabezado);
-
   position: sticky;
   top: 0;
   z-index: 10;
@@ -10,9 +8,10 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  width: 100vw;
 
   // @include bordes;
-  width: 100vw;
+  @include altura-encabezado-bp($altura-encabezado);
 
   .logo-encabezado {
     // @include bordes;
@@ -26,7 +25,7 @@
 
     .logo-encabezado img {
       // @include bordes;
-      @include tamaño-completo;
+      @include tamanio-completo;
     }
   }
 
@@ -41,7 +40,7 @@
 
     .encabezado-navegador {
       // @include bordes;
-      @include tamaño-completo;
+      @include tamanio-completo;
 
       display: flex;
       flex: 1;
@@ -51,7 +50,7 @@
 
     .encabezado-eslogan {
       // @include bordes;
-      @include tamaño-completo;
+      @include tamanio-completo;
 
       display: flex;
       flex: 1;

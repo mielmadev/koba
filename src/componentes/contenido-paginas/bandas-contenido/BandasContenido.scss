@@ -8,11 +8,10 @@
   height: 100%;
 
   @include bordes;
-  @include pad-gap-bp($pad-gap);
-}
+@include pad-gap;}
 
 .bandas-click {
-  font-size: $fuenteBandasClick;
+  font-size: $fuente-bandas-click;
   color: $gris;
 }
 
@@ -22,6 +21,6 @@
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  font-size: $fuenteBandasNombre;
+  font-size: $fuente-bandas-nombre;
   line-height: 1.5;
 }

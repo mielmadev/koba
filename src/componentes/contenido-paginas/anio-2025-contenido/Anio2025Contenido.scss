@@ -21,11 +21,11 @@
   border-radius: 12px;
   object-fit: contain;
 
-  @include tamaño-banda-imagen;
+  @include tamanio-banda-imagen;
 
   img {
     @include bordes;
-    @include tamaño-completo;
+    @include tamanio-completo;
 
     display: block;
     max-width: 90%;

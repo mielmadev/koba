@@ -6,7 +6,7 @@
 .merchan-fondo,
 .contacto-fondo,
 .bandas-fondo {
-  @include tamaño-completo;
+  @include tamanio-completo;
 
   position: fixed;
   top: 0;

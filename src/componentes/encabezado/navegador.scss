@@ -3,7 +3,7 @@
 .navegador-contenedor {
   // @include bordes;
   @include pad-gap;
-  @include tamaño-completo;
+  @include tamanio-completo;
 
   z-index: 1000;
   display: flex;

@@ -3,7 +3,8 @@
     "stylelint-config-standard-scss"
   ],
   "plugins": [
-    "stylelint-order"
+    "stylelint-order",
+    "stylelint-scss"
   ],
   "rules": {
     "order/properties-order": [
@@ -90,7 +91,11 @@
         "transform",
         "animation"
       ],
-      { "unspecified": "bottomAlphabetical" }
+      {
+        "unspecified": "bottomAlphabetical",
+        "disableFix": true,
+        "ignoreInsideAtRules": ["media", "include"]
+      }
     ]
   }
 }

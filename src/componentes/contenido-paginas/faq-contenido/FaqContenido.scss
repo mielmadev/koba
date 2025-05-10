@@ -2,13 +2,12 @@
 
 .faq-pregunta {
   @include bordes;
-  @include pad-gap-bp($pad-gap);
-
+@include pad-gap;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  margin: $margen_laterales;
-  font-size: $fuenteFaqPreguntas;
+  margin: $margen-laterales;
+  font-size: $fuente-faq-preguntas;
   text-align: justify;
   color: $gris;
 }
@@ -30,11 +29,10 @@
 
 .faq-respuesta {
   @include bordes;
-  @include pad-gap-bp($pad-gap);
-
+@include pad-gap;
   box-sizing: border-box;
-  margin: $margen_laterales;
-  font-size: $fuenteFaqRespuestas;
+  margin: $margen-laterales;
+  font-size: $fuente-faq-respuestas;
   text-align: justify;
   color: $blanco;
   overflow-wrap: break-word;

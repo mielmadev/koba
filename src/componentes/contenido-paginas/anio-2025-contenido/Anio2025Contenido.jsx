@@ -1,7 +1,7 @@
 import React from 'react';
-import bandasDatos2025 from '@datos/bandasDatosAño2025';
+import bandasDatos2025 from '@datos/bandasDatosAnio2025';
 import BandasImagenesMapeo from '@mapeos/BandasImagenesMapeo';
-import './año2025Contenido.scss';
+import './anio2025Contenido.scss';
 
 const Contenido2025 = () => {
   return (

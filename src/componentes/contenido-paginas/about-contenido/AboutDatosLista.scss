@@ -11,8 +11,8 @@
 }
 
 .about-titulo {
-  font-size: $fuenteAboutTitulo;
-  font-weight: $pesoAboutTitulo;
+  font-size: $fuente-about-titulo;
+  font-weight: $peso-about-titulo;
   text-align: center;
   text-shadow: 3px 3px 5px $blanco, -3px -3px 5px $blanco ;
   color: $negro;
@@ -20,18 +20,19 @@
 }
 
 .about-subtitulo {
-  font-size: $fuenteAboutSubtitulo;
-  font-weight: $pesoAboutSubtitulo;
+  font-size: $fuente-about-subtitulo;
+  font-weight: $peso-about-subtitulo;
   color: $marron;
   white-space: nowrap;
 }
 
 .about-seccion {
-  font-size: $fuenteAboutSeccion;
-  font-weight: $pesoAboutSeccion;
+  font-size: $fuente-about-seccion;
+  font-weight: $peso-about-seccion;
   color: $marron;
 }
 
 .about-texto {
-  font-size: $fuenteAboutTexto;
+  font-size: $fuente-about-texto;
+  font-weight: $peso-about-texto;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import bandasDatos2025 from '@datos/bandasDatosAño2025';
+import bandasDatos2025 from '@datos/bandasDatosAnio2025';
 import './gruposContenido.scss'
 import GrupoIntegrantesMapeo from '@mapeos/GrupoIntegrantesMapeo';
 import GrupoAlbumsMapeo from '@mapeos/GrupoAlbumsMapeo';
@@ -8,7 +8,7 @@ const WolfheartContenido = () => {
   const banda = bandasDatos2025.find(b => b.nombre === 'Wolfheart ');
   const albumsOrdenados = banda.albums
     .slice()
-    .sort((a, b) => (b.año || 0) - (a.año || 0));
+    .sort((a, b) => (b.anio || 0) - (a.anio || 0));
 
   return (
     <div className='contenido'>
@@ -20,7 +20,7 @@ const WolfheartContenido = () => {
                 className="grupo-logo" />
             </div>
             <div className='grupo-encabezado-superior-derecha'>
-              <div className='grupo-estilo'>{banda.estilo} - {banda.año}</div>
+              <div className='grupo-estilo'>{banda.estilo} - {banda.anio}</div>
               <div className='grupo-origen'>{banda.origen.pais} - {banda.origen.provincia} - {banda.origen.ciudad}</div>
             </div>
           </div>
