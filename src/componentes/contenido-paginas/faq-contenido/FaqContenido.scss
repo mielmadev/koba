@@ -1,8 +1,8 @@
-@use '@estilos/core.scss' as *;
+@use "@estilos/core.scss" as *;
 
 .faq-pregunta {
   @include bordes;
-@include pad-gap;
+  @include pad-gap;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
@@ -29,8 +29,7 @@
 
 .faq-respuesta {
   @include bordes;
-@include pad-gap;
-
+  @include pad-gap;
   box-sizing: border-box;
   margin: $margen-laterales;
   font-size: $fuente-faq-respuestas;

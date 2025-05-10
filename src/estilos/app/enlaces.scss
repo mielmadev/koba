@@ -1,4 +1,4 @@
-@use '@estilos/core.scss' as *;
+@use "@estilos/core.scss" as *;
 
 .navlink {
   @include bordes;
@@ -16,14 +16,18 @@ a {
     text-shadow: $sombra_gris;
     color: $gris;
     transition: cursor 0.3s ease;
-    cursor: url('@cursor/KobaPua_32x32_Gris.png') 16 0, auto;
+    cursor:
+      url("@cursor/KobaPua_32x32_Gris.png") 16 0,
+      auto;
   }
 
   &:active {
     text-shadow: $sombra_blanca;
     color: $negro;
     transition: cursor 0.3s ease;
-    cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
+    cursor:
+      url("@cursor/KobaPua_32x32_Negro.png") 16 0,
+      auto;
   }
 
   &.navlink {
@@ -31,12 +35,16 @@ a {
       text-shadow: $sombra_marron;
       color: $marron;
       transition: cursor 0.3s ease;
-      cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+      cursor:
+        url("@cursor/KobaPua_32x32_Marron.png") 16 0,
+        auto;
 
       &:active {
         color: $negro;
         transition: cursor 0.3s ease;
-        cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
+        cursor:
+          url("@cursor/KobaPua_32x32_Negro.png") 16 0,
+          auto;
       }
     }
   }

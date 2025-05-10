@@ -1,7 +1,7 @@
 // Para compatibilidad futura con Sass: usar map.get en vez de map-get
-@use 'sass:map';
-@use '@estilos/bp.scss' as bp;
-@use '@estilos/var.scss' as var;
+@use "sass:map";
+@use "@estilos/bp.scss" as bp;
+@use "@estilos/var.scss" as var;
 
 // @include altura-encabezado-bp($altura-encabezado);
 @mixin altura-encabezado-bp($mapa, $propiedad: height) {

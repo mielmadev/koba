@@ -1,4 +1,4 @@
-@use '@estilos/core.scss' as *;
+@use "@estilos/core.scss" as *;
 
 .about-titulo,
 .about-subtitulo,
@@ -14,7 +14,9 @@
   font-size: $fuente-about-titulo;
   font-weight: $peso-about-titulo;
   text-align: center;
-  text-shadow: 3px 3px 5px $blanco, -3px -3px 5px $blanco ;
+  text-shadow:
+    3px 3px 5px $blanco,
+    -3px -3px 5px $blanco;
   color: $negro;
   white-space: nowrap;
 }

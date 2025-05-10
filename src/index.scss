@@ -1,10 +1,12 @@
-@use '@estilos/core.scss' as *;
+@use "@estilos/core.scss" as *;
 
 :root {
   font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: $fuente-base;
   line-height: 1.7;
-  cursor: url('@imagenes/cursor/KobaPua_32x32_Blanco.png') 16 0, auto;
+  cursor:
+    url("@imagenes/cursor/KobaPua_32x32_Blanco.png") 16 0,
+    auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-synthesis: none;

@@ -1,7 +1,5 @@
-@use '@estilos/core.scss' as *;
-@use '@estilos/bp.scss' as bp;
-
-
+@use "@estilos/core.scss" as *;
+@use "@estilos/bp.scss" as bp;
 
 /* Estilo general del scrollbar */
 ::-webkit-scrollbar {
@@ -37,17 +35,20 @@
     transition: cursor 0.3s ease;
 
     /* Color al pasar el mouse */
-    cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+    cursor:
+      url("@cursor/KobaPua_32x32_Marron.png") 16 0,
+      auto;
   }
 
   &:active {
     background: $negro;
     border: 1px solid $blanco;
     transition: cursor 0.3s ease;
-    cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
+    cursor:
+      url("@cursor/KobaPua_32x32_Negro.png") 16 0,
+      auto;
   }
 }
-
 
 /* Quitar las flechas predeterminadas */
 ::-webkit-scrollbar-button {
@@ -65,7 +66,7 @@
   height: 20px;
 
   /* Muestra solo la flecha personalizada */
-  background: url('@cursor/KobaPua_32x32_Gris.png') no-repeat center center;
+  background: url("@cursor/KobaPua_32x32_Gris.png") no-repeat center center;
   background-size: contain;
 }
 
@@ -78,36 +79,44 @@
   height: 20px;
 
   /* Muestra solo la flecha personalizada */
-  background: url('@cursor/KobaPua_32x32_GrisAbajo.png') no-repeat center center;
+  background: url("@cursor/KobaPua_32x32_GrisAbajo.png") no-repeat center center;
   background-size: contain;
 }
 
 /* Modificadores de decrement */
 ::-webkit-scrollbar-button:single-button:decrement:hover {
-  background: url('@cursor/KobaPua_32x32_Marron.png') no-repeat center center;
+  background: url("@cursor/KobaPua_32x32_Marron.png") no-repeat center center;
   background-size: contain;
   transition: cursor 0.3s ease;
-  cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+  cursor:
+    url("@cursor/KobaPua_32x32_Marron.png") 16 0,
+    auto;
 }
 
 ::-webkit-scrollbar-button:single-button:decrement:active {
-  background: url('@cursor/KobaPua_32x32_Negro.png') no-repeat center center;
+  background: url("@cursor/KobaPua_32x32_Negro.png") no-repeat center center;
   background-size: contain;
   transition: cursor 0.3s ease;
-  cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
+  cursor:
+    url("@cursor/KobaPua_32x32_Negro.png") 16 0,
+    auto;
 }
 
 /* Modificadores de increment */
 ::-webkit-scrollbar-button:single-button:increment:hover {
-  background: url('@cursor/KobaPua_32x32_MarronAbajo.png') no-repeat center center;
+  background: url("@cursor/KobaPua_32x32_MarronAbajo.png") no-repeat center center;
   background-size: contain;
   transition: cursor 0.3s ease;
-  cursor: url('@cursor/KobaPua_32x32_Marron.png') 16 0, auto;
+  cursor:
+    url("@cursor/KobaPua_32x32_Marron.png") 16 0,
+    auto;
 }
 
 ::-webkit-scrollbar-button:single-button:increment:active {
-  background: url('@cursor/KobaPua_32x32_NegroAbajo.png') no-repeat center center;
+  background: url("@cursor/KobaPua_32x32_NegroAbajo.png") no-repeat center center;
   background-size: contain;
   transition: cursor 0.3s ease;
-  cursor: url('@cursor/KobaPua_32x32_Negro.png') 16 0, auto;
+  cursor:
+    url("@cursor/KobaPua_32x32_Negro.png") 16 0,
+    auto;
 }

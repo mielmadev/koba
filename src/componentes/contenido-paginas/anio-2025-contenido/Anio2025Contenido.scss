@@ -1,4 +1,4 @@
-@use '@estilos/core.scss' as *;
+@use "@estilos/core.scss" as *;
 
 .contenido-2025 {
   @include bordes;
@@ -8,13 +8,11 @@
   justify-content: space-evenly;
   align-items: center;
   overflow-y: auto;
-
   @include altura-contenido-bp($altura-encabezado);
 }
 
 .banda-imagen {
   @include bordes;
-
   display: flex;
   justify-content: center;
   align-items: center;

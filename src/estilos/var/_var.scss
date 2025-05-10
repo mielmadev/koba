@@ -1,6 +1,6 @@
 // Para compatibilidad futura con Sass: usar map.get en vez de map-get
-@use 'sass:map';
-@use '@estilos/var/colores.scss' as *;
+@use "sass:map";
+@use "@estilos/var/colores.scss" as *;
 
 // Bordes
 $border-radius: 20px;
@@ -40,13 +40,33 @@ $drop-shadow-blanco: drop-shadow(0 0 6px $blanco);
 // Filtros
 $filtro-fondos: brightness(25%); // filter
 
-
 $pad-gap: (
-  xs: (gap: 0.5rem, padding: 0.5rem),
-  md: (gap: 1rem, padding: 1.5rem),
-  lg: (gap: 2rem, padding: 2.5rem),
-  tablet: (gap: 2rem, padding: 2.5rem),
-  laptop: (gap: 2rem, padding: 2.5rem),
-  pc: (gap: 2rem, padding: 2.5rem),
-  full: (gap: 2rem, padding: 2.5rem)
+  xs: (
+    gap: 0.5rem,
+    padding: 0.5rem
+  ),
+  md: (
+    gap: 1rem,
+    padding: 1.5rem
+  ),
+  lg: (
+    gap: 2rem,
+    padding: 2.5rem
+  ),
+  tablet: (
+    gap: 2rem,
+    padding: 2.5rem
+  ),
+  laptop: (
+    gap: 2rem,
+    padding: 2.5rem
+  ),
+  pc: (
+    gap: 2rem,
+    padding: 2.5rem
+  ),
+  full: (
+    gap: 2rem,
+    padding: 2.5rem
+  )
 );

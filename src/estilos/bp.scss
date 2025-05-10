@@ -1,5 +1,5 @@
 // Para compatibilidad futura con Sass: usar map.get en vez de map-get
-@use 'sass:map';
+@use "sass:map";
 
 $bp-xs: 320px; // Extra pequeño (móviles muy pequeños, ej: iPhone SE)
 $bp-s: 375px; // Pequeño (móviles modernos, ej: iPhone X/12/13, Pixel 5)

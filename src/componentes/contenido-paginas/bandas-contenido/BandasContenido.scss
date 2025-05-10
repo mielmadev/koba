@@ -1,4 +1,4 @@
-@use '@estilos/core.scss' as *;
+@use "@estilos/core.scss" as *;
 
 .contenido {
   display: flex;
@@ -8,7 +8,8 @@
   height: 100%;
 
   @include bordes;
-@include pad-gap;}
+  @include pad-gap;
+}
 
 .bandas-click {
   font-size: $fuente-bandas-click;

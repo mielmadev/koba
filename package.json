@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "format:scss": "prettier --write \"src/**/*.scss\""
   },
   "dependencies": {
     "animejs": "^4.0.0",
