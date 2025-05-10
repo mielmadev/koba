@@ -3,12 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@imagenes/*": [
-        "src/assets/imagenes/*"
-      ],
-      "@estilos/*": [
-        "src/estilos/*"
-      ]
+      "@imagenes/*": ["src/assets/imagenes/*"],
+      "@estilos/*": ["src/estilos/*"]
     }
   }
 }

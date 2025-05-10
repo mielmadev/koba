@@ -1,6 +1,6 @@
-import React from 'react';
-import TheElectricAlleyContenido from '@contenido-grupos/TheElectricAlleyContenido';
-import TheElectricAlleyFondo from '@imagenes/fondos/theElectricAlleyFondo.webp';
+import React from "react";
+import TheElectricAlleyContenido from "@contenido-grupos/TheElectricAlleyContenido";
+import TheElectricAlleyFondo from "@imagenes/fondos/theElectricAlleyFondo.webp";
 
 export default function TheElectricAlleyPag() {
   return (

@@ -104,7 +104,8 @@
 
 /* Modificadores de increment */
 ::-webkit-scrollbar-button:single-button:increment:hover {
-  background: url("@cursor/KobaPua_32x32_MarronAbajo.png") no-repeat center center;
+  background: url("@cursor/KobaPua_32x32_MarronAbajo.png") no-repeat center
+    center;
   background-size: contain;
   transition: cursor 0.3s ease;
   cursor:
@@ -113,7 +114,8 @@
 }
 
 ::-webkit-scrollbar-button:single-button:increment:active {
-  background: url("@cursor/KobaPua_32x32_NegroAbajo.png") no-repeat center center;
+  background: url("@cursor/KobaPua_32x32_NegroAbajo.png") no-repeat center
+    center;
   background-size: contain;
   transition: cursor 0.3s ease;
   cursor:

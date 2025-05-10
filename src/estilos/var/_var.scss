@@ -13,7 +13,7 @@ $altura-encabezado: (
   tablet: 88px,
   laptop: 104px,
   pc: 120px,
-  full: 132px
+  full: 132px,
 );
 
 // Margen bp
@@ -24,7 +24,7 @@ $margen-completo: (
   tablet: 16px,
   laptop: 20px,
   pc: 24px,
-  full: 32px
+  full: 32px,
 );
 
 // Margen lateral (puedes adaptarlo si lo necesitas bp también)
@@ -43,30 +43,30 @@ $filtro-fondos: brightness(25%); // filter
 $pad-gap: (
   xs: (
     gap: 0.5rem,
-    padding: 0.5rem
+    padding: 0.5rem,
   ),
   md: (
     gap: 1rem,
-    padding: 1.5rem
+    padding: 1.5rem,
   ),
   lg: (
     gap: 2rem,
-    padding: 2.5rem
+    padding: 2.5rem,
   ),
   tablet: (
     gap: 2rem,
-    padding: 2.5rem
+    padding: 2.5rem,
   ),
   laptop: (
     gap: 2rem,
-    padding: 2.5rem
+    padding: 2.5rem,
   ),
   pc: (
     gap: 2rem,
-    padding: 2.5rem
+    padding: 2.5rem,
   ),
   full: (
     gap: 2rem,
-    padding: 2.5rem
-  )
+    padding: 2.5rem,
+  ),
 );

@@ -1,6 +1,6 @@
-import React from 'react';
-import BeforeTheDawnContenido from '@contenido-grupos/BeforeTheDawnContenido';
-import BeforeTheDawnFondo from '@imagenes/fondos/beforethedawnFondo.webp';
+import React from "react";
+import BeforeTheDawnContenido from "@contenido-grupos/BeforeTheDawnContenido";
+import BeforeTheDawnFondo from "@imagenes/fondos/beforethedawnFondo.webp";
 
 export default function BeforeTheDawnPag() {
   return (

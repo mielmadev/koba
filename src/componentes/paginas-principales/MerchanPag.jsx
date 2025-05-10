@@ -1,15 +1,13 @@
-import React from 'react';
-import MerchanFondo from '@imagenes/fondos/merchanFondo.webp';
+import React from "react";
+import MerchanFondo from "@imagenes/fondos/merchanFondo.webp";
 
 export default function MerchanPag() {
-    return (
-        <div className="contenedor-pag">
-            <div className="merchan-fondo">
-                <img src={MerchanFondo} alt="Merchan Fondo" />
-            </div>
-            <div className="contenido-pag">
-                merchan
-            </div>
-        </div >
-    );
+  return (
+    <div className="contenedor-pag">
+      <div className="merchan-fondo">
+        <img src={MerchanFondo} alt="Merchan Fondo" />
+      </div>
+      <div className="contenido-pag">merchan</div>
+    </div>
+  );
 }

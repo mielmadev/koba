@@ -1,6 +1,6 @@
-import React from 'react';
-import AboutContenido from '@contenido-paginas/about-contenido/AboutContenido';
-import AboutFondo from '@imagenes/fondos/aboutFondo.webp';
+import React from "react";
+import AboutContenido from "@contenido-paginas/about-contenido/AboutContenido";
+import AboutFondo from "@imagenes/fondos/aboutFondo.webp";
 
 export default function AboutPag() {
   return (
@@ -11,7 +11,6 @@ export default function AboutPag() {
       <div className="contenido-pag">
         <AboutContenido />
       </div>
-
     </div>
   );
 }

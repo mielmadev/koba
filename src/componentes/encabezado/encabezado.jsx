@@ -1,6 +1,6 @@
 import React from "react";
-import './encabezado.scss';
-import LogoKoba from '@imagenes/logos/logoKoba.png';
+import "./encabezado.scss";
+import LogoKoba from "@imagenes/logos/logoKoba.png";
 import Eslogan from "./Eslogan.jsx";
 import Navegador from "./Navegador.jsx";
 
@@ -23,4 +23,3 @@ const Encabezado = () => {
 };
 
 export default Encabezado;
-

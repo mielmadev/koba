@@ -1,6 +1,6 @@
-import React from 'react';
-import FaqFondo from '@imagenes/fondos/faqFondo.webp';
-import FAQ from '@contenido-paginas/faq-contenido/FaqContenido';
+import React from "react";
+import FaqFondo from "@imagenes/fondos/faqFondo.webp";
+import FAQ from "@contenido-paginas/faq-contenido/FaqContenido";
 
 export default function FaqPag() {
   return (

@@ -1,6 +1,6 @@
-import React from 'react';
-import EhunKiloContenido from '@contenido-grupos/EhunKiloContenido';
-import EhunKiloFondo from '@imagenes/fondos/ehunKiloFondo.webp';
+import React from "react";
+import EhunKiloContenido from "@contenido-grupos/EhunKiloContenido";
+import EhunKiloFondo from "@imagenes/fondos/ehunKiloFondo.webp";
 
 export default function EclipsePag() {
   return (

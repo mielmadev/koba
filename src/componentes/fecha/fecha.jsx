@@ -1,11 +1,13 @@
-import React from 'react';
-import { fecha, ubicacion } from '@datos/fechaDatos';
-import './fecha.scss';
+import React from "react";
+import { fecha, ubicacion } from "@datos/fechaDatos";
+import "./fecha.scss";
 
 const Fecha = () => {
   return (
-    <div className='fecha-contenedor'>
-      <div className='fecha'>{fecha} - {ubicacion}</div>
+    <div className="fecha-contenedor">
+      <div className="fecha">
+        {fecha} - {ubicacion}
+      </div>
     </div>
   );
 };

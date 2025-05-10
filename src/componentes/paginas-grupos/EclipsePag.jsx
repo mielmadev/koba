@@ -1,6 +1,6 @@
-import React from 'react';
-import EclipseContenido from '@contenido-grupos/EclipseContenido';
-import EclipseFondo from '@imagenes/fondos/eclipseFondo.webp';
+import React from "react";
+import EclipseContenido from "@contenido-grupos/EclipseContenido";
+import EclipseFondo from "@imagenes/fondos/eclipseFondo.webp";
 
 export default function EclipsePag() {
   return (

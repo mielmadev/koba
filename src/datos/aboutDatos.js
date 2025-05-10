@@ -1,6 +1,7 @@
 export const aboutDatos = {
   titulo: "Quienes somos",
-  subtitulo1: "3 palabras definen al equipo Koba Live: honestidad, pasión y corazón.",
+  subtitulo1:
+    "3 palabras definen al equipo Koba Live: honestidad, pasión y corazón.",
   texto1: `Suponemos que nuestra historia no es diferente a la de otros, pero es la nuestra y la llevamos por bandera con mucho orgullo.
 
 Sugaar Musika Elkartea es la asociación cultural que está detrás del Koba Live y está formada por un equipo de locos que no puede vivir sin la música metal. Todos teníamos claro que queríamos hacer realidad uno de nuestros sueños: organizar un festival en nuestra tierra, dónde hemos nacido y crecido.
@@ -12,7 +13,8 @@ Aún recordamos el día en que recibimos todo el apoyo que necesitábamos para o
 Formar el equipo fue lo más fácil, la vida nos ha ido poniendo a unos frente a los otros por casualidades o causalidades, eso no lo tenemos tan claro.
 
 Sea como fuere, aquí detrás tienes a gente honesta, que pone el alma en lo que hace y que ha puesto todo el corazón para sacar adelante este festival.`,
-  seccion1: "Como contarlo no es algo único, pero experimentarlo sí… Te esperamos aquí, en el Koba Live.",
+  seccion1:
+    "Como contarlo no es algo único, pero experimentarlo sí… Te esperamos aquí, en el Koba Live.",
   texto2: `Al ponernos manos a la obra, tenemos claro que, cada edición, queremos cumplir contigo una promesa:`,
   promesa: "Que respires, vivas y experimentes el verdadero metal",
   texto3: `Y nuestro entorno nos lo permite.
@@ -25,5 +27,6 @@ Dioses, mitología, naturaleza y música metal; una mezcla explosiva con la que 
 
 Aquí, en Abadiño, te espera la Koba Family al completo y la mismísima diosa Mari subida en su carro de fuego, peinando su melena a la entrada de su cueva.`,
   pregunta: "¿Vienes?",
-  subtitulo3: "Echa un ojo a este mini-documental y descúbrelo todo sobre el Koba Live."
+  subtitulo3:
+    "Echa un ojo a este mini-documental y descúbrelo todo sobre el Koba Live.",
 };
