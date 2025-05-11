@@ -19,7 +19,8 @@
   gap: 1rem;
 }
 
+// Mixin para tamaño de imagen tipo banda (cartel festival)
 @mixin tamanio-banda-imagen {
-  width: clamp(60px, 80vw, 120px);
-  height: clamp(30px, 40vw, 80px);
+  width: clamp(120px, 95vw, 320px); // XS: 120px, max: 320px (más ancho)
+  height: clamp(80px, 60vw, 200px); // XS: 80px, max: 200px (más alto)
 }

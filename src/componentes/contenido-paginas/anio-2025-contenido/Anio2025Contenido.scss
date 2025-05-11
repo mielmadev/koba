@@ -2,7 +2,6 @@
 
 .contenido-2025 {
   @include bordes;
-
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -18,7 +17,6 @@
   align-items: center;
   border-radius: 12px;
   object-fit: contain;
-
   @include tamanio-banda-imagen;
 
   img {
