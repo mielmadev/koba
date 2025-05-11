@@ -7,6 +7,11 @@ export default defineConfig({
   server: {
     open: true,
     port: 3000,
+    // Activar polling para mejorar el refresco en Windows
+    watch: {
+      usePolling: true,
+      interval: 100,
+    },
     /*     host: '192.168.0.24', // Pc
      */
     /*     host: '192.168.0.20', // Laptop

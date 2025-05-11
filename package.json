@@ -9,7 +9,8 @@
     "serve": "vite preview",
     "deploy": "gh-pages -d dist",
     "lint": "eslint --config ./config/eslint.config.js .",
-    "format:scss": "prettier --config ./config/.prettierrc --write \"src/**/*.scss\""
+    "format:scss": "prettier --config ./config/.prettierrc --write \"src/**/*.scss\"",
+    "format": "prettier --config ./config/.prettierrc --write ."
   },
   "dependencies": {
     "animejs": "^4.0.0",

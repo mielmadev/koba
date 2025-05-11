@@ -5,9 +5,9 @@
 .about-seccion,
 .about-texto,
 .about-video {
-  margin: $margen_laterales;
   padding: 2px;
   text-align: justify;
+  @include margen-laterales-bp($margen-laterales);
 }
 
 .about-titulo {

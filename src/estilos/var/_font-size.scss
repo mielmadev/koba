@@ -1,34 +1,26 @@
 @use "@estilos/bp.scss" as bp;
 
-// =========================
 // DECLARACIÓN DE FUENTES BASE
-// =========================
-$fuente-base: 0.95rem; // móvil
-$fuente-h1: 1.5rem;
-$fuente-h2: 1.2rem;
-$fuente-h3: 1rem;
-$fuente-parrafo: 0.95rem;
-$fuente-h4: 0.95rem;
-$fuente-h5: 0.8rem;
-$fuente-h6: 0.7rem;
+$fuente-base: 1rem; // móvil
+$fuente-h1: 2em;
+$fuente-h2: 1.5em;
+$fuente-h3: 1.17em;
+$fuente-h4: 1em;
+$fuente-h5: 0.83em;
+$fuente-h6: 0.67em;
+$fuente-parrafo: $fuente-base;
 
-// =========================
 // CLAMP TIPOGRÁFICO PARA HEADINGS Y PÁRRAFO
-// =========================
-$clamp-base: clamp(0.95rem, 2vw, 2rem);
-$clamp-h1: clamp($fuente-h1, 6vw, 4rem);
-$clamp-h2: clamp($fuente-h2, 4vw, 3rem);
-$clamp-h3: clamp($fuente-h3, 3vw, 2.5rem);
-$clamp-parrafo: clamp($fuente-parrafo, 2vw, 2rem);
-$clamp-h4: clamp($fuente-h4, 2vw, 2rem);
-$clamp-h5: clamp($fuente-h5, 1.5vw, 1.5rem);
-$clamp-h6: clamp($fuente-h6, 1vw, 1.2rem);
+$clamp-base: clamp($fuente-base, 2vw, 2rem);
+$clamp-h1: clamp($fuente-h1, 6vw, 4em);
+$clamp-h2: clamp($fuente-h2, 4vw, 3em);
+$clamp-h3: clamp($fuente-h3, 3vw, 2.5em);
+$clamp-parrafo: clamp($fuente-parrafo, 2vw, 2em);
+$clamp-h4: clamp($fuente-h4, 2vw, 2em);
+$clamp-h5: clamp($fuente-h5, 1.5vw, 1.5em);
+$clamp-h6: clamp($fuente-h6, 1vw, 1.2em);
 
-// Eliminados los breakpoints responsivos para fuentes
-
-// =========================
 // FUENTES ESPECÍFICAS POR PÁGINA/SECCIÓN
-// =========================
 
 // About
 $fuente-about-titulo: $clamp-h1;
@@ -49,7 +41,7 @@ $fuente-contacto-iconos: $fuente-h1;
 $fuente-contacto-texto: $fuente-parrafo;
 
 // Enlaces generales
-$fuente-enlaces: $fuente-parrafo;
+$fuente-enlaces: $clamp-h5;
 
 // Eslogan
 $fuente-eslogan: $clamp-h3;
