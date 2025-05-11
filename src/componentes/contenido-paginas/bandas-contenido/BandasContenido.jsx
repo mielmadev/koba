@@ -6,7 +6,7 @@ const BandasContenido = () => {
   return (
     <div className="contenido">
       <div className="bandas-click">
-        Haz clic en el nombre de cada banda para ver más información sobre ella.
+        Click en la banda para mas info.
       </div>
       <div className="bandas-lista">
         <BandasLista2025 />

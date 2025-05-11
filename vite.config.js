@@ -37,6 +37,7 @@ export default defineConfig({
       "@cursor": "/src/assets/imagenes/cursor",
       "@fecha": "/src/componentes/fecha",
       "@AppComponentes": "/src/componentes/AppComponentes",
+      "@iconos": "/src/componentes/iconos",
     },
   },
 });

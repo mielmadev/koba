@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: $margen-laterales;
+  @include margen-laterales-bp($margen-laterales);
 }
 
 .grupo-encabezado {
