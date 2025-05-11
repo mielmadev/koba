@@ -16,19 +16,17 @@ $altura-encabezado: (
   full: 132px,
 );
 
-// Margen bp
-$margen-completo: (
-  xs: 8px,
-  md: 12px,
-  lg: 16px,
-  tablet: 16px,
-  laptop: 20px,
-  pc: 24px,
-  full: 32px,
+// Margen bp (plegable en el editor)
+$margen-laterales: (
+  xs: 0 16px,
+  sm: 0 20px,
+  md: 0 24px,
+  lg: 0 32px,
+  tablet: 0 32px,
+  laptop: 0 80px,
+  pc: 0 120px,
+  full: 0 160px,
 );
-
-// Margen lateral (puedes adaptarlo si lo necesitas bp también)
-$margen-laterales: 0 map.get($margen-completo, md);
 
 // Sombras
 $sombra-blanca: 2px 1px 3px $blanco;
@@ -39,34 +37,3 @@ $drop-shadow-blanco: drop-shadow(0 0 6px $blanco);
 
 // Filtros
 $filtro-fondos: brightness(25%); // filter
-
-$pad-gap: (
-  xs: (
-    gap: 0.5rem,
-    padding: 0.5rem,
-  ),
-  md: (
-    gap: 1rem,
-    padding: 1.5rem,
-  ),
-  lg: (
-    gap: 2rem,
-    padding: 2.5rem,
-  ),
-  tablet: (
-    gap: 2rem,
-    padding: 2.5rem,
-  ),
-  laptop: (
-    gap: 2rem,
-    padding: 2.5rem,
-  ),
-  pc: (
-    gap: 2rem,
-    padding: 2.5rem,
-  ),
-  full: (
-    gap: 2rem,
-    padding: 2.5rem,
-  ),
-);
