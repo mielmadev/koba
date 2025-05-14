@@ -7,9 +7,7 @@ const Hamburguesa = ({ abierto, onClick }) => (
     onClick={onClick}
     aria-label={abierto ? "Cerrar menú" : "Abrir menú"}
   >
-    <span className="linea linea1" />
-    <span className="linea linea2" />
-    <span className="linea linea3" />
+    <span className="minipua" />
   </button>
 );
 

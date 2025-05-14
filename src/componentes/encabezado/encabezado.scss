@@ -41,8 +41,8 @@
 
     .encabezado-navegador {
       @include bordes;
-      @include tamanio-completo;
-
+      width: 100%;
+      height: 50% ;
       display: flex;
       flex: 1;
       justify-content: flex-end;
@@ -51,8 +51,8 @@
 
     .encabezado-eslogan {
       @include bordes;
-      @include tamanio-completo;
-
+      height: 50%;
+      width: 100%;
       display: flex;
       flex: 1;
       justify-content: flex-start;
