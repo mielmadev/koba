@@ -32,19 +32,21 @@
     filter: none;
     width: 30px;
     height: 30px;
-    animation: puaGira 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: rotate(180deg); 
-    background-size: 100%; 
+    animation: pua-gira 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotate(180deg);
+    background-size: 100%;
   }
 }
 
-@keyframes puaGira {
+@keyframes pua-gira {
   0% {
     transform: rotate(90deg);
   }
+
   80% {
     transform: rotate(540deg); // 1 vuelta y media (360 + 180)
   }
+
   100% {
     transform: rotate(180deg);
   }
