@@ -1,12 +1,13 @@
 // Para compatibilidad futura con Sass: usar map.get en vez de map-get
 @use "sass:map";
-@use "@estilos/bp.scss";
-@use "@estilos/var.scss";
+@use "@estilos/bp";
+@use "@estilos/var";
 
 // @include margen-laterales-bp($margen-laterales);
 @mixin margen-laterales-bp($mapa) {
   @each $bp in (xs, md, lg, tablet, laptop, pc, full) {
     $valor: map.get($mapa, $bp);
+
     @if $bp == xs {
       margin: #{$valor};
     } @else {

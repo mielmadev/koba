@@ -3,17 +3,20 @@
 .faq-pregunta {
   @include bordes;
   @include pad-gap;
+
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   font-size: $fuente-faq-preguntas;
   text-align: justify;
   color: $gris;
+
   @include margen-laterales-bp($margen-laterales);
 }
 
 .faq-pregunta-texto {
   @include bordes;
+
   flex-grow: 1;
   box-sizing: border-box;
   text-align: left;
@@ -23,6 +26,7 @@
 
 .faq-icon {
   @include bordes;
+
   margin-left: 2px;
   cursor: pointer;
 }
@@ -30,6 +34,7 @@
 .faq-respuesta {
   @include bordes;
   @include pad-gap;
+
   box-sizing: border-box;
   font-size: $fuente-faq-respuestas;
   text-align: justify;
@@ -37,5 +42,6 @@
   overflow-wrap: break-word;
   white-space: normal;
   word-wrap: break-word;
+
   @include margen-laterales-bp($margen-laterales);
 }

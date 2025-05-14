@@ -2,7 +2,16 @@ import React from "react";
 import GrupoIntegrantesMapeo from "@mapeos/GrupoIntegrantesMapeo";
 import GrupoAlbumsMapeo from "@mapeos/GrupoAlbumsMapeo";
 
-const GrupoEncabezado = ({ imagen, nombre, estilo, anio, origen, integrantes, resumen, albums }) => (
+const GrupoEncabezado = ({
+  imagen,
+  nombre,
+  estilo,
+  anio,
+  origen,
+  integrantes,
+  resumen,
+  albums,
+}) => (
   <>
     <div className="grupo-encabezado-superior">
       <div className="grupo-encabezado-superior-izquierda">
@@ -18,8 +27,7 @@ const GrupoEncabezado = ({ imagen, nombre, estilo, anio, origen, integrantes, re
       </div>
     </div>
     <div className="grupo-encabezado-inferior">
-      <div className="grupo-encabezado-inferior-izquierda">
-      </div>
+      <div className="grupo-encabezado-inferior-izquierda"></div>
       <div className="grupo-encabezado-resumen">
         <div className="grupo-resumen">{resumen}</div>
         <div className="grupo-integrantes">

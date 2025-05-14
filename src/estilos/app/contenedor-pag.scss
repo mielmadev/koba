@@ -2,6 +2,7 @@
 
 .contenedor-pag {
   @include bordes;
+
   position: fixed;
   z-index: 1;
   display: flex;
@@ -17,5 +18,6 @@
   width: 100%;
   color: $blanco;
   overflow: hidden auto;
+
   @include altura-contenido-bp($altura-encabezado, height);
 }

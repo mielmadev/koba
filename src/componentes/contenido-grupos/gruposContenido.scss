@@ -2,14 +2,17 @@
 
 .grupo-contenido {
   @include bordes;
+
   display: flex;
   flex-direction: column;
   width: 100%;
+
   @include margen-laterales-bp($margen-laterales);
 }
 
 .grupo-encabezado {
   @include bordes;
+
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -19,16 +22,19 @@
 .grupo-encabezado-superior {
   @include bordes;
   @include pad-gap;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   @include altura-encabezado-bp($altura-encabezado, height);
 
   .grupo-encabezado-superior-izquierda {
     @include bordes;
     @include pad-gap;
     @include altura-encabezado-bp($altura-encabezado, max-height);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,13 +43,15 @@
     img {
       @include altura-encabezado-bp($altura-encabezado, max-height);
       @include tamanio-completo;
+
       object-fit: contain;
     }
   }
 
   .grupo-encabezado-superior-derecha {
     @include bordes;
-    //@include pad-gap;
+
+    // @include pad-gap;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -52,7 +60,9 @@
     height: 100%;
     font-size: clamp(0.8rem, 6vw, 3.5vw);
     line-height: 1.1;
+
     @include altura-encabezado-bp($altura-encabezado, max-height);
+
     text-align: center;
   }
 }
@@ -60,6 +70,7 @@
 .grupo-encabezado-inferior {
   @include bordes;
   @include pad-gap;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,6 +80,7 @@
 
   .grupo-resumen {
     @include bordes;
+
     width: 100%;
     font-size: $fuente-grupos-resumen;
     text-align: justify;
@@ -83,6 +95,7 @@
 
   .grupo-albums {
     @include bordes;
+
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;

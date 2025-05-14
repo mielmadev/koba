@@ -4,6 +4,7 @@
   @include bordes;
   @include pad-gap;
   @include tamanio-completo;
+
   z-index: 1000;
   display: flex;
   flex-direction: row;
@@ -15,6 +16,7 @@
   .hamburguesa {
     display: flex;
   }
+
   .navegador-contenedor {
     position: absolute;
     top: 60px;
@@ -27,6 +29,7 @@
     background: #222;
     box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
   }
+
   .navegador-contenedor.abierto {
     display: flex;
   }
