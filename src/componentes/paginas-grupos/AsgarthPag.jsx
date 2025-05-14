@@ -1,6 +1,6 @@
-import React from "react";
-import AsgarthContenido from "@contenido-grupos/AsgarthContenido";
-import AsgarthFondo from "@imagenes/fondos/asgarthFondo.webp";
+import React from "react"
+import AsgarthContenido from "@contenido-grupos/AsgarthContenido"
+import AsgarthFondo from "@imagenes/fondos/asgarthFondo.webp"
 
 export default function AsgarthPag() {
   return (
@@ -12,5 +12,5 @@ export default function AsgarthPag() {
         <AsgarthContenido />
       </div>
     </div>
-  );
+  )
 }

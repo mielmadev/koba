@@ -1,5 +1,5 @@
-import React from "react";
-import MerchanFondo from "@imagenes/fondos/merchanFondo.webp";
+import React from "react"
+import MerchanFondo from "@imagenes/fondos/merchanFondo.webp"
 
 export default function MerchanPag() {
   return (
@@ -9,5 +9,5 @@ export default function MerchanPag() {
       </div>
       <div className="contenido-pag">merchan</div>
     </div>
-  );
+  )
 }

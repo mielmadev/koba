@@ -1,5 +1,6 @@
 module.exports = {
   extends: ["stylelint-config-standard-scss"],
+  plugins: ["stylelint-order"],
   rules: {
     // Orden recomendado para propiedades CSS/SCSS
     "order/properties-order": [
@@ -120,9 +121,9 @@ module.exports = {
         "animation-timing-function",
         "animation-delay",
         "animation-iteration-count",
-        "animation-direction",
+        "animation-direction"
       ],
-      { unspecified: "bottomAlphabetical" },
+      { unspecified: "bottomAlphabetical" }
     ],
     // Ordenar mixins SCSS generales y mixins *-bp después de las declaraciones CSS (mejor práctica)
     "order/order": [
@@ -134,20 +135,20 @@ module.exports = {
           type: "at-rule",
           name: "include",
           hasBlock: false,
-          parameter: "/^(?!.*-bp).*/",
+          parameter: "/^(?!.*-bp).*/"
         },
         {
           type: "at-rule",
           name: "include",
           hasBlock: false,
-          parameter: "/.*-bp/",
+          parameter: "/.*-bp/"
         },
         {
           type: "at-rule",
-          name: "media",
+          name: "media"
         },
-        "rules",
-      ],
-    ],
-  },
-};
+        "rules"
+      ]
+    ]
+  }
+}

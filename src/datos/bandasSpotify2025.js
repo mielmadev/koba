@@ -11,5 +11,5 @@ export const bandasSpotifyUrls = {
     "https://open.spotify.com/embed/artist/4tSXnizAbbfLebhThZ14NX?utm_source=generator&theme=0",
   suicidalAngels: "",
   theElectricAlley: "",
-  wolfheartAngels: "",
-};
+  wolfheartAngels: ""
+}

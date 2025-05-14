@@ -1,6 +1,6 @@
-import React from "react";
-import GrupoIntegrantesMapeo from "@mapeos/GrupoIntegrantesMapeo";
-import GrupoAlbumsMapeo from "@mapeos/GrupoAlbumsMapeo";
+import React from "react"
+import GrupoIntegrantesMapeo from "@mapeos/GrupoIntegrantesMapeo"
+import GrupoAlbumsMapeo from "@mapeos/GrupoAlbumsMapeo"
 
 const GrupoEncabezado = ({
   imagen,
@@ -10,7 +10,7 @@ const GrupoEncabezado = ({
   origen,
   integrantes,
   resumen,
-  albums,
+  albums
 }) => (
   <>
     <div className="grupo-encabezado-superior">
@@ -40,6 +40,6 @@ const GrupoEncabezado = ({
       </div>
     </div>
   </>
-);
+)
 
-export default GrupoEncabezado;
+export default GrupoEncabezado

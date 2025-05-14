@@ -10,7 +10,10 @@
     "deploy": "gh-pages -d dist",
     "lint": "eslint --config ./config/eslint.config.js .",
     "format:scss": "prettier --config ./config/.prettierrc --write \"src/**/*.scss\"",
-    "format": "prettier --config ./config/.prettierrc --write ."
+    "format": "prettier --config ./config/.prettierrc --write .",
+    "fix": "npm run format && npm run lint -- --fix && npm run lint:scss && npm run sort:scss",
+    "lint:scss": "stylelint \"**/*.scss\" --config stylelint.config.cjs --fix",
+    "sort:scss": "postcss \"src/**/*.scss\" --config config/postcss-sorting.config.js --replace"
   },
   "dependencies": {
     "animejs": "^4.0.0",

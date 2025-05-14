@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-const videoUrl = "https://www.youtube.com/embed/Bq7QldlGt2U";
+const videoUrl = "https://www.youtube.com/embed/Bq7QldlGt2U"
 
 export default function AboutVideo() {
   return (
@@ -14,5 +14,5 @@ export default function AboutVideo() {
         allowFullScreen
       ></iframe>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import React from "react";
-import BandasLista2025 from "./BandasLista2025";
-import "./bandasContenido.scss";
+import React from "react"
+import BandasLista2025 from "./BandasLista2025"
+import "./bandasContenido.scss"
 
 const BandasContenido = () => {
   return (
@@ -10,7 +10,7 @@ const BandasContenido = () => {
         <BandasLista2025 />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BandasContenido;
+export default BandasContenido

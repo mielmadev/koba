@@ -1,7 +1,7 @@
-import React from "react";
-import "./GrupoAlbumsMapeo.scss";
+import React from "react"
+import "./GrupoAlbumsMapeo.scss"
 const GrupoAlbumsMapeo = ({ albums }) => {
-  const albumsOrdenados = [...albums].sort((a, b) => b.año - a.año);
+  const albumsOrdenados = [...albums].sort((a, b) => b.año - a.año)
   return (
     <>
       {albumsOrdenados.map((album, index) => (
@@ -11,7 +11,7 @@ const GrupoAlbumsMapeo = ({ albums }) => {
         </div>
       ))}
     </>
-  );
-};
+  )
+}
 
-export default GrupoAlbumsMapeo;
+export default GrupoAlbumsMapeo

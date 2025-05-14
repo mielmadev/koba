@@ -1,6 +1,6 @@
-import React from "react";
-import "./aboutDatosLista.scss";
-import { aboutDatos } from "@datos/aboutDatos";
+import React from "react"
+import "./aboutDatosLista.scss"
+import { aboutDatos } from "@datos/aboutDatos"
 
 export default function AboutDatosLista() {
   return (
@@ -23,5 +23,5 @@ export default function AboutDatosLista() {
 
       <div className="about-subtitulo">{aboutDatos.subtitulo3}</div>
     </div>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite"
+import react from "@vitejs/plugin-react"
 
 export default defineConfig({
   plugins: [react()],
@@ -10,16 +10,16 @@ export default defineConfig({
     // Activar polling para mejorar el refresco en Windows
     watch: {
       usePolling: true,
-      interval: 100,
-    },
-    /*     host: '192.168.0.24', // Pc
+      interval: 100
+    }
+    /*     host: "192.168.0.24", // Pc
      */
-    /*     host: '192.168.0.20', // Laptop
+    /*     host: "192.168.0.20", // Laptop
      */
   },
   build: {
     outDir: "dist",
-    sourcemap: true,
+    sourcemap: false // Desactiva los source maps en producción
   },
   base: "/koba/",
   resolve: {
@@ -37,7 +37,7 @@ export default defineConfig({
       "@cursor": "/src/assets/imagenes/cursor",
       "@fecha": "/src/componentes/fecha",
       "@AppComponentes": "/src/componentes/AppComponentes",
-      "@iconos": "/src/componentes/iconos",
-    },
-  },
-});
+      "@iconos": "/src/componentes/iconos"
+    }
+  }
+})

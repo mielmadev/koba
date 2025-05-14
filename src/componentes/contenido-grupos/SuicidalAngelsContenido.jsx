@@ -1,16 +1,14 @@
-import React from "react";
-import bandasDatos2025 from "@datos/bandasDatosAnio2025";
-import "./gruposContenido.scss";
-import GrupoIntegrantesMapeo from "@mapeos/GrupoIntegrantesMapeo";
-import GrupoAlbumsMapeo from "@mapeos/GrupoAlbumsMapeo";
-import GrupoEncabezado from "./GrupoEncabezado";
+import React from "react"
+import bandasDatos2025 from "@datos/bandasDatosAnio2025"
+import "./gruposContenido.scss"
+import GrupoIntegrantesMapeo from "@mapeos/GrupoIntegrantesMapeo"
+import GrupoAlbumsMapeo from "@mapeos/GrupoAlbumsMapeo"
+import GrupoEncabezado from "./GrupoEncabezado"
 
 const SuicidalAngelsContenido = () => {
   // Cambia aquí el nombre de la banda para mostrar la info de otra banda
-  const banda = bandasDatos2025.find((b) => b.nombre === "Suicidal Angels");
-  const albumsOrdenados = banda.albums
-    .slice()
-    .sort((a, b) => (b.anio || 0) - (a.anio || 0));
+  const banda = bandasDatos2025.find((b) => b.nombre === "Suicidal Angels")
+  const albumsOrdenados = banda.albums.slice().sort((a, b) => (b.anio || 0) - (a.anio || 0))
 
   return (
     <div className="contenido">
@@ -37,13 +35,12 @@ const SuicidalAngelsContenido = () => {
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           >
-            Tu navegador no soporta iframes. Por favor, visita el enlace
-            directamente en Spotify.
+            Tu navegador no soporta iframes. Por favor, visita el enlace directamente en Spotify.
           </iframe>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SuicidalAngelsContenido;
+export default SuicidalAngelsContenido

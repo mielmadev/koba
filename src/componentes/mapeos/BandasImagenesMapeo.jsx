@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const BandasImagenesMapeo = ({ bandas }) => (
   <>
@@ -8,6 +8,6 @@ const BandasImagenesMapeo = ({ bandas }) => (
       </div>
     ))}
   </>
-);
+)
 
-export default BandasImagenesMapeo;
+export default BandasImagenesMapeo

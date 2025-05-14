@@ -1,6 +1,6 @@
-import React from "react";
-import { fecha, ubicacion } from "@datos/fechaDatos";
-import "./fecha.scss";
+import React from "react"
+import { fecha, ubicacion } from "@datos/fechaDatos"
+import "./fecha.scss"
 
 const Fecha = () => {
   return (
@@ -9,7 +9,7 @@ const Fecha = () => {
         {fecha} - {ubicacion}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Fecha;
+export default Fecha

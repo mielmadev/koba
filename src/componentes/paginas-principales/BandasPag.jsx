@@ -1,6 +1,6 @@
-import React from "react";
-import BandasContenido from "@contenido-paginas/bandas-contenido/BandasContenido";
-import ContactoFondo from "@imagenes/fondos/bandasFondo.webp";
+import React from "react"
+import BandasContenido from "@contenido-paginas/bandas-contenido/BandasContenido"
+import ContactoFondo from "@imagenes/fondos/bandasFondo.webp"
 
 export default function BandasPag() {
   return (
@@ -12,5 +12,5 @@ export default function BandasPag() {
         <BandasContenido />
       </div>
     </div>
-  );
+  )
 }

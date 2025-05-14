@@ -1,6 +1,6 @@
-import React from "react";
-import Pua from "@imagenes/pua/KobaPua_300x300.png";
-import "./Fallback.scss";
+import React from "react"
+import Pua from "@imagenes/pua/KobaPua_300x300.png"
+import "./Fallback.scss"
 
 function Fallback() {
   return (
@@ -11,7 +11,7 @@ function Fallback() {
         <p>Cargando...</p> // Mensaje alternativo si la imagen no se carga
       )}
     </div>
-  );
+  )
 }
 
-export default Fallback;
+export default Fallback

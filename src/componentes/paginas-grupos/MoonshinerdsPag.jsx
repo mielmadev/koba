@@ -1,6 +1,6 @@
-import React from "react";
-import MoonshinerdsContenido from "@contenido-grupos/MoonshinerdsContenido";
-import MoonshinerdsFondo from "@imagenes/fondos/moonshinerdsFondo.webp";
+import React from "react"
+import MoonshinerdsContenido from "@contenido-grupos/MoonshinerdsContenido"
+import MoonshinerdsFondo from "@imagenes/fondos/moonshinerdsFondo.webp"
 
 export default function MoonshinerdsPag() {
   return (
@@ -12,5 +12,5 @@ export default function MoonshinerdsPag() {
         <MoonshinerdsContenido />
       </div>
     </div>
-  );
+  )
 }

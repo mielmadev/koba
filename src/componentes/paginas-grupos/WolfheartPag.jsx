@@ -1,6 +1,6 @@
-import React from "react";
-import WolfheartContenido from "@contenido-grupos/WolfheartContenido";
-import WolfheartFondo from "@imagenes/fondos/wolfheartFondo.webp";
+import React from "react"
+import WolfheartContenido from "@contenido-grupos/WolfheartContenido"
+import WolfheartFondo from "@imagenes/fondos/wolfheartFondo.webp"
 
 export default function WolfheartPag() {
   return (
@@ -12,5 +12,5 @@ export default function WolfheartPag() {
         <WolfheartContenido />
       </div>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import React from "react";
-import SuicidalAngelsContenido from "@contenido-grupos/SuicidalAngelsContenido";
-import SuicidalAngelsFondo from "@imagenes/fondos/suicidalAngelsFondo.webp";
+import React from "react"
+import SuicidalAngelsContenido from "@contenido-grupos/SuicidalAngelsContenido"
+import SuicidalAngelsFondo from "@imagenes/fondos/suicidalAngelsFondo.webp"
 
 export default function SuicidalAngelsPag() {
   return (
@@ -12,5 +12,5 @@ export default function SuicidalAngelsPag() {
         <SuicidalAngelsContenido />
       </div>
     </div>
-  );
+  )
 }

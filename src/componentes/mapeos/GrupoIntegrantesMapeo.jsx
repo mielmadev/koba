@@ -1,13 +1,11 @@
-import React from "react";
-import "./GrupoIntegrantesMapeo.scss";
+import React from "react"
+import "./GrupoIntegrantesMapeo.scss"
 
 const GrupoIntegrantesMapeo = ({ integrantes }) => (
   <>
     {Object.entries(integrantes).map(([rol, nombre]) => (
       <div key={rol}>
-        <span className="integrante-rol">
-          {rol.charAt(0).toUpperCase() + rol.slice(1)}:
-        </span>{" "}
+        <span className="integrante-rol">{rol.charAt(0).toUpperCase() + rol.slice(1)}:</span>{" "}
         {Array.isArray(nombre) ? (
           nombre.map((n, i) => (
             <span className="integrante-nombre" key={i}>
@@ -21,6 +19,6 @@ const GrupoIntegrantesMapeo = ({ integrantes }) => (
       </div>
     ))}
   </>
-);
+)
 
-export default GrupoIntegrantesMapeo;
+export default GrupoIntegrantesMapeo

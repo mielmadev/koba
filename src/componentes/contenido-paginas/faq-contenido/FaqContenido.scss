@@ -7,9 +7,9 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  color: $gris;
   font-size: $fuente-faq-preguntas;
   text-align: justify;
-  color: $gris;
 
   @include margen-laterales-bp($margen-laterales);
 }
@@ -17,11 +17,11 @@
 .faq-pregunta-texto {
   @include bordes;
 
-  flex-grow: 1;
   box-sizing: border-box;
-  text-align: left;
   white-space: normal;
+  text-align: left;
   word-wrap: break-word;
+  flex-grow: 1;
 }
 
 .faq-icon {
@@ -36,12 +36,14 @@
   @include pad-gap;
 
   box-sizing: border-box;
-  font-size: $fuente-faq-respuestas;
-  text-align: justify;
   color: $blanco;
-  overflow-wrap: break-word;
+  font-size: $fuente-faq-respuestas;
   white-space: normal;
+  text-align: justify;
   word-wrap: break-word;
+  overflow-wrap: break-word;
 
   @include margen-laterales-bp($margen-laterales);
 }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkZhcUNvbnRlbmlkby5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6IkZhcUNvbnRlbmlkby5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQHVzZSBcIkBlc3RpbG9zL2NvcmUuc2Nzc1wiIGFzICo7XG5cbi5mYXEtcHJlZ3VudGEge1xuICBAaW5jbHVkZSBib3JkZXM7XG4gIEBpbmNsdWRlIHBhZC1nYXA7XG5cbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuICBjb2xvcjogJGdyaXM7XG4gIGZvbnQtc2l6ZTogJGZ1ZW50ZS1mYXEtcHJlZ3VudGFzO1xuICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xuXG4gIEBpbmNsdWRlIG1hcmdlbi1sYXRlcmFsZXMtYnAoJG1hcmdlbi1sYXRlcmFsZXMpO1xufVxuXG4uZmFxLXByZWd1bnRhLXRleHRvIHtcbiAgQGluY2x1ZGUgYm9yZGVzO1xuXG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gIHdoaXRlLXNwYWNlOiBub3JtYWw7XG4gIHRleHQtYWxpZ246IGxlZnQ7XG4gIHdvcmQtd3JhcDogYnJlYWstd29yZDtcbiAgZmxleC1ncm93OiAxO1xufVxuXG4uZmFxLWljb24ge1xuICBAaW5jbHVkZSBib3JkZXM7XG5cbiAgbWFyZ2luLWxlZnQ6IDJweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uZmFxLXJlc3B1ZXN0YSB7XG4gIEBpbmNsdWRlIGJvcmRlcztcbiAgQGluY2x1ZGUgcGFkLWdhcDtcblxuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuICBjb2xvcjogJGJsYW5jbztcbiAgZm9udC1zaXplOiAkZnVlbnRlLWZhcS1yZXNwdWVzdGFzO1xuICB3aGl0ZS1zcGFjZTogbm9ybWFsO1xuICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xuICB3b3JkLXdyYXA6IGJyZWFrLXdvcmQ7XG4gIG92ZXJmbG93LXdyYXA6IGJyZWFrLXdvcmQ7XG5cbiAgQGluY2x1ZGUgbWFyZ2VuLWxhdGVyYWxlcy1icCgkbWFyZ2VuLWxhdGVyYWxlcyk7XG59XG4iXX0= */

@@ -1,5 +1,5 @@
-import React from "react";
-import "./ContactoContenido.scss";
+import React from "react"
+import "./ContactoContenido.scss"
 import {
   EmailIcono,
   FacebookIcono,
@@ -8,8 +8,8 @@ import {
   TikTokIcono,
   WhatsappIcono,
   XTwitterIcono,
-  YoutubeIcono,
-} from "@iconos/iconos";
+  YoutubeIcono
+} from "@iconos/iconos"
 
 export default function ContactoContenido() {
   return (
@@ -69,5 +69,5 @@ export default function ContactoContenido() {
         </div>
       </div>
     </div>
-  );
+  )
 }

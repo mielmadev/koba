@@ -1,5 +1,5 @@
-import React from "react";
-import "./hamburguesa.scss";
+import React from "react"
+import "./hamburguesa.scss"
 
 const Hamburguesa = ({ abierto, onClick }) => (
   <button
@@ -9,6 +9,6 @@ const Hamburguesa = ({ abierto, onClick }) => (
   >
     <span className="minipua" />
   </button>
-);
+)
 
-export default Hamburguesa;
+export default Hamburguesa

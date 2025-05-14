@@ -1,7 +1,7 @@
-import React from "react";
-import Fecha from "@fecha/Fecha";
-import Contenido2025 from "@contenido-paginas/anio-2025-contenido/Anio2025Contenido";
-import VolcanFondo from "@imagenes/fondos/volcanFondo.webp";
+import React from "react"
+import Fecha from "@fecha/Fecha"
+import Contenido2025 from "@contenido-paginas/anio-2025-contenido/Anio2025Contenido"
+import VolcanFondo from "@imagenes/fondos/volcanFondo.webp"
 
 export default function InicioPag() {
   return (
@@ -14,5 +14,5 @@ export default function InicioPag() {
         <Contenido2025 />
       </div>
     </div>
-  );
+  )
 }

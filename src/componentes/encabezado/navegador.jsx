@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import PAGES_LAZY from "@AppComponentes/PagesLazy";
-import Hamburguesa from "./Hamburguesa";
-import "./navegador.scss";
+import React, { useState } from "react"
+import { NavLink } from "react-router-dom"
+import PAGES_LAZY from "@AppComponentes/PagesLazy"
+import Hamburguesa from "./Hamburguesa"
+import "./navegador.scss"
 
 const Navegador = () => {
-  const [abierto, setAbierto] = useState(false);
+  const [abierto, setAbierto] = useState(false)
 
-  const toggleMenu = () => setAbierto(!abierto);
-  const closeMenu = () => setAbierto(false);
+  const toggleMenu = () => setAbierto(!abierto)
+  const closeMenu = () => setAbierto(false)
 
   return (
     <nav>
@@ -18,9 +18,7 @@ const Navegador = () => {
           <NavLink
             key={path}
             to={path}
-            className={({ isActive }) =>
-              isActive ? "navlink active" : "navlink"
-            }
+            className={({ isActive }) => (isActive ? "navlink active" : "navlink")}
             onClick={closeMenu}
           >
             {label}
@@ -28,7 +26,7 @@ const Navegador = () => {
         ))}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navegador;
+export default Navegador
