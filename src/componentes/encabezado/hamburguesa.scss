@@ -38,6 +38,13 @@
   }
 }
 
+.hamburguesa.cerrando {
+  .minipua {
+    transform: rotate(90deg);
+    animation: pua-gira-reversa 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
 @keyframes pua-gira {
   0% {
     transform: rotate(90deg);
@@ -49,6 +56,20 @@
 
   100% {
     transform: rotate(180deg);
+  }
+}
+
+@keyframes pua-gira-reversa {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  80% {
+    transform: rotate(-180deg); // 1 vuelta y media en sentido inverso
+  }
+
+  100% {
+    transform: rotate(90deg);
   }
 }
 

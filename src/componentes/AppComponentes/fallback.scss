@@ -11,6 +11,36 @@
 .fallback-image {
   max-width: 100px; // Ajusta el tamaño de la imagen
   max-height: 100px;
+  animation: girar-escala-color 1.2s linear infinite, sombra 1.2s ease-in-out infinite alternate;
+  will-change: transform, filter, box-shadow; // Mejora el rendimiento de la animación
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZhbGxiYWNrLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiZmFsbGJhY2suc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkB1c2UgXCJAZXN0aWxvcy9jb3JlLnNjc3NcIiBhcyAqO1xuXG4uZmFsbGJhY2stY29udGFpbmVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGhlaWdodDogMTAwdmg7IC8vIEFzZWfDunJhdGUgZGUgcXVlIGVsIGNvbnRlbmVkb3Igb2N1cGUgdG9kYSBsYSBwYW50YWxsYVxuICBiYWNrZ3JvdW5kLWNvbG9yOiAkYmxhbmNvOyAvLyBGb25kbyBjbGFybyBwYXJhIG1lam9yIHZpc2liaWxpZGFkXG59XG5cbi5mYWxsYmFjay1pbWFnZSB7XG4gIG1heC13aWR0aDogMTAwcHg7IC8vIEFqdXN0YSBlbCB0YW1hw7FvIGRlIGxhIGltYWdlblxuICBtYXgtaGVpZ2h0OiAxMDBweDtcbn1cbiJdfQ== */
+@keyframes girar-escala-color {
+  0% {
+    transform: rotate(0deg) scale(1);
+    filter: hue-rotate(0deg) saturate(1);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1.08);
+    filter: hue-rotate(360deg) saturate(1.2);
+  }
+}
+
+@keyframes sombra {
+  0% {
+    box-shadow: 0 0 0px $negro;
+  }
+
+  100% {
+    box-shadow: 0 0 24px $blanco;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  // Si el usuario prefiere menos movimiento, la animación se desactiva por accesibilidad
+  .fallback-image {
+    animation: none;
+  }
+}

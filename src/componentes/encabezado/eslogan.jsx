@@ -1,8 +1,8 @@
 import React from "react"
-import "./eslogan.scss"
+import "./Eslogan.scss"
 
 const Eslogan = () => {
-  return <div className="eslogan-contenedor">Where Metal Comes True</div>
+  return <div className="EsloganContenedor">Where Metal Comes True</div>
 }
 
 export default Eslogan
