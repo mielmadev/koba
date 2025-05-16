@@ -11,7 +11,9 @@ export default defineConfig({
     watch: {
       usePolling: true,
       interval: 100
-    }
+    },
+    // Desactivar sourcemaps también en desarrollo
+    sourcemap: false
     /*     host: "192.168.0.24", // Pc
      */
     /*     host: "192.168.0.20", // Laptop
@@ -22,6 +24,9 @@ export default defineConfig({
     sourcemap: false // Desactiva los source maps en producción
   },
   base: "/koba/",
+  css: {
+    devSourcemap: false // Desactiva source maps de CSS en desarrollo
+  },
   resolve: {
     alias: {
       "@componentes": "/src/componentes",

@@ -1,6 +1,6 @@
 module.exports = {
   extends: ["stylelint-config-standard-scss"],
-  plugins: ["stylelint-order"],
+  plugins: ["stylelint-order", "stylelint-selector-bem-pattern"],
   rules: {
     // Orden recomendado para propiedades CSS/SCSS
     "order/properties-order": [
@@ -149,6 +149,14 @@ module.exports = {
         },
         "rules"
       ]
-    ]
+    ],
+    // BEM pattern para selectores
+    "plugin/selector-bem-pattern": {
+      "preset": "bem",
+      "componentName": "[A-Z][a-zA-Z0-9]+", // Bloques en PascalCase o puedes cambiar a kebab-case
+      "componentSelectors": {
+        "initial": "^\.{componentName}(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?$"
+      }
+    }
   }
 }
