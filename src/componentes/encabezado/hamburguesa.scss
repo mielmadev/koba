@@ -2,7 +2,7 @@
 @use "@estilos/core.scss" as *;
 
 .hamburguesa {
-  z-index: 1100;
+  z-index: 1300; // Más al frente que el menú desplegable
   display: none;
   flex-direction: column;
   justify-content: center;

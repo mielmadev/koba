@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
 import PAGES_LAZY from "@AppComponentes/PagesLazy"
 import Hamburguesa from "./Hamburguesa"
-import NavegadorDesplegable from "./NavegadorDesplegable"
+import MenuDesplegable from "./MenuDesplegable"
 import "./navegador.scss"
 
 const Navegador = () => {
@@ -14,7 +14,7 @@ const Navegador = () => {
   return (
     <nav>
       <Hamburguesa abierto={abierto} onClick={toggleMenu} />
-      <NavegadorDesplegable abierto={abierto} closeMenu={closeMenu} pages={PAGES_LAZY} />
+      <MenuDesplegable abierto={abierto} closeMenu={closeMenu} pages={PAGES_LAZY} />
     </nav>
   )
 }

@@ -1,0 +1,56 @@
+@use "@estilos/core.scss" as *;
+@use "@estilos/app/enlaces.scss" as enlaces;
+
+// Contenedor principal del menú desplegable
+.menuDesplegable {
+  background-image: url("@imagenes/logos/perfil_pua.jpg");
+  background-size: 33% 100%;
+  background-position: center center;
+  border-radius: $border-radius;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 28vw;
+  z-index: 1200;
+  overflow: hidden;
+  @include altura-encabezado-bp($altura-encabezado);
+
+  // Modificador: menú abierto (visible y en layout de fila con wrap)
+  &--abierto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 30px;
+
+    // Los enlaces dentro del menú abierto se muestran en fila
+    .menuDesplegable__link {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  // Item individual del menú (envoltorio de cada enlace)
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  // Enlace del menú, hereda estilos de navlink
+  &__link {
+    @extend .navlink;
+    font-size: $fuente-enlaces;
+    font-weight: $peso-navegador;
+    color: $blanco;
+    text-decoration: none;
+    text-shadow: $sombra_blanca;
+    height: 100%;
+
+    // Estado: enlace activo
+    &--active {
+      font-weight: bold;
+    }
+  }
+}

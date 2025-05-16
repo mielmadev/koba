@@ -1,19 +1,24 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
-import "./navegador.scss"
+import "./MenuDesplegable.scss"
 
 // Componente para el menú desplegable del navegador
 const MenuDesplegable = ({ abierto, closeMenu, pages }) => (
-  <div className={`navegador-contenedor${abierto ? " abierto" : ""}`}>
+  <div className={`menuDesplegable${abierto ? " menuDesplegable--abierto" : ""}`}>
     {pages.map(({ path, label }) => (
-      <NavLink
-        key={path}
-        to={path}
-        className={({ isActive }) => (isActive ? "navlink active" : "navlink")}
-        onClick={closeMenu}
-      >
-        {label}
-      </NavLink>
+      <div className="menuDesplegable__item" key={path}>
+        <NavLink
+          to={path}
+          className={({ isActive }) =>
+            isActive
+              ? "menuDesplegable__link menuDesplegable__link--active"
+              : "menuDesplegable__link"
+          }
+          onClick={closeMenu}
+        >
+          {label}
+        </NavLink>
+      </div>
     ))}
   </div>
 )
