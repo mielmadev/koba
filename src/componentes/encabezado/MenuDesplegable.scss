@@ -2,19 +2,37 @@
 @use "@estilos/app/enlaces.scss" as enlaces;
 
 // Contenedor principal del menú desplegable
-.menuDesplegable {
-  background-image: url("@imagenes/logos/perfil_pua.jpg");
-  background-size: 33% 100%;
-  background-position: center center;
-  border-radius: $border-radius;
-  display: none;
+.menu-desplegable {
   position: absolute;
   top: 0;
   right: 0;
   left: 28vw;
   z-index: 1200;
+  display: none;
+  border-radius: $border-radius;
+  background-image: url("@imagenes/logos/perfil_pua.jpg");
+  background-position: center center;
+  background-size: 33% 100%;
   overflow: hidden;
+
   @include altura-encabezado-bp($altura-encabezado);
+
+  // Enlace del menú, hereda estilos de navlink (usar placeholder)
+  &__link {
+    @extend %navlink;
+
+    height: 100%;
+    color: $blanco;
+    font-size: $fuente-enlaces;
+    font-weight: $peso-navegador;
+    text-decoration: none;
+    text-shadow: $sombra_blanca;
+
+    // Estado: enlace activo
+    &--active {
+      font-weight: bold;
+    }
+  }
 
   // Modificador: menú abierto (visible y en layout de fila con wrap)
   &--abierto {
@@ -22,11 +40,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 0.5rem;
     padding-top: 30px;
+    gap: 0.5rem;
 
     // Los enlaces dentro del menú abierto se muestran en fila
-    .menuDesplegable__link {
+    &__link {
       display: flex;
       flex-direction: row;
     }
@@ -36,21 +54,5 @@
   &__item {
     display: flex;
     align-items: center;
-  }
-
-  // Enlace del menú, hereda estilos de navlink
-  &__link {
-    @extend .navlink;
-    font-size: $fuente-enlaces;
-    font-weight: $peso-navegador;
-    color: $blanco;
-    text-decoration: none;
-    text-shadow: $sombra_blanca;
-    height: 100%;
-
-    // Estado: enlace activo
-    &--active {
-      font-weight: bold;
-    }
   }
 }

@@ -11,7 +11,9 @@
 .fallback-image {
   max-width: 100px; // Ajusta el tamaño de la imagen
   max-height: 100px;
-  animation: girar-escala-color 1.2s linear infinite, sombra 1.2s ease-in-out infinite alternate;
+  animation:
+    girar-escala-color 1.2s linear infinite,
+    sombra 1.2s ease-in-out infinite alternate;
   will-change: transform, filter, box-shadow; // Mejora el rendimiento de la animación
 }
 
@@ -29,7 +31,7 @@
 
 @keyframes sombra {
   0% {
-    box-shadow: 0 0 0px $negro;
+    box-shadow: 0 0 0 $negro;
   }
 
   100% {

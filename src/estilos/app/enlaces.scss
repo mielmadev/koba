@@ -1,16 +1,16 @@
 @use "@estilos/core.scss" as *;
 
-/* .navlink {
-  @include bordes;
-}
- */
-a {
+%navlink {
   height: 100%;
   color: $blanco;
   font-size: $fuente-enlaces;
   font-weight: $peso-navegador;
   text-decoration: none;
   text-shadow: $sombra_blanca;
+}
+
+a {
+  @extend %navlink;
 
   &:hover {
     color: $gris;

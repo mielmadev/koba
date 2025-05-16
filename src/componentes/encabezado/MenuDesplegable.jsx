@@ -4,15 +4,15 @@ import "./MenuDesplegable.scss"
 
 // Componente para el menú desplegable del navegador
 const MenuDesplegable = ({ abierto, closeMenu, pages }) => (
-  <div className={`menuDesplegable${abierto ? " menuDesplegable--abierto" : ""}`}>
+  <div className={`menu-desplegable${abierto ? " menu-desplegable--abierto" : ""}`}>
     {pages.map(({ path, label }) => (
-      <div className="menuDesplegable__item" key={path}>
+      <div className="menu-desplegable__item" key={path}>
         <NavLink
           to={path}
           className={({ isActive }) =>
             isActive
-              ? "menuDesplegable__link menuDesplegable__link--active"
-              : "menuDesplegable__link"
+              ? "menu-desplegable__link menu-desplegable__link--active"
+              : "menu-desplegable__link"
           }
           onClick={closeMenu}
         >
