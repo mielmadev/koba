@@ -3,7 +3,7 @@ const faqDatos = [
     id: "ubicacion",
     pregunta: "¿Dónde se celebrará el festival KOBA Live?",
     respuesta:
-      "El KOBA Live se celebrará en las instalaciones de las escuelas de Matiena (Abadiño). Aquí puedes ver la ubicación del festival. También puedes acceder a la ubicación desde el menú de la web."
+      "El KOBA Live se celebrará en las instalaciones de las escuelas de Matiena (Abadiño). Aquí puedes ver la ubicación del festival. También puedes acceder a la ubicación desde el menu de la web."
   },
   {
     id: "transporte",

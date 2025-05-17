@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 import "./Hamburguesa.scss"
 
-// Componente Hamburguesa: botón para abrir/cerrar el menú
+// Componente Hamburguesa: botón para abrir/cerrar el menu
 const Hamburguesa = ({ abierto, onClick }) => {
   // Estado para controlar la animación de cierre
   const [cerrando, setCerrando] = useState(false)
@@ -25,15 +25,16 @@ const Hamburguesa = ({ abierto, onClick }) => {
 
   // Construye la lista de clases CSS según el estado
   const clases = ["hamburguesa"]
-  if (abierto) clases.push("abierto") // Menú abierto
+  if (abierto) clases.push("abierto") // Menu abierto
   if (cerrando) clases.push("cerrando") // Animación de cierre activa
 
   return (
     <button
       className={clases.join(" ")}
       onClick={onClick}
-      aria-label={abierto ? "Cerrar menú" : "Abrir menú"} // Accesibilidad
+      aria-label={abierto ? "Cerrar menu" : "Abrir menu"}
     >
+      <span className="hamburguesa-texto">MENU</span>
       <span className="minipua" />
     </button>
   )

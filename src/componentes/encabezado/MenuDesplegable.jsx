@@ -2,7 +2,7 @@ import React from "react"
 import { NavLink } from "react-router-dom"
 import "./MenuDesplegable.scss"
 
-// Componente para el menú desplegable del navegador
+// Componente para el menu desplegable del navegador
 const MenuDesplegable = ({ abierto, closeMenu, pages }) => (
   <div className={`menu-desplegable${abierto ? " menu-desplegable--abierto" : ""}`}>
     {pages.map(({ path, label }) => (

@@ -1,36 +1,25 @@
 @use "@estilos/core.scss" as *;
 
-.navegador-contenedor {
-  @include bordes;
-  @include pad-gap;
-  @include tamanio-completo;
-
-  z-index: 1000;
+// --- VISTA ESCRITORIO Y MOVIL/TABLET: hamburguesa y menu siempre activos ---
+.hamburguesa {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
 }
 
-@include bp-max(m) {
-  .hamburguesa {
-    display: flex;
-  }
-
-  .navegador-contenedor {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    display: none;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 200px;
-    padding: 1rem;
-    background: #222;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
-  }
-
-  .navegador-contenedor.abierto {
-    display: flex;
-  }
+.navegador-contenedor {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 200px;
+  padding: 1rem;
+  background: #222;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
 }
+
+.navegador-contenedor.abierto {
+  display: flex;
+}
+
+// Elimina media queries que ocultaban la hamburguesa o el menu en escritorio
