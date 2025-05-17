@@ -13,6 +13,21 @@ const Navegador = () => {
 
   return (
     <nav>
+      <div className="menu-escritorio">
+        {PAGES_LAZY.map(({ path, label }) => (
+          <NavLink
+            key={path}
+            to={path}
+            className={({ isActive }) =>
+              isActive
+                ? "menu-escritorio__link menu-escritorio__link--active"
+                : "menu-escritorio__link"
+            }
+          >
+            {label}
+          </NavLink>
+        ))}
+      </div>
       <Hamburguesa abierto={abierto} onClick={toggleMenu} />
       <MenuDesplegable abierto={abierto} closeMenu={closeMenu} pages={PAGES_LAZY} />
     </nav>

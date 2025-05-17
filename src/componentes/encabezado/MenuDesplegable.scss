@@ -82,17 +82,17 @@
     align-items: center;
     padding-top: 0;
     padding-right: 12vw;
-    opacity: 0;
-    pointer-events: none;
+    opacity: 1; // Mantener visible durante la animación
+    pointer-events: auto; // Permitir interacción durante la animación
     transition:
       opacity 0.4s ease,
       transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
       filter 0.4s cubic-bezier(0.4, 0, 0.2, 1),
       box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(-20px);
-    animation: none;
+    transform: none; // Mantener posición durante la animación
+    animation: menu-bounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1 reverse;
     box-shadow: 0 2px 16px 0 rgb(0 0 0 / 15%);
-    filter: blur(4px);
+    filter: blur(0); // Sin desenfoque durante la animación
     gap: 0.5rem;
   }
 
@@ -103,7 +103,7 @@
   }
 
   // Asegura que el contenido esté por encima del fondo animado
-  >* {
+  > * {
     position: relative;
     z-index: 1;
   }
