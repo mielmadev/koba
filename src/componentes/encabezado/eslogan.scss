@@ -9,4 +9,9 @@
   align-items: center;
   color: $marron;
   font-size: $fuente-eslogan;
+  font-family: 'Cinzel', serif;
+
+  @include bp(xs) {
+    font-size: $fuente-eslogan-xs;
+  }
 }
