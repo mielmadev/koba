@@ -7,9 +7,9 @@
   top: 0;
   right: 0;
   left: 0;
-  width: 100vw;
   z-index: 1200;
   display: none;
+  width: 100vw;
   border-radius: $border-radius;
   background:
     linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
@@ -41,21 +41,27 @@
     font-weight: $peso-navegador;
     text-decoration: none;
     text-shadow: $sombra_blanca;
-    transition: color 0.3s, text-shadow 0.3s;
+    transition:
+      color 0.3s,
+      text-shadow 0.3s;
 
     // Estado: enlace activo
     &--active {
       color: $marron;
-      text-shadow: $sombra_marron;
       font-weight: bold;
-      cursor: url("@cursor/KobaPua_32x32_Marron.png") 16 0, auto;
+      text-shadow: $sombra_marron;
+      cursor:
+        url("@cursor/KobaPua_32x32_Marron.png") 16 0,
+        auto;
     }
 
     // Hover: cambio de color y sombra
     &:hover {
       color: $gris;
       text-shadow: $sombra_gris;
-      cursor: url("@cursor/KobaPua_32x32_Gris.png") 16 0, auto;
+      cursor:
+        url("@cursor/KobaPua_32x32_Gris.png") 16 0,
+        auto;
     }
   }
 
@@ -116,7 +122,7 @@
   }
 
   // Asegura que el contenido esté por encima del fondo animado
-  >* {
+  > * {
     position: relative;
     z-index: 1;
   }

@@ -1,7 +1,7 @@
 @use "@estilos/core.scss" as *;
 
 .contenido-2025 {
-  @include bordes;
+  //include bordes;
 
   display: flex;
   flex-flow: row wrap;
@@ -13,7 +13,7 @@
 }
 
 .banda-imagen {
-  @include bordes;
+  //include bordes;
 
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@
   @include tamanio-banda-imagen;
 
   img {
-    @include bordes;
+    //include bordes;
     @include tamanio-completo;
 
     display: block;

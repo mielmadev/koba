@@ -1,7 +1,7 @@
 @use "@estilos/core.scss" as *;
 
 .grupo-contenido {
-  @include bordes;
+  //include bordes;
 
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
 }
 
 .grupo-encabezado {
-  @include bordes;
+  //include bordes;
 
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 }
 
 .grupo-encabezado-superior {
-  @include bordes;
+  //include bordes;
   @include pad-gap;
 
   display: flex;
@@ -31,7 +31,7 @@
   @include altura-encabezado-bp($altura-encabezado, height);
 
   .grupo-encabezado-superior-izquierda {
-    @include bordes;
+    //include bordes;
     @include pad-gap;
     @include altura-encabezado-bp($altura-encabezado, max-height);
 
@@ -49,7 +49,7 @@
   }
 
   .grupo-encabezado-superior-derecha {
-    @include bordes;
+    //include bordes;
 
     // @include pad-gap;
     display: flex;
@@ -68,7 +68,7 @@
 }
 
 .grupo-encabezado-inferior {
-  @include bordes;
+  //include bordes;
   @include pad-gap;
 
   display: flex;
@@ -79,7 +79,7 @@
   gap: 0.5em;
 
   .grupo-resumen {
-    @include bordes;
+    //include bordes;
 
     width: 100%;
     font-size: $fuente-grupos-resumen;
@@ -94,7 +94,7 @@
   }
 
   .grupo-albums {
-    @include bordes;
+    //include bordes;
 
     display: flex;
     flex-flow: row wrap;
@@ -118,6 +118,6 @@
     height: 100%;
   }
 
-  @include bordes;
+  //include bordes;
   @include pad-gap;
 }

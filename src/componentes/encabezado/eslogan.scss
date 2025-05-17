@@ -1,7 +1,7 @@
 @use "@estilos/core.scss" as *;
 
 .eslogan-contenedor {
-  @include bordes;
+  //include bordes;
   @include tamanio-completo;
 
   display: flex;

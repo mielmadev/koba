@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import { NavLink } from "react-router-dom"
 import "./MenuDesplegable.scss"
+import LogoKoba from "../../assets/imagenes/logos/LogoKoba.png"
 
 // Componente para el menu desplegable del navegador
 const MenuDesplegable = ({ abierto, closeMenu, pages }) => {
@@ -31,6 +32,9 @@ const MenuDesplegable = ({ abierto, closeMenu, pages }) => {
     <div
       className={`menu-desplegable${abierto ? " menu-desplegable--abierto" : ""}${cerrando ? " menu-desplegable--cerrando" : ""}`}
     >
+      <div className="menu-desplegable__logo" style={{ display: 'flex', alignItems: 'center', margin: '1rem 2rem 1rem 1rem' }}>
+        <img src={LogoKoba} alt="Koba Live" style={{ height: '48px', width: 'auto', display: 'block' }} />
+      </div>
       {pages.map(({ path, label }) => (
         <div className="menu-desplegable__item" key={path}>
           <NavLink

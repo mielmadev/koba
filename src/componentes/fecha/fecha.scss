@@ -1,6 +1,7 @@
 @use "@estilos/core.scss" as *;
 
 @keyframes parpadeo {
+
   0%,
   100% {
     opacity: 1;
@@ -22,10 +23,10 @@
     $blanco 0 0 10px,
     $blanco 0 0 20px;
 
-  @include bordes;
+  //include bordes;
 
   .fecha {
-    @include bordes;
+    //include bordes;
 
     font-size: $fuente-fecha;
     animation: parpadeo 3s infinite;

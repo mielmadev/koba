@@ -1,7 +1,7 @@
 @use "@estilos/core.scss" as *;
 
 .faq-pregunta {
-  @include bordes;
+  //include bordes;
   @include pad-gap;
 
   display: flex;
@@ -15,7 +15,7 @@
 }
 
 .faq-pregunta-texto {
-  @include bordes;
+  //include bordes;
 
   box-sizing: border-box;
   white-space: normal;
@@ -25,14 +25,14 @@
 }
 
 .faq-icon {
-  @include bordes;
+  //include bordes;
 
   margin-left: 2px;
   cursor: pointer;
 }
 
 .faq-respuesta {
-  @include bordes;
+  //include bordes;
   @include pad-gap;
 
   box-sizing: border-box;

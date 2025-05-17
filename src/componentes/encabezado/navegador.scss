@@ -13,7 +13,7 @@
 }
 
 .menu-escritorio {
-  @include bordes;
+  //include bordes;
   @include pad-gap;
 
   display: flex;
@@ -21,7 +21,6 @@
   width: auto;
   margin-right: auto;
   padding-left: 2.5rem;
-
 
   @include bp-max(tablet) {
     display: none;
