@@ -8,7 +8,7 @@
   @each $bp in (xs, md, lg, tablet, laptop, pc, full) {
     $valor: map.get($mapa, $bp);
 
-    @if $bp ==xs {
+    @if $bp == xs {
       margin: #{$valor};
     } @else {
       @include bp.bp($bp) {
@@ -21,7 +21,7 @@
 // @include altura-encabezado-bp($altura-encabezado);
 @mixin altura-encabezado-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
-    @if $bp ==xs {
+    @if $bp == xs {
       #{$propiedad}: map.get($mapa, $bp);
     } @else {
       @include bp.bp($bp) {
@@ -34,7 +34,7 @@
 // @include altura-contenido-bp($altura-encabezado);
 @mixin altura-contenido-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
-    @if $bp ==xs {
+    @if $bp == xs {
       #{$propiedad}: calc(100vh - map.get($mapa, $bp));
     } @else {
       @include bp.bp($bp) {

@@ -13,7 +13,7 @@
     "format": "prettier --config ./config/.prettierrc --write .",
     "fix": "npm run format && npm run lint -- --fix && npm run lint:scss && npm run sort:scss",
     "lint:scss": "stylelint \"**/*.scss\" --config stylelint.config.cjs --fix",
-    "sort:scss": "postcss \"src/**/*.scss\" --config config/postcss-sorting.config.js --replace"
+    "sort:scss": "postcss \"src/**/*.scss\" --config config/postcss-sorting.config.js --replace --no-map"
   },
   "dependencies": {
     "animejs": "^4.0.0",
