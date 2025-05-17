@@ -10,9 +10,7 @@
 
     @if $bp ==xs {
       margin: #{$valor};
-    }
-
-    @else {
+    } @else {
       @include bp.bp($bp) {
         margin: #{$valor};
       }
@@ -25,9 +23,7 @@
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
     @if $bp ==xs {
       #{$propiedad}: map.get($mapa, $bp);
-    }
-
-    @else {
+    } @else {
       @include bp.bp($bp) {
         #{$propiedad}: map.get($mapa, $bp);
       }
@@ -40,9 +36,7 @@
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
     @if $bp ==xs {
       #{$propiedad}: calc(100vh - map.get($mapa, $bp));
-    }
-
-    @else {
+    } @else {
       @include bp.bp($bp) {
         #{$propiedad}: calc(100vh - map.get($mapa, $bp));
       }

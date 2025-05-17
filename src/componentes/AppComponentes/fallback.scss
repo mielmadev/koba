@@ -40,7 +40,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   // Si el usuario prefiere menos movimiento, la animación se desactiva por accesibilidad
   .fallback-image {
     animation: none;
