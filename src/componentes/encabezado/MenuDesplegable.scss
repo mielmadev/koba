@@ -10,36 +10,29 @@
   z-index: 1200;
   display: none;
   border-radius: $border-radius;
-  background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.7); // Fondo base oscuro opcional
-  overflow: hidden;
+  background:
+    linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
+    url("@imagenes/logos/perfil_pua.jpg") center center/33% 100% repeat-x;
   opacity: 0;
-  transform: translateY(-20px);
+  overflow: hidden;
   pointer-events: none;
-  transition: opacity 0.3s ease,
+  transition:
+    opacity 0.3s ease,
     transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     filter 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-20px);
+  box-shadow: 0 2px 16px 0 rgb(0 0 0 / 15%);
 
-  // Fondo animado con pua
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("@imagenes/logos/perfil_pua.jpg");
-    background-position: center center;
-    background-size: 33% 100%;
-    background-repeat: repeat-x;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: 0;
-  }
+  // Efecto inicial: desenfoque y sombra suave
+  filter: blur(4px);
 
   @include altura-encabezado-bp($altura-encabezado);
 
   // Enlace del menu, hereda estilos de navlink (usar placeholder)
   &__link {
     @extend %navlink;
+
     height: 100%;
     color: $blanco;
     font-size: calc($fuente-enlaces * 0.85); // Reducir tamaño del texto
@@ -61,24 +54,46 @@
     align-items: center;
     padding-top: 0; // Eliminar margen superior
     padding-right: 12vw; // Añadir margen derecho para no tapar la pua
-    gap: 0.5rem;
     opacity: 1;
-    transform: none;
     pointer-events: auto;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      filter 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: none;
+    animation: menu-bounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1;
+    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 25%);
     filter: blur(0);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
-    animation: menuBounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1;
+    gap: 0.5rem;
 
     // Los enlaces dentro del menu abierto se muestran en fila
     &__link {
       display: flex;
       flex-direction: row;
     }
+  }
 
-    // Fondo animado visible
-    &::before {
-      opacity: 1;
-    }
+  // Modificador: menu cerrando (animación de cierre visible, luego ocultar)
+  &--cerrando {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 0;
+    padding-right: 12vw;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      filter 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-20px);
+    animation: none;
+    box-shadow: 0 2px 16px 0 rgb(0 0 0 / 15%);
+    filter: blur(4px);
+    gap: 0.5rem;
   }
 
   // Item individual del menu (envoltorio de cada enlace)
@@ -93,12 +108,7 @@
     z-index: 1;
   }
 
-  // Efecto 1: desenfoque progresivo al abrir
-  filter: blur(4px);
-  // Efecto 3: sombra suave al abrir
-  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
-
-  @keyframes menuBounce {
+  @keyframes menu-bounce {
     0% {
       transform: translateY(-20px) scale(0.96);
     }
@@ -114,25 +124,5 @@
     100% {
       transform: translateY(0) scale(1);
     }
-  }
-}
-
-// Mostrar menu desplegable solo en móvil/tablet
-@include bp-max(m) {
-  .menu-desplegable {
-    display: none;
-
-    &--abierto {
-      display: flex;
-    }
-  }
-}
-
-// Mostrar menu desplegable en escritorio (mayor que m): oculto siempre
-@include bp(laptop) {
-
-  .menu-desplegable,
-  .menu-desplegable--abierto {
-    display: none !important;
   }
 }

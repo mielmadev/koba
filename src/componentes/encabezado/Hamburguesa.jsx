@@ -34,7 +34,7 @@ const Hamburguesa = ({ abierto, onClick }) => {
       onClick={onClick}
       aria-label={abierto ? "Cerrar menu" : "Abrir menu"}
     >
-      <span className="hamburguesa-texto">MENU</span>
+      <span className="hamburguesa-texto">Menu</span>
       <span className="minipua" />
     </button>
   )

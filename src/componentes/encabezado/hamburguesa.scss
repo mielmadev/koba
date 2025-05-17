@@ -2,6 +2,7 @@
 @use "@estilos/core.scss" as *;
 
 .hamburguesa {
+  position: relative;
   z-index: 1300; // Más al frente que el menu desplegable
   display: none;
   flex-direction: column;
@@ -12,13 +13,13 @@
   border: none;
   background: none;
   cursor: pointer;
-  position: relative;
 
   .minipua {
     display: block;
     width: 30px;
     height: 30px;
-    background: url("/src/assets/imagenes/cursor/KobaPua_32x32_Blanco.png") center/100% 100% no-repeat;
+    background: url("/src/assets/imagenes/cursor/KobaPua_32x32_Blanco.png") center/100% 100%
+      no-repeat;
     background-size: 100% 100%;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     filter: none;
@@ -26,19 +27,20 @@
 
   .hamburguesa-texto {
     position: absolute;
-    right: 110%;
     top: 50%;
+    right: 100%;
     left: auto;
-    transform: translateY(-50%);
-    color: $blanco;
-    font-size: 1rem;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    pointer-events: none;
-    transition: opacity 0.3s;
-    opacity: 1;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    color: $blanco;
+    font-size: $fuente-menu-pua;
+    font-weight: bold;
     white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.3s;
+    transform: translateY(-50%);
   }
 }
 
