@@ -6,46 +6,55 @@
   font-size: $fuente-enlaces;
   font-weight: $peso-navegador;
   text-decoration: none;
-  text-shadow: $sombra_blanca;
+  text-shadow: $sombra-blanco;
 }
 
-a {
+a,
+.menu-escritorio__link,
+.menu-desplegable__link {
   @extend %navlink;
 
   &:hover {
+    @include cursor-pua-hover;
     color: $gris;
-    text-shadow: $sombra_gris;
-    cursor:
-      url("@cursor/KobaPua_32x32_Gris.png") 16 0,
-      auto;
+    text-shadow: $sombra-gris;
     transition: cursor 0.3s ease;
   }
 
   &:active {
+    @include cursor-pua-active;
     color: $negro;
-    text-shadow: $sombra_blanca;
+    text-shadow: $sombra-blanco;
     cursor:
       url("@cursor/KobaPua_32x32_Negro.png") 16 0,
       auto;
     transition: cursor 0.3s ease;
   }
 
-  &.navlink {
-    &.active {
-      color: $marron;
-      text-shadow: $sombra_marron;
+  &.menu-escritorio__link--active,
+  &.menu-desplegable__link--active {
+    @include cursor-pua-active;
+    color: $marron;
+    font-weight: bold;
+    text-shadow: $sombra-marron;
+    transition: color 0.3s, text-shadow 0.3s, cursor 0.3s;
+
+    &:hover {
+      color: $gris;
+      text-shadow: $sombra-gris;
       cursor:
-        url("@cursor/KobaPua_32x32_Marron.png") 16 0,
+        url("@cursor/KobaPua_32x32_Negro.png") 16 0,
         auto;
       transition: cursor 0.3s ease;
+    }
 
-      &:active {
-        color: $negro;
-        cursor:
-          url("@cursor/KobaPua_32x32_Negro.png") 16 0,
-          auto;
-        transition: cursor 0.3s ease;
-      }
+    &:active {
+      color: $granate;
+      text-shadow: $sombra-blanco;
+      cursor:
+        url("@cursor/KobaPua_32x32_Negro.png") 16 0,
+        auto;
+      transition: cursor 0.3s ease;
     }
   }
 }

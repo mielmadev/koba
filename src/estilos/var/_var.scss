@@ -28,12 +28,14 @@ $margen-laterales: (
   full: 0 160px
 );
 
-// Sombras
-$sombra-blanca: 2px 1px 3px $blanco;
+// Sombras para elementos
+$sombra-blanco: 2px 1px 3px $blanco;
 $sombra-gris: 2px 1px 3px $gris;
 $sombra-marron: 2px 1px 3px $marron;
-$sombra-negra: 2px 1px 3px $negro;
-$drop-shadow-blanco: drop-shadow(0 0 6px $blanco);
+$sombra-negro: 2px 1px 3px $negro;
+
+// Sombras para imágenes
+$sombra-imagen-blanco: drop-shadow(0 0 6px $blanco);
 
 // Filtros
 $filtro-fondos: brightness(25%); // filter

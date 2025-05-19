@@ -35,34 +35,12 @@
   // Enlace del menu, hereda estilos de navlink (usar placeholder)
   &__link {
     @extend %navlink;
-
     font-size: calc($fuente-enlaces * 0.85);
     text-align: center;
-    transition:
-      color 0.3s,
-      text-shadow 0.3s;
+    transition: color 0.3s, text-shadow 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    // Estado: enlace activo (modificador BEM anidado)
-    &--active {
-      color: $marron;
-      font-weight: bold;
-      text-shadow: $sombra_marron;
-      cursor:
-        url("@cursor/KobaPua_32x32_Marron.png") 16 0,
-        auto;
-    }
-
-    // Hover: cambio de color y sombra
-    &:hover {
-      color: $gris;
-      text-shadow: $sombra_gris;
-      cursor:
-        url("@cursor/KobaPua_32x32_Gris.png") 16 0,
-        auto;
-    }
   }
 
   // Modificador: menu abierto (visible y en layout de fila con wrap)
