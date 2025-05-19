@@ -10,11 +10,11 @@
   align-items: center;
   width: 100dvw;
 
-  //include bordes;
+  // include bordes;
   @include altura-encabezado-bp($altura-encabezado);
 
   .logo-encabezado {
-    //include bordes;
+    // include bordes;
     @include pad-gap;
 
     display: flex;
@@ -24,13 +24,13 @@
     flex-shrink: 0;
 
     .logo-encabezado img {
-      //include bordes;
+      // include bordes;
       @include tamanio-completo;
     }
   }
 
   .encabezado-derecha {
-    //include bordes;
+    // include bordes;
 
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
     height: 100%;
 
     .encabezado-navegador {
-      //include bordes;
+      // include bordes;
 
       display: flex;
       flex: 1;
@@ -53,7 +53,7 @@
     }
 
     .encabezado-eslogan {
-      //include bordes;
+      // include bordes;
 
       display: flex;
       flex: 1;

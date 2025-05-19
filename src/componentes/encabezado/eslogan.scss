@@ -1,15 +1,15 @@
 @use "@estilos/core.scss" as *;
 
 .eslogan-contenedor {
-  //include bordes;
+  // include bordes;
   @include tamanio-completo;
 
   display: flex;
   justify-content: center;
   align-items: center;
   color: $marron;
+  font-family: Cinzel, serif;
   font-size: $fuente-eslogan;
-  font-family: 'Cinzel', serif;
 
   @include bp(xs) {
     font-size: $fuente-eslogan-xs;

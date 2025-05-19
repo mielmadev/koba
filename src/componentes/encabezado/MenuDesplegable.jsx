@@ -42,7 +42,9 @@ const MenuDesplegable = ({ abierto, closeMenu, pages }) => {
     "menu-desplegable",
     abierto && "menu-desplegable--abierto",
     cerrando && "menu-desplegable--cerrando"
-  ].filter(Boolean).join(" ")
+  ]
+    .filter(Boolean)
+    .join(" ")
 
   // No es necesario memoizar handleCloseMenu si solo se pasa a un hijo
   const handleCloseMenu = () => {
