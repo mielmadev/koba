@@ -89,6 +89,23 @@
   }
 }
 
+// Oculta el texto de la hamburguesa al abrir el menú desplegable y también mientras está cerrando
+.navegador-contenedor.encabezado--menu-abierto .hamburguesa-texto,
+.navegador-contenedor.encabezado--menu-cerrando .hamburguesa-texto,
+.hamburguesa.abierto .hamburguesa-texto,
+.hamburguesa.cerrando .hamburguesa-texto {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+// Solo visible cuando el menú está completamente cerrado y la hamburguesa no está en animación
+.navegador-contenedor:not(.encabezado--menu-abierto):not(.encabezado--menu-cerrando) .hamburguesa:not(.abierto):not(.cerrando) .hamburguesa-texto {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
 @keyframes pua-gira {
   0% {
     transform: rotate(90deg);

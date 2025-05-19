@@ -24,3 +24,25 @@
   width: clamp(120px, 95vw, 320px); // XS: 120px, max: 320px (más ancho)
   height: clamp(80px, 60vw, 200px); // XS: 80px, max: 200px (más alto)
 }
+
+// Mixin para el estado del menú desplegable (abierto/cerrando)
+@mixin menu-desplegable-estado($animation) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 0;
+  padding-right: 12vw;
+  opacity: 1;
+  pointer-events: auto;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: none;
+  animation: $animation;
+  box-shadow: 0 8px 32px 0 rgb(0 0 0 / 25%);
+  filter: blur(0);
+  gap: 0.5rem;
+}

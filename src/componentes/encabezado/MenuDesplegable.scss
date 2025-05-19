@@ -1,5 +1,7 @@
 @use "@estilos/core.scss" as *;
 @use "@estilos/app/enlaces.scss" as enlaces;
+@use "@estilos/mix/mix.scss" as mix;
+@use "@estilos/mix/animaciones.scss";
 
 // Contenedor principal del menu desplegable
 .menu-desplegable {
@@ -9,7 +11,7 @@
   left: 0;
   z-index: 1200;
   display: none;
-  width: 100vw;
+  width: 100dvw;
   border-radius: $border-radius;
   background:
     linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
@@ -26,7 +28,6 @@
   transform: translateY(-20px);
   box-shadow: 0 2px 16px 0 rgb(0 0 0 / 15%);
 
-  // Efecto inicial: desenfoque y sombra suave
   filter: blur(4px);
 
   @include altura-encabezado-bp($altura-encabezado);
@@ -35,17 +36,16 @@
   &__link {
     @extend %navlink;
 
-    height: 100%;
-    color: $blanco;
-    font-size: calc($fuente-enlaces * 0.85); // Reducir tamaño del texto
-    font-weight: $peso-navegador;
-    text-decoration: none;
-    text-shadow: $sombra_blanca;
+    font-size: calc($fuente-enlaces * 0.85);
+    text-align: center;
     transition:
       color 0.3s,
       text-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    // Estado: enlace activo
+    // Estado: enlace activo (modificador BEM anidado)
     &--active {
       color: $marron;
       font-weight: bold;
@@ -67,95 +67,72 @@
 
   // Modificador: menu abierto (visible y en layout de fila con wrap)
   &--abierto {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 0; // Eliminar margen superior
-    padding-right: 12vw; // Añadir margen derecho para no tapar la pua
-    opacity: 1;
-    pointer-events: auto;
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-      filter 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-      box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: none;
-    animation: menu-bounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1;
-    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 25%);
-    filter: blur(0);
-    gap: 0.5rem;
-
-    // Los enlaces dentro del menu abierto se muestran en fila
-    &__link {
-      display: flex;
-      flex-direction: row;
-    }
+    @include mix.menu-desplegable-estado(menu-bounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1);
   }
 
   // Modificador: menu cerrando (animación de cierre visible, luego ocultar)
   &--cerrando {
+    @include mix.menu-desplegable-estado(menu-bounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1 reverse);
+  }
+
+  // Logo del menu hamburguesa y dentro del contenido del menu
+  &__logo {
+    @include pad-gap;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding-top: 0;
-    padding-right: 12vw;
-    opacity: 1; // Mantener visible durante la animación
-    pointer-events: auto; // Permitir interacción durante la animación
-    transition:
-      opacity 0.4s ease,
-      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-      filter 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-      box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: none; // Mantener posición durante la animación
-    animation: menu-bounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1 reverse;
-    box-shadow: 0 2px 16px 0 rgb(0 0 0 / 15%);
-    filter: blur(0); // Sin desenfoque durante la animación
-    gap: 0.5rem;
+    height: 100%;
+
+    img {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  // Contenido del menu desplegable
+  &__contenido {
+    @include tamanio-completo;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  // Links dentro del contenido del menu
+  &__links {
+    @include tamanio-completo;
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch; // Para que todos los items tengan la misma altura
+    min-width: 0;
+  }
+
+  // Fila de items del menu
+  &__fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; // Centra los items en la fila
+    align-items: stretch;
+    width: 100%;
   }
 
   // Item individual del menu (envoltorio de cada enlace)
   &__item {
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex: 1 1 0%; // Hace que todos los items ocupen el mismo ancho
+    min-width: 0;
+
+    .menu-desplegable__link {
+      width: 100%; // El enlace ocupa todo el ancho del item
+    }
   }
 
   // Asegura que el contenido esté por encima del fondo animado
-  > * {
+  >* {
     position: relative;
     z-index: 1;
-  }
-
-  @keyframes menu-bounce {
-    0% {
-      transform: translateY(-20px) scale(0.96);
-    }
-
-    60% {
-      transform: translateY(8px) scale(1.03);
-    }
-
-    80% {
-      transform: translateY(-2px) scale(0.98);
-    }
-
-    100% {
-      transform: translateY(0) scale(1);
-    }
-  }
-
-  // Logo del menu hamburguesa
-  &__logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding-left: 2.5rem; // Igual que el logo del navegador
-
-    img {
-      display: block;
-      width: auto;
-      height: 48px;
-    }
   }
 }

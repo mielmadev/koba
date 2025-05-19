@@ -3,15 +3,17 @@ import PropTypes from "prop-types"
 import { NavLink } from "react-router-dom"
 import "./MenuDesplegable.scss"
 import LogoKoba from "@imagenes/logos/LogoKoba.png"
+import dividirEnFilasMenuDesplegable from "../mapeos/dividirEnFilasMenuDesplegable"
 
-// Definir el shape de pages fuera para reutilización y limpieza
-const pageShape = PropTypes.shape({
+
+// Definir la estructura de página fuera para reutilización y limpieza
+const estructuraPagina = PropTypes.shape({
   path: PropTypes.string.isRequired, // Ruta a la que navega el enlace
   label: PropTypes.string.isRequired // Texto que se muestra en el enlace
 })
 
 // Componente para el menu desplegable del navegador
-const MenuDesplegable = ({ abierto, closeMenu, pages }) => {
+const MenuDesplegable = ({ abierto, cerrarMenu, paginas }) => {
   // Estado para animación de cierre
   const [cerrando, setCerrando] = useState(false)
   const [visible, setVisible] = useState(abierto)
@@ -46,13 +48,18 @@ const MenuDesplegable = ({ abierto, closeMenu, pages }) => {
     .filter(Boolean)
     .join(" ")
 
-  // No es necesario memoizar handleCloseMenu si solo se pasa a un hijo
-  const handleCloseMenu = () => {
-    closeMenu()
+  // No es necesario memoizar (guardar en caché) cerrarMenu si solo se pasa a un hijo
+  const manejarCerrarMenu = () => {
+    cerrarMenu()
   }
 
   // Si el menú no está visible ni cerrando, no renderizar nada
   if (!visible && !cerrando) return null
+
+  // Dividir los enlaces en filas lo más equilibradas posible, máximo 4 por fila
+  // Utiliza la utilidad común, ver documentación interna: ../mapeos/dividirEnFilasMenuDesplegable.js y wiki/diccionario.md#dividirenfilas
+  const maxPorFila = 4
+  const filas = dividirEnFilasMenuDesplegable(paginas, maxPorFila)
 
   return (
     <div
@@ -61,25 +68,32 @@ const MenuDesplegable = ({ abierto, closeMenu, pages }) => {
       aria-label="Menú principal"
       tabIndex={-1} // Mejora accesibilidad para navegación por teclado
     >
-      <div className="menu-desplegable__logo">
-        <img src={LogoKoba} alt="Koba Live" />
-      </div>
-      {/* Renderizar los enlaces del menú */}
-      {pages.map(({ path, label }) => (
-        <div className="menu-desplegable__item" key={path}>
-          <NavLink
-            to={path}
-            className={({ isActive }) =>
-              isActive
-                ? "menu-desplegable__link menu-desplegable__link--active"
-                : "menu-desplegable__link"
-            }
-            onClick={handleCloseMenu}
-          >
-            {label}
-          </NavLink>
+      <div className="menu-desplegable__contenido">
+        <div className="menu-desplegable__logo">
+          <img src={LogoKoba} alt="Koba Live" />
         </div>
-      ))}
+        <div className="menu-desplegable__links">
+          {filas.map((fila, idx) => (
+            <div className="menu-desplegable__fila" key={idx}>
+              {fila.map(({ path, label }) => (
+                <div className="menu-desplegable__item" key={path}>
+                  <NavLink
+                    to={path}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "menu-desplegable__link menu-desplegable__link--active"
+                        : "menu-desplegable__link"
+                    }
+                    onClick={manejarCerrarMenu}
+                  >
+                    {label}
+                  </NavLink>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
@@ -87,8 +101,8 @@ const MenuDesplegable = ({ abierto, closeMenu, pages }) => {
 // Definición de los tipos de props que espera el componente MenuDesplegable
 MenuDesplegable.propTypes = {
   abierto: PropTypes.bool.isRequired, // Indica si el menú está visible (true) o no (false)
-  closeMenu: PropTypes.func.isRequired, // Función que se ejecuta para cerrar el menú
-  pages: PropTypes.arrayOf(pageShape).isRequired // Array de objetos con la ruta y el texto de cada enlace del menú
+  cerrarMenu: PropTypes.func.isRequired, // Función que se ejecuta para cerrar el menú
+  paginas: PropTypes.arrayOf(estructuraPagina).isRequired // Array de objetos con la ruta y el texto de cada enlace del menú
 }
 
 export default MenuDesplegable

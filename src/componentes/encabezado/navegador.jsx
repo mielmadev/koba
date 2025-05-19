@@ -54,7 +54,7 @@ const Navegador = () => {
         ))}
       </div>
       <Hamburguesa abierto={abierto} onClick={toggleMenu} />
-      <MenuDesplegable abierto={abierto} closeMenu={closeMenu} pages={PAGES_LAZY} />
+      <MenuDesplegable abierto={abierto} cerrarMenu={closeMenu} paginas={PAGES_LAZY} />
     </nav>
   )
 }

@@ -23,7 +23,7 @@ const PAGES_LAZY = [
   {
     key: "MERCHANDISING",
     path: "/merchandising",
-    label: "Merchandising",
+    label: "Merchan",
     component: lazy(() => import("@paginas-principales/MerchanPag"))
   },
   {
