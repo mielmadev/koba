@@ -5,9 +5,9 @@
   color: $blanco;
   font-size: $fuente-enlaces;
   font-weight: $peso-navegador;
+  font-weight: bold;
   text-decoration: none;
   text-shadow: $sombra-gris;
-  font-weight: bold;
 }
 
 a,
@@ -17,6 +17,7 @@ a,
 
   &:hover {
     @include cursor-pua-hover;
+
     color: $gris;
     text-shadow: $sombra-negro;
     transition: cursor 0.3s ease;
@@ -24,6 +25,7 @@ a,
 
   &:active {
     @include cursor-pua-active;
+
     color: $negro;
     text-shadow: $sombra-blanco;
     cursor:
@@ -35,9 +37,13 @@ a,
   &.menu-escritorio__link--active,
   &.menu-desplegable__link--active {
     @include cursor-pua-active;
+
     color: $blanco;
     text-shadow: $sombra-marron;
-    transition: color 0.3s, text-shadow 0.3s, cursor 0.3s;
+    transition:
+      color 0.3s,
+      text-shadow 0.3s,
+      cursor 0.3s;
 
     &:hover {
       color: $marron;

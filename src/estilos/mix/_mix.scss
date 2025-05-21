@@ -49,15 +49,21 @@
 
 // Mixin para cursor pua gris personalizado en hover
 @mixin cursor-pua-hover {
-  cursor: url("@imagenes/cursor/cursor-pua-gris.webp") 16 0, pointer;
+  cursor:
+    url("@imagenes/cursor/cursor-pua-gris.webp") 16 0,
+    pointer;
 }
 
 // Mixin para cursor pua marrón en active
 @mixin cursor-pua-active {
-  cursor: url("@imagenes/cursor/cursor-pua-marron.webp") 16 0, auto;
+  cursor:
+    url("@imagenes/cursor/cursor-pua-marron.webp") 16 0,
+    auto;
 }
 
 // Mixin para cursor pua negro en hover y active
 @mixin cursor-pua-active-hover {
-  cursor: url("@imagenes/cursor/cursor-pua-negro.webp") 16 0, auto;
+  cursor:
+    url("@imagenes/cursor/cursor-pua-negro.webp") 16 0,
+    auto;
 }

@@ -12,8 +12,7 @@ Jamás olvidaremos el día en que recibimos el apoyo necesario para celebrar la 
 Formar el equipo fue sencillo: la vida nos fue cruzando, por casualidad o por destino, y aquí estamos.
 
 Detrás de este festival hay personas honestas, que ponen el alma y el corazón en cada detalle para que tú vivas una experiencia inolvidable.`,
-  seccion1:
-    "Contarlo no basta, hay que vivirlo.\n Te esperamos en el Koba Live.",
+  seccion1: "Contarlo no basta, hay que vivirlo.\n Te esperamos en el Koba Live.",
   texto2: `Cada edición nos mueve una promesa contigo:`,
   promesa: "Que respires, sientas y vivas el auténtico metal.",
   texto3: `Nuestro entorno lo hace posible.

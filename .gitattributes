@@ -1,0 +1,6 @@
+# Normaliza finales de línea a LF para todos los archivos relevantes
+* text=auto
+*.js text eol=lf
+*.jsx text eol=lf
+*.scss text eol=lf
+*.md text eol=lf

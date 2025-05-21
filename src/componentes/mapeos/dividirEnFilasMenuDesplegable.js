@@ -8,18 +8,18 @@
  * @returns {Array[]} Array de filas (arrays).
  */
 export default function dividirEnFilasMenuDesplegable(items, maxPorFila) {
-  if (!Array.isArray(items) || typeof maxPorFila !== 'number' || maxPorFila < 1) return [];
-  const total = items.length;
-  if (total === 0) return [];
-  const numFilas = Math.ceil(total / maxPorFila);
-  const base = Math.floor(total / numFilas);
-  const resto = total % numFilas;
-  const filas = [];
-  let i = 0;
+  if (!Array.isArray(items) || typeof maxPorFila !== "number" || maxPorFila < 1) return []
+  const total = items.length
+  if (total === 0) return []
+  const numFilas = Math.ceil(total / maxPorFila)
+  const base = Math.floor(total / numFilas)
+  const resto = total % numFilas
+  const filas = []
+  let i = 0
   for (let f = 0; f < numFilas; f++) {
-    const tam = base + (f < resto ? 1 : 0);
-    filas.push(items.slice(i, i + tam));
-    i += tam;
+    const tam = base + (f < resto ? 1 : 0)
+    filas.push(items.slice(i, i + tam))
+    i += tam
   }
-  return filas;
+  return filas
 }

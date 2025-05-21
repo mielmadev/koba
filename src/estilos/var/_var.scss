@@ -1,5 +1,6 @@
 // Para compatibilidad futura con Sass: usar map.get en vez de map-get
 @use "sass:map";
+
 // as * para no tener que usar prefijos
 @use "@estilos/var/colores.scss" as *;
 @use "@estilos/var/margenes.scss" as *;
@@ -17,7 +18,6 @@ $altura-encabezado: (
   pc: 120px,
   full: 132px
 );
-
 
 // Sombras para elementos
 $sombra-blanco: 2px 1px 3px $blanco;

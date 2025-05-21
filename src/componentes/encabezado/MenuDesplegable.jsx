@@ -5,7 +5,6 @@ import "./MenuDesplegable.scss"
 import LogoKoba from "@imagenes/logos/LogoKoba.png"
 import dividirEnFilasMenuDesplegable from "../mapeos/dividirEnFilasMenuDesplegable"
 
-
 // Definir la estructura de página fuera para reutilización y limpieza
 const estructuraPagina = PropTypes.shape({
   path: PropTypes.string.isRequired, // Ruta a la que navega el enlace

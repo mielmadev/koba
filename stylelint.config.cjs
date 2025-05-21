@@ -152,11 +152,15 @@ module.exports = {
     ],
     // BEM pattern para selectores
     "plugin/selector-bem-pattern": {
+      // Permite bloques en PascalCase, camelCase y kebab-case
       "preset": "bem",
-      "componentName": "[A-Z][a-zA-Z0-9]+", // Bloques en PascalCase o puedes cambiar a kebab-case
+      "componentName": "[A-Za-z][a-zA-Z0-9-]+", // PascalCase, camelCase o kebab-case
       "componentSelectors": {
-        "initial": "^\.{componentName}(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?$"
+        // Permite elementos y modificadores en camelCase, kebab-case y números
+        "initial": "^\\.{componentName}(?:__[a-zA-Z0-9-]+)?(?:--[a-zA-Z0-9-]+)?$"
       }
-    }
+    },
+    // Desactiva la regla global que exige kebab-case para selectores de clase
+    "selector-class-pattern": null
   }
 }

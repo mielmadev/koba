@@ -1,7 +1,7 @@
 @use "@estilos/core.scss" as *;
 @use "@estilos/app/enlaces.scss" as enlaces;
 @use "@estilos/mix/mix.scss" as mix;
-@use "@estilos/mix/animaciones.scss";
+@use "@estilos/mix/animaciones";
 
 // Contenedor principal del menu desplegable
 .menu-desplegable {
@@ -27,7 +27,6 @@
     box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(-20px);
   box-shadow: 0 2px 16px 0 rgb(0 0 0 / 15%);
-
   filter: blur(4px);
 
   @include altura-encabezado-bp($altura-encabezado);
@@ -35,12 +34,15 @@
   // Enlace del menu, hereda estilos de navlink (usar placeholder)
   &__link {
     @extend %navlink;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: calc($fuente-enlaces * 0.85);
     text-align: center;
-    transition: color 0.3s, text-shadow 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition:
+      color 0.3s,
+      text-shadow 0.3s;
   }
 
   // Modificador: menu abierto (visible y en layout de fila con wrap)
@@ -50,12 +52,15 @@
 
   // Modificador: menu cerrando (animación de cierre visible, luego ocultar)
   &--cerrando {
-    @include mix.menu-desplegable-estado(menu-bounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1 reverse);
+    @include mix.menu-desplegable-estado(
+      menu-bounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1 reverse
+    );
   }
 
   // Logo del menu hamburguesa y dentro del contenido del menu
   &__logo {
     @include pad-gap;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,6 +75,7 @@
   // Contenido del menu desplegable
   &__contenido {
     @include tamanio-completo;
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -78,8 +84,9 @@
   // Links dentro del contenido del menu
   &__links {
     @include tamanio-completo;
-    flex: 1 1 0%;
+
     display: flex;
+    flex: 1 1 0%;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: stretch; // Para que todos los items tengan la misma altura
@@ -98,9 +105,9 @@
   // Item individual del menu (envoltorio de cada enlace)
   &__item {
     display: flex;
+    flex: 1 1 0%; // Hace que todos los items ocupen el mismo ancho
     justify-content: center;
     align-items: center;
-    flex: 1 1 0%; // Hace que todos los items ocupen el mismo ancho
     min-width: 0;
 
     .menu-desplegable__link {
@@ -109,7 +116,7 @@
   }
 
   // Asegura que el contenido esté por encima del fondo animado
-  >* {
+  > * {
     position: relative;
     z-index: 1;
   }

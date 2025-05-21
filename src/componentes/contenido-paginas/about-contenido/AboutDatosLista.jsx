@@ -10,23 +10,31 @@ function LineasAlternas({ lineas, claseBase, keyPrefix }) {
     >
       {linea}
     </div>
-  ));
+  ))
 }
 
 export default function AboutDatosLista() {
   function obtenerLineas(texto) {
-    return texto.split("\n");
+    return texto.split("\n")
   }
 
   return (
     <div className="about-datos-lista">
       <div className="about-titulo">{aboutDatos.titulo}</div>
 
-      <LineasAlternas lineas={obtenerLineas(aboutDatos.subtitulo1)} claseBase="about-subtitulo" keyPrefix="subtitulo" />
+      <LineasAlternas
+        lineas={obtenerLineas(aboutDatos.subtitulo1)}
+        claseBase="about-subtitulo"
+        keyPrefix="subtitulo"
+      />
 
       <div className="about-texto">{aboutDatos.texto1}</div>
 
-      <LineasAlternas lineas={obtenerLineas(aboutDatos.seccion1)} claseBase="about-seccion" keyPrefix="seccion1" />
+      <LineasAlternas
+        lineas={obtenerLineas(aboutDatos.seccion1)}
+        claseBase="about-seccion"
+        keyPrefix="seccion1"
+      />
 
       <div className="about-texto">{aboutDatos.texto2}</div>
 

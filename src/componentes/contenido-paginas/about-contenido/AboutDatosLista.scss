@@ -23,12 +23,12 @@
 }
 
 .about-subtitulo {
+  margin-bottom: $margen-about-subtitulo;
   color: $marron;
   font-size: $fuente-about-subtitulo;
   font-weight: $peso-about-subtitulo;
-  margin-bottom: $margen-about-subtitulo;
-  white-space: normal;
   line-height: 1;
+  white-space: normal;
 
   &-linea-izq {
     text-align: left;
@@ -39,13 +39,12 @@
   }
 }
 
-
 .about-seccion {
+  margin-top: $margen-about-seccion;
+  margin-bottom: $margen-about-seccion;
   color: $marron;
   font-size: $fuente-about-seccion;
   font-weight: $peso-about-seccion;
-  margin-top: $margen-about-seccion;
-  margin-bottom: $margen-about-seccion;
 
   &-linea-izq {
     text-align: left;
@@ -56,9 +55,8 @@
   }
 }
 
-
 .about-texto {
+  margin-bottom: $margen-about-texto;
   font-size: $fuente-about-texto;
   font-weight: $peso-about-texto;
-  margin-bottom: $margen-about-texto;
 }

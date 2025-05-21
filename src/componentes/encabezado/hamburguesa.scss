@@ -18,7 +18,8 @@
     display: block;
     width: 30px;
     height: 30px;
-    background: url("/src/assets/imagenes/cursor/KobaPua_32x32_Blanco.png") center/100% 100% no-repeat;
+    background: url("/src/assets/imagenes/cursor/KobaPua_32x32_Blanco.png") center/100% 100%
+      no-repeat;
     background-size: 100% 100%;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     filter: none;
@@ -51,7 +52,8 @@
       pointer;
 
     .minipua {
-      background: url("/src/assets/imagenes/cursor/KobaPua_32x32_Gris.png") center/100% 100% no-repeat;
+      background: url("/src/assets/imagenes/cursor/KobaPua_32x32_Gris.png") center/100% 100%
+        no-repeat;
       filter: grayscale(1) brightness(0.7);
     }
 
@@ -93,15 +95,17 @@
 .hamburguesa.abierto .hamburguesa-texto,
 .hamburguesa.cerrando .hamburguesa-texto {
   opacity: 0;
-  pointer-events: none;
   visibility: hidden;
+  pointer-events: none;
 }
 
 // Solo visible cuando el menú está completamente cerrado y la hamburguesa no está en animación
-.navegador-contenedor:not(.encabezado--menu-abierto):not(.encabezado--menu-cerrando) .hamburguesa:not(.abierto):not(.cerrando) .hamburguesa-texto {
+.navegador-contenedor:not(.encabezado--menu-abierto, .encabezado--menu-cerrando)
+  .hamburguesa:not(.abierto, .cerrando)
+  .hamburguesa-texto {
   opacity: 1;
-  pointer-events: auto;
   visibility: visible;
+  pointer-events: auto;
 }
 
 @keyframes pua-gira {
