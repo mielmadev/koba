@@ -1,6 +1,7 @@
 // Para compatibilidad futura con Sass: usar map.get en vez de map-get
 @use "sass:map";
 @use "@estilos/var/colores.scss" as *;
+@use "@estilos/var/margen.scss" as *;
 
 // Bordes
 $border-radius: 20px;
@@ -16,17 +17,6 @@ $altura-encabezado: (
   full: 132px
 );
 
-// Margen bp (plegable en el editor)
-$margen-laterales: (
-  xs: 0 16px,
-  sm: 0 24px,
-  md: 0 32px,
-  lg: 0 48px,
-  tablet: 0 48px,
-  laptop: 0 120px,
-  pc: 0 180px,
-  full: 0 240px
-);
 
 // Sombras para elementos
 $sombra-blanco: 2px 1px 3px $blanco;
@@ -40,18 +30,3 @@ $sombra-imagen-blanco: drop-shadow(0 0 6px $blanco);
 // Filtros
 $filtro-fondos: brightness(25%); // filter
 
-// Márgenes globales para encabezados y texto (unificados)
-$margen-h1: 0.34em;
-$margen-h2: 0.415em;
-$margen-h3: 0.5em;
-$margen-h4: 0.665em;
-$margen-h5: 0.835em;
-$margen-h6: 1.165em;
-$margen-base: 0.5em;
-$margen-parrafo: 0.5em;
-
-// Márgenes para tipos About (una sola variable por tipo, con nuevo nombre)
-$margen-about-titulo: $margen-h1;
-$margen-about-subtitulo: $margen-h2;
-$margen-about-seccion: $margen-h3;
-$margen-about-texto: $margen-parrafo;
