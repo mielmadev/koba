@@ -2,23 +2,23 @@
 
 // DECLARACIÓN DE FUENTES BASE
 $fuente-base: 1rem; // móvil
-$fuente-h1: 2em;
-$fuente-h2: 1.5em;
-$fuente-h3: 1.17em;
-$fuente-h4: 1em;
-$fuente-h5: 0.83em;
-$fuente-h6: 0.67em;
-$fuente-parrafo: $fuente-base;
+$fuente-h1: 2rem;
+$fuente-h2: 1.5rem;
+$fuente-h3: 1.17rem;
+$fuente-h4: 1rem;
+$fuente-h5: 0.83rem;
+$fuente-h6: 0.67rem;
+$fuente-parrafo: 1.1rem;
 
 // CLAMP TIPOGRÁFICO PARA HEADINGS Y PÁRRAFO
 $clamp-base: clamp($fuente-base, 2vw, 2rem);
-$clamp-h1: clamp($fuente-h1, 6vw, 4em);
-$clamp-h2: clamp($fuente-h2, 4vw, 3em);
-$clamp-h3: clamp($fuente-h3, 3vw, 2.5em);
-$clamp-parrafo: clamp($fuente-parrafo, 2vw, 2em);
-$clamp-h4: clamp($fuente-h4, 2vw, 2em);
-$clamp-h5: clamp($fuente-h5, 1.5vw, 1.5em);
-$clamp-h6: clamp($fuente-h6, 1vw, 1.2em);
+$clamp-h1: clamp($fuente-h1, 6vw, 4rem);
+$clamp-h2: clamp($fuente-h2, 4vw, 3rem);
+$clamp-h3: clamp($fuente-h3, 3vw, 2.34rem);
+$clamp-parrafo: clamp($fuente-parrafo, 2vw, 2.2rem);
+$clamp-h4: clamp($fuente-h4, 2vw, 2rem);
+$clamp-h5: clamp($fuente-h5, 1.5vw, 1.66rem);
+$clamp-h6: clamp($fuente-h6, 1vw, 1.34rem);
 
 // FUENTES ESPECÍFICAS POR PÁGINA/SECCIÓN
 

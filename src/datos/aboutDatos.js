@@ -1,30 +1,30 @@
 export const aboutDatos = {
-  titulo: "Quienes somos",
-  subtitulo1: "3 palabras definen al equipo Koba Live: honestidad, pasión y corazón.",
-  texto1: `Suponemos que nuestra historia no es diferente a la de otros, pero es la nuestra y la llevamos por bandera con mucho orgullo.
+  titulo: "Quiénes somos",
+  subtitulo1: "Honestidad, pasión y corazón\n Así late el equipo Koba Live.",
+  texto1: `Nuestra historia quizá no sea única, pero es nuestra, y la llevamos con orgullo.
 
-Sugaar Musika Elkartea es la asociación cultural que está detrás del Koba Live y está formada por un equipo de locos que no puede vivir sin la música metal. Todos teníamos claro que queríamos hacer realidad uno de nuestros sueños: organizar un festival en nuestra tierra, dónde hemos nacido y crecido.
+Sugaar Musika Elkartea es la asociación cultural que impulsa el Koba Live. Somos un grupo de apasionados que no concibe la vida sin el metal. Desde el principio, compartimos un sueño: crear un festival en nuestra tierra, donde nacimos y crecimos.
 
-Ha sido un trabajo duro, muy de “pico y pala”, hasta que se nos dio la oportunidad de demostrar el potencial que tenía el Koba en Abadiño.
+No ha sido fácil. Ha sido un trabajo de pico y pala, de esfuerzo y constancia, hasta que llegó la oportunidad de mostrar todo el potencial de Koba en Abadiño.
 
-Aún recordamos el día en que recibimos todo el apoyo que necesitábamos para organizar nuestra primera edición, fue uno de los más felices de nuestra vida.
+Jamás olvidaremos el día en que recibimos el apoyo necesario para celebrar la primera edición. Fue uno de los momentos más felices de nuestras vidas.
 
-Formar el equipo fue lo más fácil, la vida nos ha ido poniendo a unos frente a los otros por casualidades o causalidades, eso no lo tenemos tan claro.
+Formar el equipo fue sencillo: la vida nos fue cruzando, por casualidad o por destino, y aquí estamos.
 
-Sea como fuere, aquí detrás tienes a gente honesta, que pone el alma en lo que hace y que ha puesto todo el corazón para sacar adelante este festival.`,
+Detrás de este festival hay personas honestas, que ponen el alma y el corazón en cada detalle para que tú vivas una experiencia inolvidable.`,
   seccion1:
-    "Como contarlo no es algo único, pero experimentarlo sí… Te esperamos aquí, en el Koba Live.",
-  texto2: `Al ponernos manos a la obra, tenemos claro que, cada edición, queremos cumplir contigo una promesa:`,
-  promesa: "Que respires, vivas y experimentes el verdadero metal",
-  texto3: `Y nuestro entorno nos lo permite.
+    "Contarlo no basta, hay que vivirlo. Te esperamos en el Koba Live.",
+  texto2: `Cada edición nos mueve una promesa contigo:`,
+  promesa: "Que respires, sientas y vivas el auténtico metal.",
+  texto3: `Nuestro entorno lo hace posible.
 
-La esencia del KOBA Live es el cresterío del Anboto y, más concretamente, la cueva de Mari. En esa cueva habitaron Mari y Sugaar, un dragón serpiente cambiante a persona humana y consorte de Mari, diosa de la mitología vasca.
+La esencia del KOBA Live es el cresterío del Anboto y, en especial, la cueva de Mari. Allí habitaron Mari y Sugaar, un dragón-serpiente capaz de transformarse en humano y consorte de la diosa Mari, figura clave de la mitología vasca.
 
-Cada vez que una banda suba al escenario, Mari y Sugaar estarán detrás, en su cueva compartiendo contigo cada canción, cada melodía, cada voz.
+Cada vez que una banda pisa el escenario, Mari y Sugaar están presentes, compartiendo contigo cada canción, cada melodía, cada grito.
 
-Dioses, mitología, naturaleza y música metal; una mezcla explosiva con la que experimentarás una experiencia única, mucho más que un festival.
+Dioses, mitología, naturaleza y metal: una mezcla explosiva para una experiencia irrepetible, mucho más que un festival.
 
-Aquí, en Abadiño, te espera la Koba Family al completo y la mismísima diosa Mari subida en su carro de fuego, peinando su melena a la entrada de su cueva.`,
-  pregunta: "¿Vienes?",
-  subtitulo3: "Echa un ojo a este mini-documental y descúbrelo todo sobre el Koba Live."
+En Abadiño te espera la Koba Family y la mismísima diosa Mari, subida en su carro de fuego, peinando su melena a la entrada de su cueva.`,
+  pregunta: "¿Te unes a la leyenda?",
+  seccion2: "Descubre todo sobre el Koba Live en este mini-documental."
 }

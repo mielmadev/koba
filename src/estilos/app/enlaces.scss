@@ -6,7 +6,8 @@
   font-size: $fuente-enlaces;
   font-weight: $peso-navegador;
   text-decoration: none;
-  text-shadow: $sombra-blanco;
+  text-shadow: $sombra-gris;
+  font-weight: bold;
 }
 
 a,
@@ -17,7 +18,7 @@ a,
   &:hover {
     @include cursor-pua-hover;
     color: $gris;
-    text-shadow: $sombra-gris;
+    text-shadow: $sombra-negro;
     transition: cursor 0.3s ease;
   }
 
@@ -34,14 +35,13 @@ a,
   &.menu-escritorio__link--active,
   &.menu-desplegable__link--active {
     @include cursor-pua-active;
-    color: $marron;
-    font-weight: bold;
+    color: $blanco;
     text-shadow: $sombra-marron;
     transition: color 0.3s, text-shadow 0.3s, cursor 0.3s;
 
     &:hover {
-      color: $gris;
-      text-shadow: $sombra-gris;
+      color: $marron;
+      text-shadow: $sombra-negro;
       cursor:
         url("@cursor/KobaPua_32x32_Negro.png") 16 0,
         auto;
