@@ -2,28 +2,31 @@ import React from "react"
 import "./aboutDatosLista.scss"
 import { aboutDatos } from "@datos/aboutDatos"
 
+function LineasAlternas({ lineas, claseBase, keyPrefix }) {
+  return lineas.map((linea, i) => (
+    <div
+      key={`${keyPrefix}-${i}`}
+      className={`${claseBase} ${claseBase}-linea-${i === 0 ? "izq" : "der"}`}
+    >
+      {linea}
+    </div>
+  ));
+}
+
 export default function AboutDatosLista() {
-  // Divide el subtitulo1 en líneas y aplica la clase de alineación
-  const lineasSubtitulo1 = aboutDatos.subtitulo1.split("\n")
+  function obtenerLineas(texto) {
+    return texto.split("\n");
+  }
 
   return (
     <div className="about-datos-lista">
       <div className="about-titulo">{aboutDatos.titulo}</div>
 
-      {lineasSubtitulo1.map((linea, i) => (
-        <div
-          key={i}
-          className={`about-subtitulo about-subtitulo-linea-${i === 0 ? "izq" : "der"
-            }`}
-        >
-          {linea}
-        </div>
-      ))}
-
+      <LineasAlternas lineas={obtenerLineas(aboutDatos.subtitulo1)} claseBase="about-subtitulo" keyPrefix="subtitulo" />
 
       <div className="about-texto">{aboutDatos.texto1}</div>
 
-      <div className="about-seccion">{aboutDatos.seccion1}</div>
+      <LineasAlternas lineas={obtenerLineas(aboutDatos.seccion1)} claseBase="about-seccion" keyPrefix="seccion1" />
 
       <div className="about-texto">{aboutDatos.texto2}</div>
 

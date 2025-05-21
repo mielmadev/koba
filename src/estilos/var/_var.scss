@@ -1,7 +1,8 @@
 // Para compatibilidad futura con Sass: usar map.get en vez de map-get
 @use "sass:map";
+// as * para no tener que usar prefijos
 @use "@estilos/var/colores.scss" as *;
-@use "@estilos/var/margen.scss" as *;
+@use "@estilos/var/margenes.scss" as *;
 
 // Bordes
 $border-radius: 20px;
@@ -29,4 +30,3 @@ $sombra-imagen-blanco: drop-shadow(0 0 6px $blanco);
 
 // Filtros
 $filtro-fondos: brightness(25%); // filter
-

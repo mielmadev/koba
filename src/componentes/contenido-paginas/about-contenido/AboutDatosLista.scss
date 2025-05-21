@@ -20,14 +20,12 @@
   text-shadow:
     3px 3px 5px $blanco,
     -3px -3px 5px $blanco;
-  margin-bottom: $margen-about-titulo;
 }
 
 .about-subtitulo {
   color: $marron;
   font-size: $fuente-about-subtitulo;
   font-weight: $peso-about-subtitulo;
-  margin-top: $margen-about-subtitulo;
   margin-bottom: $margen-about-subtitulo;
   white-space: normal;
   line-height: 1;
@@ -48,6 +46,14 @@
   font-weight: $peso-about-seccion;
   margin-top: $margen-about-seccion;
   margin-bottom: $margen-about-seccion;
+
+  &-linea-izq {
+    text-align: left;
+  }
+
+  &-linea-der {
+    text-align: right;
+  }
 }
 
 
