@@ -14,17 +14,6 @@
   background: none;
   cursor: pointer;
 
-  .minipua {
-    display: block;
-    width: 30px;
-    height: 30px;
-    background: url("/src/assets/imagenes/cursor/KobaPua_32x32_Blanco.png") center/100% 100%
-      no-repeat;
-    background-size: 100% 100%;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: none;
-  }
-
   .hamburguesa-texto {
     position: absolute;
     top: 50%;
@@ -51,12 +40,6 @@
       url("/src/assets/imagenes/cursor/KobaPua_32x32_Gris.png") 16 0,
       pointer;
 
-    .minipua {
-      background: url("/src/assets/imagenes/cursor/KobaPua_32x32_Gris.png") center/100% 100%
-        no-repeat;
-      filter: grayscale(1) brightness(0.7);
-    }
-
     .hamburguesa-texto {
       color: $gris;
       text-shadow: $sombra_gris;
@@ -68,24 +51,14 @@
   position: relative;
   flex-direction: row;
 
-  .minipua {
-    width: 30px;
-    height: 30px;
-    background-size: 100%;
-    transform: rotate(180deg);
-    animation: pua-gira 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: none;
-  }
-
   .hamburguesa-texto {
     opacity: 0;
   }
 }
 
 .hamburguesa.cerrando {
-  .minipua {
-    transform: rotate(90deg);
-    animation: pua-gira-reversa 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  .hamburguesa-texto {
+    opacity: 0;
   }
 }
 
@@ -100,40 +73,10 @@
 }
 
 // Solo visible cuando el menú está completamente cerrado y la hamburguesa no está en animación
-.navegador-contenedor:not(.encabezado--menu-abierto, .encabezado--menu-cerrando)
-  .hamburguesa:not(.abierto, .cerrando)
-  .hamburguesa-texto {
+.navegador-contenedor:not(.encabezado--menu-abierto, .encabezado--menu-cerrando) .hamburguesa:not(.abierto, .cerrando) .hamburguesa-texto {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-}
-
-@keyframes pua-gira {
-  0% {
-    transform: rotate(90deg);
-  }
-
-  80% {
-    transform: rotate(540deg); // 1 vuelta y media (360 + 180)
-  }
-
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes pua-gira-reversa {
-  0% {
-    transform: rotate(180deg);
-  }
-
-  80% {
-    transform: rotate(-180deg); // 1 vuelta y media en sentido inverso
-  }
-
-  100% {
-    transform: rotate(90deg);
-  }
 }
 
 @include bp-max(m) {

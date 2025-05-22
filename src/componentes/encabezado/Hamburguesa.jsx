@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 import "./Hamburguesa.scss"
+import PuaGirando from "../animaciones/PuaGirando"
 
 // Componente Hamburguesa: botón para abrir/cerrar el menu
 const Hamburguesa = ({ abierto, onClick }) => {
@@ -35,7 +36,7 @@ const Hamburguesa = ({ abierto, onClick }) => {
       aria-label={abierto ? "Cerrar menu" : "Abrir menu"}
     >
       <span className="hamburguesa-texto">Menu</span>
-      <span className="minipua" />
+      <PuaGirando girada={abierto} cerrando={cerrando} size={30} />
     </button>
   )
 }

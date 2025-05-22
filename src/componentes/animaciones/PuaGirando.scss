@@ -1,0 +1,71 @@
+// Animaciones acordeón estándar: cerrado (0deg, arriba), abierto (180deg, abajo)
+@keyframes pua-gira {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  80% {
+    transform: rotate(540deg); // 1 vuelta y media (360 + 180)
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes pua-gira-reversa {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  80% {
+    transform: rotate(-180deg); // 1 vuelta y media en sentido inverso
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@mixin pua-giratoria($reverse: false, $duration: 0.5s, $timing: cubic-bezier(0.4, 0, 0.2, 1)) {
+  @if $reverse {
+    animation: pua-gira-reversa $duration $timing;
+  }
+
+  @else {
+    animation: pua-gira $duration $timing;
+  }
+}
+
+.pua-girando {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  user-select: none;
+  pointer-events: none;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    transition: filter 0.2s;
+  }
+}
+
+.pua-girando--abierta img {
+  transform: rotate(180deg);
+  @include pua-giratoria(false);
+}
+
+.pua-girando--cerrada img {
+  transform: rotate(0deg);
+}
+
+.pua-girando--cerrando img {
+  transform: rotate(180deg);
+  @include pua-giratoria(true);
+}
