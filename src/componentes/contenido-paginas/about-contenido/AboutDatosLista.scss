@@ -31,11 +31,11 @@
   white-space: normal;
 
   &-linea-izq {
-    text-align: left;
+    text-align: left !important;
   }
 
   &-linea-der {
-    text-align: right;
+    text-align: right !important;
   }
 }
 
@@ -45,13 +45,14 @@
   color: $marron;
   font-size: $fuente-about-seccion;
   font-weight: $peso-about-seccion;
+  line-height: 1;
 
   &-linea-izq {
-    text-align: left;
+    text-align: left !important;
   }
 
   &-linea-der {
-    text-align: right;
+    text-align: right !important;
   }
 }
 

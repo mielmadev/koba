@@ -1,29 +1,9 @@
 export const aboutDatos = {
   titulo: "Quiénes somos",
-  subtitulo1: "Honestidad, pasión y corazón\n Así late el equipo Koba Live.",
-  texto1: `Nuestra historia quizá no sea única, pero es nuestra, y la llevamos con orgullo.
-
-Sugaar Musika Elkartea es la asociación cultural que impulsa el Koba Live. Somos un grupo de apasionados que no concibe la vida sin el metal. Desde el principio, compartimos un sueño: crear un festival en nuestra tierra, donde nacimos y crecimos.
-
-No ha sido fácil. Ha sido un trabajo de pico y pala, de esfuerzo y constancia, hasta que llegó la oportunidad de mostrar todo el potencial de Koba en Abadiño.
-
-Jamás olvidaremos el día en que recibimos el apoyo necesario para celebrar la primera edición. Fue uno de los momentos más felices de nuestras vidas.
-
-Formar el equipo fue sencillo: la vida nos fue cruzando, por casualidad o por destino, y aquí estamos.
-
-Detrás de este festival hay personas honestas, que ponen el alma y el corazón en cada detalle para que tú vivas una experiencia inolvidable.`,
-  seccion1: "Contarlo no basta, hay que vivirlo.\n Te esperamos en el Koba Live.",
-  texto2: `Cada edición nos mueve una promesa contigo:`,
-  promesa: "Que respires, sientas y vivas el auténtico metal.",
-  texto3: `Nuestro entorno lo hace posible.
-
-La esencia del KOBA Live es el cresterío del Anboto y, en especial, la cueva de Mari. Allí habitaron Mari y Sugaar, un dragón-serpiente capaz de transformarse en humano y consorte de la diosa Mari, figura clave de la mitología vasca.
-
-Cada vez que una banda pisa el escenario, Mari y Sugaar están presentes, compartiendo contigo cada canción, cada melodía, cada grito.
-
-Dioses, mitología, naturaleza y metal: una mezcla explosiva para una experiencia irrepetible, mucho más que un festival.
-
-En Abadiño te espera la Koba Family y la mismísima diosa Mari, subida en su carro de fuego, peinando su melena a la entrada de su cueva.`,
-  pregunta: "¿Te unes a la leyenda?",
-  seccion2: "Descubre todo sobre el Koba Live en este mini-documental."
+  subtitulo1: "Metal, pasión, honestidad, corazón y fuego\nAsí ruge el corazón de Koba Live.",
+  texto1: `Nuestra historia quizá no sea diferente a otras, pero la llevamos grabada a fuego. Sugaar Musika Elkartea es la fuerza que impulsa el Koba Live, un comando de metaleros que respira, vive y sangra música extrema. Desde el primer rugido, compartimos una misión: forjar un festival sin concesiones en nuestra tierra, donde clavamos nuestras raíces.\n\nHa sido una batalla constante, tallando a martillazos nuestro camino hasta que surgió la oportunidad de desatar todo el poder de Koba en Abadiño. El día que recibimos el respaldo para la primera edición quedó marcado en nuestra piel: uno de los momentos más electrizantes de nuestras vidas.\n\nEl equipo se formó como un ritual ancestral, el destino uniendo guerreros con un mismo objetivo. Aquí encontrarás almas de acero que dejan su esencia en cada detalle para que vivas una experiencia que arrasará tus sentidos.`,
+  seccion: `Las palabras se las lleva el viento, pero el metal retumba en tus huesos.\nCada edición sellamos contigo un pacto de sangre:\nQue sientas el metal en su forma más salvaje, cruda y demoledora.\nTe esperamos en las tierras de Koba.`,
+  texto2: `Nuestro territorio salvaje lo hace posible. La esencia del KOBA Live está en el imponente cresterío del Anboto y en la legendaria cueva de Mari. En ese santuario primitivo moraron Mari y Sugaar, un dragón-serpiente con poder de transformación humana, consorte de Mari, la poderosa deidad de la mitología vasca.\n\nCuando una banda conquista el escenario, Mari y Sugaar emergen de las sombras, fusionándose con cada riff desgarrador, cada grito visceral, cada golpe de batería que sacude las montañas. Dioses ancestrales, mitología brutal y naturaleza indómita se entrelazan con el metal para crear una experiencia que va más allá de lo musical, alcanzando lo ritual.\n\nEn Abadiño te aguarda la Koba Family y la mismísima diosa Mari, cabalgando las tormentas en su carro de fuego, con su melena salvaje ondeando a las puertas de su morada milenaria.`,
+  pregunta: "¿Te atreves a formar parte de la leyenda?",
+  subtitulo2: "Pulsa play y revive la potencia del Koba Live en este documental forjado en las tierras de Mari."
 }
