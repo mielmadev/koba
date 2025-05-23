@@ -1,0 +1,12 @@
+@use "@estilos/core.scss" as *;
+
+.bandas-banner {
+  @include pad-gap;
+  color: $marron;
+  font-size: $fuente-bandas-click;
+  font-family: Cinzel, serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
