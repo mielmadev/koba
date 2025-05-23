@@ -1,16 +1,18 @@
 // Para compatibilidad futura con Sass: usar map.get en vez de map-get
 @use "sass:map";
 @use "@estilos/bp";
-@use "@estilos/var";
+@use "@estilos/var.scss" as *;
 
 // @include margen-laterales-bp($margen-laterales);
 @mixin margen-laterales-bp($mapa) {
   @each $bp in (xs, md, lg, tablet, laptop, pc, full) {
     $valor: map.get($mapa, $bp);
 
-    @if $bp == xs {
+    @if $bp ==xs {
       margin: #{$valor};
-    } @else {
+    }
+
+    @else {
       @include bp.bp($bp) {
         margin: #{$valor};
       }
@@ -21,9 +23,11 @@
 // @include altura-encabezado-bp($altura-encabezado);
 @mixin altura-encabezado-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
-    @if $bp == xs {
+    @if $bp ==xs {
       #{$propiedad}: map.get($mapa, $bp);
-    } @else {
+    }
+
+    @else {
       @include bp.bp($bp) {
         #{$propiedad}: map.get($mapa, $bp);
       }
@@ -34,11 +38,28 @@
 // @include altura-contenido-bp($altura-encabezado);
 @mixin altura-contenido-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
-    @if $bp == xs {
+    @if $bp ==xs {
       #{$propiedad}: calc(100vh - map.get($mapa, $bp));
-    } @else {
+    }
+
+    @else {
       @include bp.bp($bp) {
         #{$propiedad}: calc(100vh - map.get($mapa, $bp));
+      }
+    }
+  }
+}
+
+// @include altura-redes-sociales-bp($alturas-redes-sociales);
+@mixin altura-redes-sociales-bp($mapa, $propiedad: height) {
+  @each $bp, $valor in $mapa {
+    @if $bp ==xs {
+      #{$propiedad}: #{$valor};
+    }
+
+    @else {
+      @include bp.bp($bp) {
+        #{$propiedad}: #{$valor};
       }
     }
   }

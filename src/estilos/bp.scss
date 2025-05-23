@@ -1,24 +1,4 @@
-// Para compatibilidad futura con Sass: usar map.get en vez de map-get
-@use "sass:map";
-
-$bp-xs: 320px; // Extra pequeño (móviles muy pequeños, ej: iPhone SE)
-$bp-s: 375px; // Pequeño (móviles modernos, ej: iPhone X/12/13, Pixel 5)
-$bp-m: 425px; // Mediano (móviles grandes, ej: Galaxy S20)
-$bp-tablet: 768px; // Tablet (ej: iPad vertical)
-$bp-laptop: 1024px; // Portátil (ej: iPad Air horizontal, laptops pequeños)
-$bp-pc: 1440px; // Escritorio (laptops grandes, monitores estándar)
-$bp-full: 2560px; // Ultra grande (pantallas full, ej: 2560px)
-
-// Mapa de breakpoints para uso dinámico
-$breakpoints: (
-  xs: $bp-xs,
-  s: $bp-s,
-  m: $bp-m,
-  tablet: $bp-tablet,
-  laptop: $bp-laptop,
-  pc: $bp-pc,
-  full: $bp-full
-);
+@use "@estilos/var.scss" as *;
 
 // Mixin mobile-first para breakpoints
 // Uso: @include bp(xs) { ... }

@@ -10,6 +10,7 @@ import {
   XTwitterIcono,
   YoutubeIcono
 } from "@iconos/iconos"
+import TarjetaContacto from "./TarjetaContacto"
 
 export default function ContactoContenido() {
   return (
@@ -59,14 +60,18 @@ export default function ContactoContenido() {
         />
       </div>
       <div className="contacto">
-        <div className="item-contacto">
-          <EmailIcono className="icono-contacto" />
-          <span>info@koba-live.com</span>
-        </div>
-        <div className="item-contacto">
-          <WhatsappIcono className="icono-contacto" />
-          <span>+34 12345678</span>
-        </div>
+        <TarjetaContacto
+          icono={EmailIcono}
+          titulo="Email"
+          texto="info@koba-live.com"
+          tipo="default"
+        />
+        <TarjetaContacto
+          icono={WhatsappIcono}
+          titulo="WhatsApp"
+          texto="+34 12345678"
+          tipo="whatsapp"
+        />
       </div>
     </div>
   )
