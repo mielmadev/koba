@@ -1,7 +1,6 @@
 @use "@estilos/core.scss" as *;
 
 .grupo-contenido {
-
   @include pad-gap;
   display: flex;
   flex-direction: column;
@@ -14,12 +13,10 @@
 
     .grupo-encabezado-superior {
       @include pad-gap;
-
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-
       @include altura-encabezado-bp($altura-encabezado, height);
 
       .grupo-encabezado-superior-izquierda {
@@ -50,7 +47,6 @@
     }
 
     .grupo-encabezado-inferior {
-      // include bordes;
       @include pad-gap;
       display: flex;
       flex-direction: column;
@@ -84,13 +80,13 @@
   }
 
   .grupo-pie {
+    @include pad-gap;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 150px;
-    @include pad-gap;
 
     iframe {
       width: 100%;

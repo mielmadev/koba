@@ -1,0 +1,25 @@
+@use "@estilos/core.scss" as *;
+
+.bandas-lista {
+  @include pad-gap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  .banda {
+    flex: 0 0 200px;
+
+    &:hover {
+      color: $blanco;
+    }
+
+    .banda-nombre {
+      @include tamanio-completo;
+      font-weight: bold;
+      white-space: nowrap; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
