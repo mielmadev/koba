@@ -11,6 +11,7 @@ import {
   YoutubeIcono
 } from "@iconos/iconos"
 import TarjetaContacto from "./TarjetaContacto"
+import FormularioEmail from "./FormularioEmail"
 
 export default function ContactoContenido() {
   return (
@@ -59,19 +60,24 @@ export default function ContactoContenido() {
           className="icono-social icono-youtube"
         />
       </div>
-      <div className="contacto">
-        <TarjetaContacto
-          icono={EmailIcono}
-          titulo="Email"
-          texto="info@koba-live.com"
-          tipo="default"
-        />
-        <TarjetaContacto
-          icono={WhatsappIcono}
-          titulo="WhatsApp"
-          texto="+34 12345678"
-          tipo="whatsapp"
-        />
+      <div className="contacto-contenedor">
+        <div className="contacto">
+          <TarjetaContacto
+            icono={EmailIcono}
+            titulo="Email"
+            texto="info@koba-live.com"
+            tipo="default"
+          />
+          <TarjetaContacto
+            icono={WhatsappIcono}
+            titulo="WhatsApp"
+            texto="+34 12345678"
+            tipo="whatsapp"
+          />
+        </div>
+        <div className="contacto-formulario">
+          <FormularioEmail />
+        </div>
       </div>
     </div>
   )

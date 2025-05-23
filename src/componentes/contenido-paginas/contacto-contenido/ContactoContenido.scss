@@ -1,99 +1,66 @@
 @use "@estilos/core.scss" as *;
 
 .contenido {
+  @include pad-gap;
   flex-direction: column;
   align-items: stretch;
   font-size: $fuente-contacto-iconos;
 
-  @include pad-gap;
-}
-
-.contacto {
-  @include pad-gap;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%; // Ahora ocupa el alto completo disponible
-  min-height: 0;
-  gap: 1rem;
-}
-
-.redes-sociales {
-  @include tamanio-completo;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly; // Espaciado entre iconos
-  align-items: center;
-  width: 100%;
-  min-height: unset;
-  padding: 0.5em 0;
-  gap: 0.5em;
-
-  @include altura-redes-sociales-bp($alturas-redes-sociales);
-
-  .icono-social {
+  .contacto-contenedor {
+    @include pad-gap;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1.4em;
-    height: 1.4em;
-    font-size: $fuente-contacto-iconos;
-    vertical-align: middle;
-    filter: $sombra-imagen-blanco;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 100%;
 
-    &:hover {
-      color: $marron;
-      filter: drop-shadow(0 0 18px var(--icono-color-original, $facebook));
+    >* {
+      flex: 1 1 0;
+      min-width: 0;
+      height: 100%;
     }
 
-    &:active {
-      color: transparent;
-      filter: drop-shadow(0 0 18px transparent);
+
+    .contacto {
+      @include pad-gap;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      min-height: 0;
+      gap: 1rem;
     }
   }
 
-  .icono-facebook {
-    --icono-color-original: #{$facebook};
+  @include bp-max(tablet) {
+    .contacto-contenedor {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: stretch;
 
-    color: $facebook;
-  }
+      >* {
+        width: 100%;
+        max-width: 100%;
+        flex: unset;
+        height: auto !important;
+        min-width: 0;
+        position: static !important;
+        z-index: auto !important;
+        margin-bottom: 2rem;
+      }
 
-  .icono-instagram {
-    --icono-color-original: #{$instagram};
+      >*:last-child {
+        margin-bottom: 0;
+      }
 
-    color: $instagram;
-  }
-
-  .icono-spotify {
-    --icono-color-original: #{$spotify};
-
-    color: $spotify;
-  }
-
-  .icono-tiktok {
-    --icono-color-original: #{$tiktok};
-
-    color: $tiktok;
-  }
-
-  .icono-twitter {
-    --icono-color-original: #{$twitter};
-
-    color: $twitter;
-  }
-
-  .icono-youtube {
-    --icono-color-original: #{$youtube};
-
-    color: $youtube;
-  }
-
-  .icono-whatsapp {
-    --icono-color-original: #{$whatsapp};
-
-    color: $whatsapp;
+      .contacto,
+      .contacto-formulario {
+        height: auto !important;
+        min-height: 0 !important;
+        position: static !important;
+        z-index: auto !important;
+      }
+    }
   }
 }
