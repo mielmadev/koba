@@ -1,7 +1,6 @@
 @use "@estilos/core.scss" as *;
 
 .formulario-email {
-  @include bordes;
   @include pad-gap;
   display: flex;
   flex-direction: column;
@@ -11,7 +10,6 @@
 }
 
 .formulario-email label {
-  @include bordes;
   @include pad-gap;
   font-weight: bold;
   color: $blanco;

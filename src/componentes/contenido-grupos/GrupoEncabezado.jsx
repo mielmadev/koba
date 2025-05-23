@@ -19,10 +19,10 @@ const GrupoEncabezado = ({
       </div>
       <div className="grupo-encabezado-superior-derecha">
         <div className="grupo-estilo">
-          {estilo} - {anio}
+          {[estilo, anio].filter(Boolean).join(', ')}
         </div>
         <div className="grupo-origen">
-          {origen.pais} - {origen.provincia} - {origen.ciudad}
+          {[origen.pais, origen.provincia, origen.ciudad].filter(Boolean).join(', ')}
         </div>
       </div>
     </div>

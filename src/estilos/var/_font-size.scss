@@ -24,7 +24,7 @@ $clamp-h6: clamp($fuente-h6, 1vw, 1.34rem);
 $fuente-about-titulo: $clamp-h1;
 $fuente-about-subtitulo: $clamp-h2;
 $fuente-about-seccion: $clamp-h3;
-$fuente-about-texto: $fuente-parrafo;
+$fuente-about-texto: $clamp-parrafo;
 
 // Bandas
 $fuente-bandas-nombre: $clamp-h1;
@@ -33,6 +33,7 @@ $fuente-bandas-click: $clamp-h2;
 // Grupos
 $fuente-grupos-estilo-anio: $clamp-h4;
 $fuente-grupos-resumen: $clamp-parrafo;
+$fuente-grupos-genero: $clamp-h3;
 
 // Contacto
 $fuente-contacto-iconos: $fuente-h1;

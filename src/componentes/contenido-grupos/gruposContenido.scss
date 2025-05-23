@@ -1,123 +1,100 @@
 @use "@estilos/core.scss" as *;
 
 .grupo-contenido {
-  // include bordes;
 
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-  @include margen-laterales-bp($margen-laterales);
-}
-
-.grupo-encabezado {
-  // include bordes;
-
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-
-.grupo-encabezado-superior {
-  // include bordes;
   @include pad-gap;
-
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  @include margen-laterales-bp($margen-laterales);
 
-  @include altura-encabezado-bp($altura-encabezado, height);
-
-  .grupo-encabezado-superior-izquierda {
-    // include bordes;
-    @include pad-gap;
-    @include altura-encabezado-bp($altura-encabezado, max-height);
-
+  .grupo-encabezado {
+    @include tamanio-completo;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    img {
-      @include altura-encabezado-bp($altura-encabezado, max-height);
-      @include tamanio-completo;
+    .grupo-encabezado-superior {
+      @include pad-gap;
 
-      object-fit: contain;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      @include altura-encabezado-bp($altura-encabezado, height);
+
+      .grupo-encabezado-superior-izquierda {
+        @include pad-gap;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include altura-encabezado-bp($altura-encabezado, max-height);
+
+        img {
+          @include tamanio-completo;
+          object-fit: contain;
+          @include altura-encabezado-bp($altura-encabezado, max-height);
+        }
+      }
+
+      .grupo-encabezado-superior-derecha {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: $fuente-grupos-genero;
+        line-height: 1.1;
+        text-align: center;
+        @include altura-encabezado-bp($altura-encabezado, max-height);
+      }
+    }
+
+    .grupo-encabezado-inferior {
+      // include bordes;
+      @include pad-gap;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      gap: 0.5em;
+
+      .grupo-resumen {
+        width: 100%;
+        font-size: $fuente-grupos-resumen;
+        text-align: justify;
+      }
+
+      .grupo-encabezado-integrantes {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      .grupo-albums {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
-  .grupo-encabezado-superior-derecha {
-    // include bordes;
-
-    // @include pad-gap;
+  .grupo-pie {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100%;
-    font-size: clamp(0.8rem, 6vw, 3.5vw);
-    line-height: 1.1;
+    height: 150px;
+    @include pad-gap;
 
-    @include altura-encabezado-bp($altura-encabezado, max-height);
-
-    text-align: center;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
-}
-
-.grupo-encabezado-inferior {
-  // include bordes;
-  @include pad-gap;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  gap: 0.5em;
-
-  .grupo-resumen {
-    // include bordes;
-
-    width: 100%;
-    font-size: $fuente-grupos-resumen;
-    text-align: justify;
-  }
-
-  .grupo-encabezado-integrantes {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .grupo-albums {
-    // include bordes;
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.grupo-pie {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 150px;
-
-  iframe {
-    width: 100%;
-    height: 100%;
-  }
-
-  // include bordes;
-  @include pad-gap;
 }
