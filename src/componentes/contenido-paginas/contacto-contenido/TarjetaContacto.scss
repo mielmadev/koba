@@ -1,71 +1,60 @@
 @use "@estilos/core.scss" as *;
 
-$negro-trans-20: rgba($negro, 0.2);
-
 .tarjeta-contacto {
+  @include pad-gap;
   display: flex;
   align-items: center;
-  background: $blanco;
-  color: $negro;
   border-radius: 10px;
-  box-shadow: 0 2px 10px $negro-trans-20;
-  padding: 1rem 1.5rem;
+  background: rgba($blanco, 0.2);
+  color: $blanco;
+  box-shadow: 0 2px 10px rgba($negro, 0.2);
   margin-bottom: 1rem;
-  gap: 1rem;
   border: 2px solid transparent;
 
-  &.tarjeta-default {
-    background: $blanco;
-    color: $negro;
-    border-color: $amarillo;
+  
+  .icono-contacto {
+    font-size: $fuente-contacto-titulo;
+    color: $gris;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    align-self: center;
+  }
+
+  .info-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 0;
+
+    .titulo-contacto {
+      color: $gris;
+      font-weight: 700;
+      font-size: $fuente-contacto-titulo;
+      text-align: left;
+      margin-bottom: 0.1em;
+      white-space: normal;
+      word-break: break-word;
+    }
+
+    .texto-contacto {
+      font-size: $fuente-contacto-texto;
+      text-align: left;
+      white-space: normal;
+      word-break: break-word;
+    }
   }
 
   &.tarjeta-whatsapp {
-    background: $marron;
-    color: $blanco;
-    border-color: $amarillo;
+    .info-contacto {
+      .titulo-contacto {
+        color: $whatsapp;
+      }
+    }
+
+    .icono-contacto {
+      color: $whatsapp;
+    }
   }
-
-  &.tarjeta-error {
-    background: $granate;
-    color: $blanco;
-    border-color: $amarillo;
-  }
-}
-
-.icono-contacto {
-  font-size: 2rem;
-  color: $gris;
-}
-
-.info-contacto {
-  display: flex;
-  flex-direction: column;
-}
-
-.titulo-contacto {
-  font-weight: 700;
-  font-size: 1.1em;
-  color: $gris;
-}
-
-.texto-contacto {
-  color: $negro;
-  font-size: 1em;
-}
-
-.tarjeta-contacto.tarjeta-whatsapp .icono-contacto {
-  color: $blanco;
-}
-
-.tarjeta-contacto.tarjeta-whatsapp .texto-contacto {
-  color: $blanco;
-}
-
-.tarjeta-contacto.tarjeta-error .titulo-contacto {
-  color: $blanco;
-}
-
-.tarjeta-contacto.tarjeta-error .texto-contacto {
-  color: $blanco;
 }

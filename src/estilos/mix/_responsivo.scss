@@ -1,6 +1,6 @@
 // Para compatibilidad futura con Sass: usar map.get en vez de map-get
 @use "sass:map";
-@use "@estilos/bp";
+@use "@estilos/bp" as *;
 @use "@estilos/var.scss" as *;
 
 // @include margen-laterales-bp($margen-laterales);
@@ -13,7 +13,7 @@
     }
 
     @else {
-      @include bp.bp($bp) {
+      @include bp($bp) {
         margin: #{$valor};
       }
     }
@@ -28,7 +28,7 @@
     }
 
     @else {
-      @include bp.bp($bp) {
+      @include bp($bp) {
         #{$propiedad}: map.get($mapa, $bp);
       }
     }
@@ -43,7 +43,7 @@
     }
 
     @else {
-      @include bp.bp($bp) {
+      @include bp($bp) {
         #{$propiedad}: calc(100vh - map.get($mapa, $bp));
       }
     }
@@ -58,7 +58,7 @@
     }
 
     @else {
-      @include bp.bp($bp) {
+      @include bp($bp) {
         #{$propiedad}: #{$valor};
       }
     }

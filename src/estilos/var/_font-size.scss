@@ -1,7 +1,5 @@
-@use "@estilos/bp.scss" as bp;
-
 // DECLARACIÓN DE FUENTES BASE
-$fuente-base: 1rem; 
+$fuente-base: 1rem;
 $fuente-h1: 2rem;
 $fuente-h2: 1.5rem;
 $fuente-h3: 1.17rem;
@@ -38,6 +36,7 @@ $fuente-grupos-resumen: $clamp-parrafo;
 
 // Contacto
 $fuente-contacto-iconos: $fuente-h1;
+$fuente-contacto-titulo: $clamp-h3;
 $fuente-contacto-texto: $fuente-parrafo;
 
 // Enlaces generales
