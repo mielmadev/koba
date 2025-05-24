@@ -11,9 +11,8 @@ export default function AboutVideo() {
         src={videoUrl}
         title="Mini-documental KOBA LIVE"
         frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
       ></iframe>
     </div>
   )

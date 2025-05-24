@@ -1,32 +1,42 @@
-import React, { useRef, useState } from "react";
-// Si usas Vite/CRA: npm install emailjs-com
-import emailjs from "emailjs-com";
-import "./FormularioEmail.scss";
+// Para EmailJS, añade en tu .env (no subir a GitHub):
+// VITE_EMAILJS_USER_ID=xxxxxxx
+// VITE_EMAILJS_SERVICE_ID=xxxxxxx
+// VITE_EMAILJS_TEMPLATE_ID=xxxxxxx
+
+import React, { useRef, useState } from "react"
+// Instala emailjs-com: npm install emailjs-com
+import emailjs from "emailjs-com"
+import "./FormularioEmail.scss"
 
 export default function FormularioEmail() {
-  const form = useRef();
-  const [estado, setEstado] = useState({ enviado: false, error: false, cargando: false });
+  const form = useRef()
+  const [estado, setEstado] = useState({
+    enviado: false,
+    error: false,
+    cargando: false,
+  })
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setEstado({ enviado: false, error: false, cargando: true });
+    e.preventDefault()
+    setEstado({ enviado: false, error: false, cargando: true })
     emailjs
-      .sendForm(
-        "service_MielmaDev", // Service ID real de EmailJS
-        "template_Contacto", // Reemplaza por tu Template ID de EmailJS
+      .sendForm( // Desde .env
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "V5NECqFo8Hl8TFBzA" // Reemplaza por tu User ID/public key de EmailJS
+        import.meta.env.VITE_EMAILJS_USER_ID
       )
       .then(
         (result) => {
-          setEstado({ enviado: true, error: false, cargando: false });
-          form.current.reset();
+          setEstado({ enviado: true, error: false, cargando: false })
+          form.current.reset()
         },
         (error) => {
-          setEstado({ enviado: false, error: true, cargando: false });
+          console.error("Error al enviar email:", error)
+          setEstado({ enviado: false, error: true, cargando: false })
         }
-      );
-  };
+      )
+  }
 
   return (
     <form ref={form} className="formulario-email" onSubmit={handleSubmit}>
@@ -45,8 +55,10 @@ export default function FormularioEmail() {
       <button type="submit" disabled={estado.cargando}>
         {estado.cargando ? "Enviando..." : "Enviar"}
       </button>
-      {estado.enviado && <p className="exito">¡Mensaje enviado correctamente!</p>}
+      {estado.enviado && (
+        <p className="exito">¡Mensaje enviado correctamente!</p>
+      )}
       {estado.error && <p className="error">Error al enviar. Inténtalo de nuevo.</p>}
     </form>
-  );
+  )
 }

@@ -1,8 +1,8 @@
 import React from "react"
 import "./GrupoIntegrantesMapeo.scss"
 
-const GrupoIntegrantesMapeo = ({ integrantes }) => (
-  <>
+const GrupoIntegrantesMapeo = ({ integrantes, className = "" }) => (
+  <div className={className}>
     {Object.entries(integrantes).map(([rol, nombre]) => (
       <div key={rol}>
         <span className="integrante-rol">{rol.charAt(0).toUpperCase() + rol.slice(1)}:</span>{" "}
@@ -18,7 +18,7 @@ const GrupoIntegrantesMapeo = ({ integrantes }) => (
         )}
       </div>
     ))}
-  </>
+  </div>
 )
 
 export default GrupoIntegrantesMapeo

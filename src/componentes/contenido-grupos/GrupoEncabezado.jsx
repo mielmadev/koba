@@ -30,12 +30,9 @@ const GrupoEncabezado = ({
       <div className="grupo-encabezado-inferior-izquierda"></div>
       <div className="grupo-encabezado-resumen">
         <div className="grupo-resumen">{resumen}</div>
-        <div className="grupo-integrantes">
-          <GrupoIntegrantesMapeo integrantes={integrantes} />
-        </div>
-
-        <div className="grupo-albums">
-          <GrupoAlbumsMapeo albums={albums} />
+        <div className="grupo-integrantes-albums">
+          <GrupoIntegrantesMapeo integrantes={integrantes} className="grupo-integrantes" />
+          <GrupoAlbumsMapeo albums={albums} className="grupo-albums" />
         </div>
       </div>
     </div>

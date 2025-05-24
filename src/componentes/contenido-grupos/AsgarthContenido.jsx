@@ -28,10 +28,8 @@ const AsgarthContenido = () => {
         <div className="grupo-pie">
           <iframe
             className="grupo-reproductor"
-            style={{ border_radius: "12px", height: "100px" }} // Altura ajustada
             src={banda.spotify}
             frameBorder="0"
-            allowFullScreen
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           >
