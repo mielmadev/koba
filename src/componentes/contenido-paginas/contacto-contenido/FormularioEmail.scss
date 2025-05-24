@@ -23,7 +23,7 @@
 .formulario-email input,
 .formulario-email textarea {
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid $blanco;
   border-radius: 4px;
   font-size: 1rem;
   margin-top: 0.3rem;
@@ -47,17 +47,17 @@
 }
 
 .formulario-email button:disabled {
-  background: #888;
+  background: $gris;
   cursor: not-allowed;
 }
 
 .formulario-email .exito {
-  color: #2e7d32;
+  color: $verde;
   font-weight: bold;
 }
 
 .formulario-email .error {
-  color: #c62828;
+  color: $granate;
   font-weight: bold;
 }
 
@@ -69,7 +69,4 @@
   box-sizing: border-box;
   @include margen-laterales-bp($margen-laterales);
 
-  @include bp(tablet) {
-    margin-top: 2.5rem;
-  }
 }

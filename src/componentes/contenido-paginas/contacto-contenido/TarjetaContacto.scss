@@ -3,20 +3,31 @@
 .tarjeta-contacto {
   @include pad-gap;
   display: flex;
+  justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  background: rgba($blanco, 0.2);
+  border-radius: 6px 24px 6px 24px;
+  background: linear-gradient(135deg, rgba($negro, 0.95) 80%, rgba($granate, 0.7) 100%);
   color: $blanco;
-  box-shadow: 0 2px 10px rgba($negro, 0.2);
+  border: 2.5px solid $granate;
+  box-shadow: 0 4px 24px 0 rgba($granate, 0.25), 0 1.5px 0 0 $granate inset;
   margin-bottom: 1rem;
-  border: 2px solid transparent;
+  letter-spacing: 0.03em;
+  text-shadow: 1px 1px 2px $negro, 0 0 8px $granate;
+  transition: transform 0.15s, box-shadow 0.15s;
+  font-family: 'Oswald', 'Bebas Neue', 'Impact', sans-serif;
 
-  
+  &:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 8px 32px 0 rgba($granate, 0.45), 0 2px 0 0 $granate inset;
+    border-color: lighten($granate, 10%);
+    background: linear-gradient(120deg, rgba($negro, 1) 70%, rgba($granate, 0.9) 100%);
+  }
+
   .icono-contacto {
     font-size: $fuente-contacto-titulo;
-    color: $gris;
-    flex-shrink: 0;
-    margin-right: 1rem;
+    color: $granate;
+    filter: drop-shadow(0 0 4px $granate);
+    margin-right: 1.2rem;
     align-self: center;
   }
 
@@ -27,34 +38,58 @@
     align-items: flex-start;
     flex: 1;
     min-width: 0;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    gap: 0.3em;
 
     .titulo-contacto {
-      color: $gris;
+      color: $granate;
       font-weight: 700;
       font-size: $fuente-contacto-titulo;
       text-align: left;
-      margin-bottom: 0.1em;
-      white-space: normal;
-      word-break: break-word;
+      margin-bottom: 0.25em;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-shadow: 0 0 6px $granate, 1px 1px 2px $negro;
     }
 
     .texto-contacto {
       font-size: $fuente-contacto-texto;
+      color: $blanco;
       text-align: left;
-      white-space: normal;
-      word-break: break-word;
+      text-shadow: 0 0 4px $negro;
     }
   }
 
   &.tarjeta-whatsapp {
-    .info-contacto {
-      .titulo-contacto {
-        color: $whatsapp;
-      }
-    }
+    border-color: $whatsapp;
+    box-shadow: 0 4px 24px 0 rgba($whatsapp, 0.25), 0 1.5px 0 0 $whatsapp inset;
 
     .icono-contacto {
       color: $whatsapp;
+      filter: drop-shadow(0 0 4px $whatsapp);
     }
+
+    .info-contacto {
+      .titulo-contacto {
+        color: $whatsapp;
+        text-shadow: 0 0 6px $whatsapp, 1px 1px 2px $negro;
+      }
+    }
+  }
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+
+  >.tarjeta-contacto {
+    width: 100%;
+    max-width: 370px;
+    min-width: 250px;
+    align-self: center;
   }
 }

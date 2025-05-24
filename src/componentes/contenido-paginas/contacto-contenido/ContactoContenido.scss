@@ -33,7 +33,7 @@
     }
   }
 
-  @include bp-max(tablet) {
+  @include bp-max(m) {
     .contacto-contenedor {
       flex-direction: column;
       gap: 2rem;

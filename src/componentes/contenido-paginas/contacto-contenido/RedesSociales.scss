@@ -1,0 +1,98 @@
+@use "@estilos/core.scss" as *;
+
+.redes-sociales {
+  @include pad-gap;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+
+  .icono-social {
+    display: flex;
+    font-size: $fuente-contacto-iconos;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--icono-color-original, $blanco);
+    filter: drop-shadow(0 0 6px $blanco);
+    transition: color 0.2s, filter 0.2s, transform 0.15s;
+    cursor: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+
+    &:hover {
+      color: $blanco;
+      filter: drop-shadow(0 0 18px currentColor);
+    }
+
+    &:active {
+      color: transparent;
+      filter: drop-shadow(0 0 18px transparent);
+    }
+  }
+
+  // Colores originales y hover para cada red
+  .icono-facebook {
+    --icono-color-original: $facebook;
+    color: $facebook;
+
+    &:hover {
+      filter: drop-shadow(0 0 18px $facebook);
+    }
+  }
+
+  .icono-instagram {
+    --icono-color-original: $instagram;
+    color: $instagram;
+
+    &:hover {
+      filter: drop-shadow(0 0 18px $instagram);
+    }
+  }
+
+  .icono-spotify {
+    --icono-color-original: $spotify;
+    color: $spotify;
+
+    &:hover {
+      filter: drop-shadow(0 0 18px $spotify);
+    }
+  }
+
+  .icono-tiktok {
+    --icono-color-original: $tiktok;
+    color: $tiktok;
+
+    &:hover {
+      filter: drop-shadow(0 0 18px $tiktok);
+    }
+  }
+
+  .icono-twitter {
+    --icono-color-original: $twitter;
+    color: $twitter;
+
+    &:hover {
+      filter: drop-shadow(0 0 18px $twitter);
+    }
+  }
+
+  .icono-youtube {
+    --icono-color-original: $youtube;
+    color: $youtube;
+
+    &:hover {
+      filter: drop-shadow(0 0 18px $youtube);
+    }
+  }
+
+  .icono-whatsapp {
+    --icono-color-original: $whatsapp;
+    color: $whatsapp;
+
+    &:hover {
+      filter: drop-shadow(0 0 18px $whatsapp);
+    }
+  }
+}
