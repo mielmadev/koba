@@ -1,35 +1,73 @@
 @use "@estilos/core.scss" as *;
 
+@mixin tarjeta-contacto-estilos($color) {
+  border-color: $color;
+  box-shadow: 0 4px 24px 0 rgba($color, 0.25), 0 1.5px 0 0 $color inset;
+  background: linear-gradient(135deg, rgba($negro, 0.95) 80%, rgba($color, 0.7) 100%);
+
+  &:hover {
+    box-shadow: 0 8px 32px 0 rgba($color, 0.45), 0 2px 0 0 $color inset;
+    border-color: lighten($color, 10%);
+    background: linear-gradient(120deg, rgba($negro, 1) 70%, rgba($color, 0.9) 100%);
+  }
+
+  .icono-contacto {
+    color: $color;
+    filter: drop-shadow(0 0 4px $color);
+  }
+
+  .info-contacto {
+    .titulo-contacto {
+      color: $color;
+      text-shadow: 0 0 6px $color, 1px 1px 2px $negro;
+    }
+  }
+}
+
 .tarjeta-contacto {
   @include pad-gap;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 6px 24px 6px 24px;
-  background: linear-gradient(135deg, rgba($negro, 0.95) 80%, rgba($granate, 0.7) 100%);
   color: $blanco;
-  border: 2.5px solid $granate;
-  box-shadow: 0 4px 24px 0 rgba($granate, 0.25), 0 1.5px 0 0 $granate inset;
-  margin-bottom: 1rem;
   letter-spacing: 0.03em;
   text-shadow: 1px 1px 2px $negro, 0 0 8px $granate;
   transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s, background 0.15s;
   font-family: 'Oswald', 'Bebas Neue', 'Impact', sans-serif;
+  margin-bottom: 1rem;
+  @include tarjeta-contacto-estilos($granate);
 
   &:hover {
     transform: scale(1.04) rotate(-1deg);
-    box-shadow: 0 8px 32px 0 rgba($granate, 0.45), 0 2px 0 0 $granate inset;
-    border-color: lighten($granate, 10%);
-    background: linear-gradient(120deg, rgba($negro, 1) 70%, rgba($granate, 0.9) 100%);
   }
 
   .icono-contacto {
     font-size: $fuente-contacto-titulo;
-    color: $granate;
-    filter: drop-shadow(0 0 4px $granate);
     margin-right: 1.2rem;
     align-self: center;
     transition: color 0.15s, filter 0.15s;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      width: 60%;
+      height: 30%;
+      background: linear-gradient(120deg, rgba($blanco, 0.25) 0%, rgba($blanco, 0) 100%);
+      border-radius: 50%;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      animation: brillo-metal 0.7s linear;
+    }
   }
 
   .info-contacto {
@@ -44,14 +82,12 @@
     gap: 0.3em;
 
     .titulo-contacto {
-      color: $granate;
       font-weight: 700;
       font-size: $fuente-contacto-titulo;
       text-align: left;
       margin-bottom: 0.25em;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      text-shadow: 0 0 6px $granate, 1px 1px 2px $negro;
       transition: color 0.15s, text-shadow 0.15s;
     }
 
@@ -63,28 +99,29 @@
     }
   }
 
-  // Variante para WhatsApp
   &.tarjeta-whatsapp {
-    border-color: $whatsapp;
-    box-shadow: 0 4px 24px 0 rgba($whatsapp, 0.25), 0 1.5px 0 0 $whatsapp inset;
-    background: linear-gradient(135deg, rgba($negro, 0.95) 80%, rgba($whatsapp, 0.7) 100%);
+    @include tarjeta-contacto-estilos($whatsapp);
+  }
+}
 
-    &:hover {
-      box-shadow: 0 8px 32px 0 rgba($whatsapp, 0.45), 0 2px 0 0 $whatsapp inset;
-      border-color: lighten($whatsapp, 10%);
-      background: linear-gradient(120deg, rgba($negro, 1) 70%, rgba($whatsapp, 0.9) 100%);
-    }
+@keyframes brillo-metal {
+  0% {
+    left: 10%;
+    opacity: 0;
+  }
 
-    .icono-contacto {
-      color: $whatsapp;
-      filter: drop-shadow(0 0 4px $whatsapp);
-    }
+  30% {
+    left: 30%;
+    opacity: 1;
+  }
 
-    .info-contacto {
-      .titulo-contacto {
-        color: $whatsapp;
-        text-shadow: 0 0 6px $whatsapp, 1px 1px 2px $negro;
-      }
-    }
+  70% {
+    left: 70%;
+    opacity: 1;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
   }
 }
