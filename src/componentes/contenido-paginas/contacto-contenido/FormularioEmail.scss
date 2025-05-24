@@ -6,67 +6,147 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
-  @include margen-laterales-bp($margen-laterales);
-}
-
-.formulario-email label {
-  @include pad-gap;
-  font-weight: bold;
+  background: linear-gradient(135deg, rgba($negro, 0.98) 80%, rgba($granate, 0.7) 100%);
+  border-radius: 8px 32px 8px 32px;
+  border: 2.5px solid $granate;
+  box-shadow: 0 4px 24px 0 rgba($granate, 0.25), 0 1.5px 0 0 $granate inset;
   color: $blanco;
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 0;
-  width: 100%;
-
-}
-
-.formulario-email input,
-.formulario-email textarea {
-  padding: 0.5rem;
-  border: 1px solid $blanco;
-  border-radius: 4px;
-  font-size: 1rem;
-  margin-top: 0.3rem;
-}
-
-.formulario-email textarea {
-  min-height: 80px;
-  resize: vertical;
-}
-
-.formulario-email button {
-  background: #222;
-  color: #fff;
-  border: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-  align-self: flex-start;
-}
-
-.formulario-email button:disabled {
-  background: $gris;
-  cursor: not-allowed;
-}
-
-.formulario-email .exito {
-  color: $verde;
-  font-weight: bold;
-}
-
-.formulario-email .error {
-  color: $granate;
-  font-weight: bold;
-}
-
-.formulario-email .exito,
-.formulario-email .error {
-  margin-top: 1.5rem;
-  margin-bottom: 0;
-  width: 100%;
-  box-sizing: border-box;
+  letter-spacing: 0.03em;
+  text-shadow: 1px 1px 2px $negro, 0 0 8px $granate;
+  font-family: 'Oswald', 'Bebas Neue', 'Impact', sans-serif;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
   @include margen-laterales-bp($margen-laterales);
 
+  label {
+    @include pad-gap;
+    font-weight: bold;
+    color: $granate;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 6px $granate, 1px 1px 2px $negro;
+    margin-bottom: 0.5em;
+  }
+
+  input,
+  textarea {
+    padding: 0.7rem 1rem;
+    border: 2px solid $granate;
+    border-radius: 6px 18px 6px 18px;
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
+    background: rgba($negro, 0.85);
+    color: $blanco;
+    box-shadow: 0 2px 8px 0 rgba($granate, 0.15);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+    outline: none;
+
+    &:focus {
+      border-color: lighten($granate, 10%);
+      box-shadow: 0 4px 16px 0 rgba($granate, 0.35);
+    }
+  }
+
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  button {
+    background: linear-gradient(120deg, $granate 70%, $negro 100%);
+    color: $blanco;
+    border: 2px solid $granate;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px 18px 6px 18px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 0 rgba($granate, 0.18);
+    text-shadow: 1px 1px 2px $negro;
+    align-self: flex-start;
+    margin-top: 1rem;
+    transition: background 0.2s, box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+
+    &:hover {
+      background: linear-gradient(120deg, lighten($granate, 10%) 70%, $negro 100%);
+      border-color: lighten($granate, 10%);
+      box-shadow: 0 4px 16px 0 rgba($granate, 0.35);
+      transform: scale(1.05) rotate(-2deg);
+    }
+
+    &:active {
+      background: $negro;
+      border-color: $granate;
+      transform: scale(0.97) rotate(0deg);
+    }
+
+    &:disabled {
+      background: $gris;
+      border-color: $gris;
+      color: $negro;
+      cursor: not-allowed;
+      box-shadow: none;
+      text-shadow: none;
+    }
+  }
+
+  // Mixin para mensajes destacados (éxito y error)
+  @mixin mensaje-destacado($color, $bg, $borde, $sombra, $animacion) {
+    color: $color;
+    background: $bg;
+    border: 1.5px solid $borde;
+    text-shadow: 0 0 6px $sombra, 1px 1px 2px $negro, 0 0 4px $blanco;
+    animation: #{$animacion} 1.2s ease-in-out;
+  }
+
+  // Mixin para animación de brillo (dinámico y reutilizable)
+  @mixin animacion-brillo($nombre, $color) {
+    @keyframes #{$nombre} {
+      0% {
+        text-shadow: 0 0 16px $blanco, 0 0 6px $color, 1px 1px 2px $negro;
+      }
+
+      60% {
+        text-shadow: 0 0 8px $blanco, 0 0 6px $color, 1px 1px 2px $negro;
+      }
+
+      100% {
+        text-shadow: 0 0 4px $blanco, 0 0 6px $color, 1px 1px 2px $negro;
+      }
+    }
+  }
+
+  @include animacion-brillo('brillo-verde', $verde);
+  @include animacion-brillo('brillo-granate', $granate);
+
+  .exito,
+  .error {
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    @include margen-laterales-bp($margen-laterales);
+    border-radius: 6px 18px 6px 18px;
+    padding: 0.7em 1em;
+    text-align: center;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px 0 rgba($granate, 0.15);
+    text-shadow: 1px 1px 2px $negro, 0 0 4px $blanco;
+  }
+
+  .exito {
+    @include mensaje-destacado($verde, rgba($verde, 0.08), $verde, $verde, 'brillo-verde');
+  }
+
+  .error {
+    @include mensaje-destacado($granate, rgba($granate, 0.08), $granate, $granate, 'brillo-granate');
+  }
 }
