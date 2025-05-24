@@ -1,4 +1,5 @@
 @use "@estilos/core.scss" as *;
+@use "@estilos/var/redes-sociales-colores.scss" as *;
 
 .redes-sociales {
   @include pad-gap;
@@ -24,75 +25,21 @@
     &:hover {
       color: $blanco;
       filter: drop-shadow(0 0 18px currentColor);
+      transform: scale(1.15) rotate(-6deg);
     }
 
     &:active {
       color: transparent;
       filter: drop-shadow(0 0 18px transparent);
+      transform: scale(0.95) rotate(0deg);
     }
   }
 
-  // Colores originales y hover para cada red
-  .icono-facebook {
-    --icono-color-original: $facebook;
-    color: $facebook;
-
-    &:hover {
-      filter: drop-shadow(0 0 18px $facebook);
-    }
-  }
-
-  .icono-instagram {
-    --icono-color-original: $instagram;
-    color: $instagram;
-
-    &:hover {
-      filter: drop-shadow(0 0 18px $instagram);
-    }
-  }
-
-  .icono-spotify {
-    --icono-color-original: $spotify;
-    color: $spotify;
-
-    &:hover {
-      filter: drop-shadow(0 0 18px $spotify);
-    }
-  }
-
-  .icono-tiktok {
-    --icono-color-original: $tiktok;
-    color: $tiktok;
-
-    &:hover {
-      filter: drop-shadow(0 0 18px $tiktok);
-    }
-  }
-
-  .icono-twitter {
-    --icono-color-original: $twitter;
-    color: $twitter;
-
-    &:hover {
-      filter: drop-shadow(0 0 18px $twitter);
-    }
-  }
-
-  .icono-youtube {
-    --icono-color-original: $youtube;
-    color: $youtube;
-
-    &:hover {
-      filter: drop-shadow(0 0 18px $youtube);
-    }
-  }
-
-  .icono-whatsapp {
-    --icono-color-original: $whatsapp;
-    color: $whatsapp;
-
-    &:hover {
-      filter: drop-shadow(0 0 18px $whatsapp);
+  // Generación automática de clases para cada red social
+  @each $nombre, $color in $iconos-redes {
+    .icono-#{$nombre} {
+      --icono-color-original: #{$color};
+      color: #{$color};
     }
   }
 }

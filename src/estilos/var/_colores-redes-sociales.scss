@@ -1,0 +1,20 @@
+// Colores de redes sociales
+$facebook: #4267b2;
+$instagram: #d6249f;
+$spotify: #1db954;
+$tiktok: #25f4ee;
+$twitter: #1da1f2;
+$youtube: #f00;
+$whatsapp: #25d366;
+$telegram: #08c;
+
+// Mapa de colores para iconos de redes sociales
+$iconos-redes: (
+  facebook: $facebook,
+  instagram: $instagram,
+  spotify: $spotify,
+  tiktok: $tiktok,
+  twitter: $twitter,
+  youtube: $youtube,
+  whatsapp: $whatsapp
+);
