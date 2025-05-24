@@ -13,7 +13,7 @@
   margin-bottom: 1rem;
   letter-spacing: 0.03em;
   text-shadow: 1px 1px 2px $negro, 0 0 8px $granate;
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s, background 0.15s;
   font-family: 'Oswald', 'Bebas Neue', 'Impact', sans-serif;
 
   &:hover {
@@ -29,6 +29,7 @@
     filter: drop-shadow(0 0 4px $granate);
     margin-right: 1.2rem;
     align-self: center;
+    transition: color 0.15s, filter 0.15s;
   }
 
   .info-contacto {
@@ -51,6 +52,7 @@
       letter-spacing: 0.04em;
       text-transform: uppercase;
       text-shadow: 0 0 6px $granate, 1px 1px 2px $negro;
+      transition: color 0.15s, text-shadow 0.15s;
     }
 
     .texto-contacto {
@@ -61,9 +63,17 @@
     }
   }
 
+  // Variante para WhatsApp
   &.tarjeta-whatsapp {
     border-color: $whatsapp;
     box-shadow: 0 4px 24px 0 rgba($whatsapp, 0.25), 0 1.5px 0 0 $whatsapp inset;
+    background: linear-gradient(135deg, rgba($negro, 0.95) 80%, rgba($whatsapp, 0.7) 100%);
+
+    &:hover {
+      box-shadow: 0 8px 32px 0 rgba($whatsapp, 0.45), 0 2px 0 0 $whatsapp inset;
+      border-color: lighten($whatsapp, 10%);
+      background: linear-gradient(120deg, rgba($negro, 1) 70%, rgba($whatsapp, 0.9) 100%);
+    }
 
     .icono-contacto {
       color: $whatsapp;
@@ -76,20 +86,5 @@
         text-shadow: 0 0 6px $whatsapp, 1px 1px 2px $negro;
       }
     }
-  }
-}
-
-.contacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 350px;
-
-  >.tarjeta-contacto {
-    width: 100%;
-    max-width: 370px;
-    min-width: 250px;
-    align-self: center;
   }
 }
