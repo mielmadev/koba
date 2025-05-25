@@ -22,6 +22,12 @@
       justify-content: space-between;
       align-items: center;
 
+      // Igualar ancho de los tres componentes hijos
+      >* {
+        flex: 1 1 0;
+        min-width: 0;
+      }
+
       @include altura-encabezado-bp($altura-encabezado, height);
 
       .grupo-encabezado-superior-izquierda {
@@ -32,10 +38,10 @@
         justify-content: center;
         align-items: center;
 
-        @include altura-encabezado-bp($altura-encabezado, max-height);
 
         max-width: 33vw; // Fallback para navegadores que no soportan dvw
         max-width: 33dvw; // Moderno: viewport dinámico
+        @include altura-encabezado-bp($altura-encabezado, max-height);
 
         img {
           @include tamanio-completo;
