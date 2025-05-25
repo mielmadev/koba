@@ -1,7 +1,7 @@
 @use "@estilos/core.scss" as *;
 
 .contenido-2025 {
-  // include bordes;
+  @include bordes;
 
   display: flex;
   flex-flow: row wrap;
@@ -13,7 +13,7 @@
 }
 
 .banda-imagen {
-  // include bordes;
+  @include bordes;
 
   display: flex;
   justify-content: center;

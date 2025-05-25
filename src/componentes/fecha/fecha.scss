@@ -1,6 +1,7 @@
 @use "@estilos/core.scss" as *;
 
 @keyframes parpadeo {
+
   0%,
   100% {
     opacity: 1;
@@ -11,7 +12,21 @@
   }
 }
 
+@keyframes brillo-metal {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 6px $dorado-viejo);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 16px $amarillo);
+  }
+}
+
 .fecha-contenedor {
+  @include pad-gap;
+  @include bordes;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -29,5 +44,28 @@
 
     font-size: $fuente-fecha;
     animation: parpadeo 3s infinite;
+    font-family: 'Metal Mania', 'Russo One', 'Teko', Impact, Arial, sans-serif;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .icono-fecha {
+    font-size: 1.2em;
+    color: $amarillo-mostaza;
+    filter: drop-shadow(0 0 6px $dorado-viejo);
+    vertical-align: middle;
+    transition: transform 0.2s;
+  }
+
+  .icono-cuernos {
+    margin-right: 0.2em;
+    animation: parpadeo 2.5s infinite;
+  }
+
+  .icono-guitarra {
+    margin-left: 0.2em;
+    animation: brillo-metal 3s infinite;
   }
 }
