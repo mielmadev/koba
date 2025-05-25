@@ -1,10 +1,51 @@
-// Colores base proyecto
-$granate: #7a2e2e; // error
-$verde: #25613a; // Exito
-$blanco: #f0f8ff;//  Fuente base
-$gris: #9ca6b1; // Al hacer hover
-$marron: #c49c74; // activos y destacados
-$negro: #292421;
+// Grises, negros y metálicos
+$negro: #292421; // Fondo principal, overlays, scrollbars, enlaces activos, sombras
+$hierro-oscuro: #43464b;
+$gris-plomo: #484848;
+$gris: #9ca6b1; // Año de álbum, rol de integrante, hover enlaces, scrollbar
+$plata-acero: #b0b0b0;
+$blanco: #f0f8ff; // Texto principal, iconos, botones, sombras, animaciones
 
-// Solo bordes
+// Verdes
+$verde-musgo: #384d3a;
+$verde-oliva-oscuro: #556b2f;
+$verde: #25613a; // Animación de brillo en mensajes de éxito
+$turquesa-oscuro: #13636d;
+
+// Rojos y vinos
+$vino: #4b1e2f;
+$granate: #7a2e2e; // Botones, sombras, animaciones, bordes
+$rojo-oxido: #a13d2d;
+$rojo-sangre: #8a0303;
+
+// Naranjas, marrones y metálicos
+$cobre-viejo: #7c4a02;
+$naranja-oxido: #b34700;
+$naranja-quemado: #d35400;
+$marron: #c49c74; // Nombre de álbum/integrante, enlaces activos, scrollbar hover
+$bronce: #ad8a56;
+$cobre: #b87333;
+
+// Amarillos y dorados
+$dorado-viejo: #bfa14a;
+$amarillo-mostaza: #bfa43a;
 $amarillo: #eed755;
+
+// Azules
+$azul-medianoche: #191970;
+$azul-acero: #223a5e;
+$cian-profundo: #1b3a4b;
+$azul-metalico-oscuro: #355c7d;
+
+// Morados y rosas
+$violeta-profundo: #3d224e;
+$morado-oscuro: #5e366e;
+$rosa-fucsia-oscuro: #a23e6e;
+
+// Colores puros de referencia (no recomendados)
+$rojo-puro: #ff0000; 
+$naranja-puro: #ffa500; 
+$amarillo-puro: #ffff00; 
+$verde-lima: #aeea00; 
+$azul-claro: #4fc3f7; 
+$blanco-humo: #f5f5f5; 
