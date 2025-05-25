@@ -12,6 +12,15 @@
   @include altura-contenido-bp($altura-encabezado);
 }
 
+.cartel-festival {
+  flex-direction: column;
+  background: transparent;
+  box-shadow: none;
+  padding: 2vw 0 3vw 0;
+  min-height: 100vh;
+  width: 100vw;
+}
+
 .banda-imagen {
 
 
@@ -24,12 +33,80 @@
   @include tamanio-banda-imagen;
 
   img {
-    // include bordes;
     @include tamanio-completo;
 
     display: block;
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
+  }
+
+  margin: 1vw 2vw 2vw 2vw;
+  box-shadow: none;
+  border: none;
+  transition: transform 0.2s;
+  flex-direction: column;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.07) rotate(-2deg);
+    z-index: 2;
+  }
+
+  .banda-nombre-cartel {
+    margin-top: 0.5em;
+    text-align: center;
+    color: #eed755;
+    font-family: 'Metal Mania', 'Bebas Neue', Impact, Arial, sans-serif;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 8px #000, 0 0 2px #eed75599;
+    font-weight: 900;
+    line-height: 1.1;
+    user-select: none;
+    pointer-events: none;
+  }
+}
+
+.banda-nivel-1 {
+  width: clamp(320px, 40vw, 480px);
+  height: clamp(180px, 18vw, 260px);
+
+  .banda-nombre-cartel {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    color: #fffbe6;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
+
+.banda-nivel-2 {
+  width: clamp(220px, 28vw, 340px);
+  height: clamp(120px, 12vw, 180px);
+
+  .banda-nombre-cartel {
+    font-size: clamp(1.5rem, 4vw, 2.7rem);
+    color: #eed755;
+    text-transform: uppercase;
+  }
+}
+
+.banda-nivel-3 {
+  width: clamp(140px, 18vw, 220px);
+  height: clamp(80px, 8vw, 120px);
+
+  .banda-nombre-cartel {
+    font-size: clamp(1.1rem, 2.5vw, 1.7rem);
+    color: #eed755cc;
+    text-transform: capitalize;
+  }
+}
+
+@media (max-width: 700px) {
+  .cartel-festival {
+    padding: 1vw 0 2vw 0;
+  }
+
+  .banda-imagen {
+    margin: 2vw 0.5vw;
   }
 }

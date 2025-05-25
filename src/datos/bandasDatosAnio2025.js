@@ -124,32 +124,6 @@ const bandasDatos2025 = [
     albums: [{ nombre: "Moonshinerds", anio: 2019 }]
   },
   {
-    // Suicidal Angels
-    nombre: "Suicidal Angels",
-    imagen: bandasLogo.suicidalsAngelsLogo,
-    spotify: bandasSpotifyUrls.suicidalAngels,
-    estilo: "Thrash Metal",
-    origen: { pais: "Grecia", provincia: "Atica", ciudad: "Atenas" },
-    anio: 2001,
-    resumen: resumenesBandas.SuicidalAngels || "",
-    integrantes: {
-      cantante: "Nick Melissourgos",
-      guitarra: ["Nick Melissourgos"],
-      bajo: "Angel Lelikakis",
-      bateria: "Orfeas Tzortzopoulos"
-    },
-    albums: [
-      { nombre: "Profane Prayer", anio: 2024 },
-      { nombre: "Years of Aggression", anio: 2019 },
-      { nombre: "Division of Blood", anio: 2016 },
-      { nombre: "Divide and Conquer", anio: 2014 },
-      { nombre: "Bloodbath", anio: 2012 },
-      { nombre: "Dead Again", anio: 2010 },
-      { nombre: "Sanctify the Darkness", anio: 2009 },
-      { nombre: "Eternal Domination", anio: 2007 }
-    ]
-  },
-  {
     // The Electric Alley
     nombre: "The Electric Alley",
     imagen: bandasLogo.theElectricAlleyLogo,

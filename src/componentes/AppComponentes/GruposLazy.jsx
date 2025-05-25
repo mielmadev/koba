@@ -41,12 +41,6 @@ const GRUPOS_LAZY = [
     component: lazy(() => import("@paginas-grupos/TheElectricAlleyPag"))
   },
   {
-    key: "SUICIDALANGELS",
-    path: "/bandas/suicidalangels",
-    label: "Suicidal Angels",
-    component: lazy(() => import("@paginas-grupos/SuicidalAngelsPag"))
-  },
-  {
     key: "WOLFHEART",
     path: "/bandas/wolfheart",
     label: "Wolfheart",
