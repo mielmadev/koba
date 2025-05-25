@@ -1,6 +1,6 @@
 import React from "react"
 import bandasDatos2025 from "@datos/bandasDatosAnio2025"
-import "./gruposContenido.scss"
+import "./GrupoContenido.scss"
 import GrupoIntegrantesMapeo from "@mapeos/GrupoIntegrantesMapeo"
 import GrupoAlbumsMapeo from "@mapeos/GrupoAlbumsMapeo"
 import GrupoEncabezado from "./GrupoEncabezado"

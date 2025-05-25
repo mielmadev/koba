@@ -45,7 +45,7 @@ PuaGirando.propTypes = {
   girada: PropTypes.bool.isRequired,
   cerrando: PropTypes.bool,
   size: PropTypes.number,
-  className: PropTypes.string,
+  className: PropTypes.string
 }
 
 export default PuaGirando

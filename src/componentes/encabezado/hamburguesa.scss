@@ -73,7 +73,9 @@
 }
 
 // Solo visible cuando el menú está completamente cerrado y la hamburguesa no está en animación
-.navegador-contenedor:not(.encabezado--menu-abierto, .encabezado--menu-cerrando) .hamburguesa:not(.abierto, .cerrando) .hamburguesa-texto {
+.navegador-contenedor:not(.encabezado--menu-abierto, .encabezado--menu-cerrando)
+  .hamburguesa:not(.abierto, .cerrando)
+  .hamburguesa-texto {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;

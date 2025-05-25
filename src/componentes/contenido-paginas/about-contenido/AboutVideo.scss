@@ -9,19 +9,23 @@
     display: block;
     width: 100%;
     height: 56.25vw;
+
     /* Proporción 16:9 (9/16 = 0.5625) */
     border: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 30%);
 
     @include bp(xs) {
       min-height: 300px;
+
       /* Altura mínima para móviles */
     }
 
     @include bp(tablet) {
       min-height: 400px;
+
       /* Altura mínima para tablets */
       max-height: 80vh;
+
       /* Altura máxima */
     }
   }

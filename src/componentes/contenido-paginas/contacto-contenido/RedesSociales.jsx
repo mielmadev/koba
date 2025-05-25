@@ -1,5 +1,5 @@
-import React from "react";
-import "./RedesSociales.scss";
+import React from "react"
+import "./RedesSociales.scss"
 import {
   FacebookIcono,
   InstagramIcono,
@@ -7,7 +7,7 @@ import {
   TikTokIcono,
   XTwitterIcono,
   YoutubeIcono
-} from "@iconos/iconos";
+} from "@iconos/iconos"
 
 export default function RedesSociales() {
   return (
@@ -55,5 +55,5 @@ export default function RedesSociales() {
         className="icono-social icono-youtube"
       />
     </div>
-  );
+  )
 }

@@ -19,12 +19,12 @@ a,
 
     color: $gris;
     text-shadow: $sombra-negro;
-    transform: scale(1.08);
     transition:
       color 0.3s,
       text-shadow 0.3s,
       cursor 0.3s,
       transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1.08);
   }
 
   &:active {
@@ -54,12 +54,12 @@ a,
       cursor:
         url("@cursor/KobaPua_32x32_Negro.png") 16 0,
         auto;
-      transform: scale(1.08);
       transition:
         color 0.3s,
         text-shadow 0.3s,
         cursor 0.3s,
         transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: scale(1.08);
     }
 
     &:active {

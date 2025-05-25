@@ -15,22 +15,19 @@ function obtenerLineas(texto) {
 
 function LineasAlternas({ lineas, claseBase, keyPrefix }) {
   // Añade console.log para depuración
-  console.log("Lineas:", lineas);
+  console.log("Lineas:", lineas)
   return lineas.map((linea, i) => {
     // Calcula la clase y muestra info para depuración
-    const posicion = i % 2 === 0 ? "izq" : "der";
-    const className = `${claseBase} ${claseBase}-linea-${posicion}`;
-    console.log(`Línea ${i}: "${linea}" -> Clase: "${className}"`);
+    const posicion = i % 2 === 0 ? "izq" : "der"
+    const className = `${claseBase} ${claseBase}-linea-${posicion}`
+    console.log(`Línea ${i}: "${linea}" -> Clase: "${className}"`)
 
     return (
-      <div
-        key={`${keyPrefix}-${i}`}
-        className={className}
-      >
+      <div key={`${keyPrefix}-${i}`} className={className}>
         {linea}
       </div>
-    );
-  });
+    )
+  })
 }
 
 export default function AboutDatosLista() {
@@ -45,7 +42,7 @@ export default function AboutDatosLista() {
       />
       <div className="about-texto">{obtenerLineas(aboutDatos.texto1)}</div>
       <LineasAlternas
-        lineas={aboutDatos.seccion.split("\n").filter(line => line.trim() !== "")}
+        lineas={aboutDatos.seccion.split("\n").filter((line) => line.trim() !== "")}
         claseBase="about-seccion"
         keyPrefix="seccion"
       />

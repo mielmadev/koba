@@ -30,26 +30,24 @@
 @mixin pua-giratoria($reverse: false, $duration: 0.5s, $timing: cubic-bezier(0.4, 0, 0.2, 1)) {
   @if $reverse {
     animation: pua-gira-reversa $duration $timing;
-  }
-
-  @else {
+  } @else {
     animation: pua-gira $duration $timing;
   }
 }
 
 .pua-girando {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 30px;
   height: 30px;
-  user-select: none;
   pointer-events: none;
+  user-select: none;
 
   img {
+    display: block;
     width: 100%;
     height: 100%;
-    display: block;
     pointer-events: none;
     user-select: none;
     transition: filter 0.2s;
@@ -58,6 +56,7 @@
 
 .pua-girando--abierta img {
   transform: rotate(180deg);
+
   @include pua-giratoria(false);
 }
 
@@ -67,5 +66,6 @@
 
 .pua-girando--cerrando img {
   transform: rotate(180deg);
+
   @include pua-giratoria(true);
 }

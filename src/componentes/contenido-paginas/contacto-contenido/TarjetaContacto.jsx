@@ -1,6 +1,7 @@
 import React from "react"
 import "./TarjetaContacto.scss"
 
+// eslint-disable-next-line no-unused-vars
 export default function TarjetaContacto({ icono: Icono, titulo, texto, tipo = "default" }) {
   return (
     <div className={`tarjeta-contacto tarjeta-${tipo}`}>

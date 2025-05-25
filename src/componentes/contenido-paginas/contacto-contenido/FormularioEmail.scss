@@ -2,54 +2,46 @@
 
 .formulario-email {
   @include pad-gap;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
-  background: linear-gradient(135deg, rgba($negro, 0.98) 80%, rgba($granate, 0.7) 100%);
-  border-radius: 8px 32px 8px 32px;
-  border: 2.5px solid $granate;
-  box-shadow: 0 4px 24px 0 rgba($granate, 0.25), 0 1.5px 0 0 $granate inset;
-  color: $blanco;
-  letter-spacing: 0.03em;
-  text-shadow: 1px 1px 2px $negro, 0 0 8px $granate;
-  font-family: 'Oswald', 'Bebas Neue', 'Impact', sans-serif;
   margin-bottom: 2rem;
-  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+  border: 2.5px solid $granate;
+  border-radius: 8px 32px;
+  background: linear-gradient(135deg, rgba($negro, 0.98) 80%, rgba($granate, 0.7) 100%);
+  color: $blanco;
+  font-family: Oswald, "Bebas Neue", Impact, sans-serif;
+  letter-spacing: 0.03em;
+  text-shadow:
+    1px 1px 2px $negro,
+    0 0 8px $granate;
+  transition:
+    box-shadow 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+  box-shadow:
+    0 4px 24px 0 rgba($granate, 0.25),
+    0 1.5px 0 0 $granate inset;
+
   @include margen-laterales-bp($margen-laterales);
 
   label {
     @include pad-gap;
-    font-weight: bold;
-    color: $granate;
+
     display: flex;
-    flex-direction: column;
     flex: 1 1 0;
+    flex-direction: column;
     width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    text-shadow: 0 0 6px $granate, 1px 1px 2px $negro;
     margin-bottom: 0.5em;
-  }
-
-  input,
-  textarea {
-    padding: 0.7rem 1rem;
-    border: 2px solid $granate;
-    border-radius: 6px 18px 6px 18px;
-    font-size: 1.1rem;
-    margin-top: 0.3rem;
-    background: rgba($negro, 0.85);
-    color: $blanco;
-    box-shadow: 0 2px 8px 0 rgba($granate, 0.15);
-    transition: border-color 0.2s, box-shadow 0.2s;
-    font-family: inherit;
-    outline: none;
-
-    &:focus {
-      border-color: lighten($granate, 10%);
-      box-shadow: 0 4px 16px 0 rgba($granate, 0.35);
-    }
+    color: $granate;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-shadow:
+      0 0 6px $granate,
+      1px 1px 2px $negro;
   }
 
   textarea {
@@ -57,52 +49,86 @@
     resize: vertical;
   }
 
+  input,
+  textarea {
+    margin-top: 0.3rem;
+    padding: 0.7rem 1rem;
+    border: 2px solid $granate;
+    border-radius: 6px 18px;
+    background: rgba($negro, 0.85);
+    color: $blanco;
+    font-family: inherit;
+    font-size: 1.1rem;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+    box-shadow: 0 2px 8px 0 rgba($granate, 0.15);
+    outline: none;
+
+    &:focus {
+      border-color: color.adjust($granate, $lightness: 10%);
+      box-shadow: 0 4px 16px 0 rgba($granate, 0.35);
+    }
+  }
+
+  .formulario-email textarea:focus {
+    border-color: color.adjust($granate, $lightness: 10%);
+    box-shadow: 0 4px 16px 0 rgba($granate, 0.35);
+  }
+
   button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid $granate;
+    border-radius: 6px 18px;
     background: linear-gradient(120deg, $granate 70%, $negro 100%);
     color: $blanco;
-    border: 2px solid $granate;
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px 18px 6px 18px;
-    font-size: 1.1rem;
     font-family: inherit;
+    font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 0.05em;
-    cursor: pointer;
-    box-shadow: 0 2px 8px 0 rgba($granate, 0.18);
     text-shadow: 1px 1px 2px $negro;
+    cursor: pointer;
+    transition:
+      background 0.2s,
+      box-shadow 0.2s,
+      border-color 0.2s,
+      transform 0.15s;
     align-self: flex-start;
-    margin-top: 1rem;
-    transition: background 0.2s, box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+    box-shadow: 0 2px 8px 0 rgba($granate, 0.18);
 
     &:hover {
-      background: linear-gradient(120deg, lighten($granate, 10%) 70%, $negro 100%);
-      border-color: lighten($granate, 10%);
-      box-shadow: 0 4px 16px 0 rgba($granate, 0.35);
+      border-color: color.adjust($granate, $lightness: 10%);
+      background: linear-gradient(120deg, color.adjust($granate, $lightness: 10%) 70%, $negro 100%);
       transform: scale(1.05) rotate(-2deg);
+      box-shadow: 0 4px 16px 0 rgba($granate, 0.35);
     }
 
     &:active {
-      background: $negro;
       border-color: $granate;
+      background: $negro;
       transform: scale(0.97) rotate(0deg);
     }
 
     &:disabled {
-      background: $gris;
       border-color: $gris;
+      background: $gris;
       color: $negro;
+      text-shadow: none;
       cursor: not-allowed;
       box-shadow: none;
-      text-shadow: none;
     }
   }
 
   // Mixin para mensajes destacados (éxito y error)
   @mixin mensaje-destacado($color, $bg, $borde, $sombra, $animacion) {
-    color: $color;
-    background: $bg;
     border: 1.5px solid $borde;
-    text-shadow: 0 0 6px $sombra, 1px 1px 2px $negro, 0 0 4px $blanco;
+    background: $bg;
+    color: $color;
+    text-shadow:
+      0 0 6px $sombra,
+      1px 1px 2px $negro,
+      0 0 4px $blanco;
     animation: #{$animacion} 1.2s ease-in-out;
   }
 
@@ -110,43 +136,60 @@
   @mixin animacion-brillo($nombre, $color) {
     @keyframes #{$nombre} {
       0% {
-        text-shadow: 0 0 16px $blanco, 0 0 6px $color, 1px 1px 2px $negro;
+        text-shadow:
+          0 0 16px $blanco,
+          0 0 6px $color,
+          1px 1px 2px $negro;
       }
 
       60% {
-        text-shadow: 0 0 8px $blanco, 0 0 6px $color, 1px 1px 2px $negro;
+        text-shadow:
+          0 0 8px $blanco,
+          0 0 6px $color,
+          1px 1px 2px $negro;
       }
 
       100% {
-        text-shadow: 0 0 4px $blanco, 0 0 6px $color, 1px 1px 2px $negro;
+        text-shadow:
+          0 0 4px $blanco,
+          0 0 6px $color,
+          1px 1px 2px $negro;
       }
     }
   }
 
-  @include animacion-brillo('brillo-verde', $verde);
-  @include animacion-brillo('brillo-granate', $granate);
+  @include animacion-brillo("brillo-verde", $verde);
+  @include animacion-brillo("brillo-granate", $granate);
 
   .exito,
   .error {
-    font-weight: bold;
+    box-sizing: border-box;
+    width: 100%;
     margin-top: 1.5rem;
     margin-bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
-    @include margen-laterales-bp($margen-laterales);
-    border-radius: 6px 18px 6px 18px;
     padding: 0.7em 1em;
-    text-align: center;
+    border-radius: 6px 18px;
     font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow:
+      1px 1px 2px $negro,
+      0 0 4px $blanco;
     box-shadow: 0 2px 8px 0 rgba($granate, 0.15);
-    text-shadow: 1px 1px 2px $negro, 0 0 4px $blanco;
+
+    @include margen-laterales-bp($margen-laterales);
   }
 
   .exito {
-    @include mensaje-destacado($verde, rgba($verde, 0.08), $verde, $verde, 'brillo-verde');
+    @include mensaje-destacado($verde, rgba($verde, 0.08), $verde, $verde, "brillo-verde");
   }
 
   .error {
-    @include mensaje-destacado($granate, rgba($granate, 0.08), $granate, $granate, 'brillo-granate');
+    @include mensaje-destacado($granate,
+      rgba($granate, 0.08),
+      $granate,
+      $granate,
+      "brillo-granate"
+    );
   }
 }

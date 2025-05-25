@@ -5,5 +5,6 @@ export const aboutDatos = {
   seccion: `Las palabras se las lleva el viento, pero el metal retumba en tus huesos.\nCada edición sellamos contigo un pacto de sangre:\nQue sientas el metal en su forma más salvaje, cruda y demoledora.\nTe esperamos en las tierras de Koba.`,
   texto2: `Nuestro territorio salvaje lo hace posible. La esencia del KOBA Live está en el imponente cresterío del Anboto y en la legendaria cueva de Mari. En ese santuario primitivo moraron Mari y Sugaar, un dragón-serpiente con poder de transformación humana, consorte de Mari, la poderosa deidad de la mitología vasca.\n\nCuando una banda conquista el escenario, Mari y Sugaar emergen de las sombras, fusionándose con cada riff desgarrador, cada grito visceral, cada golpe de batería que sacude las montañas. Dioses ancestrales, mitología brutal y naturaleza indómita se entrelazan con el metal para crear una experiencia que va más allá de lo musical, alcanzando lo ritual.\n\nEn Abadiño te aguarda la Koba Family y la mismísima diosa Mari, cabalgando las tormentas en su carro de fuego, con su melena salvaje ondeando a las puertas de su morada milenaria.`,
   pregunta: "¿Te atreves a formar parte de la leyenda?",
-  subtitulo2: "Pulsa play y revive la potencia del Koba Live en este documental forjado en las tierras de Mari."
+  subtitulo2:
+    "Pulsa play y revive la potencia del Koba Live en este documental forjado en las tierras de Mari."
 }

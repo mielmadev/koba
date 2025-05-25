@@ -8,7 +8,7 @@ const BandasContenido = () => {
     <div className="contenido">
       <div className="bandas-banner-contenedor">
         <BandasBanner />
-        </div>
+      </div>
       <div className="bandasLista">
         <BandasLista2025 />
       </div>

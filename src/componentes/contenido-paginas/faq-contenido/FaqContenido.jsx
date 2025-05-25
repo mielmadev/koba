@@ -38,9 +38,7 @@ const FAQ = () => {
                 <PuaGirando girada={abierta} cerrando={enCierre} size={20} />
               </span>
             </div>
-            {(abierta || enCierre) && (
-              <div className="faq-respuesta">{item.respuesta}</div>
-            )}
+            {(abierta || enCierre) && <div className="faq-respuesta">{item.respuesta}</div>}
           </div>
         )
       })}

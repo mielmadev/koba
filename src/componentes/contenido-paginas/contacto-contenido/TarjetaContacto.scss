@@ -2,13 +2,17 @@
 
 @mixin tarjeta-contacto-estilos($color) {
   border-color: $color;
-  box-shadow: 0 4px 24px 0 rgba($color, 0.25), 0 1.5px 0 0 $color inset;
   background: linear-gradient(135deg, rgba($negro, 0.95) 80%, rgba($color, 0.7) 100%);
+  box-shadow:
+    0 4px 24px 0 rgba($color, 0.25),
+    0 1.5px 0 0 $color inset;
 
   &:hover {
-    box-shadow: 0 8px 32px 0 rgba($color, 0.45), 0 2px 0 0 $color inset;
-    border-color: lighten($color, 10%);
+    border-color: color.adjust($color, $lightness: 10%);
     background: linear-gradient(120deg, rgba($negro, 1) 70%, rgba($color, 0.9) 100%);
+    box-shadow:
+      0 8px 32px 0 rgba($color, 0.45),
+      0 2px 0 0 $color inset;
   }
 
   .icono-contacto {
@@ -19,23 +23,33 @@
   .info-contacto {
     .titulo-contacto {
       color: $color;
-      text-shadow: 0 0 6px $color, 1px 1px 2px $negro;
+      text-shadow:
+        0 0 6px $color,
+        1px 1px 2px $negro;
     }
   }
 }
 
 .tarjeta-contacto {
   @include pad-gap;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 6px 24px 6px 24px;
-  color: $blanco;
-  letter-spacing: 0.03em;
-  text-shadow: 1px 1px 2px $negro, 0 0 8px $granate;
-  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s, background 0.15s;
-  font-family: 'Oswald', 'Bebas Neue', 'Impact', sans-serif;
   margin-bottom: 1rem;
+  border-radius: 6px 24px;
+  color: $blanco;
+  font-family: Oswald, "Bebas Neue", Impact, sans-serif;
+  letter-spacing: 0.03em;
+  text-shadow:
+    1px 1px 2px $negro,
+    0 0 8px $granate;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s,
+    border-color 0.15s,
+    background 0.15s;
+
   @include tarjeta-contacto-estilos($granate);
 
   &:hover {
@@ -43,25 +57,27 @@
   }
 
   .icono-contacto {
-    font-size: $fuente-contacto-titulo;
-    margin-right: 1.2rem;
-    align-self: center;
-    transition: color 0.15s, filter 0.15s;
     position: relative;
+    margin-right: 1.2rem;
+    font-size: $fuente-contacto-titulo;
+    transition:
+      color 0.15s,
+      filter 0.15s;
+    align-self: center;
 
     &::after {
-      content: '';
-      display: block;
       position: absolute;
       top: 10%;
       left: 10%;
+      display: block;
       width: 60%;
       height: 30%;
-      background: linear-gradient(120deg, rgba($blanco, 0.25) 0%, rgba($blanco, 0) 100%);
       border-radius: 50%;
+      background: linear-gradient(120deg, rgba($blanco, 0.25) 0%, rgba($blanco, 0) 100%);
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.3s;
+      content: "";
     }
 
     &:hover::after {
@@ -72,28 +88,30 @@
 
   .info-contacto {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    flex: 1;
     min-width: 0;
-    padding-left: 0.75rem;
     padding-right: 0.75rem;
+    padding-left: 0.75rem;
     gap: 0.3em;
 
     .titulo-contacto {
-      font-weight: 700;
-      font-size: $fuente-contacto-titulo;
-      text-align: left;
       margin-bottom: 0.25em;
+      font-size: $fuente-contacto-titulo;
+      font-weight: 700;
       letter-spacing: 0.04em;
+      text-align: left;
       text-transform: uppercase;
-      transition: color 0.15s, text-shadow 0.15s;
+      transition:
+        color 0.15s,
+        text-shadow 0.15s;
     }
 
     .texto-contacto {
-      font-size: $fuente-contacto-texto;
       color: $blanco;
+      font-size: $fuente-contacto-texto;
       text-align: left;
       text-shadow: 0 0 4px $negro;
     }

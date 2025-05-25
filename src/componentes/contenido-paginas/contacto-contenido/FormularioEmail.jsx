@@ -13,21 +13,22 @@ export default function FormularioEmail() {
   const [estado, setEstado] = useState({
     enviado: false,
     error: false,
-    cargando: false,
+    cargando: false
   })
 
   const handleSubmit = (e) => {
     e.preventDefault()
     setEstado({ enviado: false, error: false, cargando: true })
     emailjs
-      .sendForm( // Desde .env
+      .sendForm(
+        // Desde .env
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
         import.meta.env.VITE_EMAILJS_USER_ID
       )
       .then(
-        (result) => {
+        () => {
           setEstado({ enviado: true, error: false, cargando: false })
           form.current.reset()
         },
@@ -55,9 +56,7 @@ export default function FormularioEmail() {
       <button type="submit" disabled={estado.cargando}>
         {estado.cargando ? "Enviando..." : "Enviar"}
       </button>
-      {estado.enviado && (
-        <p className="exito">¡Mensaje enviado correctamente!</p>
-      )}
+      {estado.enviado && <p className="exito">¡Mensaje enviado correctamente!</p>}
       {estado.error && <p className="error">Error al enviar. Inténtalo de nuevo.</p>}
     </form>
   )

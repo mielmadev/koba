@@ -2,31 +2,32 @@
 
 .contenido {
   @include pad-gap;
+
   flex-direction: column;
   align-items: stretch;
   font-size: $fuente-contacto-iconos;
 
   .contacto-contenedor {
     @include pad-gap;
+
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     height: 100%;
 
-    >* {
+    > * {
       flex: 1 1 0;
       min-width: 0;
       height: 100%;
     }
-
 
     .contacto {
       @include pad-gap;
 
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: space-evenly;
+      align-items: center;
       width: 100%;
       min-height: 0;
       gap: 1rem;
@@ -36,29 +37,29 @@
   @include bp-max(m) {
     .contacto-contenedor {
       flex-direction: column;
-      gap: 2rem;
       align-items: stretch;
+      gap: 2rem;
 
-      >* {
-        width: 100%;
-        max-width: 100%;
-        flex: unset;
-        height: auto !important;
-        min-width: 0;
+      > * {
         position: static !important;
         z-index: auto !important;
+        flex: unset;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        height: auto !important;
         margin-bottom: 2rem;
       }
 
-      >*:last-child {
+      > *:last-child {
         margin-bottom: 0;
       }
 
       .contacto-formulario {
-        height: auto !important;
-        min-height: 0 !important;
         position: static !important;
         z-index: auto !important;
+        height: auto !important;
+        min-height: 0 !important;
       }
     }
   }
