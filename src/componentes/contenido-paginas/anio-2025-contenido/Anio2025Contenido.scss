@@ -1,7 +1,7 @@
 @use "@estilos/core.scss" as *;
 
 .contenido-2025 {
-
+  @include bordes;
 
   display: flex;
   flex-flow: row wrap;
@@ -12,102 +12,24 @@
   @include altura-contenido-bp($altura-encabezado);
 }
 
-.cartel-festival {
+.banda-imagen {
   @include bordes;
-  flex-direction: column;
-  background: transparent;
-  box-shadow: none;
-  min-height: 100vh;
-  width: 100vw;
 
-  .banda-imagen {
-    @include tamanio-banda-imagen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: contain;
-    transition: transform 0.2s;
-    flex-direction: column;
-    position: relative;
-
-    &:hover {
-      transform: scale(1.07) rotate(-2deg);
-      z-index: 2;
-    }
-
-    img {
-      @include tamanio-completo;
-
-      display: block;
-      max-width: 90%;
-      max-height: 90%;
-      object-fit: contain;
-    }
-
-    .banda-nombre-cartel {
-      margin-top: 0.5em;
-      text-align: center;
-    }
-  }
-}
-
-.cartel-nivel {
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1.5vw;
-}
+  border-radius: 12px;
+  object-fit: contain;
 
-.cartel-nivel-1 {
+  @include tamanio-banda-imagen;
 
-  /* Headliner: mucho más grande, centrado, con sombra y color especial */
-  .banda-imagen {
-    @include bordes;
-    transform: scale(1.5);
-    filter: drop-shadow(0 0 16px #eed755);
-    z-index: 10;
-    margin: 0.5vw 0 2vw 0;
+  img {
+    // include bordes;
+    @include tamanio-completo;
 
-    img {
-      max-width: 420px;
-      max-height: 180px;
-    }
-  }
-}
-
-.cartel-nivel-2 {
-  .banda-imagen {
-    @include bordes;
-    transform: scale(1.15);
-    margin: 1vw 1vw 2vw 1vw;
-
-    img {
-      max-width: 260px;
-      max-height: 120px;
-    }
-  }
-}
-
-.cartel-nivel-3 {
-  .banda-imagen {
-    @include bordes;
-    opacity: 0.92;
-    margin: 0.5vw 1vw 2vw 1vw;
-
-    img {
-      max-width: 180px;
-      max-height: 80px;
-    }
-  }
-}
-
-@media (max-width: 700px) {
-  .cartel-festival {
-    padding: 1vw 0 2vw 0;
-
-    .banda-imagen {
-      margin: 2vw 0.5vw;
-    }
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
   }
 }

@@ -15,25 +15,9 @@ const bandasCartel2025 = [
 ]
 
 const Contenido2025 = () => {
-  // Separar bandas por nivel
-  const nivel1 = bandasCartel2025.filter(b => b.nivel === 1)
-  const nivel2 = bandasCartel2025.filter(b => b.nivel === 2)
-  const nivel3 = bandasCartel2025.filter(b => b.nivel === 3)
-
   return (
-    <div className="contenido-2025 cartel-festival">
-      {/* Headliner (nivel 1) en una sola línea, destacado */}
-      <div className="cartel-nivel cartel-nivel-1">
-        <BandasImagenesMapeo bandas={nivel1} />
-      </div>
-      {/* Co-headliners (nivel 2) */}
-      <div className="cartel-nivel cartel-nivel-2">
-        <BandasImagenesMapeo bandas={nivel2} />
-      </div>
-      {/* Resto de bandas (nivel 3) */}
-      <div className="cartel-nivel cartel-nivel-3">
-        <BandasImagenesMapeo bandas={nivel3} />
-      </div>
+    <div className="contenido-2025">
+      <BandasImagenesMapeo bandas={bandasCartel2025} />
     </div>
   )
 }
