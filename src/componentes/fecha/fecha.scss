@@ -26,21 +26,19 @@
 
 .fecha-contenedor {
   @include pad-gap;
-  @include bordes;
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: $blanco;
+  color: $gris-plomo;
   white-space: normal;
   text-align: center;
   text-shadow:
     $blanco 0 0 10px,
     $blanco 0 0 20px;
 
-  // include bordes;
 
   .fecha {
-    // include bordes;
 
     font-size: $fuente-fecha;
     animation: parpadeo 3s infinite;
@@ -69,3 +67,5 @@
     animation: brillo-metal 3s infinite;
   }
 }
+
+@include fecha-svg-separador-sizes;

@@ -64,3 +64,31 @@
     }
   }
 }
+
+// Tamaños responsivos para los SVG de fecha
+$fecha-svg-sizes: (
+  xs: 1.3em,
+  // más pequeño para xs
+  md: 2.8em,
+  lg: 3.5em
+);
+
+@mixin fecha-svg-separador-sizes {
+  .fecha-svg-separador svg {
+    width: map.get($fecha-svg-sizes, xs);
+    height: map.get($fecha-svg-sizes, xs);
+    max-width: 7vw;
+    max-height: 7vw;
+  }
+
+  @each $bp, $size in $fecha-svg-sizes {
+    @if $bp !=xs {
+      @include bp($bp) {
+        .fecha-svg-separador svg {
+          width: $size;
+          height: $size;
+        }
+      }
+    }
+  }
+}
