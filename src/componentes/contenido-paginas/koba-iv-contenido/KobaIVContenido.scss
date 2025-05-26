@@ -24,12 +24,9 @@
   @include tamanio-banda-imagen;
 
   img {
-    // include bordes;
     @include tamanio-completo;
 
-    display: block;
-    max-width: 90%;
-    max-height: 90%;
     object-fit: contain;
+
   }
 }
