@@ -6,7 +6,7 @@ const PAGES_LAZY = [
     key: "INICIO",
     path: "/",
     label: "Inicio",
-    component: lazy(() => import("@paginas-principales/2025Pag"))
+    component: lazy(() => import("@paginas-principales/KobaIVPag"))
   },
   {
     key: "FAQ",

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import bandasDatos2025 from "@datos/bandasDatosAnio2025"
-import "./anio2025Contenido.scss"
+import "./KobaIVContenido.scss"
 
 // Orden por importancia (headliner primero, luego co-headliners, luego resto)
 const bandasCartel2025 = [
@@ -14,9 +14,9 @@ const bandasCartel2025 = [
   { ...bandasDatos2025.find((b) => b.nombre === "Moonshinerds"), nivel: 3 }
 ]
 
-const Contenido2025 = () => {
+const KobaIVContenido = () => {
   return (
-    <div className="contenido-2025">
+    <div className="koba-iv-contenido">
       {bandasCartel2025.map(({ nombre, imagen }) => (
         <div key={nombre} className="banda-imagen">
           {imagen && (
@@ -34,4 +34,4 @@ const Contenido2025 = () => {
   )
 }
 
-export default Contenido2025
+export default KobaIVContenido

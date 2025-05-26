@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { NavLink } from "react-router-dom"
 import "./MenuDesplegable.scss"
 import LogoKoba from "@imagenes/logos/LogoKoba.png"
-import dividirEnFilasMenuDesplegable from "../mapeos/dividirEnFilasMenuDesplegable"
+import dividirEnFilasMenuDesplegable from "./dividirEnFilasMenuDesplegable"
 
 // Definir la estructura de página fuera para reutilización y limpieza
 const estructuraPagina = PropTypes.shape({
