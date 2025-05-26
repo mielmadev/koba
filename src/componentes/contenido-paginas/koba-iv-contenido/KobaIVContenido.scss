@@ -2,8 +2,11 @@
 @use "@estilos/var/var.scss" as *;
 @use "@estilos/mix/responsivo.scss" as *;
 
+// Variables para los tamaños de cada nivel
+$logo-base: 12rem;
+$logo-step: 2.65rem;
+
 .koba-iv-contenido {
-  @include bordes;
   overflow-y: auto;
   @include altura-contenido-bp($altura-encabezado);
 
@@ -13,179 +16,54 @@
     justify-content: space-evenly;
     align-items: flex-start;
     width: 100%;
-  }
-
-  .banda-imagen {
-    @include bordes;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-
-    img {
-      @include tamanio-completo;
-
-      object-fit: contain;
-    }
-  }
-
-  // Estilo para cartel de festival heavy metal con niveles
-  .nivel,
-  .nivel-1,
-  .nivel-2,
-  .nivel-3,
-  .nivel-4 {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-
-  .nivel>*,
-  .nivel-1>*,
-  .nivel-2>*,
-  .nivel-3>*,
-  .nivel-4>* {
-    flex: 0 1 auto;
-    max-width: 18vw;
-    min-width: 80px;
-  }
-
-  .nivel-1>* {
-    max-width: 28vw;
-  }
-
-  .nivel-2>* {
-    max-width: 22vw;
-  }
-
-  .nivel-3>* {
-    max-width: 16vw;
-  }
-
-  .nivel-4>* {
-    max-width: 12vw;
-  }
-
-  @media (max-width: 700px) {
-
-    .nivel,
-    .nivel-1,
-    .nivel-2,
-    .nivel-3,
-    .nivel-4 {
-      gap: 0.5rem;
-    }
-
-    .nivel>*,
-    .nivel-1>*,
-    .nivel-2>*,
-    .nivel-3>*,
-    .nivel-4>* {
-      max-width: 48vw;
-      min-width: 60px;
-    }
-  }
-
-  // Personalización por nivel (puedes ajustar los colores y tamaños)
-  .nivel-1,
-  .nivel-2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.5rem;
-    width: auto;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-  }
-
-  .nivel-1>* {
-    max-width: 28vw;
-    min-width: 120px;
-    z-index: 2;
-  }
-
-  .nivel-2>* {
-    max-width: 18vw;
-    min-width: 80px;
-    z-index: 1;
-  }
-
-  .nivel-1 {
-    font-size: 2.7rem;
-    color: #ffd700;
-    text-shadow: 0 0 18px #ff0, 2px 2px 16px #000, 0 0 24px #ff0;
-    font-weight: 900;
-    filter: drop-shadow(0 0 12px #ffd70088);
-    z-index: 3;
 
     .banda-imagen {
-      border: 3px solid #ffd700;
-      box-shadow: 0 0 24px #ffd70088, 0 0 8px #000a;
-      transform: scale(1.08) rotate(-2deg);
-    }
-  }
-
-  .nivel-2 {
-    font-size: 2.1rem;
-    color: #ff4500;
-    text-shadow: 0 0 10px #f00, 2px 2px 10px #000, 0 0 12px #ff4500;
-    font-weight: 800;
-    filter: drop-shadow(0 0 8px #ff450088);
-    z-index: 2;
-
-    .banda-imagen {
-      border: 2px solid #ff4500;
-      box-shadow: 0 0 12px #ff450088, 0 0 4px #000a;
-      transform: scale(1.04) rotate(1deg);
-    }
-  }
-
-  .nivel-3 {
-    font-size: 1.5rem;
-    color: #00bfff;
-    text-shadow: 0 0 8px #0ff, 2px 2px 8px #000, 0 0 8px #00bfff;
-    font-weight: 700;
-    filter: drop-shadow(0 0 6px #00bfff88);
-    z-index: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
-
-    .banda-imagen {
-      max-width: 16vw;
-      min-width: 80px;
-      align-self: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      transform: none;
-      z-index: 1;
+      overflow: hidden;
+
+      .banda-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover,
+        &:focus {
+          transform: scale(1.05);
+          outline: none;
+        }
+      }
+
+      .banda-img {
+        @include bordes;
+        @include tamanio-completo;
+        object-fit: contain;
+        border-radius: inherit;
+      }
     }
   }
 
-  .nivel-4 {
-    font-size: 1.2rem;
-    color: #fff;
-    text-shadow: 1px 1px 6px #000, 0 0 4px #888;
-    font-weight: 600;
-    filter: drop-shadow(0 0 4px #fff8);
-    z-index: 0;
+  .nivel {
+    @include pad-gap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
-    .banda-imagen {
-      border: 1.5px solid #888;
-      box-shadow: 0 0 4px #8888, 0 0 1px #000a;
-      transform: scale(0.98);
+    @for $i from 1 through 4 {
+      &-#{$i} {
+        .banda-imagen {
+          height: calc(#{$logo-base} - #{$logo-step} * ($i - 1));
+          max-width: 33%;
+        }
+
+        .banda-img {
+          @include tamanio-completo;
+        }
+      }
     }
   }
-
-  // Alturas máximas por nivel y breakpoint (ahora usando el mixin global y el mapa global)
-  @include max-height-niveles($altura-max-niveles);
-
 }

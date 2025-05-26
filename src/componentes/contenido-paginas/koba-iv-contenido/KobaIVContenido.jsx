@@ -9,95 +9,50 @@ const bandasCartel2025 = [
   { ...bandasDatos2025.find((b) => b.nombre === "Eclipse"), nivel: 1 },
   { ...bandasDatos2025.find((b) => b.nombre === "Wolfheart"), nivel: 2 },
   { ...bandasDatos2025.find((b) => b.nombre === "Before The Dawn"), nivel: 3 },
-  { ...bandasDatos2025.find((b) => b.nombre === "Ehun Kilo"), nivel: 3 },
   { ...bandasDatos2025.find((b) => b.nombre === "Asgarth"), nivel: 3 },
+  { ...bandasDatos2025.find((b) => b.nombre === "Ehun Kilo"), nivel: 3 },
   { ...bandasDatos2025.find((b) => b.nombre === "The Electric Alley"), nivel: 4 },
   { ...bandasDatos2025.find((b) => b.nombre === "Moonshinerds"), nivel: 4 }
 ]
 
+// Componente reutilizable para renderizar bandas por nivel
+const BandasNivel = ({ bandas, nivel }) => {
+  if (!bandas.length) return null;
+  return (
+    <div className={`nivel nivel-${nivel}`}>
+      {bandas.map(({ nombre, imagen }) => (
+        imagen ? (
+          <div key={nombre} className="banda-imagen" data-nombre={nombre}>
+            <Link
+              to={`/bandas/${nombre.toLowerCase().replace(/\s+/g, "")}`}
+              tabIndex={0}
+              aria-label={`Ver página de ${nombre}`}
+              className="banda-link"
+            >
+              <img src={imagen} alt={nombre} loading="lazy" className="banda-img" />
+            </Link>
+          </div>
+        ) : null
+      ))}
+    </div>
+  );
+}
+
 const KobaIVContenido = () => {
   // Agrupar bandas por nivel
-  const nivel1 = bandasCartel2025.filter(b => b.nivel === 1)
-  const nivel2 = bandasCartel2025.filter(b => b.nivel === 2)
-  const nivel3 = bandasCartel2025.filter(b => b.nivel === 3)
-  const nivel4 = bandasCartel2025.filter(b => b.nivel === 4)
+  const niveles = [1, 2, 3, 4]
+  const bandasPorNivel = niveles.map(nivel => ({
+    nivel,
+    bandas: bandasCartel2025.filter(b => b.nivel === nivel)
+  }))
 
   return (
     <div className="koba-iv-contenido">
       <Fecha />
       <div className="cartel-koba">
-        {/* Nivel 1 */}
-        {nivel1.length > 0 && (
-          <div className="nivel nivel-1">
-            {nivel1.map(({ nombre, imagen }) => (
-              <div key={nombre} className="banda-imagen">
-                {imagen && (
-                  <Link
-                    to={`/bandas/${nombre.toLowerCase().replace(/\s+/g, "")}`}
-                    tabIndex={0}
-                    aria-label={`Ver página de ${nombre}`}
-                  >
-                    <img src={imagen} alt={nombre} loading="lazy" />
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
-        {/* Nivel 2 */}
-        {nivel2.length > 0 && (
-          <div className="nivel nivel-2">
-            {nivel2.map(({ nombre, imagen }) => (
-              <div key={nombre} className="banda-imagen">
-                {imagen && (
-                  <Link
-                    to={`/bandas/${nombre.toLowerCase().replace(/\s+/g, "")}`}
-                    tabIndex={0}
-                    aria-label={`Ver página de ${nombre}`}
-                  >
-                    <img src={imagen} alt={nombre} loading="lazy" />
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
-        {/* Nivel 3: todos iguales */}
-        {nivel3.length > 0 && (
-          <div className="nivel nivel-3">
-            {nivel3.map(({ nombre, imagen }) => (
-              <div key={nombre} className="banda-imagen">
-                {imagen && (
-                  <Link
-                    to={`/bandas/${nombre.toLowerCase().replace(/\s+/g, "")}`}
-                    tabIndex={0}
-                    aria-label={`Ver página de ${nombre}`}
-                  >
-                    <img src={imagen} alt={nombre} loading="lazy" />
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
-        {/* Nivel 4 */}
-        {nivel4.length > 0 && (
-          <div className="nivel nivel-4">
-            {nivel4.map(({ nombre, imagen }) => (
-              <div key={nombre} className="banda-imagen">
-                {imagen && (
-                  <Link
-                    to={`/bandas/${nombre.toLowerCase().replace(/\s+/g, "")}`}
-                    tabIndex={0}
-                    aria-label={`Ver página de ${nombre}`}
-                  >
-                    <img src={imagen} alt={nombre} loading="lazy" />
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
+        {bandasPorNivel.map(({ nivel, bandas }) => (
+          <BandasNivel key={nivel} bandas={bandas} nivel={nivel} />
+        ))}
       </div>
     </div>
   )
