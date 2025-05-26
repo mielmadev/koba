@@ -2,6 +2,7 @@
 @use "sass:map";
 @use "@estilos/bp" as *;
 @use "@estilos/var.scss" as *;
+@use "@estilos/mix/mix.scss" as *;
 
 // @include margen-laterales-bp($margen-laterales);
 @mixin margen-laterales-bp($mapa) {
@@ -87,6 +88,56 @@ $fecha-svg-sizes: (
         .fecha-svg-separador svg {
           width: $size;
           height: $size;
+        }
+      }
+    }
+  }
+}
+
+// Mixin para obtener el valor de base y step según el bp para los logos
+@mixin logo-altura {
+  @each $bp, $valores in $logo-altura {
+    $base: map.get($valores, base);
+    $step: map.get($valores, step);
+
+    @for $i from 1 through 4 {
+      &-#{$i} {
+        .banda-imagen {
+          @if $bp ==xs {
+            height: calc(#{$base} - #{$step} * ($i - 1));
+          }
+
+          @else {
+            @include bp($bp) {
+              height: calc(#{$base} - #{$step} * ($i - 1));
+            }
+          }
+
+          max-width: 33%;
+        }
+
+        .banda-img {
+          @include tamanio-completo;
+        }
+      }
+    }
+  }
+}
+
+@mixin banda-imagen-especial {
+  .banda-imagen.banda-imagen-especial {
+    @each $bp, $valores in $logo-altura {
+      $base: map.get($valores, base);
+      $step: map.get($valores, step);
+      $altura-especial: calc(#{$base} + #{$step} / 3);
+
+      @if $bp ==xs {
+        height: $altura-especial !important;
+      }
+
+      @else {
+        @include bp($bp) {
+          height: $altura-especial !important;
         }
       }
     }

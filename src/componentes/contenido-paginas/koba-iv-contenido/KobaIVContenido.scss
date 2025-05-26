@@ -1,10 +1,5 @@
 @use "@estilos/core.scss" as *;
-@use "@estilos/var/var.scss" as *;
-@use "@estilos/mix/responsivo.scss" as *;
 
-// Variables para los tamaños de cada nivel
-$logo-base: 12rem;
-$logo-step: 2.65rem;
 
 .koba-iv-contenido {
   overflow-y: auto;
@@ -16,12 +11,13 @@ $logo-step: 2.65rem;
     justify-content: space-evenly;
     align-items: flex-start;
     width: 100%;
+    overflow: visible;
 
     .banda-imagen {
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
+      overflow: visible;
 
       .banda-link {
         display: flex;
@@ -30,40 +26,78 @@ $logo-step: 2.65rem;
 
         &:hover,
         &:focus {
-          transform: scale(1.05);
-          outline: none;
+          transform: scale(1.15);
         }
       }
 
       .banda-img {
-        @include bordes;
         @include tamanio-completo;
         object-fit: contain;
-        border-radius: inherit;
       }
     }
   }
 
   .nivel {
+    @include bordes;
     @include pad-gap;
+
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
 
-    @for $i from 1 through 4 {
-      &-#{$i} {
-        .banda-imagen {
-          height: calc(#{$logo-base} - #{$logo-step} * ($i - 1));
-          max-width: 33%;
-        }
+    // Llama al mixin sin argumentos, ya que ahora recorre todos los breakpoints internamente
+    @include logo-altura;
+
+    @include bp-max(xs) {
+      flex-direction: column;
+      min-height: 100%;
+      gap: 0.35rem;
+      width: 100vw;
+      max-width: 100vw;
+      overflow-x: hidden;
+      box-sizing: border-box;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      margin-right: 0;
+
+      .banda-imagen {
+        flex: 1 1 0;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        max-width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
 
         .banda-img {
-          @include tamanio-completo;
+          height: 100%;
+          width: auto;
+          object-fit: contain;
         }
       }
     }
   }
+
+  .nivel-3 {
+    @include bp-max(xs) {
+      .banda-imagen[data-nombre="Before The Dawn"] {
+        .banda-img {
+          width: 95%;
+          max-width: 95%;
+          height: auto;
+          max-height: 100%;
+          object-fit: contain;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include banda-imagen-especial;
 }

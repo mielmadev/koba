@@ -9,10 +9,10 @@ const bandasCartel2025 = [
   { ...bandasDatos2025.find((b) => b.nombre === "Eclipse"), nivel: 1 },
   { ...bandasDatos2025.find((b) => b.nombre === "Wolfheart"), nivel: 2 },
   { ...bandasDatos2025.find((b) => b.nombre === "Before The Dawn"), nivel: 3 },
+  { ...bandasDatos2025.find((b) => b.nombre === "Ehun Kilo"), nivel: 3, especial: true },
   { ...bandasDatos2025.find((b) => b.nombre === "Asgarth"), nivel: 3 },
-  { ...bandasDatos2025.find((b) => b.nombre === "Ehun Kilo"), nivel: 3 },
+  { ...bandasDatos2025.find((b) => b.nombre === "Moonshinerds"), nivel: 4 },
   { ...bandasDatos2025.find((b) => b.nombre === "The Electric Alley"), nivel: 4 },
-  { ...bandasDatos2025.find((b) => b.nombre === "Moonshinerds"), nivel: 4 }
 ]
 
 // Componente reutilizable para renderizar bandas por nivel
@@ -20,9 +20,9 @@ const BandasNivel = ({ bandas, nivel }) => {
   if (!bandas.length) return null;
   return (
     <div className={`nivel nivel-${nivel}`}>
-      {bandas.map(({ nombre, imagen }) => (
+      {bandas.map(({ nombre, imagen, especial }) => (
         imagen ? (
-          <div key={nombre} className="banda-imagen" data-nombre={nombre}>
+          <div key={nombre} className={`banda-imagen${especial ? ' banda-imagen-especial' : ''}`} data-nombre={nombre}>
             <Link
               to={`/bandas/${nombre.toLowerCase().replace(/\s+/g, "")}`}
               tabIndex={0}

@@ -62,3 +62,14 @@ $breakpoints: (
   pc: $bp-pc,
   full: $bp-full
 );
+
+// Logo altura
+$logo-altura: (
+  xs: (base: 4.5rem, step: 1rem),
+  s: (base: 6rem, step: 1.2rem),
+  m: (base: 7rem, step: 1.5rem),
+  tablet: (base: 8rem, step: 1.8rem),
+  laptop: (base: 10rem, step: 2.2rem),
+  pc: (base: 12rem, step: 2.65rem),
+  full: (base: 14rem, step: 3rem)
+);
