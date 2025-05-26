@@ -7,7 +7,7 @@ $twitter: #1da1f2;
 $youtube: #f00;
 $whatsapp: #25d366;
 $telegram: #08c;
-
+$email: #223a5e;
 // Mapa de colores para iconos de redes sociales
 $iconos-redes: (
   facebook: $facebook,
@@ -16,5 +16,6 @@ $iconos-redes: (
   tiktok: $tiktok,
   twitter: $twitter,
   youtube: $youtube,
-  whatsapp: $whatsapp
+  whatsapp: $whatsapp,
+  email: $email, 
 );

@@ -10,11 +10,19 @@ import "./FormularioEmail.scss"
 
 export default function FormularioEmail() {
   const form = useRef()
+  const textareaRef = useRef(null)
   const [estado, setEstado] = useState({
     enviado: false,
     error: false,
     cargando: false
   })
+
+  // Ajusta la altura del textarea automáticamente
+  const handleInput = (e) => {
+    const el = e.target
+    el.style.height = 'auto'
+    el.style.height = el.scrollHeight + 'px'
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -51,7 +59,13 @@ export default function FormularioEmail() {
       </label>
       <label className="campo-mensaje">
         Mensaje
-        <textarea name="message" required />
+        <textarea
+          name="message"
+          required
+          ref={textareaRef}
+          onInput={handleInput}
+          style={{ overflow: 'hidden', resize: 'none' }}
+        />
       </label>
       <button type="submit" disabled={estado.cargando}>
         {estado.cargando ? "Enviando..." : "Enviar"}
