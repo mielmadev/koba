@@ -92,3 +92,16 @@ $fecha-svg-sizes: (
     }
   }
 }
+
+// Mixin genérico para max-height responsivo por nivel y breakpoint
+@mixin max-height-niveles($mapa-niveles) {
+  @each $nivel, $alturas in $mapa-niveles {
+    .#{$nivel} .banda-imagen img {
+      @each $bp, $altura in $alturas {
+        @include bp-max($bp) {
+          max-height: $altura;
+        }
+      }
+    }
+  }
+}

@@ -44,6 +44,14 @@ $alturas-redes-sociales: (
   full: 3.5rem
 );
 
+// Alturas máximas por nivel y breakpoint para carteles de bandas
+$altura-max-niveles: (
+  nivel-1: (xs: 80px, s: 96px, m: 112px, tablet: 128px, laptop: 144px, pc: 160px, full: 176px),
+  nivel-2: (xs: 66px, s: 80px, m: 94px, tablet: 108px, laptop: 122px, pc: 136px, full: 150px),
+  nivel-3: (xs: 36px, s: 58px, m: 68px, tablet: 78px, laptop: 88px, pc: 98px, full: 108px),
+  nivel-4: (xs: 28px, s: 44px, m: 52px, tablet: 60px, laptop: 68px, pc: 76px, full: 84px)
+);
+
 // Breakpoints globales
 $bp-xs: 320px; // Extra pequeño (móviles muy pequeños, ej: iPhone SE)
 $bp-s: 375px; // Pequeño (móviles modernos, ej: iPhone X/12/13, Pixel 5)

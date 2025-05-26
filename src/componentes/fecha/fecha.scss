@@ -1,6 +1,7 @@
 @use "@estilos/core.scss" as *;
 
 @keyframes parpadeo {
+
   0%,
   100% {
     opacity: 1;
@@ -12,13 +13,14 @@
 }
 
 @keyframes brillo-metal {
+
   0%,
   100% {
     filter: drop-shadow(0 0 6px $dorado-viejo);
   }
 
   50% {
-    filter: drop-shadow(0 0 16px $amarillo);
+    filter: drop-shadow(0 0 16px $amarillo-mostaza);
   }
 }
 
@@ -62,6 +64,8 @@
     margin-left: 0.2em;
     animation: brillo-metal 3s infinite;
   }
+
+  margin-bottom: 2rem;
 }
 
 @include fecha-svg-separador-sizes;

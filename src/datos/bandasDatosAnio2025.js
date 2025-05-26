@@ -151,7 +151,7 @@ const bandasDatos2025 = [
   },
   {
     // Wolfheart
-    nombre: "Wolfheart ",
+    nombre: "Wolfheart",
     imagen: bandasLogo.wolfhearthLogo,
     spotify: "",
     estilo: "Melodic Death Metal",

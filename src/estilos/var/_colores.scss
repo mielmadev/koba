@@ -29,7 +29,6 @@ $cobre: #b87333;
 // Amarillos y dorados
 $dorado-viejo: #bfa14a;
 $amarillo-mostaza: #bfa43a;
-$amarillo: #eed755;
 
 // Azules
 $azul-medianoche: #191970;
@@ -52,3 +51,16 @@ $blanco-humo: #f5f5f5;
 
 // Colores para formularios y botones
 $formulario-color: $rojo-oxido; // Color de borde y fondo de formularios
+
+// Sombras y transparencias para marrón, gris-plomo, azul-acero, hierro-oscuro
+$marron22: rgba($marron, 0.13); // 22 ~ 13% opacidad
+$marron33: rgba($marron, 0.2); // 33 ~ 20% opacidad
+$marron44: rgba($marron, 0.27); // 44 ~ 27% opacidad
+$marron88: rgba($marron, 0.53); // 88 ~ 53% opacidad
+
+$gris-plomo44: rgba($gris-plomo, 0.27);
+$gris-plomo88: rgba($gris-plomo, 0.53);
+
+$azul-acero88: rgba($azul-acero, 0.53);
+
+$hierro-oscuro88: rgba($hierro-oscuro, 0.53);
