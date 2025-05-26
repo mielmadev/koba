@@ -20,8 +20,14 @@ const GrupoContenido = ({ nombreBanda }) => {
               <img src={banda.imagen} alt={banda.nombre} className="grupo-logo" />
             </div>
             <div className="grupo-encabezado-superior-derecha">
-              <div className="grupo-estilo">{[banda.estilo, banda.anio].filter(Boolean).join(", ")}</div>
-              <div className="grupo-origen">{[banda.origen.pais, banda.origen.provincia, banda.origen.ciudad].filter(Boolean).join(", ")}</div>
+              <div className="grupo-estilo">
+                {[banda.estilo, banda.anio].filter(Boolean).join(", ")}
+              </div>
+              <div className="grupo-origen">
+                {[banda.origen.pais, banda.origen.provincia, banda.origen.ciudad]
+                  .filter(Boolean)
+                  .join(", ")}
+              </div>
             </div>
           </div>
           <div className="grupo-encabezado-inferior">
@@ -34,15 +40,19 @@ const GrupoContenido = ({ nombreBanda }) => {
                   <ul>
                     {Object.entries(banda.integrantes).map(([rol, valor]) => (
                       <li key={rol}>
-                        <span className="integrante-rol">{rol.charAt(0).toUpperCase() + rol.slice(1)}:</span>{" "}
-                        {Array.isArray(valor)
-                          ? valor.map((n, i) => (
+                        <span className="integrante-rol">
+                          {rol.charAt(0).toUpperCase() + rol.slice(1)}:
+                        </span>{" "}
+                        {Array.isArray(valor) ? (
+                          valor.map((n, i) => (
                             <span className="integrante-nombre" key={i}>
                               {n}
                               {i < valor.length - 1 ? " - " : ""}
                             </span>
                           ))
-                          : <span className="integrante-nombre">{valor}</span>}
+                        ) : (
+                          <span className="integrante-nombre">{valor}</span>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -51,7 +61,10 @@ const GrupoContenido = ({ nombreBanda }) => {
                   <strong>Álbumes:</strong>
                   <ul>
                     {albumsOrdenados.map((album, idx) => (
-                      <li key={idx}>{album.nombre}{album.anio ? ` (${album.anio})` : ""}</li>
+                      <li key={idx}>
+                        {album.nombre}
+                        {album.anio ? ` (${album.anio})` : ""}
+                      </li>
                     ))}
                   </ul>
                 </div>

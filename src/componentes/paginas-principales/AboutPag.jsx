@@ -5,11 +5,7 @@ import AboutFondo from "@imagenes/fondos/aboutFondo.webp"
 
 export default function AboutPag() {
   return (
-    <PaginaGenerica
-      Fondo={AboutFondo}
-      fondoAlt="About Fondo"
-      claseFondo="about-fondo"
-    >
+    <PaginaGenerica Fondo={AboutFondo} fondoAlt="About Fondo" claseFondo="about-fondo">
       <AboutContenido />
     </PaginaGenerica>
   )

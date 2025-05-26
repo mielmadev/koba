@@ -5,11 +5,7 @@ import ContactoFondo from "@imagenes/fondos/contactoFondo.webp"
 
 export default function ContactoPag() {
   return (
-    <PaginaGenerica
-      Fondo={ContactoFondo}
-      fondoAlt="Contacto Fondo"
-      claseFondo="contacto-fondo"
-    >
+    <PaginaGenerica Fondo={ContactoFondo} fondoAlt="Contacto Fondo" claseFondo="contacto-fondo">
       <ContactoContenido />
     </PaginaGenerica>
   )

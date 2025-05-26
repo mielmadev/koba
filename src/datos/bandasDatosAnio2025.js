@@ -6,7 +6,8 @@ const bandasDatos2025 = [
     // Asgarth
     nombre: "Asgarth",
     imagen: bandasLogo.asgarthLogo,
-    spotify: "https://open.spotify.com/embed/artist/2bDXRtcRp5hO0JuwV3s8ef?utm_source=generator&theme=0",
+    spotify:
+      "https://open.spotify.com/embed/artist/2bDXRtcRp5hO0JuwV3s8ef?utm_source=generator&theme=0",
     estilo: "Melodic Power Metal",
     origen: { pais: "España", provincia: "Gipuzkoa", ciudad: "Donosti" },
     anio: 1998,
@@ -30,7 +31,8 @@ const bandasDatos2025 = [
     // Before The Dawn
     nombre: "Before The Dawn",
     imagen: bandasLogo.beforeTheDawnLogo,
-    spotify: "https://open.spotify.com/embed/artist/6L77qXFnXb7Tac7xzPa0Y7?utm_source=generator&theme=0",
+    spotify:
+      "https://open.spotify.com/embed/artist/6L77qXFnXb7Tac7xzPa0Y7?utm_source=generator&theme=0",
     estilo: "Melodic Death Metal",
     origen: {
       pais: "Finlandia",
@@ -60,7 +62,8 @@ const bandasDatos2025 = [
     // Eclipse
     nombre: "Eclipse",
     imagen: bandasLogo.eclipseLogo,
-    spotify: "https://open.spotify.com/embed/artist/23ajwxFk5RBpPERZrcjHUr?utm_source=generator&theme=0",
+    spotify:
+      "https://open.spotify.com/embed/artist/23ajwxFk5RBpPERZrcjHUr?utm_source=generator&theme=0",
     estilo: "Melodic Hard Rock",
     origen: { pais: "Suecia", provincia: "Estocolmo", ciudad: "Estocolmo" },
     anio: 1999,
@@ -89,7 +92,8 @@ const bandasDatos2025 = [
     // Ehun Kilo
     nombre: "Ehun Kilo",
     imagen: bandasLogo.ehunKiloLogo,
-    spotify: "https://open.spotify.com/embed/artist/0AIlJpZGwg6GAqrdsIj0iE?utm_source=generator&theme=0",
+    spotify:
+      "https://open.spotify.com/embed/artist/0AIlJpZGwg6GAqrdsIj0iE?utm_source=generator&theme=0",
     estilo: "Melodic Heavy Metal",
     origen: { pais: "España", provincia: "Gipuzkoa", ciudad: "Elgoibar" },
     anio: 1991,
@@ -109,7 +113,8 @@ const bandasDatos2025 = [
     // Moonshinerds
     nombre: "Moonshinerds",
     imagen: bandasLogo.moonshinerdsLogo,
-    spotify: "https://open.spotify.com/embed/artist/4tSXnizAbbfLebhThZ14NX?utm_source=generator&theme=0",
+    spotify:
+      "https://open.spotify.com/embed/artist/4tSXnizAbbfLebhThZ14NX?utm_source=generator&theme=0",
     estilo: "Melodic Hard Rock",
     origen: { pais: "España", provincia: "Bizkaia", ciudad: "Durango" },
     anio: 2009,

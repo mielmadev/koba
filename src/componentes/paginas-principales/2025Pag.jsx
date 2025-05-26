@@ -5,11 +5,7 @@ import VolcanFondo from "@imagenes/fondos/volcanFondo.webp"
 
 export default function InicioPag() {
   return (
-    <PaginaGenerica
-      Fondo={VolcanFondo}
-      fondoAlt="Volcan Fondo"
-      claseFondo="inicio-fondo"
-    >
+    <PaginaGenerica Fondo={VolcanFondo} fondoAlt="Volcan Fondo" claseFondo="inicio-fondo">
       <Contenido2025 />
     </PaginaGenerica>
   )

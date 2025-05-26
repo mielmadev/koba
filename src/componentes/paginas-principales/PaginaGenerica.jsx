@@ -6,9 +6,7 @@ export default function PaginaGenerica({ Fondo, fondoAlt, claseFondo, children }
       <div className={claseFondo}>
         <img src={Fondo} alt={fondoAlt} />
       </div>
-      <div className="contenido-pag">
-        {children}
-      </div>
+      <div className="contenido-pag">{children}</div>
     </div>
   )
 }

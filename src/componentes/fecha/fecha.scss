@@ -1,7 +1,6 @@
 @use "@estilos/core.scss" as *;
 
 @keyframes parpadeo {
-
   0%,
   100% {
     opacity: 1;
@@ -13,7 +12,6 @@
 }
 
 @keyframes brillo-metal {
-
   0%,
   100% {
     filter: drop-shadow(0 0 6px $dorado-viejo);
@@ -37,24 +35,22 @@
     $blanco 0 0 10px,
     $blanco 0 0 20px;
 
-
   .fecha {
-
-    font-size: $fuente-fecha;
-    animation: parpadeo 3s infinite;
-    font-family: 'Metal Mania', 'Russo One', 'Teko', Impact, Arial, sans-serif;
-    letter-spacing: 0.04em;
     display: flex;
     align-items: center;
+    font-family: "Metal Mania", "Russo One", Teko, Impact, Arial, sans-serif;
+    font-size: $fuente-fecha;
+    letter-spacing: 0.04em;
+    animation: parpadeo 3s infinite;
     gap: 0.5em;
   }
 
   .icono-fecha {
-    font-size: 1.2em;
     color: $amarillo-mostaza;
-    filter: drop-shadow(0 0 6px $dorado-viejo);
+    font-size: 1.2em;
     vertical-align: middle;
     transition: transform 0.2s;
+    filter: drop-shadow(0 0 6px $dorado-viejo);
   }
 
   .icono-cuernos {

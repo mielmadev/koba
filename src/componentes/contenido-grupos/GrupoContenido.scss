@@ -23,24 +23,30 @@
       align-items: center;
 
       // Igualar ancho de los tres componentes hijos
-      >* {
+      > * {
         flex: 1 1 0;
         min-width: 0;
       }
 
       @include altura-encabezado-bp($altura-encabezado, height);
 
+      .grupo-encabezado-superior-izquierda,
+      .grupo-encabezado-superior-derecha {
+        flex: 1 1 0;
+        max-width: 50%;
+      }
+
       .grupo-encabezado-superior-izquierda {
         @include pad-gap;
 
         display: flex;
+        flex: 0 0 33%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-
         max-width: 33vw; // Fallback para navegadores que no soportan dvw
         max-width: 33dvw; // Moderno: viewport dinámico
+
         @include altura-encabezado-bp($altura-encabezado, max-height);
 
         img {
@@ -57,9 +63,11 @@
 
       .grupo-encabezado-superior-derecha {
         display: flex;
+        flex: 0 0 66%;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        max-width: 66%;
         font-size: $fuente-grupos-genero;
         line-height: 1.1;
         text-align: center;

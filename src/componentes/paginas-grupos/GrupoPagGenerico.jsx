@@ -19,7 +19,7 @@ const fondos = {
   moonshinerds: moonshinerdsFondo,
   theelectricalley: theElectricAlleyFondo,
   wolfheart: wolfheartFondo,
-  suicidalangels: suicidalAngelsFondo,
+  suicidalangels: suicidalAngelsFondo
 }
 
 export default function GrupoPagGenerico() {
