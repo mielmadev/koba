@@ -31,12 +31,6 @@ const PAGES_LAZY = [
     path: "/contacto",
     label: "Contacto",
     component: lazy(() => import("@paginas-principales/ContactoPag"))
-  },
-  {
-    key: "BANDAS",
-    path: "/bandas",
-    label: "Bandas",
-    component: lazy(() => import("@paginas-principales/BandasPag"))
   }
 ]
 
