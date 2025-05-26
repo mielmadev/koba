@@ -1,4 +1,0 @@
-Estos archivos pueden eliminarse si solo se usaban en GrupoEncabezado.jsx:
-- src/componentes/mapeos/GrupoIntegrantesMapeo.jsx
-- src/componentes/mapeos/GrupoAlbumsMapeo.jsx
-Revisar si se usan en otros componentes antes de borrar definitivamente.

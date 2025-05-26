@@ -1,2 +1,0 @@
-Eliminados por integración de encabezado en GrupoContenido.jsx:
-- src/componentes/contenido-grupos/GrupoEncabezado.jsx

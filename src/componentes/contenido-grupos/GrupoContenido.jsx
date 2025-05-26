@@ -1,5 +1,6 @@
 import React from "react"
 import bandasDatos2025 from "@datos/bandasDatosAnio2025"
+import obtenerLineas from "@componentes/utils/obtenerLineas"
 import "./GrupoContenido.scss"
 
 // Este componente recibe el nombre de la banda por prop o por parámetro de ruta
@@ -27,7 +28,7 @@ const GrupoContenido = ({ nombreBanda }) => {
           <div className="grupo-encabezado-inferior">
             <div className="grupo-encabezado-inferior-izquierda"></div>
             <div className="grupo-encabezado-resumen">
-              <div className="grupo-resumen">{banda.resumen}</div>
+              <div className="grupo-resumen">{obtenerLineas(banda.resumen)}</div>
               <div className="grupo-integrantes-albums">
                 {/* Integrantes */}
                 <div className="grupo-integrantes">
