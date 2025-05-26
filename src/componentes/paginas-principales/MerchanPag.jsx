@@ -1,13 +1,15 @@
 import React from "react"
+import PaginaGenerica from "./PaginaGenerica"
 import MerchanFondo from "@imagenes/fondos/merchanFondo.webp"
 
 export default function MerchanPag() {
   return (
-    <div className="contenedor-pag">
-      <div className="merchan-fondo">
-        <img src={MerchanFondo} alt="Merchan Fondo" />
-      </div>
-      <div className="contenido-pag">merchan</div>
-    </div>
+    <PaginaGenerica
+      Fondo={MerchanFondo}
+      fondoAlt="Merchan Fondo"
+      claseFondo="merchan-fondo"
+    >
+      {/* Aquí irá el componente de contenido de Merchan más adelante */}
+    </PaginaGenerica>
   )
 }

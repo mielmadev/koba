@@ -1,16 +1,16 @@
 import React from "react"
+import PaginaGenerica from "./PaginaGenerica"
 import AboutContenido from "@contenido-paginas/about-contenido/AboutContenido"
 import AboutFondo from "@imagenes/fondos/aboutFondo.webp"
 
 export default function AboutPag() {
   return (
-    <div className="contenedor-pag">
-      <div className="about-fondo">
-        <img src={AboutFondo} alt="About Fondo" />
-      </div>
-      <div className="contenido-pag">
-        <AboutContenido />
-      </div>
-    </div>
+    <PaginaGenerica
+      Fondo={AboutFondo}
+      fondoAlt="About Fondo"
+      claseFondo="about-fondo"
+    >
+      <AboutContenido />
+    </PaginaGenerica>
   )
 }

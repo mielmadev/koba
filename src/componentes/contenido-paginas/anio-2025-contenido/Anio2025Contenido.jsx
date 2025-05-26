@@ -1,6 +1,5 @@
 import React from "react"
 import bandasDatos2025 from "@datos/bandasDatosAnio2025"
-import BandasImagenesMapeo from "@mapeos/BandasImagenesMapeo"
 import "./anio2025Contenido.scss"
 
 // Orden por importancia (headliner primero, luego co-headliners, luego resto)
@@ -17,7 +16,18 @@ const bandasCartel2025 = [
 const Contenido2025 = () => {
   return (
     <div className="contenido-2025">
-      <BandasImagenesMapeo bandas={bandasCartel2025} />
+      {bandasCartel2025.map(({ nombre, imagen }) => (
+        <div key={nombre} className="banda-imagen">
+          {imagen && (
+            <a href={`/bandas/${nombre.toLowerCase().replace(/\s+/g, "")}`}
+              tabIndex={0}
+              aria-label={`Ver página de ${nombre}`}
+            >
+              <img src={imagen} alt={nombre} loading="lazy" />
+            </a>
+          )}
+        </div>
+      ))}
     </div>
   )
 }

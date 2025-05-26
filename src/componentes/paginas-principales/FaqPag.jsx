@@ -1,16 +1,16 @@
 import React from "react"
-import FaqFondo from "@imagenes/fondos/faqFondo.webp"
+import PaginaGenerica from "./PaginaGenerica"
 import FAQ from "@contenido-paginas/faq-contenido/FaqContenido"
+import FaqFondo from "@imagenes/fondos/faqFondo.webp"
 
 export default function FaqPag() {
   return (
-    <div className="contenedor-pag">
-      <div className="faq-fondo">
-        <img src={FaqFondo} alt="Faq Fondo" />
-      </div>
-      <div className="contenido-pag">
-        <FAQ />
-      </div>
-    </div>
+    <PaginaGenerica
+      Fondo={FaqFondo}
+      fondoAlt="Faq Fondo"
+      claseFondo="faq-fondo"
+    >
+      <FAQ />
+    </PaginaGenerica>
   )
 }

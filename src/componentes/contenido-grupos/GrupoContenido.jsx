@@ -15,7 +15,6 @@ const GrupoContenido = ({ nombreBanda }) => {
     <div className="contenido">
       <div className="grupo-contenido">
         <div className="grupo-encabezado">
-          {/* Encabezado de la banda */}
           <div className="grupo-encabezado-superior">
             <div className="grupo-encabezado-superior-izquierda">
               <img src={banda.imagen} alt={banda.nombre} className="grupo-logo" />
@@ -30,18 +29,24 @@ const GrupoContenido = ({ nombreBanda }) => {
             <div className="grupo-encabezado-resumen">
               <div className="grupo-resumen">{obtenerLineas(banda.resumen)}</div>
               <div className="grupo-integrantes-albums">
-                {/* Integrantes */}
                 <div className="grupo-integrantes">
                   <strong>Integrantes:</strong>
                   <ul>
                     {Object.entries(banda.integrantes).map(([rol, valor]) => (
                       <li key={rol}>
-                        <span style={{ textTransform: "capitalize" }}>{rol}:</span> {Array.isArray(valor) ? valor.join(", ") : valor}
+                        <span className="integrante-rol">{rol.charAt(0).toUpperCase() + rol.slice(1)}:</span>{" "}
+                        {Array.isArray(valor)
+                          ? valor.map((n, i) => (
+                            <span className="integrante-nombre" key={i}>
+                              {n}
+                              {i < valor.length - 1 ? " - " : ""}
+                            </span>
+                          ))
+                          : <span className="integrante-nombre">{valor}</span>}
                       </li>
                     ))}
                   </ul>
                 </div>
-                {/* Álbumes */}
                 <div className="grupo-albums">
                   <strong>Álbumes:</strong>
                   <ul>
@@ -54,6 +59,7 @@ const GrupoContenido = ({ nombreBanda }) => {
             </div>
           </div>
         </div>
+        {/* Pie de grupo */}
         <div className="grupo-pie">
           <iframe
             className="grupo-reproductor"
