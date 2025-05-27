@@ -44,7 +44,6 @@
       .banda-imagen {
         height: clamp(7rem, 15vw, 12rem);
         max-height: 12rem;
-        filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.55));
         z-index: 4;
       }
     }
@@ -53,7 +52,6 @@
       .banda-imagen {
         height: clamp(5rem, 10vw, 8.5rem);
         max-height: 8.5rem;
-        filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.38));
         z-index: 3;
       }
     }
@@ -63,7 +61,6 @@
       .banda-imagen {
         height: clamp(3.2rem, 7vw, 5.5rem);
         max-height: 5.5rem;
-        filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.25));
         z-index: 2;
       }
 
@@ -77,7 +74,6 @@
       .banda-imagen {
         height: clamp(1.7rem, 4vw, 3rem);
         max-height: 3rem;
-        filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.15));
         z-index: 1;
       }
     }
@@ -108,6 +104,23 @@
           @include tamanio-completo;
         }
       }
+    }
+
+    // Sombra roja fuerte para todas las imágenes de logos
+    .nivel-1 .banda-imagen {
+      filter: drop-shadow(0 2px 8px $granate); // sombra roja
+    }
+
+    .nivel-2 .banda-imagen {
+      filter: drop-shadow(0 2px 8px $verde-musgo); // sombra verde
+    }
+
+    .nivel-3 .banda-imagen {
+      filter: drop-shadow(0 2px 8px $cian-profundo); // sombra azul
+    }
+
+    .nivel-4 .banda-imagen {
+      filter: drop-shadow(0 2px 8px $cobre); // sombra naranja
     }
   }
 }
