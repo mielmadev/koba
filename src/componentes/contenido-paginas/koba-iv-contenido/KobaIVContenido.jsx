@@ -8,9 +8,9 @@ import { bandasLogo } from "@imagenes/imagenes"
 const bandasCartel = [
   { nombre: "Eclipse", imagen: bandasLogo.eclipseLogo, link: "/bandas/eclipse" },
   { nombre: "Wolfheart", imagen: bandasLogo.wolfheartLogo, link: "/bandas/wolfheart" },
-  { nombre: "Before The Dawn", imagen: bandasLogo.beforeTheDawnLogo, link: "/bandas/beforethedawn" },
-  { nombre: "Ehun Kilo", imagen: bandasLogo.ehunKiloLogo, link: "/bandas/ehunkilo" },
   { nombre: "Asgarth", imagen: bandasLogo.asgarthLogo, link: "/bandas/asgarth" },
+  { nombre: "Ehun Kilo", imagen: bandasLogo.ehunKiloLogo, link: "/bandas/ehunkilo" },
+  { nombre: "Before The Dawn", imagen: bandasLogo.beforeTheDawnLogo, link: "/bandas/beforethedawn" },
   { nombre: "The Electric Alley", imagen: bandasLogo.theElectricAlleyLogo, link: "/bandas/theelectricalley" },
   { nombre: "Moonshinerds", imagen: bandasLogo.moonshinerdsLogo, link: "/bandas/moonshinerds" },
 ]
@@ -39,9 +39,9 @@ const KobaIVContenido = () => {
         </div>
         <div className="nivel-2">
           <Banda {...bandasCartel[1]} />
-          <Banda {...bandasCartel[2]} />
         </div>
         <div className="nivel-3">
+          <Banda {...bandasCartel[2]} />
           <Banda {...bandasCartel[3]} />
           <Banda {...bandasCartel[4]} />
         </div>

@@ -9,18 +9,84 @@
   .cartel-koba {
     @include pad-gap;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     overflow: visible;
     width: 100%;
     justify-content: center;
 
-    .banda-contenedor {
+    // Cada nivel de banda en el cartel
+    .nivel-1,
+    .nivel-2,
+    .nivel-3,
+    .nivel-4 {
       @include pad-gap;
+      gap: 5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+      width: 100%;
+
+      &>.banda-contenedor {
+        flex: 0 1 auto;
+        min-width: 0;
+        max-width: 100%;
+      }
+
+      .banda-imagen {
+        width: auto;
+        object-fit: contain;
+      }
+    }
+
+    .nivel-1 {
+      .banda-imagen {
+        height: clamp(7rem, 15vw, 12rem);
+        max-height: 12rem;
+        filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.55));
+        z-index: 4;
+      }
+    }
+
+    .nivel-2 {
+      .banda-imagen {
+        height: clamp(5rem, 10vw, 8.5rem);
+        max-height: 8.5rem;
+        filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.38));
+        z-index: 3;
+      }
+    }
+
+    .nivel-3 {
+
+      .banda-imagen {
+        height: clamp(3.2rem, 7vw, 5.5rem);
+        max-height: 5.5rem;
+        filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.25));
+        z-index: 2;
+      }
+
+      >.banda-contenedor {
+        max-width: 30%;
+      }
+    }
+
+    .nivel-4 {
+
+      .banda-imagen {
+        height: clamp(1.7rem, 4vw, 3rem);
+        max-height: 3rem;
+        filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.15));
+        z-index: 1;
+      }
+    }
+
+    .banda-contenedor {
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: visible; // Permite sobresalir por defecto
+      overflow: visible;
       position: relative;
 
       .banda-link {
@@ -35,13 +101,11 @@
         &:focus {
           transform: scale(1.15);
           z-index: 10;
-          // Permite sobresalir del contenedor
           filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.25));
         }
 
         .banda-imagen {
           @include tamanio-completo;
-          object-fit: contain;
         }
       }
     }
