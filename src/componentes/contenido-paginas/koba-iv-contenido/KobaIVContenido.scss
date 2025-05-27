@@ -9,70 +9,50 @@
   .cartel-koba {
     @include pad-gap;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     overflow: visible;
-    width: 100%; // Evita desbordamiento horizontal
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
 
-    .banda-contenedor {
-      @include pad-gap;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      flex: 1 1 0;
-      min-width: 0; // Permite que los hijos se reduzcan y no generen scroll
+  }
 
-    }
+  .banda-contenedor {
+    @include pad-gap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex: 0 1 220px;
+    min-width: 180px;
+    min-height: 180px;
+    max-width: 240px;
+    max-height: 240px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 
-    .banda-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  }
 
-      &:hover,
-      &:focus {
-        transform: scale(1.15);
-      }
-    }
+  .banda-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .banda-imagen {
-      @include bordes;
-      @include tamanio-completo;
-      object-fit: contain;
-      display: block;
+    &:hover,
+    &:focus {
+      transform: scale(1.15);
     }
   }
 
-  // Altura dinámica de los contenedores de logo de banda por nivel y breakpoint
-  @include altura-logo-banda-por-nivel($logo-altura, 4);
-}
+  .banda-imagen {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+  }
 
-.nivel-1,
-.nivel-2,
-.nivel-3,
-.nivel-4 {
-  @include bordes;
-  width: 100%; // Evita desbordamiento horizontal
-  display: flex;
-  flex-direction: row;
-}
-
-.nivel-1 {
-  // Estilos específicos para el nivel 1
-  background: #ffe066;
-}
-
-.nivel-2 {
-  // Estilos específicos para el nivel 2
-  background: #fabada;
-}
-
-.nivel-3 {
-  // Estilos específicos para el nivel 3
-  background: #b2f2ff;
-}
-
-.nivel-4 {
-  // Estilos específicos para el nivel 4
-  background: #d0bfff;
+  // Eliminados estilos de niveles
 }
