@@ -3,101 +3,76 @@
 
 .koba-iv-contenido {
   overflow-y: auto;
+  overflow-x: hidden;
   @include altura-contenido-bp($altura-encabezado);
 
   .cartel-koba {
+    @include pad-gap;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    width: 100%;
+    flex-direction: column;
     overflow: visible;
+    width: 100%; // Evita desbordamiento horizontal
 
-    .banda-imagen {
+    .banda-contenedor {
+      @include pad-gap;
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: visible;
+      overflow: hidden;
+      flex: 1 1 0;
+      min-width: 0; // Permite que los hijos se reduzcan y no generen scroll
 
-      .banda-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    }
 
-        &:hover,
-        &:focus {
-          transform: scale(1.15);
-        }
+    .banda-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover,
+      &:focus {
+        transform: scale(1.15);
       }
+    }
 
-      .banda-img {
-        @include tamanio-completo;
-        object-fit: contain;
-      }
+    .banda-imagen {
+      @include bordes;
+      @include tamanio-completo;
+      object-fit: contain;
+      display: block;
     }
   }
 
-  .nivel {
-    @include bordes;
-    @include pad-gap;
+  // Altura dinámica de los contenedores de logo de banda por nivel y breakpoint
+  @include altura-logo-banda-por-nivel($logo-altura, 4);
+}
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
+.nivel-1,
+.nivel-2,
+.nivel-3,
+.nivel-4 {
+  @include bordes;
+  width: 100%; // Evita desbordamiento horizontal
+  display: flex;
+  flex-direction: row;
+}
 
-    // Llama al mixin sin argumentos, ya que ahora recorre todos los breakpoints internamente
-    @include logo-altura;
+.nivel-1 {
+  // Estilos específicos para el nivel 1
+  background: #ffe066;
+}
 
-    @include bp-max(xs) {
-      flex-direction: column;
-      min-height: 100%;
-      gap: 0.35rem;
-      width: 100vw;
-      max-width: 100vw;
-      overflow-x: hidden;
-      box-sizing: border-box;
-      padding-left: 0;
-      padding-right: 0;
-      margin-left: 0;
-      margin-right: 0;
+.nivel-2 {
+  // Estilos específicos para el nivel 2
+  background: #fabada;
+}
 
-      .banda-imagen {
-        flex: 1 1 0;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        max-width: 90vw;
-        margin-left: auto;
-        margin-right: auto;
+.nivel-3 {
+  // Estilos específicos para el nivel 3
+  background: #b2f2ff;
+}
 
-        .banda-img {
-          height: 100%;
-          width: auto;
-          object-fit: contain;
-        }
-      }
-    }
-  }
-
-  .nivel-3 {
-    @include bp-max(xs) {
-      .banda-imagen[data-nombre="Before The Dawn"] {
-        .banda-img {
-          width: 95%;
-          max-width: 95%;
-          height: auto;
-          max-height: 100%;
-          object-fit: contain;
-          margin-left: auto;
-          margin-right: auto;
-          display: block;
-        }
-      }
-    }
-  }
-
-  @include banda-imagen-especial;
+.nivel-4 {
+  // Estilos específicos para el nivel 4
+  background: #d0bfff;
 }

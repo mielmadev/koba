@@ -94,50 +94,46 @@ $fecha-svg-sizes: (
   }
 }
 
-// Mixin para obtener el valor de base y step según el bp para los logos
-@mixin logo-altura {
-  @each $bp, $valores in $logo-altura {
-    $base: map.get($valores, base);
-    $step: map.get($valores, step);
+// Uso: @include altura-logo-banda-por-nivel($logo-altura, 4);
+@mixin altura-logo-banda-por-nivel($mapa: $logo-altura, $niveles: 4) {
+  @each $bp, $valores in $mapa {
+    // 1. Extrae el valor base y el step para el breakpoint actual
+    $base: map.get($valores, base); // Altura base para el nivel 1
+    $step: map.get($valores, step); // Cuánto disminuye la altura por cada nivel
 
-    @for $i from 1 through 4 {
-      &-#{$i} {
-        .banda-imagen {
-          @if $bp ==xs {
-            height: calc(#{$base} - #{$step} * ($i - 1));
-          }
-
-          @else {
-            @include bp($bp) {
-              height: calc(#{$base} - #{$step} * ($i - 1));
-            }
-          }
-
-          max-width: 33%;
-        }
-
-        .banda-img {
-          @include tamanio-completo;
-        }
-      }
-    }
-  }
-}
-
-@mixin banda-imagen-especial {
-  .banda-imagen.banda-imagen-especial {
-    @each $bp, $valores in $logo-altura {
-      $base: map.get($valores, base);
-      $step: map.get($valores, step);
-      $altura-especial: calc(#{$base} + #{$step} / 3);
+    @for $nivel from 1 through $niveles {
+      // 2. Calcula la altura para el nivel actual
+      $altura: calc(#{$base} - #{$step} * ($nivel - 1));
+      // 3. Selector para el nivel y el contenedor de la banda
+      $selector: ".nivel-#{$nivel} .banda-contenedor";
 
       @if $bp ==xs {
-        height: $altura-especial !important;
+
+        // 4. Para xs (sin media query): aplica la altura directamente
+        #{$selector} {
+          height: #{$altura};
+          display: flex; // Hace que los hijos se distribuyan en línea
+
+          >* {
+            flex: 1 1 0; // Cada hijo ocupa el mismo ancho
+            min-width: 0; // Evita desbordamientos
+          }
+        }
       }
 
       @else {
+
+        // 4. Para otros breakpoints: aplica la altura dentro de la media query
         @include bp($bp) {
-          height: $altura-especial !important;
+          #{$selector} {
+            height: #{$altura};
+            display: flex;
+
+            >* {
+              flex: 1 1 0;
+              min-width: 0;
+            }
+          }
         }
       }
     }

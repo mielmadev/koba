@@ -9,7 +9,7 @@ const bandasCartel2025 = [
   { ...bandasDatos2025.find((b) => b.nombre === "Eclipse"), nivel: 1 },
   { ...bandasDatos2025.find((b) => b.nombre === "Wolfheart"), nivel: 2 },
   { ...bandasDatos2025.find((b) => b.nombre === "Before The Dawn"), nivel: 3 },
-  { ...bandasDatos2025.find((b) => b.nombre === "Ehun Kilo"), nivel: 3, especial: true },
+  { ...bandasDatos2025.find((b) => b.nombre === "Ehun Kilo"), nivel: 3 },
   { ...bandasDatos2025.find((b) => b.nombre === "Asgarth"), nivel: 3 },
   { ...bandasDatos2025.find((b) => b.nombre === "Moonshinerds"), nivel: 4 },
   { ...bandasDatos2025.find((b) => b.nombre === "The Electric Alley"), nivel: 4 },
@@ -20,16 +20,16 @@ const BandasNivel = ({ bandas, nivel }) => {
   if (!bandas.length) return null;
   return (
     <div className={`nivel nivel-${nivel}`}>
-      {bandas.map(({ nombre, imagen, especial }) => (
+      {bandas.map(({ nombre, imagen }) => (
         imagen ? (
-          <div key={nombre} className={`banda-imagen${especial ? ' banda-imagen-especial' : ''}`} data-nombre={nombre}>
+          <div key={nombre} className="banda-contenedor" data-nombre={nombre}>
             <Link
               to={`/bandas/${nombre.toLowerCase().replace(/\s+/g, "")}`}
               tabIndex={0}
               aria-label={`Ver página de ${nombre}`}
               className="banda-link"
             >
-              <img src={imagen} alt={nombre} loading="lazy" className="banda-img" />
+              <img src={imagen} alt={nombre} loading="lazy" className="banda-imagen" />
             </Link>
           </div>
         ) : null
@@ -51,7 +51,22 @@ const KobaIVContenido = () => {
       <Fecha />
       <div className="cartel-koba">
         {bandasPorNivel.map(({ nivel, bandas }) => (
-          <BandasNivel key={nivel} bandas={bandas} nivel={nivel} />
+          <div key={nivel} className={`nivel nivel-${nivel}`}>
+            {bandas.map(({ nombre, imagen }) => (
+              imagen ? (
+                <div key={nombre} className="banda-contenedor" data-nombre={nombre}>
+                  <Link
+                    to={`/bandas/${nombre.toLowerCase().replace(/\s+/g, "")}`}
+                    tabIndex={0}
+                    aria-label={`Ver página de ${nombre}`}
+                    className="banda-link"
+                  >
+                    <img src={imagen} alt={nombre} loading="lazy" className="banda-imagen" />
+                  </Link>
+                </div>
+              ) : null
+            ))}
+          </div>
         ))}
       </div>
     </div>
