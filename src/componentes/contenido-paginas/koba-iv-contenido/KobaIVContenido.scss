@@ -15,7 +15,7 @@
     width: 100%;
     justify-content: center;
 
-    // Cada nivel de banda en el cartel
+    // General para todos los niveles
     .nivel-1,
     .nivel-2,
     .nivel-3,
@@ -28,7 +28,7 @@
       align-items: flex-end;
       width: 100%;
 
-      &>.banda-contenedor {
+      & > .banda-contenedor {
         flex: 0 1 auto;
         min-width: 0;
         max-width: 100%;
@@ -40,11 +40,13 @@
       }
     }
 
+    // Específico por nivel
     .nivel-1 {
       .banda-imagen {
         height: clamp(7rem, 15vw, 12rem);
         max-height: 12rem;
         z-index: 4;
+        filter: drop-shadow(0 2px 8px $granate); // sombra roja
       }
     }
 
@@ -53,28 +55,29 @@
         height: clamp(5rem, 10vw, 8.5rem);
         max-height: 8.5rem;
         z-index: 3;
+        filter: drop-shadow(0 2px 8px $verde-musgo); // sombra verde
       }
     }
 
     .nivel-3 {
-
       .banda-imagen {
         height: clamp(3.2rem, 7vw, 5.5rem);
         max-height: 5.5rem;
         z-index: 2;
+        filter: drop-shadow(0 2px 8px $cian-profundo); // sombra azul
       }
 
-      >.banda-contenedor {
+      > .banda-contenedor {
         max-width: 30%;
       }
     }
 
     .nivel-4 {
-
       .banda-imagen {
         height: clamp(1.7rem, 4vw, 3rem);
         max-height: 3rem;
         z-index: 1;
+        filter: drop-shadow(0 2px 8px $cobre); // sombra naranja
       }
     }
 
@@ -104,23 +107,6 @@
           @include tamanio-completo;
         }
       }
-    }
-
-    // Sombra roja fuerte para todas las imágenes de logos
-    .nivel-1 .banda-imagen {
-      filter: drop-shadow(0 2px 8px $granate); // sombra roja
-    }
-
-    .nivel-2 .banda-imagen {
-      filter: drop-shadow(0 2px 8px $verde-musgo); // sombra verde
-    }
-
-    .nivel-3 .banda-imagen {
-      filter: drop-shadow(0 2px 8px $cian-profundo); // sombra azul
-    }
-
-    .nivel-4 .banda-imagen {
-      filter: drop-shadow(0 2px 8px $cobre); // sombra naranja
     }
   }
 }
