@@ -152,7 +152,7 @@ const bandasDatos2025 = [
   {
     // Wolfheart
     nombre: "Wolfheart",
-    imagen: bandasLogo.wolfhearthLogo,
+    imagen: bandasLogo.wolfheartLogo,
     spotify: "",
     estilo: "Melodic Death Metal",
     origen: { pais: "Finlandia", provincia: "Päijät-Häme", ciudad: "Lahti" },

@@ -4,7 +4,7 @@ import eclipseLogo from "@imagenes/bandas/eclipse-logo.webp"
 import ehunKiloLogo from "@imagenes/bandas/ehun-kilo-logo.webp"
 import moonshinerdsLogo from "@imagenes/bandas/moonshinerds-logo.webp"
 import theElectricAlleyLogo from "@imagenes/bandas/the-electric-alley-logo.webp"
-import wolfhearthLogo from "@imagenes/bandas/wolfhearth-logo.webp"
+import wolfheartLogo from "@imagenes/bandas/wolfheart-logo.webp"
 
 export const bandasLogo = {
   asgarthLogo,
@@ -13,5 +13,5 @@ export const bandasLogo = {
   ehunKiloLogo,
   moonshinerdsLogo,
   theElectricAlleyLogo,
-  wolfhearthLogo
+  wolfheartLogo
 }
