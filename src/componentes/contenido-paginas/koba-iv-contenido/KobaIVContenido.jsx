@@ -10,20 +10,23 @@ const bandasCartel = [
   { nombre: "Wolfheart", imagen: bandasLogo.wolfheartLogo, link: "/bandas/wolfheart" },
   { nombre: "Asgarth", imagen: bandasLogo.asgarthLogo, link: "/bandas/asgarth" },
   { nombre: "Ehun Kilo", imagen: bandasLogo.ehunKiloLogo, link: "/bandas/ehunkilo" },
-  { nombre: "Before The Dawn", imagen: bandasLogo.beforeTheDawnLogo, link: "/bandas/beforethedawn" },
-  { nombre: "The Electric Alley", imagen: bandasLogo.theElectricAlleyLogo, link: "/bandas/theelectricalley" },
-  { nombre: "Moonshinerds", imagen: bandasLogo.moonshinerdsLogo, link: "/bandas/moonshinerds" },
+  {
+    nombre: "Before The Dawn",
+    imagen: bandasLogo.beforeTheDawnLogo,
+    link: "/bandas/beforethedawn"
+  },
+  {
+    nombre: "The Electric Alley",
+    imagen: bandasLogo.theElectricAlleyLogo,
+    link: "/bandas/theelectricalley"
+  },
+  { nombre: "Moonshinerds", imagen: bandasLogo.moonshinerdsLogo, link: "/bandas/moonshinerds" }
 ]
 
 // Componente reutilizable para mostrar una banda por nombre
 const Banda = ({ nombre, imagen, link }) => (
   <div className="banda-contenedor" data-nombre={nombre}>
-    <Link
-      to={link}
-      tabIndex={0}
-      aria-label={`Ver página de ${nombre}`}
-      className="banda-link"
-    >
+    <Link to={link} tabIndex={0} aria-label={`Ver página de ${nombre}`} className="banda-link">
       <img src={imagen} alt={nombre} loading="lazy" className="banda-imagen" />
     </Link>
   </div>

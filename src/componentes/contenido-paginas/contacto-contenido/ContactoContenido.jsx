@@ -15,7 +15,7 @@ export default function ContactoContenido() {
             icono={EmailIcono}
             titulo="Email"
             texto="info@koba-live.com"
-            tipo="email" 
+            tipo="email"
           />
           <TarjetaContacto
             icono={WhatsappIcono}

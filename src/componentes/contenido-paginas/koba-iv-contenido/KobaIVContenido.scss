@@ -1,19 +1,49 @@
 @use "@estilos/core.scss" as *;
 
-
 .koba-iv-contenido {
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden auto;
+
   @include altura-contenido-bp($altura-encabezado);
 
   .cartel-koba {
     @include pad-gap;
+
     display: flex;
     flex-direction: column;
-    align-items: center;
-    overflow: visible;
-    width: 100%;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: visible;
+
+    .banda-contenedor {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+
+      .banda-link {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition:
+          transform 0.2s,
+          z-index 0s;
+
+        &:hover,
+        &:focus {
+          z-index: 10;
+          transform: scale(1.15);
+          filter: drop-shadow(0 2px 12px rgb(0 0 0 / 25%));
+        }
+
+        .banda-imagen {
+          @include tamanio-completo;
+        }
+      }
+    }
 
     // General para todos los niveles
     .nivel-1,
@@ -21,12 +51,13 @@
     .nivel-3,
     .nivel-4 {
       @include pad-gap;
-      gap: 5rem;
+
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: flex-end;
       width: 100%;
+      gap: 5rem;
 
       & > .banda-contenedor {
         flex: 0 1 auto;
@@ -43,27 +74,27 @@
     // Específico por nivel
     .nivel-1 {
       .banda-imagen {
+        z-index: 4;
         height: clamp(7rem, 15vw, 12rem);
         max-height: 12rem;
-        z-index: 4;
         filter: drop-shadow(0 2px 8px $granate); // sombra roja
       }
     }
 
     .nivel-2 {
       .banda-imagen {
+        z-index: 3;
         height: clamp(5rem, 10vw, 8.5rem);
         max-height: 8.5rem;
-        z-index: 3;
         filter: drop-shadow(0 2px 8px $verde-musgo); // sombra verde
       }
     }
 
     .nivel-3 {
       .banda-imagen {
+        z-index: 2;
         height: clamp(3.2rem, 7vw, 5.5rem);
         max-height: 5.5rem;
-        z-index: 2;
         filter: drop-shadow(0 2px 8px $cian-profundo); // sombra azul
       }
 
@@ -74,38 +105,10 @@
 
     .nivel-4 {
       .banda-imagen {
+        z-index: 1;
         height: clamp(1.7rem, 4vw, 3rem);
         max-height: 3rem;
-        z-index: 1;
         filter: drop-shadow(0 2px 8px $cobre); // sombra naranja
-      }
-    }
-
-    .banda-contenedor {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: visible;
-      position: relative;
-
-      .banda-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        z-index: 1;
-        transition: transform 0.2s, z-index 0s;
-
-        &:hover,
-        &:focus {
-          transform: scale(1.15);
-          z-index: 10;
-          filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.25));
-        }
-
-        .banda-imagen {
-          @include tamanio-completo;
-        }
       }
     }
   }

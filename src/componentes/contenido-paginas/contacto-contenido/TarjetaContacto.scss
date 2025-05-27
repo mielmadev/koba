@@ -3,19 +3,36 @@
 @use "@estilos/core.scss" as *;
 
 // Mapa de colores para tarjetas de contacto (redes sociales + variantes propias)
-$tarjetas-contacto: map.merge((default: $blanco), $iconos-redes);
+$tarjetas-contacto: map.merge(
+  (
+    default: $blanco
+  ),
+  $iconos-redes
+);
 
 // Mixin para estilos visuales de la tarjeta
 @mixin tarjeta-contacto-estilos($color) {
   border-color: $color;
   background: linear-gradient(135deg, transparent 80%, rgba($color, 0.7) 100%);
-  box-shadow:
-    0 4px 24px 0 rgba($color, 0.25),
-    0 1.5px 0 0 $color inset;
   transition:
     box-shadow 0.15s,
     border-color 0.15s,
     background 0.15s;
+  box-shadow:
+    0 4px 24px 0 rgba($color, 0.25),
+    0 1.5px 0 0 $color inset;
+
+  .icono-contacto {
+    color: $color;
+    transition: filter 0.15s;
+    filter: none;
+  }
+
+  .info-contacto .titulo-contacto {
+    color: $color;
+    text-shadow: none;
+    transition: text-shadow 0.15s;
+  }
 
   &:hover {
     border-color: color.adjust($color, $lightness: 10%);
@@ -34,30 +51,19 @@ $tarjetas-contacto: map.merge((default: $blanco), $iconos-redes);
         1px 1px 2px $negro;
     }
   }
-
-  .icono-contacto {
-    color: $color;
-    filter: none;
-    transition: filter 0.15s;
-  }
-
-  .info-contacto .titulo-contacto {
-    color: $color;
-    text-shadow: none;
-    transition: text-shadow 0.15s;
-  }
 }
 
 .tarjeta-contacto {
   @include pad-gap;
+
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
   border-radius: 6px 24px;
+  color: $blanco;
   font-family: Oswald, "Bebas Neue", Impact, sans-serif;
   letter-spacing: 0.03em;
-  color: $blanco;
   transition: transform 0.15s;
 
   // Variantes de color

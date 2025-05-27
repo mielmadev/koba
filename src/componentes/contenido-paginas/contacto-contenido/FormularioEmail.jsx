@@ -20,8 +20,8 @@ export default function FormularioEmail() {
   // Ajusta la altura del textarea automáticamente
   const handleInput = (e) => {
     const el = e.target
-    el.style.height = 'auto'
-    el.style.height = el.scrollHeight + 'px'
+    el.style.height = "auto"
+    el.style.height = el.scrollHeight + "px"
   }
 
   const handleSubmit = (e) => {
@@ -64,7 +64,7 @@ export default function FormularioEmail() {
           required
           ref={textareaRef}
           onInput={handleInput}
-          style={{ overflow: 'hidden', resize: 'none' }}
+          style={{ overflow: "hidden", resize: "none" }}
         />
       </label>
       <button type="submit" disabled={estado.cargando}>

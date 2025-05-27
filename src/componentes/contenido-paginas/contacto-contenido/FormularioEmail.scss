@@ -9,9 +9,9 @@
   align-items: center;
   height: auto;
   min-height: 0;
+  margin-bottom: 0.7rem;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
-  margin-bottom: 0.7rem;
   border: 2.5px solid $formulario-color;
   border-radius: 8px 32px;
   background: transparent;
@@ -37,10 +37,10 @@
     width: 100%;
     margin-bottom: 0.3em;
     color: $formulario-color;
+    font-size: 1.05rem;
     font-weight: bold;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    font-size: 1.05rem;
 
     // Sombra solo en hover
     &:hover {
@@ -51,12 +51,12 @@
   }
 
   textarea {
+    height: auto;
     min-height: 32px;
     max-height: 160px;
-    height: auto;
+    font-size: 1.08rem;
     overflow-y: auto;
     resize: none;
-    font-size: 1.08rem;
   }
 
   input,
@@ -109,7 +109,11 @@
 
     &:hover {
       border-color: color.adjust($formulario-color, $lightness: 10%);
-      background: linear-gradient(120deg, color.adjust($formulario-color, $lightness: 10%) 70%, $negro 100%);
+      background: linear-gradient(
+        120deg,
+        color.adjust($formulario-color, $lightness: 10%) 70%,
+        $negro 100%
+      );
       transform: scale(1.05) rotate(-2deg);
       box-shadow: 0 4px 16px 0 rgba($formulario-color, 0.35);
     }
@@ -195,7 +199,8 @@
   }
 
   .error {
-    @include mensaje-destacado($formulario-color,
+    @include mensaje-destacado(
+      $formulario-color,
       rgba($formulario-color, 0.08),
       $formulario-color,
       $formulario-color,
