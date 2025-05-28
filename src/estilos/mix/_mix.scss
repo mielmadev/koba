@@ -67,3 +67,10 @@
     url("@imagenes/cursor/cursor-pua-negro.webp") 16 0,
     auto;
 }
+
+// Mixin para media queries de max-width
+@mixin max-width-bp($bp) {
+  @media (max-width: #{$bp}) {
+    @content;
+  }
+}
