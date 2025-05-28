@@ -6,7 +6,7 @@
   @include altura-contenido-bp($altura-encabezado);
 
   .cartel-koba {
-    //@include bordes;
+
 
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
     overflow: visible;
 
     .banda-contenedor {
-      //@include bordes;
+
       position: relative;
       display: flex;
       justify-content: center;
@@ -41,7 +41,6 @@
         }
 
         .banda-imagen {
-          // @include bordes;
           @include tamanio-completo;
         }
       }
@@ -52,7 +51,7 @@
     .nivel-2,
     .nivel-3,
     .nivel-4 {
-      @include bordes;
+
       @include pad-gap;
 
       display: flex;
@@ -108,8 +107,42 @@
         filter: drop-shadow(0 2px 8px $cian-profundo); // sombra azul
       }
 
-      >.banda-contenedor {
-        max-width: 30%;
+
+      @include max-width-bp($bp-m) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        column-gap: 2rem; // Separación entre columnas
+        row-gap: 0.5rem;
+        max-width: 100vw;
+
+        // Asgarth arriba izquierda
+        .banda-contenedor[data-nombre="Asgarth"] {
+          grid-column: 1;
+          grid-row: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        // Before abajo izquierda
+        .banda-contenedor[data-nombre="Before"] {
+          grid-column: 1;
+          grid-row: 2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        // Ehun Kilo centrado verticalmente en la derecha
+        .banda-contenedor[data-nombre="Ehun Kilo"] {
+          grid-column: 2;
+          grid-row: 1 / span 2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
 
