@@ -6,7 +6,7 @@
   @include altura-contenido-bp($altura-encabezado);
 
   .cartel-koba {
-    @include pad-gap;
+    //@include bordes;
 
     display: flex;
     flex-direction: column;
@@ -16,6 +16,7 @@
     overflow: visible;
 
     .banda-contenedor {
+      //@include bordes;
       position: relative;
       display: flex;
       justify-content: center;
@@ -40,6 +41,7 @@
         }
 
         .banda-imagen {
+          // @include bordes;
           @include tamanio-completo;
         }
       }
@@ -50,6 +52,7 @@
     .nivel-2,
     .nivel-3,
     .nivel-4 {
+      @include bordes;
       @include pad-gap;
 
       display: flex;
@@ -92,6 +95,12 @@
     }
 
     .nivel-3 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+
       .banda-imagen {
         z-index: 2;
         height: clamp(3.2rem, 7vw, 5.5rem);
@@ -143,9 +152,5 @@
       }
     }
 
-    .nivel-3-izq .banda-imagen {
-      height: clamp(4.5rem, 10vw, 7rem);
-      max-height: 7rem;
-    }
   }
 }

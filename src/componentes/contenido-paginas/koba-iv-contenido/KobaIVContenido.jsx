@@ -39,24 +39,20 @@ const KobaIVContenido = () => {
           </div>
         </div>
         <div className="nivel-3">
-          <div className="nivel-3-der">
-            <div className="banda-contenedor" data-nombre="Asgarth">
-              <Link to={getBanda("Asgarth").link} tabIndex={0} aria-label="Ver página de Asgarth" className="banda-link">
-                <img src={getBanda("Asgarth").imagen} alt="Asgarth" loading="lazy" className="banda-imagen" />
-              </Link>
-            </div>
-            <div className="banda-contenedor" data-nombre="Before The Dawn">
-              <Link to={getBanda("Before The Dawn").link} tabIndex={0} aria-label="Ver página de Before The Dawn" className="banda-link">
-                <img src={getBanda("Before The Dawn").imagen} alt="Before The Dawn" loading="lazy" className="banda-imagen" />
-              </Link>
-            </div>
+          <div className="banda-contenedor" data-nombre="Asgarth">
+            <Link to={getBanda("Asgarth").link} tabIndex={0} aria-label="Ver página de Asgarth" className="banda-link">
+              <img src={getBanda("Asgarth").imagen} alt="Asgarth" loading="lazy" className="banda-imagen" />
+            </Link>
           </div>
-          <div className="nivel-3-izq">
-            <div className="banda-contenedor" data-nombre="Ehun Kilo">
-              <Link to={getBanda("Ehun Kilo").link} tabIndex={0} aria-label="Ver página de Ehun Kilo" className="banda-link">
-                <img src={getBanda("Ehun Kilo").imagen} alt="Ehun Kilo" loading="lazy" className="banda-imagen" />
-              </Link>
-            </div>
+          <div className="banda-contenedor" data-nombre="Ehun Kilo">
+            <Link to={getBanda("Ehun Kilo").link} tabIndex={0} aria-label="Ver página de Ehun Kilo" className="banda-link">
+              <img src={getBanda("Ehun Kilo").imagen} alt="Ehun Kilo" loading="lazy" className="banda-imagen" />
+            </Link>
+          </div>
+          <div className="banda-contenedor" data-nombre="Before The Dawn">
+            <Link to={getBanda("Before The Dawn").link} tabIndex={0} aria-label="Ver página de Before The Dawn" className="banda-link">
+              <img src={getBanda("Before The Dawn").imagen} alt="Before The Dawn" loading="lazy" className="banda-imagen" />
+            </Link>
           </div>
         </div>
         <div className="nivel-4">
