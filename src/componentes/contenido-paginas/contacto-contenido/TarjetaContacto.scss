@@ -3,12 +3,8 @@
 @use "@estilos/core.scss" as *;
 
 // Mapa de colores para tarjetas de contacto (redes sociales + variantes propias)
-$tarjetas-contacto: map.merge(
-  (
-    default: $blanco
-  ),
-  $iconos-redes
-);
+$tarjetas-contacto: map.merge((default: $blanco ),
+    $iconos-redes);
 
 // Mixin para estilos visuales de la tarjeta
 @mixin tarjeta-contacto-estilos($color) {
@@ -64,7 +60,7 @@ $tarjetas-contacto: map.merge(
   color: $blanco;
   font-family: Oswald, "Bebas Neue", Impact, sans-serif;
   letter-spacing: 0.03em;
-  transition: transform 0.15s;
+  transition: transform 0.15s cubic-bezier(.34, 1.56, .64, 1), box-shadow 0.2s;
 
   // Variantes de color
   @each $tipo, $color in $tarjetas-contacto {
@@ -132,6 +128,11 @@ $tarjetas-contacto: map.merge(
       text-align: left;
       text-shadow: 0 0 4px $negro;
     }
+  }
+
+  &:hover {
+    transform: scale(1.13) rotate(-7deg);
+    box-shadow: 0 6px 24px 0 rgba($rojo-sangre, 0.28), 0 0 0 8px rgba($rojo-sangre, 0.18), inset 0 2px 24px 0 rgba($blanco, 0.10);
   }
 }
 
