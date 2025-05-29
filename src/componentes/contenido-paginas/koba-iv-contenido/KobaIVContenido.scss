@@ -100,6 +100,10 @@
       align-items: center;
       gap: 5rem;
 
+      &>.banda-contenedor {
+        max-width: 30%;
+      }
+
       .banda-imagen {
         z-index: 2;
         height: clamp(3.2rem, 7vw, 5.5rem);
@@ -143,6 +147,10 @@
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        .banda-contenedor {
+          max-width: none;
         }
       }
     }
