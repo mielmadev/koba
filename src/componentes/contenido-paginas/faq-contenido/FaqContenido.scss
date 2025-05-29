@@ -7,13 +7,14 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  color: $gris;
+  color: $blanco;
   font-size: $fuente-faq-preguntas;
   text-align: justify;
   font-family: 'Metal Mania', cursive;
 
   @include margen-laterales-bp($margen-laterales);
 }
+
 
 .faq-pregunta-texto {
   // include bordes;
@@ -29,7 +30,6 @@
   // include bordes;
 
   margin-left: 2px;
-  cursor: pointer;
   color: $gris;
   font-size: 1.2em;
   display: flex;

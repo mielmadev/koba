@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import faqDatos from "@datos/faqDatos"
 import "./faqContenido.scss"
 import PuaGirando from "../../animaciones/PuaGirando"
@@ -7,46 +7,27 @@ import BotonEntradas from "../../utils/BotonEntradas"
 
 const FAQ = () => {
   const [preguntaActiva, setPreguntaActiva] = useState(null)
-  const [cerrando, setCerrando] = useState(null)
   const [mostrarPrompt, setMostrarPrompt] = useState(false)
-  const timeoutRef = React.useRef()
+  const timeoutRef = useRef()
 
   const togglePregunta = (index) => {
     if (preguntaActiva === index) {
-      setCerrando(index)
-      timeoutRef.current = setTimeout(() => {
-        setPreguntaActiva(null)
-        setCerrando(null)
-        setMostrarPrompt(false)
-      }, 500)
+      setPreguntaActiva(null)
+      setMostrarPrompt(false)
     } else {
       setPreguntaActiva(index)
-      setCerrando(null)
       setMostrarPrompt(false)
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     return () => clearTimeout(timeoutRef.current)
   }, [])
-
-  React.useEffect(() => {
-    // Delegación de eventos para el enlace dentro del HTML de la respuesta
-    const handler = (e) => {
-      if (e.target.classList.contains('enlace-comprar-entradas')) {
-        e.preventDefault();
-        setMostrarPrompt(true);
-      }
-    };
-    document.addEventListener('click', handler);
-    return () => document.removeEventListener('click', handler);
-  }, []);
 
   return (
     <div className="contenido">
       {faqDatos.es.map((item, index) => {
         const abierta = preguntaActiva === index
-        const enCierre = cerrando === index
         if (item.id === "entradas") {
           // Inserta el botón justo después de 'Consigue aquí tus' en la respuesta
           let respuesta = item.respuesta;
@@ -56,11 +37,11 @@ const FAQ = () => {
             <div key={index} className="faq-item">
               <div className="faq-pregunta" onClick={() => togglePregunta(index)}>
                 <span className="faq-pregunta-texto">{item.pregunta}</span>
-                <span className="faq-icon">
-                  <PuaGirando girada={abierta} cerrando={enCierre} />
+                <span className="faq-icon" style={{ fontSize: '1.7em', width: 38, height: 38, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <PuaGirando girada={abierta} tamano={36} />
                 </span>
               </div>
-              {(abierta || enCierre) && (
+              {abierta && (
                 <div className="faq-respuesta">
                   <span dangerouslySetInnerHTML={{ __html: partes[0] }} />
                   <BotonEntradas
@@ -84,15 +65,16 @@ const FAQ = () => {
             </div>
           )
         }
+        // Resto de preguntas
         return (
           <div key={index} className="faq-item">
             <div className="faq-pregunta" onClick={() => togglePregunta(index)}>
               <span className="faq-pregunta-texto">{item.pregunta}</span>
-              <span className="faq-icon">
-                <PuaGirando girada={abierta} cerrando={enCierre} />
+              <span className="faq-icon" style={{ fontSize: '1.7em', width: 38, height: 38, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+                <PuaGirando girada={abierta} tamano={36} />
               </span>
             </div>
-            {(abierta || enCierre) && <div className="faq-respuesta">{item.respuesta}</div>}
+            {abierta && <div className="faq-respuesta" dangerouslySetInnerHTML={{ __html: item.respuesta }} />}
           </div>
         )
       })}
