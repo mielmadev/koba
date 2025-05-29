@@ -1,52 +1,57 @@
-const faqDatos = [
-  {
-    id: "ubicacion",
-    pregunta: "¿Dónde se celebrará el festival KOBA Live?",
-    respuesta:
-      "El KOBA Live se celebrará en las instalaciones de las escuelas de Matiena (Abadiño). Aquí puedes ver la ubicación del festival. También puedes acceder a la ubicación desde el menu de la web."
-  },
-  {
-    id: "transporte",
-    pregunta: "¿Cómo puedo desplazarme hasta la localidad de celebración del KOBA Live?",
-    respuesta:
-      "El KOBA Live se celebra en Matiena una zona de Abadiño que se encuentra muy bien comunicada con los diferentes pueblos de la región. Puedes desplazarte en tren, en autobus y por supuesto en tu propio coche. La parada del tren y la del autobus se encuentran muy cercanas al recinto del festival. En caso de que te desplaces en coche no tendrás problemas de aparcamiento. En las inmediaciones al recinto hay zonas de parking gratuito."
-  },
-  {
-    id: "accesibilidad",
-    pregunta: "Tengo una minusvalía, ¿se puede acceder al recinto en silla de ruedas?",
-    respuesta:
-      "Sí, el acceso al recinto está preparado para poder entrar en silla de ruedas sin ningún problema."
-  },
-  {
-    id: "entradas",
-    pregunta: "¿Dónde puedo conseguir entradas para ver el festival?",
-    respuesta:
-      "La primera (año 2022) y segunda (año 2023) edición del festival KOBA Live es totalmente gratis, no se necesita ningún tipo de entrada para poder acceder al recinto y disfrutar del festival."
-  },
-  {
-    id: "merchandise",
-    pregunta: "¿Dónde puedo comprar el merchandise del KOBA Live?",
-    respuesta:
-      "En esta página puedes ver los artículos disponibles y los puntos de venta antes de la celebración del evento. También podrás comprar los productos dentro del recinto en el stand oficial el mismo día de la celebración del festival."
-  },
-  {
-    id: "comida",
-    pregunta: "¿Dónde puedo comer y dormir el día del festival?",
-    respuesta:
-      "Los diferentes barrios de Abadiño tienen numerosos restaurantes y bares donde se puede comer. Para dormir, en concreto el barrio de Matiena (donde se celebra el festival) tiene pensiones, hoteles y una casa rural donde poder pasar la noche cómodamente sin necesidad de desplazarse a la finalización del festival."
-  },
-  {
-    id: "colaborar",
-    pregunta: "Quiero colaborar. ¿Qué puedo hacer?",
-    respuesta:
-      "Fundamentalmente, acudiendo al festival. También puedes colaborar comprando algún artículo del merchandise que nos ayudará para continuar realizando futuras ediciones y haciendo que el festival sea cada vez más grande y más importante dentro de la escena metal local y nacional. Si quieres realizar alguna colaboración más importante o tienes una propuesta, puedes ponerte en contacto con nosotros en este e-mail: info@koba-live.com"
-  },
-  {
-    id: "banda",
-    pregunta: "Tengo una banda y quiero participar en el KOBA Live. ¿Qué puedo hacer?",
-    respuesta:
-      "Ponte en contacto con nosotros. Para ello, tenemos un e-mail en el que puedes enviarnos información sobre tu banda y exponernos tus intereses. El e-mail es el siguiente: koba@koba-live.com"
-  }
-]
+// Archivo en español para traductores: todas las preguntas y respuestas están redactadas en español.
+// Estructura para internacionalización (i18n)
+const faqDatos = {
+  es: [
+    {
+      id: "ubicacion",
+      pregunta: "¿Dónde rugirá el KOBA Live este año?",
+      respuesta:
+        "El KOBA Live desatará toda su potencia en las escuelas de Matiena (Abadiño). Aquí puedes ver la ubicación del festival. También puedes acceder desde el menú de la web. ¡Prepárate para sentir la energía en el epicentro del metal!"
+    },
+    {
+      id: "transporte",
+      pregunta: "¿Cómo puedo llegar a la guarida del KOBA Live?",
+      respuesta:
+        "Matiena, en Abadiño, está perfectamente conectada con los pueblos de la región. Puedes venir en tren, autobús o en tu propio bólido. Las paradas de tren y autobús están a un riff de distancia del recinto. Si vienes en coche, encontrarás parking gratuito cerca. ¡No hay excusas para perderte la descarga!"
+    },
+    {
+      id: "accesibilidad",
+      pregunta: "¿El recinto es accesible para tod@s?",
+      respuesta:
+        "¡Por supuesto! El acceso está preparado para que cualquier guerrero o guerrera del metal pueda entrar en silla de ruedas sin problema. Aquí nadie se queda fuera del mosh pit."
+    },
+    {
+      id: "entradas",
+      pregunta: "¿Dónde consigo mi pase al infierno del KOBA Live?",
+      respuesta:
+        "¡Atento, metalhead! Las dos primeras ediciones del KOBA Live (2022 y 2023) fueron totalmente gratuitas, pero a partir de la tercera edición el acceso requiere entrada. Puedes comprar tus entradas en la web oficial: https://koba-live.com/entradas/ donde encontrarás el sistema seguro de compra online. Consulta ahí los precios, puntos de venta y toda la info actualizada. ¡No te quedes fuera de la fiesta más brutal del año!"
+    },
+    {
+      id: "merchandise",
+      pregunta: "¿Dónde pillo el merch oficial del KOBA Live?",
+      respuesta:
+        "En la web puedes ver los artículos y puntos de venta antes del evento. El día del festival, busca el stand oficial dentro del recinto y hazte con tu camiseta, parche o lo que quieras para lucir como un auténtico metalhead. ¡Apoya la escena y presume de KOBA!"
+    },
+    {
+      id: "comida",
+      pregunta: "¿Dónde puedo recargar energías y descansar tras la batalla?",
+      respuesta:
+        "Abadiño está repleto de bares y restaurantes para que no te falte combustible. En Matiena tienes pensiones, hoteles y una casa rural para reponer fuerzas tras la tralla. ¡Nada de dormir en la calle como un roadie perdido!"
+    },
+    {
+      id: "colaborar",
+      pregunta: "Quiero ser parte de la hermandad KOBA, ¿cómo colaboro?",
+      respuesta:
+        "Lo más importante: ¡ven al festival y haz ruido! También puedes apoyar comprando merch, lo que nos ayuda a seguir creciendo y manteniendo viva la llama del metal. Si tienes ideas, propuestas o quieres colaborar más a fondo, escríbenos a info@koba-live.com. ¡El KOBA es de tod@s!"
+    },
+    {
+      id: "banda",
+      pregunta: "Tengo una banda y quiero reventar el escenario del KOBA Live, ¿qué hago?",
+      respuesta:
+        "¡Queremos descubrir nuevos himnos! Escríbenos a koba@koba-live.com con info de tu banda y tus ganas de liarla. El KOBA siempre está abierto a nuevas propuestas y sonidos que hagan temblar el valle."
+    }
+  ]
+  // Aquí puedes añadir más idiomas, por ejemplo 'en', 'eu', etc.
+};
 
 export default faqDatos

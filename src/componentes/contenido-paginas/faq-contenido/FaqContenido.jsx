@@ -27,7 +27,7 @@ const FAQ = () => {
 
   return (
     <div className="contenido">
-      {faqDatos.map((item, index) => {
+      {faqDatos.es.map((item, index) => {
         const abierta = preguntaActiva === index
         const enCierre = cerrando === index
         return (
