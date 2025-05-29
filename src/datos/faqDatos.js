@@ -24,7 +24,7 @@ const faqDatos = {
       id: "entradas",
       pregunta: "¿Dónde consigo mi pase al infierno del KOBA Live?",
       respuesta:
-        "¡Atento, metalhead! Las dos primeras ediciones del KOBA Live (2022 y 2023) fueron totalmente gratuitas, pero a partir de la tercera edición el acceso requiere entrada. Puedes comprar tus entradas en la web oficial: https://koba-live.com/entradas/ donde encontrarás el sistema seguro de compra online. Consulta ahí los precios, puntos de venta y toda la info actualizada. ¡No te quedes fuera de la fiesta más brutal del año!"
+        "¡Atento, metalhead! Consigue aquí tus <a href=\"#\" class='enlace-comprar-entradas'>entradas</a><br>¡Hazte ya con tu pase y únete a la horda metalera en la fiesta más brutal del año!"
     },
     {
       id: "merchandise",
