@@ -9,7 +9,7 @@ import puaImg from "@cursor/KobaPua_32x32_Blanco.png"
  * @param {number} size - Tamaño en px (opcional, por defecto 30)
  * @param {string} className - Clases extra opcionales
  */
-const PuaGirando = ({ girada, cerrando: cerrandoProp = false, size = 30, className = "" }) => {
+const PuaGirando = ({ girada, cerrando: cerrandoProp = false, size = "1em", className = "" }) => {
   const [cerrando, setCerrando] = useState(false)
   const prevGirada = useRef(girada)
   const timeoutRef = useRef()
@@ -34,9 +34,9 @@ const PuaGirando = ({ girada, cerrando: cerrandoProp = false, size = 30, classNa
   return (
     <span
       className={`pua-girando ${estado} ${className}`.trim()}
-      style={{ width: size, height: size }}
+      style={{ width: size, height: "100%", display: "inline-flex", alignItems: "center" }}
     >
-      <img src={puaImg} alt="Pua animada" width={size} height={size} draggable={false} />
+      <img src={puaImg} alt="Pua animada" style={{ width: "100%", height: "100%", objectFit: "contain" }} draggable={false} />
     </span>
   )
 }
@@ -44,7 +44,7 @@ const PuaGirando = ({ girada, cerrando: cerrandoProp = false, size = 30, classNa
 PuaGirando.propTypes = {
   girada: PropTypes.bool.isRequired,
   cerrando: PropTypes.bool,
-  size: PropTypes.number,
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   className: PropTypes.string
 }
 

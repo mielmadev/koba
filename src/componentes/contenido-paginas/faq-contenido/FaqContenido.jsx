@@ -57,7 +57,7 @@ const FAQ = () => {
               <div className="faq-pregunta" onClick={() => togglePregunta(index)}>
                 <span className="faq-pregunta-texto">{item.pregunta}</span>
                 <span className="faq-icon">
-                  <PuaGirando girada={abierta} cerrando={enCierre} size={20} />
+                  <PuaGirando girada={abierta} cerrando={enCierre} />
                 </span>
               </div>
               {(abierta || enCierre) && (
@@ -89,7 +89,7 @@ const FAQ = () => {
             <div className="faq-pregunta" onClick={() => togglePregunta(index)}>
               <span className="faq-pregunta-texto">{item.pregunta}</span>
               <span className="faq-icon">
-                <PuaGirando girada={abierta} cerrando={enCierre} size={20} />
+                <PuaGirando girada={abierta} cerrando={enCierre} />
               </span>
             </div>
             {(abierta || enCierre) && <div className="faq-respuesta">{item.respuesta}</div>}
