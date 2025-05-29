@@ -3,6 +3,7 @@ import faqDatos from "@datos/faqDatos"
 import "./faqContenido.scss"
 import PuaGirando from "../../animaciones/PuaGirando"
 import IframeEntradas from "./IframeEntradas"
+import BotonEntradas from "../../utils/BotonEntradas"
 
 const FAQ = () => {
   const [preguntaActiva, setPreguntaActiva] = useState(null)
@@ -47,8 +48,10 @@ const FAQ = () => {
         const abierta = preguntaActiva === index
         const enCierre = cerrando === index
         if (item.id === "entradas") {
-          // Reemplaza los saltos de línea por <br /> para mantener el HTML y los saltos
-          const respuestaConSaltos = item.respuesta.replace(/\n/g, '<br />');
+          // Inserta el botón justo después de 'Consigue aquí tus' en la respuesta
+          let respuesta = item.respuesta;
+          respuesta = respuesta.replace(/<a [^>]*class=['"]enlace-comprar-entradas['"][^>]*>.*?<\/a>/gi, "<BOTON_ENTRADAS_PLACEHOLDER>");
+          const partes = respuesta.split('<BOTON_ENTRADAS_PLACEHOLDER>');
           return (
             <div key={index} className="faq-item">
               <div className="faq-pregunta" onClick={() => togglePregunta(index)}>
@@ -59,7 +62,15 @@ const FAQ = () => {
               </div>
               {(abierta || enCierre) && (
                 <div className="faq-respuesta">
-                  <div dangerouslySetInnerHTML={{ __html: respuestaConSaltos }} />
+                  <span dangerouslySetInnerHTML={{ __html: partes[0] }} />
+                  <BotonEntradas
+                    href="#"
+                    style={{ display: 'inline-block', margin: '0 0.2em', verticalAlign: 'middle' }}
+                    onClick={e => { e.preventDefault(); setMostrarPrompt(true); }}
+                  >
+                    Entradas
+                  </BotonEntradas>
+                  <span dangerouslySetInnerHTML={{ __html: partes[1] }} />
                   {mostrarPrompt && (
                     <div className="modal-entradas-faq" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.7)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <div style={{ background: '#111', padding: 24, borderRadius: 12, maxWidth: 650, width: '90%', position: 'relative' }}>

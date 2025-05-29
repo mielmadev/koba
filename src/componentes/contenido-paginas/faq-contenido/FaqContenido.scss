@@ -46,30 +46,5 @@
   @include margen-laterales-bp($margen-laterales);
 }
 
-.enlace-comprar-entradas {
-  display: inline-block;
-  color: $plata-acero;
-  text-shadow: 0 1px 6px rgba($negro, 0.18);
-  border: 2px solid $rojo-sangre;
-  border-radius: 24px 8px;
-  padding: 0.18em 1.1em;
-  background: linear-gradient(135deg, transparent 0%, $rojo-sangre 100%);
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.08em;
-  box-shadow: 0 1px 4px 0 rgba($plata-acero, 0.13), 0 0 0 2px rgba($rojo-sangre, 0.10), inset 0 1px 8px 0 rgba($rojo-sangre, 0.09);
-  margin: 0 0.2em;
-  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.3s cubic-bezier(.34, 1.56, .64, 1);
-  will-change: transform, box-shadow;
-
-  &:hover,
-  &:focus {
-    background: linear-gradient(135deg, $rojo-sangre 70%, $blanco 100%);
-    color: $rojo-sangre;
-    border-color: $rojo-sangre;
-    box-shadow: 0 6px 24px 0 rgba($rojo-sangre, 0.28), 0 0 0 8px rgba($rojo-sangre, 0.18), inset 0 2px 24px 0 rgba($blanco, 0.10);
-    outline: none;
-    transform: rotate(-7deg) scale(1.07);
-    filter: brightness(1.08);
-  }
-}
+// El bloque de .enlace-comprar-entradas se ha extraído para uso global en BotonEntradas.scss
+// Si necesitas estilos específicos para FAQ, puedes usar una clase modificadora o importar el SCSS global aquí.
