@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react"
 import faqDatos from "@datos/faqDatos"
 import "./faqContenido.scss"
 import PuaGirando from "../../animaciones/PuaGirando"
-import IframeEntradas from "./IframeEntradas"
+import IframeEntradas from "../../utils/IframeEntradas"
 import BotonEntradas from "../../utils/BotonEntradas"
 
 const FAQ = () => {
