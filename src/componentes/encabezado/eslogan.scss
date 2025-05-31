@@ -5,12 +5,13 @@
   @include pad-gap;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   color: $marron;
   font-family: Cinzel, serif;
   font-size: $fuente-eslogan;
 
+  
   @include bp(xs) {
     font-size: $fuente-eslogan-xs;
   }

@@ -8,7 +8,7 @@
   border: 2px solid $rojo-sangre;
   border-radius: 24px 8px;
   padding: 0.18em 1.1em;
-  background: linear-gradient(135deg, transparent 0%, $rojo-sangre 100%);
+  background: linear-gradient(135deg, transparent 0%, rgba($rojo-sangre, 0.75) 100%);
   font-weight: bold;
   text-decoration: none;
   font-size: 1.08em;
@@ -19,7 +19,7 @@
 
   &:hover,
   &:focus {
-    background: linear-gradient(135deg, $rojo-sangre 70%, $blanco 100%);
+    background: linear-gradient(135deg, rgba($rojo-sangre, 0.85) 70%, $blanco 100%);
     color: $rojo-sangre;
     border-color: $rojo-sangre;
     transform: scale(1.13) rotate(-7deg);
@@ -33,7 +33,7 @@
 
   &:hover,
   &:focus {
-    background: linear-gradient(135deg, $rojo-sangre 70%, $blanco 100%);
+    background: linear-gradient(135deg, rgba($rojo-sangre, 0.85) 70%, $blanco 100%);
     color: $rojo-sangre;
     border-color: $rojo-sangre;
     transform: scale(1.13) rotate(-7deg);
