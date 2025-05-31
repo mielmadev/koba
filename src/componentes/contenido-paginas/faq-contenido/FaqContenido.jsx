@@ -46,7 +46,6 @@ const FAQ = () => {
                   <span dangerouslySetInnerHTML={{ __html: partes[0] }} />
                   <BotonEntradas
                     href="#"
-                    style={{ display: 'inline-block', margin: '0 0.2em', verticalAlign: 'middle' }}
                     onClick={e => { e.preventDefault(); setMostrarPrompt(true); }}
                   >
                     Entradas
