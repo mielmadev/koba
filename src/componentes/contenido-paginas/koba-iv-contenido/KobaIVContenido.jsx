@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import Fecha from "../../fecha/fecha"
 import "./KobaIVContenido.scss"
 import { bandasLogo } from "@imagenes/imagenes"
+import BannerInfoInteractivo from "./BannerInfoInteractivo"
 
 // Datos de bandas para el cartel, con imagen y link explícitos
 const bandasCartel = [
@@ -23,6 +24,7 @@ const KobaIVContenido = () => {
   return (
     <div className="koba-iv-contenido">
       <Fecha />
+      <BannerInfoInteractivo />
       <div className="cartel-koba">
         <div className="nivel-1">
           <div className="banda-contenedor" data-nombre="Eclipse">

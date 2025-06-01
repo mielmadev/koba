@@ -1,0 +1,11 @@
+@use "@estilos/var/font-size.scss" as *;
+@use "@estilos/var/colores.scss" as *;
+
+// Variables de estilo específicas para banners y páginas (fuentes y colores a aplicar)
+// Ejemplo de uso: importar en el SCSS de cada página y usar la variable correspondiente
+
+$banner-color-koba-iv: $blanco;
+$banner-texto-color-koba-iv: $violeta-profundo;
+$banner-font-koba-iv: Oswald, "Bebas Neue", Impact, sans-serif;
+$banner-font-size-koba-iv: $fuente-contacto-texto;
+$banner-font-weight-koba-iv: 700;
