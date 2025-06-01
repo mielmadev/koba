@@ -1,62 +1,63 @@
 @use "@estilos/core.scss" as *;
 
-.about-titulo,
-.about-subtitulo,
-.about-seccion,
-.about-texto {
-  padding: 2px;
-  text-align: justify;
+.about-datos-lista {
 
-  @include margen-laterales-bp($margen-laterales);
-}
+  .about-titulo,
+  .about-subtitulo,
+  .about-seccion,
+  .about-texto {
+    padding: 2px;
+    text-align: justify;
 
-.about-titulo {
-  color: $negro;
-  font-size: $fuente-about-titulo;
-  font-weight: $peso-about-titulo;
-  white-space: nowrap;
-  text-align: center;
-  text-shadow:
-    3px 3px 5px $blanco,
-    -3px -3px 5px $blanco;
-}
-
-.about-subtitulo {
-  margin-bottom: $margen-about-subtitulo;
-  color: $marron;
-  font-size: $fuente-about-subtitulo;
-  font-weight: $peso-about-subtitulo;
-  line-height: 1;
-  white-space: normal;
-
-  &-linea-izq {
-    text-align: left !important;
+    @include margen-laterales-bp($margen-laterales);
   }
 
-  &-linea-der {
-    text-align: right !important;
-  }
-}
-
-.about-seccion {
-  margin-top: $margen-about-seccion;
-  margin-bottom: $margen-about-seccion;
-  color: $marron;
-  font-size: $fuente-about-seccion;
-  font-weight: $peso-about-seccion;
-  line-height: 1;
-
-  &-linea-izq {
-    text-align: left !important;
+  .about-titulo {
+    color: $color-about-titulo;
+    font-size: $font-size-about-titulo;
+    font-weight: $peso-about-titulo;
+    white-space: nowrap;
+    text-align: center;
+    text-shadow: $text-shadow-about-titulo;
   }
 
-  &-linea-der {
-    text-align: right !important;
-  }
-}
+  .about-subtitulo {
+    margin-bottom: $margen-about-subtitulo;
+    color: $color-about-subtitulo;
+    font-size: $font-size-about-subtitulo;
+    font-weight: $peso-about-subtitulo;
+    line-height: 1;
+    white-space: normal;
 
-.about-texto {
-  margin-bottom: $margen-about-texto;
-  font-size: $fuente-about-texto;
-  font-weight: $peso-about-texto;
+    &-linea-izq {
+      text-align: left !important;
+    }
+
+    &-linea-der {
+      text-align: right !important;
+    }
+  }
+
+  .about-seccion {
+    margin-top: $margen-about-seccion;
+    margin-bottom: $margen-about-seccion;
+    color: $color-about-seccion;
+    font-size: $font-size-about-seccion;
+    font-weight: $peso-about-seccion;
+    line-height: 1;
+
+    &-linea-izq {
+      text-align: left !important;
+    }
+
+    &-linea-der {
+      text-align: right !important;
+    }
+  }
+
+  .about-texto {
+    margin-bottom: $margen-about-texto;
+    font-size: $font-size-about-texto;
+    font-weight: $peso-about-texto;
+  }
 }

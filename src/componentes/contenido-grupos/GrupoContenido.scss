@@ -22,18 +22,12 @@
       justify-content: space-between;
       align-items: center;
 
+      @include altura-encabezado-bp($altura-encabezado, height);
+
       // Igualar ancho de los tres componentes hijos
       >* {
         flex: 1 1 0;
         min-width: 0;
-      }
-
-      @include altura-encabezado-bp($altura-encabezado, height);
-
-      .grupo-encabezado-superior-izquierda,
-      .grupo-encabezado-superior-derecha {
-        flex: 1 1 0;
-        max-width: 50%;
       }
 
       .grupo-encabezado-superior-izquierda {
@@ -68,11 +62,11 @@
         justify-content: center;
         align-items: center;
         max-width: 66%;
-        font-size: $fuente-grupos-genero;
-        line-height: 1.1;
-        text-align: center;
 
-        @include altura-encabezado-bp($altura-encabezado, max-height);
+        .grupo-estilo,
+        .grupo-origen {
+          font-size: $font-size-grupos-estilo-anio;
+        }
       }
     }
 
@@ -88,23 +82,8 @@
 
       .grupo-resumen {
         width: 100%;
-        font-size: $fuente-grupos-resumen;
+        font-size: $font-size-grupos-resumen;
         text-align: justify;
-      }
-
-      .grupo-encabezado-integrantes {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        width: 100%;
-      }
-
-      .grupo-albums {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
       }
     }
   }
