@@ -2,16 +2,22 @@
 @use "sass:map";
 @use "@estilos/core.scss" as *;
 
-
 .banner-info-interactivo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2rem;
+
+}
+
+.banner-titulo {
   @include pad-gap;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   min-width: 0;
-  width: 100%;
-  max-width: 700px;
   border: 2.5px solid $banner-color-koba-iv;
   border-radius: 6px 24px;
   background: linear-gradient(135deg, transparent 80%, rgba($banner-color-koba-iv, 0.7) 100%);
@@ -23,9 +29,9 @@
   box-shadow:
     0 4px 24px 0 rgba($banner-color-koba-iv, 0.25),
     0 1.5px 0 0 $banner-color-koba-iv inset;
-  text-align: center;
+  text-align: left;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 0;
 }

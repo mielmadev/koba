@@ -2,7 +2,9 @@ import "./BannerInfoInteractivo.scss";
 
 const BannerInfoInteractivo = () => (
   <div className="banner-info-interactivo">
-    Haz clic en los logos de las bandas para ver más información.
+    <div className="banner-titulo">
+      Haz clic en los logos de las bandas para ver más información.
+      </div>
   </div>
 );
 
