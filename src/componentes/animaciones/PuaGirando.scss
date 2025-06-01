@@ -28,11 +28,7 @@
 }
 
 @mixin pua-giratoria($reverse: false, $duration: 0.5s, $timing: cubic-bezier(0.4, 0, 0.2, 1)) {
-  @if $reverse {
-    animation: pua-gira-reversa $duration $timing;
-  } @else {
-    animation: pua-gira $duration $timing;
-  }
+  animation: if($reverse, pua-gira-reversa, pua-gira) $duration $timing;
 }
 
 .pua-girando {
@@ -52,20 +48,22 @@
     user-select: none;
     transition: filter 0.2s;
   }
-}
 
-.pua-girando--abierta img {
-  transform: rotate(180deg);
+  // Estados
+  &--abierta img,
+  &--cerrando img {
+    transform: rotate(180deg);
+  }
 
-  @include pua-giratoria(false);
-}
+  &--abierta img {
+    @include pua-giratoria(false);
+  }
 
-.pua-girando--cerrada img {
-  transform: rotate(0deg);
-}
+  &--cerrando img {
+    @include pua-giratoria(true);
+  }
 
-.pua-girando--cerrando img {
-  transform: rotate(180deg);
-
-  @include pua-giratoria(true);
+  &--cerrada img {
+    transform: rotate(0deg);
+  }
 }

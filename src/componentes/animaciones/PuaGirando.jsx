@@ -16,10 +16,7 @@ const PuaGirando = ({ girada, cerrando: cerrandoProp = false, size = "1em", tama
   const timeoutRef = useRef()
 
   useEffect(() => {
-    if (cerrandoProp) {
-      setCerrando(true)
-      timeoutRef.current = setTimeout(() => setCerrando(false), 500)
-    } else if (prevGirada.current && !girada) {
+    if (cerrandoProp || (prevGirada.current && !girada)) {
       setCerrando(true)
       timeoutRef.current = setTimeout(() => setCerrando(false), 500)
     }
@@ -27,18 +24,16 @@ const PuaGirando = ({ girada, cerrando: cerrandoProp = false, size = "1em", tama
     return () => clearTimeout(timeoutRef.current)
   }, [girada, cerrandoProp])
 
-  let estado = ""
-  if (girada) estado = "pua-girando--abierta"
-  else if (cerrando) estado = "pua-girando--cerrando"
-  else estado = "pua-girando--cerrada"
+  const estado = girada
+    ? "pua-girando--abierta"
+    : cerrando
+      ? "pua-girando--cerrando"
+      : "pua-girando--cerrada"
 
-  // Si se pasa la prop 'tamano', tiene prioridad sobre 'size'
-  const realSize = tamano ? `${tamano}px` : size;
-
-  let puaImgActual = puaImgBlanca;
-  if (estado === "pua-girando--abierta" || estado === "pua-girando--cerrando") {
-    puaImgActual = puaImgMarron;
-  }
+  const realSize = tamano ? `${tamano}px` : size
+  const puaImgActual = (estado === "pua-girando--abierta" || estado === "pua-girando--cerrando")
+    ? puaImgMarron
+    : puaImgBlanca
 
   return (
     <span
@@ -55,7 +50,7 @@ PuaGirando.propTypes = {
   cerrando: PropTypes.bool,
   size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   tamano: PropTypes.number,
-  className: PropTypes.string
-}
+  className: PropTypes.string,
+};
 
 export default PuaGirando

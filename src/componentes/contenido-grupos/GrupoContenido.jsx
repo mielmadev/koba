@@ -24,14 +24,12 @@ const GrupoContenido = ({ nombreBanda }) => {
                 {[banda.estilo, banda.anio].filter(Boolean).join(", ")}
               </div>
               <div className="grupo-origen">
-                {[banda.origen.pais, banda.origen.provincia, banda.origen.ciudad]
-                  .filter(Boolean)
-                  .join(", ")}
+                {[banda.origen.pais, banda.origen.provincia, banda.origen.ciudad].filter(Boolean).join(", ")}
               </div>
             </div>
           </div>
           <div className="grupo-encabezado-inferior">
-            <div className="grupo-encabezado-inferior-izquierda"></div>
+            <div className="grupo-encabezado-inferior-izquierda" />
             <div className="grupo-encabezado-resumen">
               <div className="grupo-resumen">{obtenerLineas(banda.resumen)}</div>
               <div className="grupo-integrantes-albums">
@@ -43,16 +41,14 @@ const GrupoContenido = ({ nombreBanda }) => {
                         <span className="integrante-rol">
                           {rol.charAt(0).toUpperCase() + rol.slice(1)}:
                         </span>{" "}
-                        {Array.isArray(valor) ? (
-                          valor.map((n, i) => (
+                        {Array.isArray(valor)
+                          ? valor.map((n, i) => (
                             <span className="integrante-nombre" key={i}>
                               {n}
                               {i < valor.length - 1 ? " - " : ""}
                             </span>
                           ))
-                        ) : (
-                          <span className="integrante-nombre">{valor}</span>
-                        )}
+                          : <span className="integrante-nombre">{valor}</span>}
                       </li>
                     ))}
                   </ul>
@@ -61,7 +57,7 @@ const GrupoContenido = ({ nombreBanda }) => {
                   <strong>Álbumes:</strong>
                   <ul>
                     {albumsOrdenados.map((album, idx) => (
-                      <li key={idx}>
+                      <li key={album.nombre + (album.anio || idx)}>
                         {album.nombre}
                         {album.anio ? ` (${album.anio})` : ""}
                       </li>
@@ -81,6 +77,7 @@ const GrupoContenido = ({ nombreBanda }) => {
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
+            title={`Spotify de ${banda.nombre}`}
           >
             Tu navegador no soporta iframes. Por favor, visita el enlace directamente en Spotify.
           </iframe>

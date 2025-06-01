@@ -4,17 +4,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; // Asegúrate de que el contenedor ocupe toda la pantalla
-  background-color: $blanco; // Fondo claro para mejor visibilidad
-}
+  height: 100vh;
+  background-color: $blanco;
 
-.fallback-image {
-  max-width: 100px; // Ajusta el tamaño de la imagen
-  max-height: 100px;
-  animation:
-    girar-escala-color 1.2s linear infinite,
-    sombra 1.2s ease-in-out infinite alternate;
-  will-change: transform, filter, box-shadow; // Mejora el rendimiento de la animación
+  .fallback-image {
+    max-width: 100px;
+    max-height: 100px;
+    animation:
+      girar-escala-color 1.2s linear infinite,
+      sombra 1.2s ease-in-out infinite alternate;
+    will-change: transform, filter, box-shadow;
+  }
 }
 
 @keyframes girar-escala-color {
@@ -40,8 +40,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  // Si el usuario prefiere menos movimiento, la animación se desactiva por accesibilidad
-  .fallback-image {
+  .fallback-container .fallback-image {
     animation: none;
   }
 }

@@ -18,41 +18,4 @@ $clamp-h4: clamp($fuente-h4, 2vw, 2rem);
 $clamp-h5: clamp($fuente-h5, 1.5vw, 1.66rem);
 $clamp-h6: clamp($fuente-h6, 1vw, 1.34rem);
 
-// FUENTES ESPECÍFICAS POR PÁGINA/SECCIÓN
-
-// About
-$fuente-about-titulo: $clamp-h1;
-$fuente-about-subtitulo: $clamp-h2;
-$fuente-about-seccion: $clamp-h3;
-$fuente-about-texto: $clamp-parrafo;
-
-// Bandas
-$fuente-bandas-nombre: $clamp-h1;
-$fuente-bandas-click: $clamp-h3;
-
-// Grupos
-$fuente-grupos-estilo-anio: $clamp-h4;
-$fuente-grupos-resumen: $clamp-parrafo;
-$fuente-grupos-genero: $clamp-h3;
-
-// Contacto
-$fuente-contacto-iconos: $fuente-h1;
-$fuente-contacto-titulo: $clamp-h3;
-$fuente-contacto-texto: $fuente-parrafo;
-
-// Enlaces generales
-$fuente-enlaces: $clamp-h5;
-
-// Eslogan
-$fuente-eslogan: $clamp-h2;
-$fuente-eslogan-xs: $clamp-h5;
-
-// FAQ
-$fuente-faq-preguntas: $clamp-h3;
-$fuente-faq-respuestas: $clamp-parrafo;
-
-// Fecha
-$fuente-fecha: $clamp-h3;
-
-// Fuente MenuPua
-$fuente-menu-pua: $clamp-h3;
+// (Se movieron las fuentes específicas por página/sección a _fuentes-colores.scss)
