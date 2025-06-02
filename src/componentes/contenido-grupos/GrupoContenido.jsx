@@ -16,16 +16,14 @@ const GrupoContenido = ({ nombreBanda }) => {
       <div className="grupo-contenido">
         <div className="grupo-encabezado">
           <div className="grupo-encabezado-superior">
-            <div className="grupo-encabezado-superior-izquierda">
+            <div className="grupo-encabezado-logo">
               <img src={banda.imagen} alt={banda.nombre} className="grupo-logo" />
             </div>
-            <div className="grupo-encabezado-superior-derecha">
-              <div className="grupo-estilo">
-                {[banda.estilo, banda.anio].filter(Boolean).join(", ")}
-              </div>
-              <div className="grupo-origen">
-                {[banda.origen.pais, banda.origen.provincia, banda.origen.ciudad].filter(Boolean).join(", ")}
-              </div>
+            <div className="grupo-encabezado-estilo">
+              {[banda.estilo, banda.anio].filter(Boolean).join(", ")}
+            </div>
+            <div className="grupo-encabezado-origen">
+              {[banda.origen.pais, banda.origen.provincia, banda.origen.ciudad].filter(Boolean).join(", ")}
             </div>
           </div>
           <div className="grupo-encabezado-inferior">

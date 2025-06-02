@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import Fecha from "../../fecha/fecha"
+import Fecha from "./fecha"
 import "./KobaIVContenido.scss"
 import { bandasLogo } from "@imagenes/imagenes"
 import BannerInfoInteractivo from "./BannerInfoInteractivo"
@@ -24,7 +24,6 @@ const KobaIVContenido = () => {
   return (
     <div className="koba-iv-contenido">
       <Fecha />
-      <BannerInfoInteractivo />
       <div className="cartel-koba">
         <div className="nivel-1">
           <div className="banda-contenedor" data-nombre="Eclipse">
@@ -69,6 +68,9 @@ const KobaIVContenido = () => {
             </Link>
           </div>
         </div>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+        <BannerInfoInteractivo />
       </div>
     </div>
   )

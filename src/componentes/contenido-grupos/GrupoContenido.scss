@@ -1,7 +1,6 @@
 @use "@estilos/core.scss" as *;
 
 .grupo-contenido {
-  @include pad-gap;
 
   display: flex;
   flex-direction: column;
@@ -9,64 +8,59 @@
   @include margen-laterales-bp($margen-laterales);
 
   .grupo-encabezado {
+    @include bordes;
     @include tamanio-completo;
 
     display: flex;
     flex-direction: column;
 
     .grupo-encabezado-superior {
+      @include bordes;
       @include pad-gap;
-
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-
+      width: 100%;
+      box-sizing: border-box;
       @include altura-encabezado-bp($altura-encabezado, height);
 
-      // Igualar ancho de los tres componentes hijos
-      >* {
-        flex: 1 1 0;
-        min-width: 0;
-      }
-
-      .grupo-encabezado-superior-izquierda {
-        @include pad-gap;
-
+      .grupo-encabezado-logo {
+        @include bordes;
         display: flex;
         flex: 0 0 33%;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        max-width: 33vw; // Fallback para navegadores que no soportan dvw
-        max-width: 33dvw; // Moderno: viewport dinámico
-
+        max-width: 33vw;
+        max-width: 33dvw;
         @include altura-encabezado-bp($altura-encabezado, max-height);
-
-        img {
-          @include tamanio-completo;
-
-          width: 100%;
-          max-width: 100%;
-          height: auto;
-          object-fit: contain;
-
-          @include altura-encabezado-bp($altura-encabezado, max-height);
-        }
       }
 
-      .grupo-encabezado-superior-derecha {
+      .grupo-logo {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        @include altura-encabezado-bp($altura-encabezado, max-height);
+      }
+
+      .grupo-encabezado-estilo {
+        @include bordes;
         display: flex;
-        flex: 0 0 66%;
-        flex-direction: row;
+        flex: 0 0 33%;
         justify-content: center;
         align-items: center;
-        max-width: 66%;
+        font-size: $font-size-grupos-estilo-anio;
+        text-align: center;
+      }
 
-        .grupo-estilo,
-        .grupo-origen {
-          font-size: $font-size-grupos-estilo-anio;
-        }
+      .grupo-encabezado-origen {
+        @include bordes;
+        flex: 0 0 33%;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size-grupos-estilo-anio;
+        text-align: center;
       }
     }
 

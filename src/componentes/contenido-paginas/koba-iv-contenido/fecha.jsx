@@ -1,8 +1,8 @@
 import React from "react"
 import { fecha, ubicacion } from "@datos/fechaDatos"
 import "./fecha.scss"
-import MetalSeparadorIcono from "../iconos/MetalSeparadorIcono"
-import EscudoSeparadorIcono from "../iconos/EscudoSeparadorIcono"
+import MetalSeparadorIcono from "../../iconos/MetalSeparadorIcono"
+import EscudoSeparadorIcono from "../../iconos/EscudoSeparadorIcono"
 
 const Fecha = () => {
   return (

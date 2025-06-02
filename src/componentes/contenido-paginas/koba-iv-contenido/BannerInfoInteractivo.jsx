@@ -3,8 +3,8 @@ import "./BannerInfoInteractivo.scss";
 const BannerInfoInteractivo = () => (
   <div className="banner-info-interactivo">
     <div className="banner-titulo">
-      Haz clic en los logos de las bandas para ver más información.
-      </div>
+      ¡Esto es KOBA! Haz clic en cada logo y siente el rugido de las bandas.
+    </div>
   </div>
 );
 
