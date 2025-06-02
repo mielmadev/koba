@@ -1,0 +1,121 @@
+@use "@estilos/core.scss" as *;
+
+.merchan-carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0 1.5rem 0;
+  position: relative;
+  z-index: 2;
+
+  &__imagenes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 350px;
+    min-height: 260px;
+    max-width: 800px;
+    position: relative;
+    flex: 1 1 auto;
+    overflow: visible;
+    transition: height 0.3s;
+    touch-action: pan-y;
+    /* Centrar verticalmente las imágenes grandes */
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__imagen {
+    width: 240px;
+    height: 240px;
+    border-radius: 18px 6px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0.13;
+    filter: blur(3px) grayscale(90%);
+    z-index: 2;
+    transition: transform 0.7s ease, opacity 0.7s ease, filter 0.7s ease, border-color 0.7s ease;
+    pointer-events: none;
+    background: #222;
+    box-shadow: 0 2px 12px #0008, 0 6px 24px 0 rgba($rojo-sangre, 0.18), 0 0 0 8px rgba($rojo-sangre, 0.10), inset 0 2px 24px 0 rgba($blanco, 0.10);
+    border: 2.5px solid transparent;
+
+    &.actual {
+      transform: translate(-50%, -60%) scale(1.22);
+      opacity: 1;
+      filter: none;
+      z-index: 10;
+      pointer-events: auto;
+      border: 2.5px solid $rojo-sangre;
+      box-shadow: 0 6px 24px 0 rgba($rojo-sangre, 0.28), 0 0 0 8px rgba($rojo-sangre, 0.18), inset 0 2px 24px 0 rgba($blanco, 0.10);
+
+      &:hover {
+        cursor: url("@cursor/KobaPua_32x32_Gris.png") 16 0, pointer;
+      }
+    }
+
+    &.anterior,
+    &.siguiente,
+    &.lateral-izq,
+    &.lateral-der {
+      border: none !important;
+      box-shadow: none !important;
+      pointer-events: auto;
+
+      &:hover {
+        cursor: url("@cursor/KobaPua_32x32_Gris.png") 16 0, auto;
+      }
+    }
+
+    &.anterior {
+      transform: translate(-160%, -54%) scale(0.92) rotate(-7deg);
+      opacity: 0.38;
+      z-index: 7;
+      background: #222;
+    }
+
+    &.siguiente {
+      transform: translate(60%, -54%) scale(0.92) rotate(7deg);
+      opacity: 0.38;
+      z-index: 7;
+      background: #222;
+    }
+
+    &.lateral-izq {
+      transform: translate(-240%, -56%) scale(0.7) rotate(-12deg);
+      opacity: 0.09;
+      filter: blur(3px) grayscale(90%) drop-shadow(0 6px 24px 0 rgba($dorado-viejo, 0.28), 0 0 0 8px rgba($dorado-viejo, 0.18), inset 0 2px 24px 0 rgba($blanco, 0.10));
+      z-index: 1;
+      background: #222;
+    }
+
+    &.lateral-der {
+      transform: translate(140%, -56%) scale(0.7) rotate(12deg);
+      opacity: 0.09;
+      filter: blur(3px) grayscale(90%) drop-shadow(0 6px 24px 0 rgba($dorado-viejo, 0.28), 0 0 0 8px rgba($dorado-viejo, 0.18), inset 0 2px 24px 0 rgba($blanco, 0.10));
+      z-index: 1;
+      background: #222;
+    }
+  }
+
+  &__btn {
+    display: none !important;
+  }
+
+  &__indicadores {
+    display: none !important;
+  }
+}
+
+@keyframes indicador-gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}

@@ -1,7 +1,7 @@
 @use "@estilos/core.scss" as *;
 
 .contenedor-pag {
-  position: fixed;
+  position: relative;
   z-index: 1;
   display: flex;
   width: 100%;
