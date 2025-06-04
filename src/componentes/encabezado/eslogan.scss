@@ -7,12 +7,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: $marron;
-  font-family: Cinzel, serif;
-  font-size: $fuente-eslogan;
+  color: $color-eslogan;
+  font-family: $font-family-eslogan;
+  font-size: $font-size-eslogan;
 
-  
-  @include bp(xs) {
-    font-size: $fuente-eslogan-xs;
+  @include bp-max(xs) {
+    font-size: $font-size-eslogan-xs;
   }
 }

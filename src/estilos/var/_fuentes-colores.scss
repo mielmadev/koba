@@ -9,9 +9,9 @@
 // Variables para el Banner Koba IV
 $banner-color-koba-iv: $blanco;
 $banner-texto-color-koba-iv: $plata-acero;
-$banner-font-koba-iv: 'Metal Mania', sans-serif;
+$banner-font-koba-iv: $font-family-metalmania;
 $banner-font-size-koba-iv: $clamp-parrafo;
-$banner-font-weight-koba-iv: 400;
+$banner-font-weight-koba-iv: $peso-parrafo;
 
 
 // FUENTES ESPECÍFICAS POR PÁGINA/SECCIÓN
@@ -44,8 +44,10 @@ $fuente-contacto-texto: $fuente-parrafo;
 $fuente-enlaces: $clamp-h5;
 
 // Eslogan
-$fuente-eslogan: $clamp-h2;
-$fuente-eslogan-xs: $clamp-h6;
+$color-eslogan: $marron;
+$font-size-eslogan: $clamp-h3;
+$font-size-eslogan-xs: $clamp-h6;
+$font-family-eslogan: $font-family-cinzel;
 
 // FAQ
 $fuente-faq-preguntas: $clamp-h3;
