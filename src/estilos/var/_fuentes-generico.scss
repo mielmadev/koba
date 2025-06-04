@@ -22,9 +22,9 @@ $font-family-creepster: 'Creepster', cursive;
 
 // Tamaños base
 $fuente-base: 1rem;
-$fuente-parrafo: 1.1rem;
+$fuente-parrafo: 1rem;
 $fuente-h1: 2rem;
-$fuente-h2: 2.2rem;
+$fuente-h2: 1.5rem;
 $fuente-h3: 1.17rem;
 $fuente-h4: 1rem;
 $fuente-h5: 0.83rem;
@@ -33,12 +33,12 @@ $fuente-h6: 0.67rem;
 // Clamps base
 $clamp-base: clamp($fuente-base, 2vw, 2rem);
 $clamp-parrafo: clamp($fuente-parrafo, 2vw, 2.2rem);
-$clamp-h1: clamp($fuente-h1, 6vw, 4rem);
-$clamp-h2: clamp($fuente-h2, 7vw, 4.5rem);
-$clamp-h3: clamp($fuente-h3, 3vw, 2.34rem);
-$clamp-h4: clamp($fuente-h4, 2vw, 2rem);
-$clamp-h5: clamp($fuente-h5, 1.5vw, 1.66rem);
-$clamp-h6: clamp($fuente-h6, 1vw, 1.34rem);
+$clamp-h1: clamp($fuente-h1, 6vw, 3rem);
+$clamp-h2: clamp($fuente-h2, 5vw, 2.2rem);
+$clamp-h3: clamp($fuente-h3, 3vw, 1.5rem);
+$clamp-h4: clamp($fuente-h4, 2vw, 1.2rem);
+$clamp-h5: clamp($fuente-h5, 1.5vw, 1rem);
+$clamp-h6: clamp($fuente-h6, 1vw, 0.8rem);
 
 // Pesos base
 $peso-base: 400;

@@ -2,20 +2,18 @@
 
 .contenido {
   @include pad-gap;
-
   flex-direction: column;
   align-items: stretch;
-  font-size: $fuente-contacto-iconos;
+  font-size: $font-size-contacto-iconos;
 
   .contacto-contenedor {
     @include pad-gap;
-
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     height: 100%;
 
-    > * {
+    >* {
       flex: 1 1 0;
       min-width: 0;
       height: 100%;
@@ -23,14 +21,12 @@
 
     .contacto {
       @include pad-gap;
-
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
       width: 100%;
       min-height: 0;
-      gap: 1rem;
     }
   }
 
@@ -40,7 +36,7 @@
       align-items: stretch;
       gap: 2rem;
 
-      > * {
+      >* {
         position: static !important;
         z-index: auto !important;
         flex: unset;
@@ -49,10 +45,10 @@
         max-width: 100%;
         height: auto !important;
         margin-bottom: 2rem;
-      }
 
-      > *:last-child {
-        margin-bottom: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
 
       .contacto-formulario {

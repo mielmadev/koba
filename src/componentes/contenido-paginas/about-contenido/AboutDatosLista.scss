@@ -1,7 +1,6 @@
 @use "@estilos/core.scss" as *;
 
 .about-datos-lista {
-
   .about-titulo,
   .about-subtitulo,
   .about-seccion,
@@ -13,19 +12,14 @@
   }
 
   .about-titulo {
-    color: $color-about-titulo;
-    font-size: $font-size-about-titulo;
-    font-weight: $peso-about-titulo;
+    @include about-titulo;
     white-space: nowrap;
     text-align: center;
-    text-shadow: $text-shadow-about-titulo;
   }
 
   .about-subtitulo {
+    @include about-subtitulo;
     margin-bottom: $margen-about-subtitulo;
-    color: $color-about-subtitulo;
-    font-size: $font-size-about-subtitulo;
-    font-weight: $peso-about-subtitulo;
     line-height: 1;
     white-space: normal;
 
@@ -39,12 +33,9 @@
   }
 
   .about-seccion {
+    @include about-seccion;
     margin-top: $margen-about-seccion;
     margin-bottom: $margen-about-seccion;
-    color: $color-about-seccion;
-    font-size: $font-size-about-seccion;
-    font-weight: $peso-about-seccion;
-    line-height: 1;
 
     &-linea-izq {
       text-align: left !important;
@@ -56,8 +47,7 @@
   }
 
   .about-texto {
+    @include about-texto;
     margin-bottom: $margen-about-texto;
-    font-size: $font-size-about-texto;
-    font-weight: $peso-about-texto;
   }
 }

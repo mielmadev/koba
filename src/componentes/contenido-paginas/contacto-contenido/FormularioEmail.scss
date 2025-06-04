@@ -12,7 +12,7 @@
   margin-bottom: 0.7rem;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
-  border: 2.5px solid $formulario-color;
+  border: 2.5px solid $color-borde-formulario;
   border-radius: 8px 32px;
   background: transparent;
   color: $blanco;
@@ -23,8 +23,8 @@
     border-color 0.2s,
     background 0.2s;
   box-shadow:
-    0 4px 24px 0 rgba($formulario-color, 0.25),
-    0 1.5px 0 0 $formulario-color inset;
+    0 4px 24px 0 rgba($color-borde-formulario, 0.25),
+    0 1.5px 0 0 $color-borde-formulario inset;
 
   @include margen-laterales-bp($margen-laterales);
 
@@ -36,7 +36,7 @@
     flex-direction: column;
     width: 100%;
     margin-bottom: 0.3em;
-    color: $formulario-color;
+    color: $color-borde-formulario;
     font-size: 1.05rem;
     font-weight: bold;
     letter-spacing: 0.04em;
@@ -45,7 +45,7 @@
     // Sombra solo en hover
     &:hover {
       text-shadow:
-        0 0 6px $formulario-color,
+        0 0 6px $color-borde-formulario,
         1px 1px 2px $negro;
     }
   }
@@ -63,7 +63,7 @@
   textarea {
     margin-top: 0.3rem;
     padding: 0.5rem 0.7rem;
-    border: 2px solid $formulario-color;
+    border: 2px solid $color-borde-formulario;
     border-radius: 6px 18px;
     background: rgba($negro, 0.35);
     color: $blanco;
@@ -72,26 +72,26 @@
     transition:
       border-color 0.2s,
       box-shadow 0.2s;
-    box-shadow: 0 2px 8px 0 rgba($formulario-color, 0.15);
+    box-shadow: 0 2px 8px 0 rgba($color-borde-formulario, 0.15);
     outline: none;
 
     &:focus {
-      border-color: color.adjust($formulario-color, $lightness: 10%);
-      box-shadow: 0 4px 16px 0 rgba($formulario-color, 0.35);
+      border-color: color.adjust($color-borde-formulario, $lightness: 10%);
+      box-shadow: 0 4px 16px 0 rgba($color-borde-formulario, 0.35);
     }
   }
 
   .formulario-email textarea:focus {
-    border-color: color.adjust($formulario-color, $lightness: 10%);
-    box-shadow: 0 4px 16px 0 rgba($formulario-color, 0.35);
+    border-color: color.adjust($color-borde-formulario, $lightness: 10%);
+    box-shadow: 0 4px 16px 0 rgba($color-borde-formulario, 0.35);
   }
 
   button {
     margin-top: 0.7rem;
     padding: 0.6rem 1.1rem;
-    border: 2px solid $formulario-color;
+    border: 2px solid $color-borde-formulario;
     border-radius: 6px 18px;
-    background: linear-gradient(120deg, $formulario-color 70%, $negro 100%);
+    background: linear-gradient(120deg, $color-borde-formulario 70%, $negro 100%);
     color: $blanco;
     font-family: inherit;
     font-size: 1.08rem;
@@ -105,21 +105,19 @@
       border-color 0.2s,
       transform 0.15s;
     align-self: flex-start;
-    box-shadow: 0 2px 8px 0 rgba($formulario-color, 0.18);
+    box-shadow: 0 2px 8px 0 rgba($color-borde-formulario, 0.18);
 
     &:hover {
-      border-color: color.adjust($formulario-color, $lightness: 10%);
-      background: linear-gradient(
-        120deg,
-        color.adjust($formulario-color, $lightness: 10%) 70%,
-        $negro 100%
-      );
+      border-color: color.adjust($color-borde-formulario, $lightness: 10%);
+      background: linear-gradient(120deg,
+          color.adjust($color-borde-formulario, $lightness: 10%) 70%,
+          $negro 100%);
       transform: scale(1.05) rotate(-2deg);
-      box-shadow: 0 4px 16px 0 rgba($formulario-color, 0.35);
+      box-shadow: 0 4px 16px 0 rgba($color-borde-formulario, 0.35);
     }
 
     &:active {
-      border-color: $formulario-color;
+      border-color: $color-borde-formulario;
       background: $negro;
       transform: scale(0.97) rotate(0deg);
     }
@@ -189,7 +187,7 @@
     text-shadow:
       1px 1px 2px $negro,
       0 0 4px $blanco;
-    box-shadow: 0 2px 8px 0 rgba($formulario-color, 0.15);
+    box-shadow: 0 2px 8px 0 rgba($color-borde-formulario, 0.15);
 
     @include margen-laterales-bp($margen-laterales);
   }
@@ -199,11 +197,10 @@
   }
 
   .error {
-    @include mensaje-destacado(
-      $formulario-color,
-      rgba($formulario-color, 0.08),
-      $formulario-color,
-      $formulario-color,
+    @include mensaje-destacado($color-borde-formulario,
+      rgba($color-borde-formulario, 0.08),
+      $color-borde-formulario,
+      $color-borde-formulario,
       "brillo-granate"
     );
   }

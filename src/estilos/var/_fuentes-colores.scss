@@ -17,65 +17,97 @@ $banner-font-weight-koba-iv: $peso-parrafo;
 // FUENTES ESPECÍFICAS POR PÁGINA/SECCIÓN
 
 // About
-$font-size-about-titulo: $clamp-h1;
-$font-size-about-subtitulo: $clamp-h2;
-$font-size-about-seccion: $clamp-h3;
-$font-size-about-texto: $clamp-parrafo;
-$color-about-titulo: $negro;
-$color-about-subtitulo: $marron;
-$color-about-seccion: $marron;
-$text-shadow-about-titulo: 3px 3px 5px $blanco, -3px -3px 5px $blanco;
+// Colores
+// $color-about-seccion: $marron;
+// $color-about-subtitulo: $marron;
+// $color-about-titulo: $negro;
+// Tamaños
+// $font-size-about-seccion: $clamp-h3;
+// $font-size-about-subtitulo: $clamp-h2;
+// $font-size-about-titulo: $clamp-h1;
+// $font-size-about-texto: $clamp-parrafo;
+// Pesos
+// $font-weight-about-seccion: $peso-h3;
+// $font-weight-about-subtitulo: $peso-h2;
+// $font-weight-about-titulo: $peso-h1;
+// $font-weight-about-texto: $peso-parrafo;
+// Sombra
+// $text-shadow-about-titulo: 3px 3px 5px $blanco, -3px -3px 5px $blanco;
+// Mixins
+@mixin about-seccion {
+  color: $marron;
+  font-size: $clamp-h3;
+  font-weight: $peso-h3;
+}
+
+@mixin about-titulo {
+  color: $negro;
+  font-size: $clamp-h1;
+  font-weight: $peso-h1;
+  text-shadow: 3px 3px 5px $blanco, -3px -3px 5px $blanco;
+}
+
+@mixin about-subtitulo {
+  color: $marron;
+  font-size: $clamp-h2;
+  font-weight: $peso-h2;
+}
+
+@mixin about-texto {
+  font-size: $clamp-parrafo;
+  font-weight: $peso-h3;
+}
 
 // Bandas
-$fuente-bandas-nombre: $clamp-h1;
 $fuente-bandas-click: $clamp-h3;
-
-// Grupos
-$font-size-grupos-estilo-anio: $clamp-h4;
-$font-size-grupos-resumen: $clamp-parrafo;
-$font-size-grupos-genero: $clamp-h3;
+$fuente-bandas-nombre: $clamp-h1;
+$peso-bandas-click: $peso-h2;
+$peso-bandas-nombre: $peso-h1;
 
 // Contacto
-$fuente-contacto-iconos: $fuente-h1;
-$fuente-contacto-titulo: $clamp-h3;
+$font-size-contacto-iconos: $fuente-h1;
 $fuente-contacto-texto: $fuente-parrafo;
+$fuente-contacto-titulo: $clamp-h3;
+$peso-contacto-iconos: $peso-h1;
 
 // Enlaces generales
 $fuente-enlaces: $clamp-h5;
+$peso-enlaces: $peso-parrafo;
 
 // Eslogan
 $color-eslogan: $marron;
+$font-family-eslogan: $font-family-cinzel;
 $font-size-eslogan: $clamp-h3;
 $font-size-eslogan-xs: $clamp-h6;
-$font-family-eslogan: $font-family-cinzel;
+$peso-eslogan: $peso-h1;
 
 // FAQ
 $fuente-faq-preguntas: $clamp-h3;
 $fuente-faq-respuestas: $clamp-parrafo;
+$peso-faq-preguntas: $peso-h2;
+$peso-faq-respuestas: $peso-parrafo;
 
 // Fecha
 $fuente-fecha: $clamp-h3;
+$peso-fecha: $peso-h2;
+
+// Grupos
+$font-size-grupos-estilo-anio: $clamp-h4;
+$font-size-grupos-genero: $clamp-h3;
+$font-size-grupos-resumen: $clamp-parrafo;
+$peso-grupos-estilo-anio: $peso-h2;
+$peso-grupos-resumen: $peso-h3;
 
 // Fuente MenuPua
 $fuente-menu-pua: $clamp-h3;
 
-// Pesos específicos para About
-$peso-about-texto: $peso-parrafo;
-$peso-about-titulo: $peso-h1;
-$peso-about-subtitulo: $peso-h2;
-$peso-about-seccion: $peso-h3;
-
-// Pesos específicos para otras secciones
+// Otros pesos
 $peso-grupo-album: $peso-h1;
 $peso-grupo-integrante: $peso-h1;
-$peso-bandas-click: $peso-h2;
-$peso-bandas-nombre: $peso-h1;
-$peso-contacto-iconos: $peso-h1;
-$peso-enlaces: $peso-parrafo;
-$peso-eslogan: $peso-h1;
 $peso-navegador: $peso-parrafo;
-$peso-faq-preguntas: $peso-h2;
-$peso-faq-respuestas: $peso-parrafo;
-$peso-fecha: $peso-h2;
-$peso-grupos-estilo-anio: $peso-h2;
-$peso-grupos-resumen: $peso-h3;
+
+@mixin formulario {
+  color: $blanco;
+  font-family: $font-family-oswald;
+  letter-spacing: 0.03em;
+}
