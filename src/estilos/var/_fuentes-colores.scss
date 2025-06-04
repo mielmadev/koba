@@ -10,13 +10,12 @@
 $banner-color-koba-iv: $blanco;
 
 @mixin banner-koba-iv {
-  color: $banner-texto-color-koba-iv;
-  font-family: $banner-font-koba-iv;
-  font-size: $banner-font-size-koba-iv;
-  font-weight: $banner-font-weight-koba-iv;
+  color: $plata-acero;
+  font-family: $font-family-metalmania;
+  font-size: $clamp-parrafo;
+  font-weight: $font-weight-parrafo;
   letter-spacing: 0.04em;
 }
-
 @mixin about-seccion {
   color: $marron;
   font-size: $clamp-h3;
