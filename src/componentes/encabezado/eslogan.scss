@@ -3,13 +3,11 @@
 .eslogan-contenedor {
   @include tamanio-completo;
   @include pad-gap;
+  @include eslogan-fuente;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: $color-eslogan;
-  font-family: $font-family-eslogan;
-  font-size: $font-size-eslogan;
 
   @include bp-max(xs) {
     font-size: $font-size-eslogan-xs;

@@ -51,15 +51,13 @@ $tarjetas-contacto: map.merge((default: $blanco ),
 
 .tarjeta-contacto {
   @include pad-gap;
+  @include contacto-fuente;
 
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
   border-radius: 6px 24px;
-  color: $blanco;
-  font-family: Oswald, "Bebas Neue", Impact, sans-serif;
-  letter-spacing: 0.03em;
   transition: transform 0.15s cubic-bezier(.34, 1.56, .64, 1), box-shadow 0.2s;
 
   // Variantes de color

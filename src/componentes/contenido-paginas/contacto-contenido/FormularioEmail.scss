@@ -3,6 +3,7 @@
 
 .formulario-email {
   @include pad-gap;
+  @include contacto-fuente;
 
   display: flex;
   flex-direction: column;
@@ -15,9 +16,6 @@
   border: 2.5px solid $color-borde-formulario;
   border-radius: 8px 32px;
   background: transparent;
-  color: $blanco;
-  font-family: Oswald, "Bebas Neue", Impact, sans-serif;
-  letter-spacing: 0.03em;
   transition:
     box-shadow 0.2s,
     border-color 0.2s,
