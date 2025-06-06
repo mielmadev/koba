@@ -2,9 +2,6 @@
 @use "./componentes/utils/IframeEntradas.scss";
 
 :root {
-  font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: $fuente-base;
-  line-height: 1.7;
   cursor:
     url("@imagenes/cursor/cursor-pua-blanco.webp") 16 0,
     auto;
@@ -22,6 +19,8 @@
 }
 
 body {
+  @include base-fuente;
+
   display: flex;
   box-sizing: border-box;
   min-width: 0;

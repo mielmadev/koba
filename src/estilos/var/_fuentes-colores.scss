@@ -1,94 +1,81 @@
-// Convención de nombres para variables:
-// - Para fuentes específicas de sección: $fuente-[seccion]-[elemento]  (ejemplo: $fuente-about-titulo)
-// - Para banners: $banner-[propiedad]-[contexto]  (ejemplo: $banner-color-koba-iv)
-
 @use "@estilos/var/fuentes-generico.scss" as *;
 @use "@estilos/var/colores.scss" as *;
 
+$banner-koba-iv-color-borde-fondo: $blanco;
 
-// Variables para el Banner Koba IV
-$banner-color-koba-iv: $blanco;
-
-@mixin banner-koba-iv {
+@mixin banner-koba-iv-fuente {
   color: $plata-acero;
   font-family: $font-family-metalmania;
-  font-size: $clamp-parrafo;
+  font-size: $clamp-p;
   font-weight: $font-weight-parrafo;
   letter-spacing: 0.04em;
 }
-@mixin about-seccion {
+
+@mixin about-seccion-fuente {
   color: $marron;
   font-size: $clamp-h3;
   font-weight: $font-weight-h3;
 }
 
-@mixin about-titulo {
+
+@mixin about-titulo-fuente {
   color: $negro;
   font-size: $clamp-h1;
   font-weight: $font-weight-h1;
   text-shadow: 3px 3px 5px $blanco, -3px -3px 5px $blanco;
 }
 
-@mixin about-subtitulo {
+@mixin about-subtitulo-fuente {
   color: $marron;
   font-size: $clamp-h2;
   font-weight: $font-weight-h2;
 }
 
-@mixin about-texto {
-  font-size: $clamp-parrafo;
-  font-weight: $font-weight-h3;
+@mixin about-texto-fuente {
+  font-size: $clamp-p;
+  font-weight: $font-weight-parrafo;
 }
 
-// Bandas
 $fuente-bandas-click: $clamp-h3;
 $fuente-bandas-nombre: $clamp-h1;
 $font-weight-bandas-click: $font-weight-h2;
 $font-weight-bandas-nombre: $font-weight-h1;
 
-// Contacto
 $font-size-contacto-iconos: $fuente-h1;
-$fuente-contacto-texto: $fuente-parrafo;
+$fuente-contacto-texto: $fuente-p;
 $fuente-contacto-titulo: $clamp-h3;
 $font-weight-contacto-iconos: $font-weight-h1;
 
-// Enlaces generales
-$fuente-enlaces: $clamp-h5;
+$font-size-enlaces: $clamp-h5;
 $font-weight-enlaces: $font-weight-parrafo;
 
 @mixin enlaces-generales {
-  font-size: $fuente-enlaces;
+  font-size: $font-size-enlaces;
   font-weight: $font-weight-enlaces;
 }
 
-// Eslogan
 $color-eslogan: $marron;
 $font-family-eslogan: $font-family-cinzel;
 $font-size-eslogan: $clamp-h3;
 $font-size-eslogan-xs: $clamp-h6;
 $font-weight-eslogan: $font-weight-h1;
 
-// FAQ
 $fuente-faq-preguntas: $clamp-h3;
-$fuente-faq-respuestas: $clamp-parrafo;
+$fuente-faq-respuestas: $clamp-p;
 $font-weight-faq-preguntas: $font-weight-h2;
 $font-weight-faq-respuestas: $font-weight-parrafo;
 
-// Fecha
 $fuente-fecha: $clamp-h3;
 $font-weight-fecha: $font-weight-h2;
 
-// Grupos
 $font-size-grupos-estilo-anio: $clamp-h4;
 $font-size-grupos-genero: $clamp-h3;
-$font-size-grupos-resumen: $clamp-parrafo;
+$font-size-grupos-resumen: $clamp-p;
 $font-weight-grupos-estilo-anio: $font-weight-h2;
 $font-weight-grupos-resumen: $font-weight-h3;
 
-// Fuente MenuPua
 $fuente-menu-pua: $clamp-h3;
 
-// Otros pesos
 $font-weight-grupo-album: $font-weight-h1;
 $font-weight-grupo-integrante: $font-weight-h1;
 $font-weight-navegador: $font-weight-parrafo;
@@ -97,4 +84,10 @@ $font-weight-navegador: $font-weight-parrafo;
   color: $blanco;
   font-family: $font-family-oswald;
   letter-spacing: 0.03em;
+}
+
+@mixin base-fuente {
+  font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: $fuente-p;
+  line-height: 1.7;
 }
