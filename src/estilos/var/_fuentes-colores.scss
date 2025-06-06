@@ -7,7 +7,7 @@ $banner-koba-iv-color-borde-fondo: $blanco;
   color: $plata-acero;
   font-family: $font-family-metalmania;
   font-size: $clamp-p;
-  font-weight: $font-weight-parrafo;
+  font-weight: $font-weight-p;
   letter-spacing: 0.04em;
 }
 
@@ -33,7 +33,7 @@ $banner-koba-iv-color-borde-fondo: $blanco;
 
 @mixin about-texto-fuente {
   font-size: $clamp-p;
-  font-weight: $font-weight-parrafo;
+  font-weight: $font-weight-p;
 }
 
 $fuente-bandas-click: $clamp-h3;
@@ -47,7 +47,7 @@ $fuente-contacto-titulo: $clamp-h3;
 $font-weight-contacto-iconos: $font-weight-h1;
 
 $font-size-enlaces: $clamp-h5;
-$font-weight-enlaces: $font-weight-parrafo;
+$font-weight-enlaces: $font-weight-p;
 
 @mixin enlaces-generales {
   font-size: $font-size-enlaces;
@@ -63,7 +63,7 @@ $font-weight-eslogan: $font-weight-h1;
 $fuente-faq-preguntas: $clamp-h3;
 $fuente-faq-respuestas: $clamp-p;
 $font-weight-faq-preguntas: $font-weight-h2;
-$font-weight-faq-respuestas: $font-weight-parrafo;
+$font-weight-faq-respuestas: $font-weight-p;
 
 $fuente-fecha: $clamp-h3;
 $font-weight-fecha: $font-weight-h2;
@@ -78,7 +78,7 @@ $fuente-menu-pua: $clamp-h3;
 
 $font-weight-grupo-album: $font-weight-h1;
 $font-weight-grupo-integrante: $font-weight-h1;
-$font-weight-navegador: $font-weight-parrafo;
+$font-weight-navegador: $font-weight-p;
 
 @mixin formulario {
   color: $blanco;
@@ -89,5 +89,5 @@ $font-weight-navegador: $font-weight-parrafo;
 @mixin base-fuente {
   font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: $fuente-p;
-  line-height: 1.7;
+  line-height: $line-height-p;
 }
