@@ -28,7 +28,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $gris-plomo;
   white-space: normal;
   text-align: center;
   text-shadow:
@@ -36,11 +35,9 @@
     $blanco 0 0 20px;
 
   .fecha {
+    @include fecha-fuente;
     display: flex;
     align-items: center;
-    font-family: "Metal Mania", "Russo One", Teko, Impact, Arial, sans-serif;
-    font-size: $fuente-fecha;
-    letter-spacing: 0.04em;
     animation: parpadeo 3s infinite;
     gap: 0.5em;
   }

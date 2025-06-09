@@ -103,6 +103,13 @@ $font-weight-grupos-resumen: $font-weight-h3;
 $font-weight-grupo-album: $font-weight-h1;
 $font-weight-grupo-integrante: $font-weight-h1;
 
+@mixin fecha-fuente {
+  font-family: $font-family-metalmania;
+  font-size: $fuente-fecha;
+  color: $gris-plomo;
+  letter-spacing: 0.04em;
+}
+
 // =====================
 // ABOUT
 // =====================
