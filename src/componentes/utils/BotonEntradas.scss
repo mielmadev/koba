@@ -1,4 +1,4 @@
-@use "../../estilos/core.scss" as *;
+@use "../../estilos/core" as *;
 
 // Extraído de FaqContenido.scss para uso global y reutilizable
 .enlace-comprar-entradas {
@@ -7,12 +7,13 @@
   text-shadow: 0 1px 6px rgba($negro, 0.18);
   border: 2px solid $rojo-sangre;
   border-radius: 24px 8px;
-  padding: 0.18em 1.1em;
+  padding: 0 1.1em; // sin padding vertical, solo horizontal
+  line-height: 1.3; // reduce la altura de la caja
   background: linear-gradient(135deg, transparent 0%, rgba($rojo-sangre, 0.75) 100%);
   font-family: 'Cinzel', serif;
   font-weight: bold;
   text-decoration: none;
-  font-size: 1.08em;
+  font-size: 1em; // antes 1.08em, ahora menos alta
   box-shadow: 0 1px 4px 0 rgba($plata-acero, 0.13), 0 0 0 2px rgba($rojo-sangre, 0.10), inset 0 1px 8px 0 rgba($rojo-sangre, 0.09);
   margin: 0 0.2em;
   transition: color 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.15s cubic-bezier(.34, 1.56, .64, 1);

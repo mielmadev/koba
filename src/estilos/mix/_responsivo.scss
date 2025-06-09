@@ -9,9 +9,11 @@
   @each $bp in (xs, md, lg, tablet, laptop, pc, full) {
     $valor: map.get($mapa, $bp);
 
-    @if $bp == xs {
+    @if $bp ==xs {
       margin: #{$valor};
-    } @else {
+    }
+
+    @else {
       @include bp($bp) {
         margin: #{$valor};
       }
@@ -22,9 +24,11 @@
 // @include altura-encabezado-bp($altura-encabezado);
 @mixin altura-encabezado-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
-    @if $bp == xs {
+    @if $bp ==xs {
       #{$propiedad}: map.get($mapa, $bp);
-    } @else {
+    }
+
+    @else {
       @include bp($bp) {
         #{$propiedad}: map.get($mapa, $bp);
       }
@@ -35,9 +39,11 @@
 // @include altura-contenido-bp($altura-encabezado);
 @mixin altura-contenido-bp($mapa, $propiedad: height) {
   @each $bp in (xs, s, m, tablet, laptop, pc, full) {
-    @if $bp == xs {
+    @if $bp ==xs {
       #{$propiedad}: calc(100vh - map.get($mapa, $bp));
-    } @else {
+    }
+
+    @else {
       @include bp($bp) {
         #{$propiedad}: calc(100vh - map.get($mapa, $bp));
       }
@@ -48,9 +54,11 @@
 // @include altura-redes-sociales-bp($alturas-redes-sociales);
 @mixin altura-redes-sociales-bp($mapa, $propiedad: height) {
   @each $bp, $valor in $mapa {
-    @if $bp == xs {
+    @if $bp ==xs {
       #{$propiedad}: #{$valor};
-    } @else {
+    }
+
+    @else {
       @include bp($bp) {
         #{$propiedad}: #{$valor};
       }
@@ -75,12 +83,28 @@ $fecha-svg-sizes: (
   }
 
   @each $bp, $size in $fecha-svg-sizes {
-    @if $bp != xs {
+    @if $bp !=xs {
       @include bp($bp) {
         .fecha-svg-separador svg {
           width: $size;
           height: $size;
         }
+      }
+    }
+  }
+}
+
+// Mixin para font-size responsivo del eslogan
+// Uso: @include font-size-eslogan($font-size-eslogan);
+@mixin font-size-eslogan($mapa) {
+  @each $bp, $valor in $mapa {
+    @if $bp ==xs {
+      font-size: #{$valor};
+    }
+
+    @else {
+      @include bp($bp) {
+        font-size: #{$valor};
       }
     }
   }

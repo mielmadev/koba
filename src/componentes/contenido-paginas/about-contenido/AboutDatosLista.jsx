@@ -1,6 +1,6 @@
 import React from "react"
 import "./aboutDatosLista.scss"
-import { aboutDatos } from "@datos/aboutDatos"
+import { aboutDatos } from "./aboutDatos"
 
 const obtenerLineas = (texto) =>
   texto ? texto.split("\n").map((linea, i, arr) => (
