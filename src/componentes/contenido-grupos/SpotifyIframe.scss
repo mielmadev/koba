@@ -1,0 +1,33 @@
+@use "@estilos/core.scss" as *;
+
+.grupo-pie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  width: 100%;
+  gap: 0.5rem; // Se agrega espacio entre el iframe y los bordes redondeados
+}
+
+.grupo-reproductor {
+  @include pad-gap;
+  border-radius: 6px 24px;
+  background: linear-gradient(120deg, rgba($spotify, 0.12) 80%, rgba($spotify, 0.7) 100%);
+  border: 2.5px solid $spotify;
+  box-shadow: 0 4px 24px 0 rgba($spotify, 0.25), 0 1.5px 0 0 $spotify inset;
+  padding: 0.5rem;
+  height: 100px;
+  width: 100%;
+  max-width: none;
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+  outline: none;
+  overflow: hidden;
+
+  &:focus,
+  &:hover {
+    background: linear-gradient(120deg, rgba($spotify, 0.7) 0%, rgba($spotify, 0.12) 80%);
+    border-color: $spotify;
+    color: $spotify;
+    box-shadow: 0 8px 32px 0 rgba($spotify, 0.45), 0 2px 0 0 rgba($spotify, 0.18) inset;
+  }
+}

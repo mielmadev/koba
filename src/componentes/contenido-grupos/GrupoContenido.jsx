@@ -32,7 +32,7 @@ const GrupoContenido = ({ nombreBanda }) => {
               <div className="grupo-resumen">{obtenerLineas(banda.resumen)}</div>
               <div className="grupo-integrantes-albums">
                 <div className="grupo-integrantes">
-                  <strong>Integrantes:</strong>
+                  <strong className="titulo-integrantes">Integrantes:</strong>
                   <ul>
                     {Object.entries(banda.integrantes).map(([rol, valor]) => (
                       <li key={rol}>
@@ -52,7 +52,7 @@ const GrupoContenido = ({ nombreBanda }) => {
                   </ul>
                 </div>
                 <div className="grupo-albums">
-                  <strong>Álbumes:</strong>
+                  <strong className="titulo-albums">Álbumes:</strong>
                   <ul>
                     {albumsOrdenados.map((album, idx) => (
                       <li key={album.nombre + (album.anio || idx)}>
@@ -67,19 +67,6 @@ const GrupoContenido = ({ nombreBanda }) => {
           </div>
         </div>
         {/* Pie de grupo */}
-        <div className="grupo-pie">
-          <iframe
-            className="grupo-reproductor"
-            style={{ borderRadius: "12px", height: "100px" }}
-            src={banda.spotify}
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            title={`Spotify de ${banda.nombre}`}
-          >
-            Tu navegador no soporta iframes. Por favor, visita el enlace directamente en Spotify.
-          </iframe>
-        </div>
       </div>
     </div>
   )

@@ -10,6 +10,9 @@ import theElectricAlleyFondo from "../../assets/imagenes/fondos/theElectricAlley
 import wolfheartFondo from "../../assets/imagenes/fondos/wolfheartFondo.webp"
 import suicidalAngelsFondo from "../../assets/imagenes/fondos/suicidalAngelsFondo.webp"
 
+import SpotifyIframe from "../contenido-grupos/SpotifyIframe"
+import bandasDatos2025 from "../contenido-grupos/bandasDatos2025"
+
 // Este componente genérico muestra el fondo y el contenido del grupo según la ruta
 const fondos = {
   asgarth: asgarthFondo,
@@ -25,6 +28,9 @@ const fondos = {
 export default function GrupoPagGenerico() {
   const { nombreBanda } = useParams()
   const fondo = fondos[nombreBanda?.toLowerCase()] || null
+  // Buscar la banda en bandasDatos2025
+  const normalizar = (str) => str.trim().toLowerCase().replace(/\s+/g, "")
+  const banda = bandasDatos2025.find((b) => normalizar(b.nombre) === normalizar(nombreBanda))
   return (
     <div className="contenedor-pag">
       <div className="bandas-fondo">
@@ -32,6 +38,13 @@ export default function GrupoPagGenerico() {
       </div>
       <div className="contenido-pag">
         <GrupoContenido nombreBanda={nombreBanda} />
+        {/* El iframe de Spotify debe ir al final de la página y fijado abajo */}
+        {banda?.spotify && (
+          <SpotifyIframe
+            spotify={banda.spotify}
+            nombre={banda.nombre}
+          />
+        )}
       </div>
     </div>
   )
