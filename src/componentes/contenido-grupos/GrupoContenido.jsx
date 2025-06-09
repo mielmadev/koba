@@ -1,5 +1,5 @@
 import React from "react"
-import bandasDatos2025 from "@datos/bandasDatosAnio2025"
+import bandasDatos2025 from "./bandasDatos2025"
 import obtenerLineas from "@componentes/utils/obtenerLineas"
 import "./GrupoContenido.scss"
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { fecha, ubicacion } from "@datos/fechaDatos"
+import { fecha, ubicacion } from "./fechaDatos"
 import "./fecha.scss"
 import MetalSeparadorIcono from "../../iconos/MetalSeparadorIcono"
 import EscudoSeparadorIcono from "../../iconos/EscudoSeparadorIcono"

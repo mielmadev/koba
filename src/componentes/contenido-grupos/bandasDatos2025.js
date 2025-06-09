@@ -1,5 +1,5 @@
 import { bandasLogo } from "@imagenes/imagenes.js"
-import resumenesBandas from "./resumenesBandas2025.js"
+import resumenesBandas from "./resumenesBandas2025"
 
 const bandasDatos2025 = [
   {
