@@ -17,7 +17,7 @@ $banner-koba-iv-color-borde-fondo: $blanco;
 // =====================
 // ENLACES
 // =====================
-$font-size-enlaces: $clamp-h5;
+$font-size-enlaces: $clamp-h4;
 $font-weight-enlaces: $font-weight-p;
 
 @mixin enlaces-generales {
@@ -28,13 +28,19 @@ $font-weight-enlaces: $font-weight-p;
 // =====================
 // ESLOGAN
 // =====================
-$font-size-eslogan-xs: $clamp-h6;
-$font-size-eslogan-xs: $clamp-h6;
+$font-size-eslogan: (
+    xs: 1rem,
+    s: 1.2rem,
+    m: 1.3rem,
+    tablet: 1.9rem,
+    laptop: 2rem,
+    pc: 2.5rem,
+    full: 2.5rem
+);
 
 @mixin eslogan-fuente {
   color: $marron;
   font-family: $font-family-cinzel;
-  font-size: $clamp-h3;
 }
 
 // =====================
@@ -149,3 +155,13 @@ $font-weight-navegador: $font-weight-p;
   font-size: $fuente-p;
   line-height: $line-height-p;
 }
+
+$font-size-entradas: (
+  xs: 1rem,
+  s: 1.2rem,
+  m: 1.3rem,
+  tablet: 1.9rem,
+  laptop: 2rem,
+  pc: 2.5rem,
+  full: 2.5rem
+);

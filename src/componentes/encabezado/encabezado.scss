@@ -10,11 +10,9 @@
   align-items: center;
   width: 100dvw;
 
-  // include bordes;
   @include altura-encabezado-bp($altura-encabezado);
 
   .logo-encabezado {
-    // include bordes;
     @include pad-gap;
 
     display: flex;
@@ -23,43 +21,29 @@
     flex-shrink: 0;
 
     .logo-encabezado img {
-      // include bordes;
       @include tamanio-completo;
     }
   }
 
   .encabezado-derecha {
-    // include bordes;
+    @include tamanio-completo;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-
-    .encabezado-navegador {
-      // include bordes;
-
+    .encabezado-navegador,
+    .encabezado-eslogan {
       display: flex;
       flex: 1;
-      justify-content: flex-end;
       align-items: center;
       width: 100%;
       height: 50%;
+    }
 
-      @include pad-gap;
+    .encabezado-navegador {
+      justify-content: flex-end;
     }
 
     .encabezado-eslogan {
-      // include bordes;
-
-      display: flex;
-      flex: 1;
+      padding-right: 5px;
       justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      height: 50%;
     }
   }
 }

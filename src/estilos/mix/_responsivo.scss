@@ -6,13 +6,10 @@
 
 // @include margen-laterales-bp($margen-laterales);
 @mixin margen-laterales-bp($mapa) {
-  @each $bp in (xs, md, lg, tablet, laptop, pc, full) {
-    $valor: map.get($mapa, $bp);
-
+  @each $bp, $valor in $mapa {
     @if $bp ==xs {
       margin: #{$valor};
     }
-
     @else {
       @include bp($bp) {
         margin: #{$valor};
@@ -23,14 +20,13 @@
 
 // @include altura-encabezado-bp($altura-encabezado);
 @mixin altura-encabezado-bp($mapa, $propiedad: height) {
-  @each $bp in (xs, s, m, tablet, laptop, pc, full) {
+  @each $bp, $valor in $mapa {
     @if $bp ==xs {
-      #{$propiedad}: map.get($mapa, $bp);
+      #{$propiedad}: #{$valor};
     }
-
     @else {
       @include bp($bp) {
-        #{$propiedad}: map.get($mapa, $bp);
+        #{$propiedad}: #{$valor};
       }
     }
   }
@@ -38,14 +34,13 @@
 
 // @include altura-contenido-bp($altura-encabezado);
 @mixin altura-contenido-bp($mapa, $propiedad: height) {
-  @each $bp in (xs, s, m, tablet, laptop, pc, full) {
+  @each $bp, $valor in $mapa {
     @if $bp ==xs {
-      #{$propiedad}: calc(100vh - map.get($mapa, $bp));
+      #{$propiedad}: calc(100vh - #{$valor});
     }
-
     @else {
       @include bp($bp) {
-        #{$propiedad}: calc(100vh - map.get($mapa, $bp));
+        #{$propiedad}: calc(100vh - #{$valor});
       }
     }
   }
@@ -94,17 +89,17 @@ $fecha-svg-sizes: (
   }
 }
 
-// Mixin para font-size responsivo del eslogan
-// Uso: @include font-size-eslogan($font-size-eslogan);
-@mixin font-size-eslogan($mapa) {
+
+// Mixin para propiedad responsiva reutilizable
+// Uso: @include prop-bp($mapa, font-size o propiedad);
+@mixin prop-bp($mapa, $propiedad) {
   @each $bp, $valor in $mapa {
     @if $bp ==xs {
-      font-size: #{$valor};
+      #{$propiedad}: #{$valor};
     }
-
     @else {
       @include bp($bp) {
-        font-size: #{$valor};
+        #{$propiedad}: #{$valor};
       }
     }
   }
