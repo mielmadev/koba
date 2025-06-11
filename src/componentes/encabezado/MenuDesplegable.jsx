@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import PropTypes from "prop-types"
 import { NavLink } from "react-router-dom"
-import "./MenuDesplegable.scss"
+import "./menuDesplegable.scss"
 import LogoKoba from "@imagenes/logos/logo-koba.png"
 import dividirEnFilasMenuDesplegable from "./dividirEnFilasMenuDesplegable.js"
 

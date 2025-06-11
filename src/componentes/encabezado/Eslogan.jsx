@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "./Eslogan.scss"
+import "./eslogan.scss"
 import BotonEntradas from "../utils/BotonEntradas"
 import IframeEntradas from "../utils/IframeEntradas"
 

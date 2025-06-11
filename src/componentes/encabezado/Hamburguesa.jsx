@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
-import "./Hamburguesa.scss"
+import "./hamburguesa.scss"
 import PuaGirando from "../animaciones/PuaGirando"
 
 // Componente Hamburguesa: botón para abrir/cerrar el menu
