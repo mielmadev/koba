@@ -1,6 +1,6 @@
 import React from "react"
 import "./encabezado.scss"
-import LogoKoba from "@imagenes/logos/LogoKoba.png"
+import LogoKoba from "@imagenes/logos/logo-koba.png"
 import Eslogan from "./Eslogan.jsx"
 import Navegador from "./Navegador.jsx"
 
