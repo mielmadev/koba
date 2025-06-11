@@ -1,5 +1,5 @@
 import React from "react"
-import "./SpotifyIframe.scss"
+import "./spotifyIframe.scss"
 
 const SpotifyIframe = ({ spotify, nombre }) => (
   <div className="grupo-pie">

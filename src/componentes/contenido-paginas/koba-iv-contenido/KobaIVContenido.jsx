@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import Fecha from "./fecha.jsx"
-import "./KobaIVContenido.scss"
+import "./kobaIVContenido.scss"
 import { bandasLogo } from "@imagenes/imagenes"
 import BannerInfoInteractivo from "./BannerInfoInteractivo.jsx"
 

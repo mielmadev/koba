@@ -1,5 +1,5 @@
 import React from "react"
-import "./ContactoContenido.scss"
+import "./contactoContenido.scss"
 import { EmailIcono, WhatsappIcono } from "@iconos/iconos"
 import TarjetaContacto from "./TarjetaContacto.jsx"
 import FormularioEmail from "./FormularioEmail.jsx"

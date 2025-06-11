@@ -1,5 +1,5 @@
 import React from "react"
-import "./AboutVideo.scss"
+import "./aboutVideo.scss"
 
 // URL actualizada con parámetros adicionales para mejor compatibilidad
 const videoUrl = "https://www.youtube.com/embed/Bq7QldlGt2U?rel=0&showinfo=0"

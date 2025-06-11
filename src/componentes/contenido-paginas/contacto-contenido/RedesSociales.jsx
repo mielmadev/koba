@@ -1,5 +1,5 @@
 import React from "react"
-import "./RedesSociales.scss"
+import "./redesSociales.scss"
 import {
   FacebookIcono,
   InstagramIcono,

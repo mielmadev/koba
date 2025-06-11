@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "../contenido-paginas/faq-contenido/FaqContenido.scss"
-import "./BotonEntradas.scss"
+import "./botonEntradas.scss"
 
 /**
  * Botón reutilizable para la compra de entradas.

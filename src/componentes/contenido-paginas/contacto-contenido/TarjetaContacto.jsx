@@ -1,5 +1,5 @@
 import React from "react"
-import "./TarjetaContacto.scss"
+import "./tarjetaContacto.scss"
 
 // eslint-disable-next-line no-unused-vars
 export default function TarjetaContacto({ icono: Icono, titulo, texto, tipo = "default" }) {

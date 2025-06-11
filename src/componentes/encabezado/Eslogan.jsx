@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./eslogan.scss"
 import BotonEntradas from "../utils/BotonEntradas"
-import IframeEntradas from "../utils/IframeEntradas"
+import iframeEntradas from "../utils/iframeEntradas"
 
 const Eslogan = () => {
   const [mostrarIframe, setMostrarIframe] = useState(false)
@@ -61,7 +61,7 @@ const Eslogan = () => {
             >
               ×
             </button>
-            <IframeEntradas />
+            <iframeEntradas />
           </div>
         </div>
       )}

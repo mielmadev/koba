@@ -1,4 +1,4 @@
-import "./BannerInfoInteractivo.scss"
+import "./bannerInfoInteractivo.scss"
 
 const BannerInfoInteractivo = () => (
   <div className="banner-info-interactivo">

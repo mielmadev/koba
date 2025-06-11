@@ -1,6 +1,6 @@
 import AboutDatosLista from "./AboutDatosLista"
 import AboutVideo from "./AboutVideo"
-import "./AboutContenido.scss"
+import "./aboutContenido.scss"
 
 const AboutContenido = () => (
   <div className="contenido">

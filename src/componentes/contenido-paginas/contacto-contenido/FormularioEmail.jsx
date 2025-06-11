@@ -6,7 +6,7 @@
 import React, { useRef, useState } from "react"
 // Instala emailjs-com: npm install emailjs-com
 import emailjs from "emailjs-com"
-import "./FormularioEmail.scss"
+import "./formularioEmail.scss"
 
 export default function FormularioEmail() {
   const form = useRef()
