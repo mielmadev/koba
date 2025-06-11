@@ -1,6 +1,6 @@
 import React from "react"
-import PaginaGenerica from "./PaginaGenerica"
-import FAQ from "@contenido-paginas/faq-contenido/FaqContenido"
+import PaginaGenerica from "./PaginaGenerica.jsx"
+import FaqContenido from "@contenido-paginas/faq-contenido/FaqContenido.jsx"
 import FaqFondo from "@imagenes/fondos/faqFondo.webp"
 
 export default function FaqPag() {

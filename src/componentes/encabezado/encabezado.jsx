@@ -1,7 +1,7 @@
 import React from "react"
 import "./encabezado.scss"
 import LogoKoba from "@imagenes/logos/logoKoba.png"
-import Eslogan from "./eslogan.jsx"
+import Eslogan from "./Eslogan.jsx"
 import Navegador from "./Navegador.jsx"
 
 const Encabezado = () => {

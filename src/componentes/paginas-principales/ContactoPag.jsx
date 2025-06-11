@@ -1,6 +1,6 @@
 import React from "react"
-import PaginaGenerica from "./PaginaGenerica"
-import ContactoContenido from "@contenido-paginas/contacto-contenido/ContactoContenido"
+import PaginaGenerica from "./PaginaGenerica.jsx"
+import ContactoContenido from "@contenido-paginas/contacto-contenido/ContactoContenido.jsx"
 import ContactoFondo from "@imagenes/fondos/contactoFondo.webp"
 
 export default function ContactoPag() {

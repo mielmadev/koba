@@ -1,9 +1,9 @@
 import React from "react"
 import "./ContactoContenido.scss"
 import { EmailIcono, WhatsappIcono } from "@iconos/iconos"
-import TarjetaContacto from "./TarjetaContacto"
-import FormularioEmail from "./FormularioEmail"
-import RedesSociales from "./RedesSociales"
+import TarjetaContacto from "./TarjetaContacto.jsx"
+import FormularioEmail from "./FormularioEmail.jsx"
+import RedesSociales from "./RedesSociales.jsx"
 
 export default function ContactoContenido() {
   return (

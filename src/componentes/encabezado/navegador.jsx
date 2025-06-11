@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import PAGES_LAZY from "@AppComponentes/PagesLazy"
-import Hamburguesa from "./Hamburguesa"
-import MenuDesplegable from "./MenuDesplegable"
+import Hamburguesa from "./Hamburguesa.jsx"
+import MenuDesplegable from "./MenuDesplegable.jsx"
 import "./navegador.scss"
 
 const Navegador = () => {

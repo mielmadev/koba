@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import Fecha from "./fecha"
+import Fecha from "./fecha.jsx"
 import "./KobaIVContenido.scss"
 import { bandasLogo } from "@imagenes/imagenes"
-import BannerInfoInteractivo from "./BannerInfoInteractivo"
+import BannerInfoInteractivo from "./BannerInfoInteractivo.jsx"
 
 // Datos de bandas para el cartel, con imagen y link explícitos
 const bandasCartel = [
