@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "cpx 404.html dist/",
+    "postbuild": "cpy 404.html dist/",
     "serve": "vite preview",
     "deploy": "gh-pages -d dist",
     "lint": "eslint --config ./config/eslint.config.js .",
@@ -32,7 +32,7 @@
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
-    "cpx": "^1.5.0",
+    "cpy-cli": "^5.0.0",
     "eslint": "^9.21.0",
     "eslint-plugin-prettier": "^5.4.0",
     "eslint-plugin-react-hooks": "^5.1.0",
