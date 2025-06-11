@@ -1,4 +1,4 @@
-# Koba – Proyecto React + Vite
+# Koba – Proyecto React + Vite 
 
 Este proyecto utiliza [React](https://react.dev/) y [Vite](https://vitejs.dev/) para ofrecer una base moderna, rápida y flexible para el desarrollo de aplicaciones web. Incluye configuración avanzada de ESLint, Prettier, Stylelint y ordenación de SCSS para mantener un código limpio y consistente.
 
