@@ -2,10 +2,10 @@ import React, { Suspense } from "react"
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 
 // Componentes
-import Encabezado from "./componentes/encabezado/Encabezado"
-import Fallback from "./componentes/AppComponentes/Fallback"
-import PAGES_LAZY from "./componentes/AppComponentes/PagesLazy"
-import GRUPOS_LAZY from "./componentes/AppComponentes/GruposLazy"
+import Encabezado from "./componentes/encabezado/Encabezado.jsx"
+import Fallback from "./componentes/AppComponentes/Fallback.jsx"
+import PAGES_LAZY from "./componentes/AppComponentes/PagesLazy.jsx"
+import GRUPOS_LAZY from "./componentes/AppComponentes/GruposLazy.jsx"
 
 import "@estilos/app/appEstilosIndex.scss" // Consolidado
 
