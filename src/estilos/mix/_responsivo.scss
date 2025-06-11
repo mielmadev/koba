@@ -7,9 +7,11 @@
 // @include margen-laterales-bp($margen-laterales);
 @mixin margen-laterales-bp($mapa) {
   @each $bp, $valor in $mapa {
-    @if $bp == xs {
+    @if $bp ==xs {
       margin: #{$valor};
-    } @else {
+    }
+
+    @else {
       @include bp($bp) {
         margin: #{$valor};
       }
@@ -20,9 +22,11 @@
 // @include altura-encabezado-bp($altura-encabezado);
 @mixin altura-encabezado-bp($mapa, $propiedad: height) {
   @each $bp, $valor in $mapa {
-    @if $bp == xs {
+    @if $bp ==xs {
       #{$propiedad}: #{$valor};
-    } @else {
+    }
+
+    @else {
       @include bp($bp) {
         #{$propiedad}: #{$valor};
       }
@@ -33,9 +37,11 @@
 // @include altura-contenido-bp($altura-encabezado);
 @mixin altura-contenido-bp($mapa, $propiedad: height) {
   @each $bp, $valor in $mapa {
-    @if $bp == xs {
+    @if $bp ==xs {
       #{$propiedad}: calc(100vh - #{$valor});
-    } @else {
+    }
+
+    @else {
       @include bp($bp) {
         #{$propiedad}: calc(100vh - #{$valor});
       }
@@ -46,9 +52,11 @@
 // @include altura-redes-sociales-bp($alturas-redes-sociales);
 @mixin altura-redes-sociales-bp($mapa, $propiedad: height) {
   @each $bp, $valor in $mapa {
-    @if $bp == xs {
+    @if $bp ==xs {
       #{$propiedad}: #{$valor};
-    } @else {
+    }
+
+    @else {
       @include bp($bp) {
         #{$propiedad}: #{$valor};
       }
@@ -73,7 +81,7 @@ $fecha-svg-sizes: (
   }
 
   @each $bp, $size in $fecha-svg-sizes {
-    @if $bp != xs {
+    @if $bp !=xs {
       @include bp($bp) {
         .fecha-svg-separador svg {
           width: $size;
@@ -88,9 +96,11 @@ $fecha-svg-sizes: (
 // Uso: @include prop-bp($mapa, font-size o propiedad);
 @mixin prop-bp($mapa, $propiedad) {
   @each $bp, $valor in $mapa {
-    @if $bp == xs {
+    @if $bp ==xs {
       #{$propiedad}: #{$valor};
-    } @else {
+    }
+
+    @else {
       @include bp($bp) {
         #{$propiedad}: #{$valor};
       }
