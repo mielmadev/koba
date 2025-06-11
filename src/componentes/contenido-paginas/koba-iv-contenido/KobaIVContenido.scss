@@ -49,6 +49,7 @@
     .nivel-3,
     .nivel-4 {
       @include pad-gap;
+
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -56,7 +57,7 @@
       width: 100%;
       gap: 5rem;
 
-      &>.banda-contenedor {
+      & > .banda-contenedor {
         flex: 0 1 auto;
         min-width: 0;
         max-width: 100%;
@@ -94,7 +95,7 @@
       align-items: center;
       gap: 5rem;
 
-      &>.banda-contenedor {
+      & > .banda-contenedor {
         max-width: 30%;
       }
 
@@ -108,20 +109,19 @@
       @include max-width-bp($bp-m) {
         // Grid responsivo para nivel 3: Asgarth y Before a la izquierda, Ehun Kilo a la derecha
         display: grid;
+        align-items: center;
+        max-width: 100vw;
+        gap: 0.5rem 2rem;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: 1fr 1fr;
-        align-items: center;
-        column-gap: 2rem;
-        row-gap: 0.5rem;
-        max-width: 100vw;
 
         // Estilos base para los contenedores de banda en la izquierda
         .banda-contenedor[data-nombre="Asgarth"],
         .banda-contenedor[data-nombre="Before"] {
-          grid-column: 1;
           display: flex;
-          align-items: center;
           justify-content: center;
+          align-items: center;
+          grid-column: 1;
         }
 
         // Fila específica para cada banda
@@ -135,11 +135,11 @@
 
         // Ehun Kilo ocupa ambas filas a la derecha
         .banda-contenedor[data-nombre="Ehun Kilo"] {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           grid-column: 2;
           grid-row: 1 / span 2;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
 
         .banda-contenedor {
@@ -158,22 +158,22 @@
 
       // Ajuste de alturas en escritorio (fila)
       .banda-contenedor[data-nombre="The Electric Alley"] .banda-imagen {
+        display: block;
         height: clamp(2.3rem, 6vw, 3.2rem);
         max-height: 3.2rem;
-        display: block;
       }
 
       .banda-contenedor[data-nombre="Moonshinerds"] .banda-imagen {
+        display: block;
         height: clamp(1.7rem, 4vw, 2.4rem);
         max-height: 2.4rem;
-        display: block;
       }
 
       @include max-width-bp($bp-m) {
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem 0;
         max-width: 100vw;
+        gap: 0.5rem 0;
 
         .banda-contenedor[data-nombre="The Electric Alley"] .banda-imagen {
           height: clamp(3.2rem, 9vw, 5rem);

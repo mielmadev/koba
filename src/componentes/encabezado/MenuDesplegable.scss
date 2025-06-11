@@ -52,7 +52,9 @@
 
   // Modificador: menu cerrando (animación de cierre visible, luego ocultar)
   &--cerrando {
-    @include mix.menu-desplegable-estado(menu-rebote 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1 reverse);
+    @include mix.menu-desplegable-estado(
+      menu-rebote 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1 reverse
+    );
   }
 
   // Logo del menu hamburguesa y dentro del contenido del menu
@@ -114,7 +116,7 @@
   }
 
   // Asegura que el contenido esté por encima del fondo animado
-  >* {
+  > * {
     position: relative;
     z-index: 1;
   }

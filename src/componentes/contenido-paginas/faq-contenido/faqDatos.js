@@ -52,6 +52,6 @@ const faqDatos = {
     }
   ]
   // Aquí puedes añadir más idiomas, por ejemplo 'en', 'eu', etc.
-};
+}
 
 export default faqDatos

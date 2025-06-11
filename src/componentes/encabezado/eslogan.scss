@@ -2,14 +2,17 @@
 
 .eslogan-contenedor {
   @include tamanio-completo;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 
   .eslogan {
     @include eslogan-fuente;
-    align-self: flex-end;
+
     line-height: 1;
+    align-self: flex-end;
+
     @include prop-bp($font-size-eslogan, font-size);
   }
 }

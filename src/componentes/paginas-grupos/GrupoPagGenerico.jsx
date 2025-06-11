@@ -39,12 +39,7 @@ export default function GrupoPagGenerico() {
       <div className="contenido-pag">
         <GrupoContenido nombreBanda={nombreBanda} />
         {/* El iframe de Spotify debe ir al final de la página y fijado abajo */}
-        {banda?.spotify && (
-          <SpotifyIframe
-            spotify={banda.spotify}
-            nombre={banda.nombre}
-          />
-        )}
+        {banda?.spotify && <SpotifyIframe spotify={banda.spotify} nombre={banda.nombre} />}
       </div>
     </div>
   )

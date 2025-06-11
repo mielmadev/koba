@@ -1,4 +1,4 @@
-import "./BannerInfoInteractivo.scss";
+import "./BannerInfoInteractivo.scss"
 
 const BannerInfoInteractivo = () => (
   <div className="banner-info-interactivo">
@@ -6,6 +6,6 @@ const BannerInfoInteractivo = () => (
       ¡Esto es KOBA! Haz clic en cada logo y siente el rugido de las bandas
     </div>
   </div>
-);
+)
 
-export default BannerInfoInteractivo;
+export default BannerInfoInteractivo

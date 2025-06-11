@@ -23,7 +23,9 @@ const GrupoContenido = ({ nombreBanda }) => {
               {[banda.estilo, banda.anio].filter(Boolean).join(", ")}
             </div>
             <div className="grupo-encabezado-origen">
-              {[banda.origen.pais, banda.origen.provincia, banda.origen.ciudad].filter(Boolean).join(", ")}
+              {[banda.origen.pais, banda.origen.provincia, banda.origen.ciudad]
+                .filter(Boolean)
+                .join(", ")}
             </div>
           </div>
           <div className="grupo-encabezado-inferior">
@@ -39,14 +41,16 @@ const GrupoContenido = ({ nombreBanda }) => {
                         <span className="integrante-rol">
                           {rol.charAt(0).toUpperCase() + rol.slice(1)}:
                         </span>{" "}
-                        {Array.isArray(valor)
-                          ? valor.map((n, i) => (
+                        {Array.isArray(valor) ? (
+                          valor.map((n, i) => (
                             <span className="integrante-nombre" key={i}>
                               {n}
                               {i < valor.length - 1 ? " - " : ""}
                             </span>
                           ))
-                          : <span className="integrante-nombre">{valor}</span>}
+                        ) : (
+                          <span className="integrante-nombre">{valor}</span>
+                        )}
                       </li>
                     ))}
                   </ul>

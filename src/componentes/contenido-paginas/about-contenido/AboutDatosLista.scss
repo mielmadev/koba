@@ -1,7 +1,6 @@
 @use "@estilos/core.scss" as *;
 
 .about-datos-lista {
-
   .about-titulo,
   .about-subtitulo,
   .about-seccion,
@@ -14,12 +13,14 @@
 
   .about-titulo {
     @include about-titulo-fuente;
+
     white-space: nowrap;
     text-align: center;
   }
 
   .about-subtitulo {
     @include about-subtitulo-fuente;
+
     margin-bottom: $margen-about-subtitulo;
     line-height: 1;
     white-space: normal;
@@ -35,6 +36,7 @@
 
   .about-seccion {
     @include about-seccion-fuente;
+
     margin-top: $margen-about-seccion;
     margin-bottom: $margen-about-seccion;
 
@@ -49,6 +51,7 @@
 
   .about-texto {
     @include about-texto-fuente;
+
     margin-bottom: $margen-about-texto;
   }
 }

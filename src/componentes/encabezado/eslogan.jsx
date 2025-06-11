@@ -11,7 +11,7 @@ const Eslogan = () => {
       <div className="entradas">
         <BotonEntradas
           href="#"
-          onClick={e => {
+          onClick={(e) => {
             e.preventDefault()
             setMostrarIframe(true)
           }}
@@ -20,9 +20,47 @@ const Eslogan = () => {
         </BotonEntradas>
       </div>
       {mostrarIframe && (
-        <div className="modal-entradas-faq" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.7)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ background: '#111', padding: 24, borderRadius: 12, maxWidth: 650, width: '90%', position: 'relative' }}>
-            <button onClick={() => setMostrarIframe(false)} style={{ position: 'absolute', top: 8, right: 12, background: 'none', border: 'none', color: '#fff', fontSize: 24, cursor: 'pointer' }} aria-label="Cerrar">×</button>
+        <div
+          className="modal-entradas-faq"
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            background: "rgba(0,0,0,0.7)",
+            zIndex: 9999,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+          }}
+        >
+          <div
+            style={{
+              background: "#111",
+              padding: 24,
+              borderRadius: 12,
+              maxWidth: 650,
+              width: "90%",
+              position: "relative"
+            }}
+          >
+            <button
+              onClick={() => setMostrarIframe(false)}
+              style={{
+                position: "absolute",
+                top: 8,
+                right: 12,
+                background: "none",
+                border: "none",
+                color: "#fff",
+                fontSize: 24,
+                cursor: "pointer"
+              }}
+              aria-label="Cerrar"
+            >
+              ×
+            </button>
             <IframeEntradas />
           </div>
         </div>

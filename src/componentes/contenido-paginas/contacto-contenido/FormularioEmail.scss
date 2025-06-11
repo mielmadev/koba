@@ -107,9 +107,11 @@
 
     &:hover {
       border-color: color.adjust($color-borde-formulario, $lightness: 10%);
-      background: linear-gradient(120deg,
-          color.adjust($color-borde-formulario, $lightness: 10%) 70%,
-          $negro 100%);
+      background: linear-gradient(
+        120deg,
+        color.adjust($color-borde-formulario, $lightness: 10%) 70%,
+        $negro 100%
+      );
       transform: scale(1.05) rotate(-2deg);
       box-shadow: 0 4px 16px 0 rgba($color-borde-formulario, 0.35);
     }
@@ -195,7 +197,8 @@
   }
 
   .error {
-    @include mensaje-destacado($color-borde-formulario,
+    @include mensaje-destacado(
+      $color-borde-formulario,
       rgba($color-borde-formulario, 0.08),
       $color-borde-formulario,
       $color-borde-formulario,

@@ -3,12 +3,14 @@ import "./aboutDatosLista.scss"
 import { aboutDatos } from "./aboutDatos"
 
 const obtenerLineas = (texto) =>
-  texto ? texto.split("\n").map((linea, i, arr) => (
-    <React.Fragment key={i}>
-      {linea}
-      {i < arr.length - 1 && <br />}
-    </React.Fragment>
-  )) : null
+  texto
+    ? texto.split("\n").map((linea, i, arr) => (
+        <React.Fragment key={i}>
+          {linea}
+          {i < arr.length - 1 && <br />}
+        </React.Fragment>
+      ))
+    : null
 
 const LineasAlternas = ({ lineas, claseBase, keyPrefix }) =>
   lineas.map((linea, i) => {
@@ -32,7 +34,7 @@ export default function AboutDatosLista() {
       />
       <div className="about-texto">{obtenerLineas(aboutDatos.texto1)}</div>
       <LineasAlternas
-        lineas={aboutDatos.seccion.split("\n").filter(line => line.trim())}
+        lineas={aboutDatos.seccion.split("\n").filter((line) => line.trim())}
         claseBase="about-seccion"
         keyPrefix="seccion"
       />

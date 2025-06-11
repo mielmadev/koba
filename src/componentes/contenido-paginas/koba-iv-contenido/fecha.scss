@@ -36,6 +36,7 @@
 
   .fecha {
     @include fecha-fuente;
+
     display: flex;
     align-items: center;
     animation: parpadeo 3s infinite;

@@ -12,9 +12,7 @@
   @include margen-laterales-bp($margen-laterales);
 }
 
-
 .faq-pregunta-texto {
-
   box-sizing: border-box;
   white-space: normal;
   text-align: left;
@@ -25,13 +23,17 @@
 .faq-icon {
   @include faq-icon-fuente;
 
-  margin-left: 2px;
   display: flex;
   align-items: center;
-  transition: color 0.2s, font-size 0.2s, transform 0.2s;
+  margin-left: 2px;
+  transition:
+    color 0.2s,
+    font-size 0.2s,
+    transform 0.2s;
 
   &:hover {
     @include faq-icon-hover-fuente;
+
     cursor:
       url("@imagenes/cursor/cursor-pua-gris.webp") 16 0,
       pointer;

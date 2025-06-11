@@ -4,41 +4,57 @@
 .enlace-comprar-entradas {
   // --- Apariencia base ---
   display: inline-block;
-  font-family: 'Cinzel', serif;
+  padding: 0 1rem;
+
+  // --- Bordes y sombras ---
+  border: 2px solid $rojo-sangre;
+  border-radius: 24px 8px;
+  background: linear-gradient(135deg, transparent 0%, rgba($rojo-sangre, 0.75) 100%);
+  color: $plata-acero;
+  font-family: Cinzel, serif;
   font-weight: bold;
   text-decoration: none;
-  color: $plata-acero;
-  background: linear-gradient(135deg, transparent 0%, rgba($rojo-sangre, 0.75) 100%);
+
+  // --- Efectos y transiciones ---
+  text-shadow: 0 1px 6px rgba($negro, 0.18);
+  transition:
+    color 0.2s,
+    background 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow:
+    0 1px 4px 0 rgba($plata-acero, 0.13),
+    0 0 0 2px rgba($rojo-sangre, 0.1),
+    inset 0 1px 8px 0 rgba($rojo-sangre, 0.09);
+  will-change: transform, box-shadow;
+
   @include prop-bp($font-size-entradas, font-size);
-  padding: 0 1rem;
 
   // Ajuste responsivo de padding para XS
   @include bp-max(s) {
     padding: 0 0.6em;
   }
 
-  // --- Bordes y sombras ---
-  border: 2px solid $rojo-sangre;
-  border-radius: 24px 8px;
-  box-shadow: 0 1px 4px 0 rgba($plata-acero, 0.13), 0 0 0 2px rgba($rojo-sangre, 0.10), inset 0 1px 8px 0 rgba($rojo-sangre, 0.09);
-
-  // --- Efectos y transiciones ---
-  text-shadow: 0 1px 6px rgba($negro, 0.18);
-  transition: color 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.15s cubic-bezier(.34, 1.56, .64, 1);
-  will-change: transform, box-shadow;
-
   &:hover,
   &:focus {
+    border-color: $rojo-sangre;
     background: linear-gradient(135deg, rgba($rojo-sangre, 0.85) 70%, $blanco 100%);
     color: $rojo-sangre;
-    border-color: $rojo-sangre;
     transform: scale(1.13) rotate(-7deg);
-    box-shadow: 0 6px 24px 0 rgba($rojo-sangre, 0.28), 0 0 0 8px rgba($rojo-sangre, 0.18), inset 0 2px 24px 0 rgba($blanco, 0.10);
+    box-shadow:
+      0 6px 24px 0 rgba($rojo-sangre, 0.28),
+      0 0 0 8px rgba($rojo-sangre, 0.18),
+      inset 0 2px 24px 0 rgba($blanco, 0.1);
   }
 }
 
 .tarjeta-contacto .enlace-comprar-entradas {
   // Solo sobreescribe la transición si es necesario
-  transition: color 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.15s cubic-bezier(.34, 1.56, .64, 1);
+  transition:
+    color 0.2s,
+    background 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-

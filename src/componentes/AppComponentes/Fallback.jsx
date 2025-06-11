@@ -6,10 +6,17 @@ import "./Fallback.scss"
 function Fallback() {
   return (
     <div className="fallback-container">
-      <img src={Pua} alt="Cargando..." className="fallback-image" onError={e => (e.target.style.display = 'none')} />
-      <noscript><p>Cargando...</p></noscript>
+      <img
+        src={Pua}
+        alt="Cargando..."
+        className="fallback-image"
+        onError={(e) => (e.target.style.display = "none")}
+      />
+      <noscript>
+        <p>Cargando...</p>
+      </noscript>
     </div>
-  );
+  )
 }
 
 export default Fallback

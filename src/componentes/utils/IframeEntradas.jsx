@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const IframeEntradas = () => (
   <iframe
@@ -11,6 +11,6 @@ const IframeEntradas = () => (
     src="https://venta.enterticket.es/buy/?id=40288&color=000000"
     title="Entradas KOBA Live"
   ></iframe>
-);
+)
 
-export default IframeEntradas;
+export default IframeEntradas

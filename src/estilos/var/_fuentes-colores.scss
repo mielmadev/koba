@@ -29,13 +29,13 @@ $font-weight-enlaces: $font-weight-p;
 // ESLOGAN
 // =====================
 $font-size-eslogan: (
-    xs: 1rem,
-    s: 1.2rem,
-    m: 1.3rem,
-    tablet: 1.9rem,
-    laptop: 2rem,
-    pc: 2.5rem,
-    full: 2.5rem
+  xs: 1rem,
+  s: 1.2rem,
+  m: 1.3rem,
+  tablet: 1.9rem,
+  laptop: 2rem,
+  pc: 2.5rem,
+  full: 2.5rem
 );
 
 @mixin eslogan-fuente {
@@ -92,8 +92,8 @@ $font-weight-contacto-iconos: $font-weight-h1;
 }
 
 @mixin faq-respuesta-fuente {
-  font-family: 'Oswald', Arial, sans-serif;
   color: $blanco;
+  font-family: Oswald, Arial, sans-serif;
   font-size: $clamp-p;
 }
 
@@ -111,9 +111,9 @@ $font-weight-grupo-album: $font-weight-h1;
 $font-weight-grupo-integrante: $font-weight-h1;
 
 @mixin fecha-fuente {
+  color: $gris-plomo;
   font-family: $font-family-metalmania;
   font-size: $fuente-fecha;
-  color: $gris-plomo;
   letter-spacing: 0.04em;
 }
 
@@ -130,7 +130,9 @@ $font-weight-grupo-integrante: $font-weight-h1;
   color: $negro;
   font-size: $clamp-h1;
   font-weight: $font-weight-h1;
-  text-shadow: 3px 3px 5px $blanco, -3px -3px 5px $blanco;
+  text-shadow:
+    3px 3px 5px $blanco,
+    -3px -3px 5px $blanco;
 }
 
 @mixin about-subtitulo-fuente {

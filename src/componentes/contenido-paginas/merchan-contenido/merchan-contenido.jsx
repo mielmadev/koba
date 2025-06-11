@@ -11,15 +11,12 @@ import merch7 from "@imagenes/merchan/Merch-2023_07-150x150.webp"
 import merch8 from "@imagenes/merchan/Merch-2023_08-150x150.webp"
 import merch9 from "@imagenes/merchan/Merch-2023_09-150x150.webp"
 
-const imagenesMerchan = [
-  merch1, merch2, merch3, merch4, merch5, merch6, merch7, merch8, merch9
-]
+const imagenesMerchan = [merch1, merch2, merch3, merch4, merch5, merch6, merch7, merch8, merch9]
 
 // Carrusel de imágenes de merchandising (estilo Samurai Carousel)
 const MerchanCarrusel = () => {
   const [actual, setActual] = useState(0)
   const total = imagenesMerchan.length
-  const mostrar = 5 // cantidad de imágenes visibles (central + 2 a cada lado)
 
   // Movimiento automático
   React.useEffect(() => {
@@ -45,9 +42,18 @@ const MerchanCarrusel = () => {
   // Teclado: izquierda/anteror retrocede, derecha/posterior avanza
   React.useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === "ArrowLeft" || e.key.toLowerCase() === "a" || e.key.toLowerCase() === "anterior") {
+      if (
+        e.key === "ArrowLeft" ||
+        e.key.toLowerCase() === "a" ||
+        e.key.toLowerCase() === "anterior"
+      ) {
         setActual((prev) => (prev - 1 + total) % total)
-      } else if (e.key === "ArrowRight" || e.key.toLowerCase() === "d" || e.key.toLowerCase() === "siguiente" || e.key.toLowerCase() === "posterior") {
+      } else if (
+        e.key === "ArrowRight" ||
+        e.key.toLowerCase() === "d" ||
+        e.key.toLowerCase() === "siguiente" ||
+        e.key.toLowerCase() === "posterior"
+      ) {
         setActual((prev) => (prev + 1) % total)
       }
     }
@@ -56,7 +62,8 @@ const MerchanCarrusel = () => {
   }, [total])
 
   return (
-    <div className="merchan-carrusel"
+    <div
+      className="merchan-carrusel"
       tabIndex={0}
       aria-label="Carrusel de merchandising KOBA. Usa flechas izquierda/derecha, anterior/siguiente, o haz clic en los laterales para navegar."
       style={{ outline: "none" }}
@@ -80,7 +87,8 @@ const MerchanCarrusel = () => {
           // Click: derecha/siguiente/posterior avanza, izquierda/anterior retrocede
           let onClick = undefined
           if (pos === 1 || pos === 2) onClick = () => setActual((prev) => (prev + 1) % total)
-          if (pos === -1 || pos === -2) onClick = () => setActual((prev) => (prev - 1 + total) % total)
+          if (pos === -1 || pos === -2)
+            onClick = () => setActual((prev) => (prev - 1 + total) % total)
 
           return (
             <img
