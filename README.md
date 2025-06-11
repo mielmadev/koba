@@ -35,6 +35,7 @@ npm run fix
 ```
 
 Este comando:
+
 - Formatea todo el código con Prettier
 - Corrige automáticamente los errores de ESLint
 - Corrige y ordena el SCSS con Stylelint y PostCSS Sorting
