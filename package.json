@@ -49,8 +49,7 @@
   },
   "homepage": "https://mielmadev.github.io/koba/",
   "browserslist": [
-    "last 2 versions",
-    "Safari >= 12"
+    "last 2 versions"
   ],
   "stylelint": {
     "extends": [
