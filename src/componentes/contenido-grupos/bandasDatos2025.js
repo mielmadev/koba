@@ -131,7 +131,7 @@ const bandasDatos2025 = [
     // The Electric Alley
     nombre: "The Electric Alley",
     imagen: bandasLogo.theElectricAlleyLogo,
-    spotify: "",
+    spotify: "https://open.spotify.com/embed/artist/6foPCQuxvz0R5HvMui2zUX?utm_source=generator&theme=0",
     estilo: "Hard Rock",
     origen: { pais: "España", provincia: "Cadiz", ciudad: "Cadiz" },
     anio: 2012,
@@ -153,7 +153,7 @@ const bandasDatos2025 = [
     // Wolfheart
     nombre: "Wolfheart",
     imagen: bandasLogo.wolfheartLogo,
-    spotify: "",
+    spotify: "https://open.spotify.com/embed/artist/11EAP8MX0cfrW9lzkK424H?utm_source=generator&theme=0",
     estilo: "Melodic Death Metal",
     origen: { pais: "Finlandia", provincia: "Päijät-Häme", ciudad: "Lahti" },
     anio: 2013,
