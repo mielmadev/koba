@@ -7,7 +7,7 @@
 $banner-koba-iv-color-borde-fondo: $blanco;
 
 @mixin banner-koba-iv-fuente {
-  color:aqua; //$plata-acero
+  color: $plata-acero; 
   font-family: $font-family-metalmania;
   font-size: $clamp-p;
   font-weight: $font-weight-p;
