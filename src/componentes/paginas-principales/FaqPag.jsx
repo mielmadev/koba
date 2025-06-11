@@ -6,7 +6,7 @@ import FaqFondo from "@imagenes/fondos/faqFondo.webp"
 export default function FaqPag() {
   return (
     <PaginaGenerica Fondo={FaqFondo} fondoAlt="Faq Fondo" claseFondo="faq-fondo">
-      <FAQ />
+      <FaqContenido />
     </PaginaGenerica>
   )
 }
