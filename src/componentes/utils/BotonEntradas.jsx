@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import "../contenido-paginas/faq-contenido/FaqContenido.scss"
+import "../contenido-paginas/faq-contenido/faqContenido.scss"
 import "./botonEntradas.scss"
 
 /**

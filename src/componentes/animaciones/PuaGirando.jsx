@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
-import "./PuaGirando.scss"
+import "./puaGirando.scss"
 import puaImgBlanca from "@cursor/KobaPua_32x32_Blanco.png"
 import puaImgMarron from "@cursor/KobaPua_32x32_Marron.png"
 
