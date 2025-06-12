@@ -11,7 +11,7 @@ import "@estilos/app/appEstilosIndex.scss" // Consolidado
 
 function App() {
   return (
-    <Router basename="/koba">
+    <Router>
       <Encabezado />
       <main>
         <Suspense fallback={<Fallback />}>
