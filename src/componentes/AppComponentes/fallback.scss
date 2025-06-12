@@ -1,22 +1,122 @@
 @use "@estilos/core.scss" as *;
 
+// Contenedor principal del fallback
 .fallback-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
-  background-color: $blanco;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 0;
 
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("@imagenes/fondos/fallbackFondo.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation-name: fallback-fondo-fadein;
+    animation-duration: 1.8s;
+    animation-delay: 0.05s;
+    animation-fill-mode: forwards;
+    transition: opacity 1.4s;
+  }
+
+  // Púa central y laterales
+  .fallback-pua-rebote {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: pua-flotar 2.2s ease-in-out infinite alternate;
+    filter: drop-shadow(0 8px 32px #8a030347);
+
+    &.lateral-pua {
+      position: static;
+      left: unset;
+      top: unset;
+      transform: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pua-flotar 2.2s ease-in-out infinite alternate;
+      display: none !important;
+    }
+
+    &.reverse {
+      animation-direction: reverse;
+    }
+  }
+
+  // Imagen de la púa
   .fallback-image {
-    max-width: 100px;
-    max-height: 100px;
-    animation:
-      girar-escala-color 1.2s linear infinite,
-      sombra 1.2s ease-in-out infinite alternate;
-    will-change: transform, filter, box-shadow;
+    width: 100px;
+    height: 100px;
+    user-select: none;
+    pointer-events: none;
+    animation: pua-rotar 2.2s linear infinite;
+
+    &.fallback-image-lateral {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  // Mensaje de fallback
+  .fallback-mensaje-contenedor {
+    margin-top: 32px;
+    box-shadow: none;
+    z-index: 2;
+    width: 100vw;
+    max-width: 100vw;
+    /* Elimina el gap lateral */
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    opacity: 0;
+    animation-name: fallback-fondo-fadein;
+    animation-duration: 1.8s;
+    animation-delay: 0.05s;
+    animation-fill-mode: forwards;
+
+    .fallback-mensaje-texto {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .fallback-mensaje-linea {
+        font-size: clamp(1.4em, 5vw, 3em);
+        opacity: 0.92;
+        text-shadow: 0 2px 16px #000, 0 0 8px #8a0303, 0 0 2px #fff8;
+        font-family: 'Metal Mania', 'Cinzel', serif;
+        letter-spacing: 0.04em;
+        text-align: center;
+      }
+
+      .fallback-mensaje-sugaar,
+      .fallback-mensaje-mari {
+        color: #e6b800;
+      }
+    }
   }
 }
 
+// Animaciones
 @keyframes girar-escala-color {
   0% {
     transform: rotate(0deg) scale(1);
@@ -39,6 +139,44 @@
   }
 }
 
+@keyframes pua-flotar {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(-8deg);
+    filter: drop-shadow(0 8px 32px #8a030347);
+  }
+
+  50% {
+    transform: translate(-50%, -60%) scale(1.08) rotate(8deg);
+    filter: drop-shadow(0 16px 48px #8a030361);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(-8deg);
+    filter: drop-shadow(0 8px 32px #8a030347);
+  }
+}
+
+@keyframes pua-rotar {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fallback-fondo-fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// Accesibilidad: desactivar animaciones si el usuario lo prefiere
 @media (prefers-reduced-motion: reduce) {
   .fallback-container .fallback-image {
     animation: none;
