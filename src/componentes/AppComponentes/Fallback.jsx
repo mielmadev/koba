@@ -12,7 +12,7 @@ import "./fallback.scss"
 // )
 // Puedes ajustar el tiempo (4000 ms = 4 segundos) para ver bien el efecto.
 // Para forzar el Fallback y probar la animación, descomenta la siguiente línea:
-window.FORZAR_FALLBACK = true;
+// window.FORZAR_FALLBACK = true;
 
 function Fallback() {
   return (
