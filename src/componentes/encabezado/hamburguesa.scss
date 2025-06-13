@@ -9,11 +9,17 @@
   justify-content: center;
   align-items: center;
   width: 40px;
-  height: 60%;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
   border: 2px solid $marron;
   border-radius: 50%;
   box-shadow: 0 0 0 2px rgba($marron, 0.2);
-  padding: 4px;
   background: none;
   cursor: pointer;
 
@@ -47,6 +53,8 @@
 
   &.abierto,
   &.cerrando {
+    pointer-events: none;
+
     .hamburguesa-texto {
       opacity: 0;
     }
