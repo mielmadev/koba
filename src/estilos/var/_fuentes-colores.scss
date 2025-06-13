@@ -25,6 +25,13 @@ $font-weight-enlaces: $font-weight-p;
   font-size: $font-size-enlaces;
 }
 
+@mixin enlaces-fuente {
+  font-family: $font-family-cinzel;
+  color: $blanco;
+  font-size: $font-size-enlaces;
+  font-weight: $font-weight-navegador;
+}
+
 // =====================
 // ESLOGAN
 // =====================
@@ -167,3 +174,9 @@ $font-size-entradas: (
   pc: 2.5rem,
   full: 2.5rem
 );
+
+@mixin hamburguesa-fuente {
+  color: $blanco;
+  font-family: $font-family-cinzel;
+  font-size: $fuente-menu-pua;
+}

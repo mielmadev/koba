@@ -1,10 +1,8 @@
 @use "@estilos/core.scss" as *;
 
 %navlink {
+  @include enlaces-fuente;
   height: 100%;
-  color: $blanco;
-  font-size: $font-size-enlaces;
-  font-weight: $font-weight-navegador;
   text-decoration: none;
 }
 
