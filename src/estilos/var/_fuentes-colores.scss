@@ -18,7 +18,6 @@ $banner-koba-iv-color-borde-fondo: $blanco;
 // ENLACES
 // =====================
 $font-size-enlaces: $clamp-h4;
-$font-weight-enlaces: $font-weight-p;
 
 @mixin enlaces-generales {
   font-family: $font-family-cinzel;
@@ -26,9 +25,10 @@ $font-weight-enlaces: $font-weight-p;
 }
 
 @mixin enlaces-fuente {
+  font-family: $font-family-cinzel;
   color: $blanco;
-  font-size: $font-size-enlaces;
-  font-weight: $font-weight-navegador;
+  font-size: $clamp-h4;;
+  font-weight: $font-weight-p;
 }
 
 // =====================
