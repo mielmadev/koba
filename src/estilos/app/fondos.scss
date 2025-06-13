@@ -7,7 +7,6 @@
 .contacto-fondo,
 .bandas-fondo {
   @include tamanio-completo;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -21,8 +20,32 @@
     max-width: 100%;
     height: 100%;
     max-height: 100%;
-    //filter: $filtro_fondos;
     object-fit: cover;
     object-position: top center;
   }
+}
+
+// Filtros personalizados por página (sobrescriben el global si se desea)
+.about-fondo img {
+  filter: brightness(20%);
+}
+
+.inicio-fondo img {
+  filter: brightness(30%);
+}
+
+.faq-fondo img {
+  filter: brightness(50%);
+}
+
+.merchan-fondo img {
+  filter: brightness(35%);
+}
+
+.contacto-fondo img {
+  filter: brightness(25%);
+}
+
+.bandas-fondo img {
+  filter: brightness(25%);
 }
