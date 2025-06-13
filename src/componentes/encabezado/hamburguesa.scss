@@ -41,40 +41,32 @@
       text-shadow: $sombra_gris;
     }
   }
-}
 
-.hamburguesa.abierto {
-  position: relative;
-  flex-direction: row;
-
-  .hamburguesa-texto {
-    opacity: 0;
+  &.abierto,
+  &.cerrando {
+    .hamburguesa-texto {
+      opacity: 0;
+    }
   }
 }
 
-.hamburguesa.cerrando {
-  .hamburguesa-texto {
+// Estados globales relacionados con la hamburguesa
+.navegador-contenedor {
+
+  &.encabezado--menu-abierto .hamburguesa-texto,
+  &.encabezado--menu-cerrando .hamburguesa-texto,
+  .hamburguesa.abierto .hamburguesa-texto,
+  .hamburguesa.cerrando .hamburguesa-texto {
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
-}
 
-// Oculta el texto de la hamburguesa al abrir el menú desplegable y también mientras está cerrando
-.navegador-contenedor.encabezado--menu-abierto .hamburguesa-texto,
-.navegador-contenedor.encabezado--menu-cerrando .hamburguesa-texto,
-.hamburguesa.abierto .hamburguesa-texto,
-.hamburguesa.cerrando .hamburguesa-texto {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-// Solo visible cuando el menú está completamente cerrado y la hamburguesa no está en animación
-.navegador-contenedor:not(.encabezado--menu-abierto, .encabezado--menu-cerrando)
-  .hamburguesa:not(.abierto, .cerrando)
-  .hamburguesa-texto {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  &:not(.encabezado--menu-abierto, .encabezado--menu-cerrando) .hamburguesa:not(.abierto, .cerrando) .hamburguesa-texto {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
 }
 
 @include bp-max(m) {

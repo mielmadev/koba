@@ -6,46 +6,19 @@
   text-decoration: none;
 }
 
-a,
-.menu-escritorio__link,
-.menu-desplegable__link {
+a {
   @extend %navlink;
 
-  &:hover {
-    @include cursor-pua-hover;
-
-    color: $gris;
-    text-shadow: $sombra-negro;
-    transition:
-      color 0.3s,
-      text-shadow 0.3s,
-      cursor 0.3s,
-      transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: scale(1.08);
-  }
-
-  &:active {
-    @include cursor-pua-active;
-
-    color: $negro;
-    text-shadow: $sombra-blanco;
-    transition: cursor 0.3s ease;
-  }
-
-  &.menu-escritorio__link--active,
-  &.menu-desplegable__link--active {
-    @include cursor-pua-active;
-
-    color: $marron;
-    transition:
-      color 0.3s,
-      text-shadow 0.3s,
-      cursor 0.3s;
+  &,
+  &.menu-escritorio__link,
+  &.menu-desplegable__link {
+    // Heredan estilos base
+    @extend %navlink;
 
     &:hover {
-      @include cursor-pua-active;
+      @include cursor-pua-hover;
 
-      color: $marron;
+      color: $gris;
       text-shadow: $sombra-negro;
       transition:
         color 0.3s,
@@ -58,9 +31,41 @@ a,
     &:active {
       @include cursor-pua-active;
 
-      color: $granate;
+      color: $negro;
       text-shadow: $sombra-blanco;
       transition: cursor 0.3s ease;
+    }
+
+    &.menu-escritorio__link--active,
+    &.menu-desplegable__link--active {
+      @include cursor-pua-active;
+
+      color: $marron;
+      transition:
+        color 0.3s,
+        text-shadow 0.3s,
+        cursor 0.3s;
+
+      &:hover {
+        @include cursor-pua-active;
+
+        color: $marron;
+        text-shadow: $sombra-negro;
+        transition:
+          color 0.3s,
+          text-shadow 0.3s,
+          cursor 0.3s,
+          transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: scale(1.08);
+      }
+
+      &:active {
+        @include cursor-pua-active;
+
+        color: $granate;
+        text-shadow: $sombra-blanco;
+        transition: cursor 0.3s ease;
+      }
     }
   }
 }
