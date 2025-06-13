@@ -21,8 +21,8 @@ $font-size-enlaces: $clamp-h4;
 $font-weight-enlaces: $font-weight-p;
 
 @mixin enlaces-generales {
+  font-family: $font-family-cinzel;
   font-size: $font-size-enlaces;
-  font-weight: $font-weight-enlaces;
 }
 
 // =====================

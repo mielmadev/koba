@@ -24,10 +24,8 @@
     align-items: center;
     height: 30px;
     color: $blanco;
+    font-family: $font-family-cinzel;
     font-size: $fuente-menu-pua;
-    font-weight: bold;
-    white-space: nowrap;
-    text-shadow: $sombra-blanco;
     opacity: 1;
     transition:
       color 0.3s,

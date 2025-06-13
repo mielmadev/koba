@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import "./puaGirando.scss"
-import puaImgBlanca from "@cursor/KobaPua_32x32_Blanco.png"
-import puaImgMarron from "@cursor/KobaPua_32x32_Marron.png"
+import puaImgBlanca from "@imagenes/pua/pua-blanco.webp"
+import puaImgMarron from "@imagenes/pua/pua-marron.webp"
 
 /**
  * Componente reutilizable de pua giratoria animada
@@ -38,7 +38,7 @@ const PuaGirando = ({
 
   const realSize = tamano ? `${tamano}px` : size
   const puaImgActual =
-    estado === "pua-girando--abierta" || estado === "pua-girando--cerrando"
+    estado === "pua-girando--abierta"
       ? puaImgMarron
       : puaImgBlanca
 
@@ -50,7 +50,19 @@ const PuaGirando = ({
       <img
         src={puaImgActual}
         alt="Pua animada"
-        style={{ width: "100%", height: "100%", objectFit: "contain" }}
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "contain",
+          transform:
+            estado === "pua-girando--cerrada"
+              ? "rotate(0deg)"
+              : estado === "pua-girando--abierta"
+                ? "rotate(180deg)"
+                : estado === "pua-girando--cerrando"
+                  ? "rotate(0deg)"
+                  : undefined
+        }}
         draggable={false}
       />
     </span>
