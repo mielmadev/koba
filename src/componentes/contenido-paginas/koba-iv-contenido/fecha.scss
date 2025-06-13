@@ -11,17 +11,6 @@
   }
 }
 
-@keyframes brillo-metal {
-  0%,
-  100% {
-    filter: drop-shadow(0 0 6px $dorado-viejo);
-  }
-
-  50% {
-    filter: drop-shadow(0 0 16px $amarillo-mostaza);
-  }
-}
-
 .fecha-contenedor {
   @include pad-gap;
 
@@ -31,8 +20,8 @@
   white-space: normal;
   text-align: center;
   text-shadow:
-    $blanco 0 0 10px,
-    $blanco 0 0 20px;
+    $cobre-viejo 0 0 10px,
+    $cobre-viejo 0 0 20px;
 
   .fecha {
     @include fecha-fuente;
@@ -41,24 +30,6 @@
     align-items: center;
     animation: parpadeo 3s infinite;
     gap: 0.5em;
-  }
-
-  .icono-fecha {
-    color: $amarillo-mostaza;
-    font-size: 1.2em;
-    vertical-align: middle;
-    transition: transform 0.2s;
-    filter: drop-shadow(0 0 6px $dorado-viejo);
-  }
-
-  .icono-cuernos {
-    margin-right: 0.2em;
-    animation: parpadeo 2.5s infinite;
-  }
-
-  .icono-guitarra {
-    margin-left: 0.2em;
-    animation: brillo-metal 3s infinite;
   }
 }
 
