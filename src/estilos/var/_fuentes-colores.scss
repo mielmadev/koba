@@ -177,5 +177,5 @@ $font-size-entradas: (
 @mixin hamburguesa-fuente {
   color: $blanco;
   font-family: $font-family-cinzel;
-  font-size: $fuente-menu-pua;
+  font-size: $clamp-h4;
 }

@@ -3,47 +3,33 @@
 
 .hamburguesa {
   position: relative;
-  z-index: 1300; // Más al frente que el menu desplegable
+  z-index: 1300;
   display: none;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  width: 40px;
+  justify-content: center;
+  width: auto;
+  min-width: 80px;
   height: 40px;
-  min-width: 40px;
-  min-height: 40px;
-  max-width: 40px;
-  max-height: 40px;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  border: 2px solid $marron;
-  border-radius: 50%;
-  box-shadow: 0 0 0 2px rgba($marron, 0.2);
-  background: none;
+  margin: 0; 
+   background: none;
   cursor: pointer;
+  border: none;
 
   .hamburguesa-texto {
     @include hamburguesa-fuente;
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    left: auto;
-    z-index: 2;
     display: flex;
     align-items: center;
     height: 30px;
+    margin-right: 8px;
     opacity: 1;
-    transition:
-      color 0.3s,
-      text-shadow 0.3s;
-    transform: translateY(-50%);
+    transition: color 0.3s, text-shadow 0.3s;
+    position: static;
+    z-index: 2;
   }
 
   &:hover {
-    cursor:
-      url("/src/assets/imagenes/cursor/KobaPua_32x32_Gris.png") 16 0,
-      pointer;
+    cursor: url("/src/assets/imagenes/cursor/KobaPua_32x32_Gris.png") 16 0, pointer;
 
     .hamburguesa-texto {
       color: $gris;
@@ -53,15 +39,31 @@
 
   &.abierto,
   &.cerrando {
-    pointer-events: none;
+    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    justify-content: center;
+    padding: 0;
 
     .hamburguesa-texto {
-      opacity: 0;
+      display: none;
     }
+  }
+
+  &:not(.abierto):not(.cerrando) .hamburguesa-texto {
+    display: flex;
+  }
+
+  .pua-girando {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    min-height: 26px;
+    max-width: 26px;
+    max-height: 26px;
   }
 }
 
-// Estados globales relacionados con la hamburguesa
 .navegador-contenedor {
 
   &.encabezado--menu-abierto .hamburguesa-texto,
