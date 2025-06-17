@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react"
-import "./merchan-carrusel.scss"
+import "./MerchanCarrusel.scss"
 
 import merch1 from "@imagenes/merchan/Merch-2023_01-150x150.webp"
 import merch2 from "@imagenes/merchan/Merch-2023_02-150x150.webp"

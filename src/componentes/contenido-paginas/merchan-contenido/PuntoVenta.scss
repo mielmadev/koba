@@ -31,7 +31,6 @@
     justify-content: center;
 
     @include bp-max(m) {
-      @include bordes;
       display: flex;
       flex-direction: column;
       justify-content: center;
