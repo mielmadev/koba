@@ -1,0 +1,200 @@
+@use "@estilos/core.scss" as *;
+@use "@estilos/bp.scss" as *;
+
+.merchan-carrusel {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 1.5rem;
+  gap: 1.5rem;
+
+  &__imagenes {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    min-width: 480px;
+    max-width: 420px;
+    min-height: 340px;
+    margin-top: 6rem;
+    margin-bottom: 2.5rem;
+    overflow: visible;
+    transition: height 0.3s;
+    touch-action: pan-y;
+  }
+
+  &__imagen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 340px;
+    height: 340px;
+    border: 2.5px solid transparent;
+    border-radius: 18px 6px;
+    background: #222;
+    opacity: 0.13;
+    pointer-events: none;
+    transition:
+      transform 0.7s ease,
+      opacity 0.7s ease,
+      filter 0.7s ease,
+      border-color 0.7s ease;
+    transform: translate(-50%, -50%) scale(0.7);
+    box-shadow:
+      0 2px 12px #0008,
+      0 6px 24px 0 rgba($rojo-sangre, 0.18),
+      0 0 0 8px rgba($rojo-sangre, 0.1),
+      inset 0 2px 24px 0 rgba($blanco, 0.1);
+    filter: blur(3px) grayscale(90%);
+
+    &.actual {
+      z-index: 10;
+      border: 2.5px solid $rojo-sangre;
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(-50%, -60%) scale(1.22);
+      box-shadow:
+        0 6px 24px 0 rgba($rojo-sangre, 0.28),
+        0 0 0 8px rgba($rojo-sangre, 0.18),
+        inset 0 2px 24px 0 rgba($blanco, 0.1);
+      filter: none;
+
+      &:hover {
+        cursor:
+          url("@cursor/KobaPua_32x32_Gris.png") 16 0,
+          pointer;
+      }
+    }
+
+    &.anterior,
+    &.siguiente,
+    &.lateral-izq,
+    &.lateral-der {
+      border: none !important;
+      pointer-events: auto;
+      box-shadow: none !important;
+    }
+
+    &.anterior {
+      z-index: 7;
+      background: #222;
+      opacity: 0.38;
+      transform: translate(-160%, -54%) scale(0.92) rotate(-7deg);
+    }
+
+    &.siguiente {
+      z-index: 7;
+      background: #222;
+      opacity: 0.38;
+      transform: translate(60%, -54%) scale(0.92) rotate(7deg);
+    }
+
+    &.lateral-izq {
+      z-index: 1;
+      background: #222;
+      opacity: 0.09;
+      transform: translate(-240%, -56%) scale(0.7) rotate(-12deg);
+      filter: blur(3px) grayscale(90%) drop-shadow(0 6px 24px 0 rgba($dorado-viejo, 0.28),
+          0 0 0 8px rgba($dorado-viejo, 0.18),
+          inset 0 2px 24px 0 rgba($blanco, 0.1));
+    }
+
+    &.lateral-der {
+      z-index: 1;
+      background: #222;
+      opacity: 0.09;
+      transform: translate(140%, -56%) scale(0.7) rotate(12deg);
+      filter: blur(3px) grayscale(90%) drop-shadow(0 6px 24px 0 rgba($dorado-viejo, 0.28),
+          0 0 0 8px rgba($dorado-viejo, 0.18),
+          inset 0 2px 24px 0 rgba($blanco, 0.1));
+    }
+
+    &.anterior:hover {
+      cursor:
+        url("@cursor/KobaPua_32x32_Gris.png") 16 0,
+        auto;
+    }
+
+    &.siguiente:hover {
+      cursor:
+        url("@cursor/KobaPua_32x32_Gris.png") 16 0,
+        auto;
+    }
+
+    &.lateral-izq:hover {
+      cursor:
+        url("@cursor/KobaPua_32x32_Gris.png") 16 0,
+        auto;
+    }
+
+    &.lateral-der:hover {
+      cursor:
+        url("@cursor/KobaPua_32x32_Gris.png") 16 0,
+        auto;
+    }
+  }
+
+  &__btn {
+    display: none !important;
+  }
+
+  &__indicadores {
+    display: none !important;
+  }
+}
+
+@keyframes indicador-gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@include bp-max(m) {
+  .merchan-carrusel__imagenes {
+    min-width: 220px;
+    max-width: 98vw;
+    min-height: 180px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .merchan-carrusel__imagen {
+    width: 140px;
+    height: 140px;
+    border-radius: 12px 4px;
+    transition:
+      transform 0.35s ease,
+      opacity 0.35s ease,
+      filter 0.35s ease,
+      border-color 0.35s ease;
+
+    &.actual {
+      border-width: 2px;
+      transform: translate(-50%, -60%) scale(1.08);
+    }
+
+    &.anterior {
+      transform: translate(-90%, -54%) scale(0.82) rotate(-7deg);
+    }
+
+    &.siguiente {
+      transform: translate(30%, -54%) scale(0.82) rotate(7deg);
+    }
+
+    &.lateral-izq {
+      transform: translate(-140%, -56%) scale(0.6) rotate(-12deg);
+    }
+
+    &.lateral-der {
+      transform: translate(70%, -56%) scale(0.6) rotate(12deg);
+    }
+  }
+}

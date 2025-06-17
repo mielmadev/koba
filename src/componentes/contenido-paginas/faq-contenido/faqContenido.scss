@@ -6,14 +6,12 @@
 
   display: flex;
   justify-content: space-between;
-  box-sizing: border-box;
   text-align: justify;
 
   @include margen-laterales-bp($margen-laterales);
 }
 
 .faq-pregunta-texto {
-  box-sizing: border-box;
   white-space: normal;
   text-align: left;
   word-wrap: break-word;
@@ -45,7 +43,6 @@
   @include pad-gap;
   @include faq-respuesta-fuente;
 
-  box-sizing: border-box;
   white-space: normal;
   text-align: justify;
   word-wrap: break-word;

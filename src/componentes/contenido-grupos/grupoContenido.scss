@@ -39,7 +39,6 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      box-sizing: border-box;
       width: 100%;
 
       @include altura-encabezado-bp($altura-encabezado, height);
