@@ -33,7 +33,7 @@ const FAQ = () => {
           const partes = respuesta.split("<BOTON_ENTRADAS_PLACEHOLDER>")
           return (
             <div key={index} className="faq-item">
-              <div className="faq-pregunta" onClick={() => togglePregunta(index)}>
+              <div className={`faq-pregunta${abierta ? ' faq-pregunta--activa' : ''}`} onClick={() => togglePregunta(index)}>
                 <span className="faq-pregunta-texto">{item.pregunta}</span>
                 <span
                   className="faq-icon"
@@ -116,7 +116,7 @@ const FAQ = () => {
         // Resto de preguntas
         return (
           <div key={index} className="faq-item">
-            <div className="faq-pregunta" onClick={() => togglePregunta(index)}>
+            <div className={`faq-pregunta${abierta ? ' faq-pregunta--activa' : ''}`} onClick={() => togglePregunta(index)}>
               <span className="faq-pregunta-texto">{item.pregunta}</span>
               <span
                 className="faq-icon"

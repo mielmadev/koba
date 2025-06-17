@@ -50,3 +50,13 @@
 
   @include margen-laterales-bp($margen-laterales);
 }
+
+.faq-pregunta--activa,
+.faq-pregunta.faq-pregunta--activa .faq-pregunta-texto {
+  color: $marron;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.faq-pregunta--activa .faq-icon {
+  color: $marron;
+}
