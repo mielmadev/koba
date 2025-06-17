@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import faqDatos from "./faqDatos"
 import "./faqContenido.scss"
 import PuaGirando from "../../animaciones/PuaGirando"
-import iframeEntradas from "../../utils/iframeEntradas"
+import IframeEntradas from "../../utils/IframeEntradas"
 import BotonEntradas from "../../utils/BotonEntradas"
 
 const FAQ = () => {
@@ -104,7 +104,7 @@ const FAQ = () => {
                         >
                           ×
                         </button>
-                        <iframeEntradas />
+                        <IframeEntradas />
                       </div>
                     </div>
                   )}

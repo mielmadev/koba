@@ -1,5 +1,5 @@
 import React from "react"
-import iframeEntradas from "./iframeEntradas"
+import iframeEntradas from "./IframeEntradas"
 
 const IframeEntradas = () => (
   <iframe
