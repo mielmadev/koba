@@ -51,6 +51,10 @@
         max-width: 33vw;
         max-width: 33dvw;
 
+        @supports (width: 100vw) and (not (width: 100dvw)) {
+          max-width: 33vw;
+        }
+
         @include altura-encabezado-bp($altura-encabezado, max-height);
       }
 

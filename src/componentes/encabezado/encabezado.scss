@@ -51,6 +51,7 @@
   @supports (width: 100vw) and (not (width: 100dvw)) {
     width: 100vw;
   }
+
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
 }
