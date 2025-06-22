@@ -8,7 +8,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 100dvw;
+  width: 100vw;
 
   @include altura-encabezado-bp($altura-encabezado);
 
@@ -47,11 +47,4 @@
     }
   }
 
-  // Fix para Safari móvil y áreas seguras
-  @supports (width: 100vw) and (not (width: 100dvw)) {
-    width: 100vw;
-  }
-
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
 }
