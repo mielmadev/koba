@@ -1,5 +1,4 @@
 @use "@estilos/core.scss" as *;
-
 .punto-venta {
   text-align: center;
   margin: 2rem 0;
@@ -37,7 +36,7 @@
     }
 
     .eternal-logo {
-      flex: 0 0 auto;
+      @include pad-gap;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -53,7 +52,7 @@
     }
 
     .eternal-direccion {
-      flex: 1 1 0;
+      @include pad-gap;
       font-family: $font-family-oswald;
       font-size: $clamp-h4;
       color: $marron;
