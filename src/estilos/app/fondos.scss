@@ -5,7 +5,8 @@
 .faq-fondo,
 .merchan-fondo,
 .contacto-fondo,
-.bandas-fondo {
+.bandas-fondo,
+.mielma-fondo {
   @include tamanio-completo;
   position: fixed;
   top: 0;
@@ -48,4 +49,8 @@
 
 .bandas-fondo img {
   filter: brightness(25%);
+}
+
+.mielma-fondo img {
+  filter: brightness(30%);
 }
