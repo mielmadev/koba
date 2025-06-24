@@ -1,6 +1,6 @@
 import React from "react"
 import "./contactoContenido.scss"
-import { EmailIcono, WhatsappIcono, MielmaDevIcono } from "@iconos/iconos"
+import { EmailIcono, WhatsappIcono } from "@iconos/iconos"
 import TarjetaContacto from "./TarjetaContacto.jsx"
 import FormularioEmail from "./FormularioEmail.jsx"
 import RedesSociales from "./RedesSociales.jsx"
@@ -22,12 +22,6 @@ export default function ContactoContenido() {
             titulo="WhatsApp"
             texto="+34 12345678"
             tipo="whatsapp"
-          />
-          <TarjetaContacto
-            icono={MielmaDevIcono}
-            titulo="MielmaDev"
-            texto="Haz clic aquí para más información sobre el desarrollador"
-            tipo="mielmadev"
           />
         </div>
         <div className="contacto-formulario">

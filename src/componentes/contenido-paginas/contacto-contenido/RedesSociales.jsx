@@ -6,54 +6,71 @@ import {
   SpotifyIcono,
   TikTokIcono,
   XTwitterIcono,
-  YoutubeIcono
+  YoutubeIcono,
+  MielmaDevIcono
 } from "@iconos/iconos"
+import { Link } from "react-router-dom"
 
 export default function RedesSociales() {
   return (
     <div className="redes-sociales">
-      <FacebookIcono
-        as="a"
+      <a
         href="https://www.facebook.com/kobalive.metal/"
         target="_blank"
         rel="noopener noreferrer"
         className="icono-social icono-facebook"
-      />
-      <InstagramIcono
-        as="a"
+      >
+        <FacebookIcono />
+      </a>
+      <a
         href="https://www.instagram.com/kobalive/?hl=es"
         target="_blank"
         rel="noopener noreferrer"
         className="icono-social icono-instagram"
-      />
-      <SpotifyIcono
-        as="a"
+      >
+        <InstagramIcono />
+      </a>
+      <a
         href="https://open.spotify.com/user/kobalive"
         target="_blank"
         rel="noopener noreferrer"
         className="icono-social icono-spotify"
-      />
-      <TikTokIcono
-        as="a"
+      >
+        <SpotifyIcono />
+      </a>
+      <a
         href="https://www.tiktok.com/@kobalive"
         target="_blank"
         rel="noopener noreferrer"
         className="icono-social icono-tiktok"
-      />
-      <XTwitterIcono
-        as="a"
+      >
+        <TikTokIcono />
+      </a>
+      <a
         href="https://twitter.com/kobalive"
         target="_blank"
         rel="noopener noreferrer"
         className="icono-social icono-twitter"
-      />
-      <YoutubeIcono
-        as="a"
+      >
+        <XTwitterIcono />
+      </a>
+      <a
         href="https://www.youtube.com/@kobalive"
         target="_blank"
         rel="noopener noreferrer"
         className="icono-social icono-youtube"
-      />
+      >
+        <YoutubeIcono />
+      </a>
+      <Link
+        to="/mielmadev"
+        className="icono-social icono-mielmadev"
+        tabIndex={0}
+        style={{ textDecoration: "none" }}
+        aria-label="Más información sobre el desarrollador MielmaDev"
+      >
+        <MielmaDevIcono />
+      </Link>
     </div>
   )
 }
