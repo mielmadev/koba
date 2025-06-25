@@ -1,5 +1,6 @@
 import React from "react"
 import "./MielmaDev.scss"
+import FormularioMielmaDev from "./FormularioMielmaDev"
 
 const MielmaDev = () => (
   <>
@@ -13,6 +14,9 @@ const MielmaDev = () => (
         <div className="mielmadev-eslogan">
           Compromiso, calidad y resultados para tu transformación digital.
         </div>
+      </div>
+      <div className="mielmadev-formulario">
+        <FormularioMielmaDev />
       </div>
     </div>
   </>

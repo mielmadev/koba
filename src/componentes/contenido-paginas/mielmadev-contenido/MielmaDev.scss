@@ -1,15 +1,14 @@
 @use "@estilos/core.scss" as *;
 
 .mielmadev {
-  @include bordes;
+  gap: $gap;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100vw;
-
+  max-height: 100vh;
+  overflow-y: auto;
 
   &-titulo {
-    @include bordes;
     font-family: 'Metal Mania', $font-family-cinzel, serif;
     font-size: $clamp-h1;
     font-weight: 700;
@@ -22,23 +21,20 @@
       0 0 2px $blanco-humo,
       0 0 1px $blanco-humo,
       0 1px 0 #0008;
-    width: 100vw;
-    margin: 0 auto 2.2rem auto;
-    box-sizing: border-box;
     z-index: 2;
     display: block;
+    @include margen-laterales-bp($margen-laterales);
   }
 
   &-textos {
-    @include bordes;
     @include pad-gap;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 1.2rem;
     box-shadow: 0 2px 16px 0 rgba($negro, 0.18);
+    @include margen-laterales-bp($margen-laterales);
 
     .mielmadev-descripcion {
       font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -46,10 +42,8 @@
       color: $blanco-humo;
       letter-spacing: 0.01rem;
       font-weight: 400;
-      margin-bottom: 0.5rem;
       text-align: center;
       text-shadow: 0 2px 8px #000, 0 0 2px #fff8;
-      @include margen-laterales-bp($margen-laterales);
 
       .mielmadev-servicio {
         font-size: $clamp-h3;
@@ -57,8 +51,6 @@
         color: $plata-acero;
         font-weight: 700;
         letter-spacing: 0.03rem;
-        margin-bottom: 1.1rem;
-        margin-top: 0;
         text-shadow: 0 2px 12px #000, 0 0 2px #fff8;
       }
     }
@@ -70,8 +62,11 @@
       font-weight: 600;
       letter-spacing: 0.01rem;
       text-align: center;
-      margin-bottom: 1.2rem;
       text-shadow: 0 2px 8px #000, 0 0 2px #fff8;
     }
+  }
+
+  &-formulario {
+    padding: $padding;
   }
 }

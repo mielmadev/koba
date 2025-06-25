@@ -1,0 +1,160 @@
+@use "sass:color";
+@use "@estilos/core.scss" as *;
+
+.formulario-email-mielmadev {
+  @include pad-gap;
+  @include contacto-fuente;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin-bottom: 0.7rem;
+  border: 2.5px solid $morado-oscuro;
+  border-radius: 8px 32px;
+  background: transparent;
+  transition:
+    box-shadow 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+  box-shadow:
+    0 4px 24px 0 rgba($morado-oscuro, 0.25),
+    0 1.5px 0 0 $morado-oscuro inset;
+  overflow: visible;
+  @include margen-laterales-bp($margen-laterales);
+
+  &-inner {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  &-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+
+    &.izq {
+      max-width: 320px;
+      flex: 1 1 320px;
+    }
+    &.der {
+      flex: 2 1 340px;
+      min-width: 220px;
+      max-width: 100%;
+    }
+  }
+
+  &-boton {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0 0 0;
+    order: 2;
+  }
+
+  label {
+    @include pad-gap;
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.3em;
+    color: $morado-oscuro;
+    font-size: 1.05rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    &:hover {
+      text-shadow:
+        0 0 6px $morado-oscuro,
+        1px 1px 2px $negro;
+    }
+  }
+
+  input,
+  textarea {
+    border: 1.5px solid $morado-oscuro;
+    border-radius: 6px;
+    padding: 0.5em;
+    font-size: 1rem;
+    margin-top: 0.2em;
+    background: #fff;
+    color: $morado-oscuro;
+    &:focus {
+      outline: 2px solid $morado-oscuro;
+      background: #f9f9f9;
+    }
+  }
+
+  button {
+    margin-top: 1em;
+    background: $morado-oscuro;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7em 2em;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    &:hover {
+      background: darken($morado-oscuro, 15%);
+    }
+    &:disabled {
+      background: lighten($morado-oscuro, 25%);
+      cursor: not-allowed;
+    }
+  }
+
+  .exito {
+    color: #388e3c;
+    font-weight: bold;
+    margin-top: 0.7em;
+  }
+  .error {
+    color: #d32f2f;
+    font-weight: bold;
+    margin-top: 0.7em;
+  }
+
+  label,
+  input,
+  textarea,
+  button {
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 900px) {
+    &-inner {
+      min-width: 0;
+      flex-wrap: wrap;
+    }
+    &-boton {
+      margin: 1.2rem 0 0 0;
+    }
+  }
+  @media (max-width: 700px) {
+    &-inner {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    &-col {
+      max-width: 100%;
+      min-width: 0;
+    }
+    &-boton {
+      margin: 0.7rem 0 0 0;
+    }
+  }
+}
