@@ -20,10 +20,13 @@
     <noscript>
       Necesitas habilitar JavaScript para ver esta web.
     </noscript>
+    <!-- El siguiente script solo muestra el mensaje si el navegador NO soporta ES modules -->
     <script>
-      if (!('noModule' in HTMLScriptElement.prototype)) {
-        document.body.innerHTML = '<div style="padding:2em;text-align:center;color:#900;font-size:1.2em">Tu navegador es demasiado antiguo para esta web. Por favor, actualiza Safari o usa Chrome/Firefox.</div>';
-      }
+      try {
+        if (!('noModule' in HTMLScriptElement.prototype)) {
+          document.body.innerHTML = '<div style="padding:2em;text-align:center;color:#900;font-size:1.2em">Tu navegador es demasiado antiguo para esta web. Por favor, actualiza Safari o usa Chrome/Firefox.</div>';
+        }
+      } catch(e) {}
     </script>
   </body>
 </html>
