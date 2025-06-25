@@ -42,7 +42,7 @@
 
     .mielmadev-descripcion {
       font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-      font-size: 1.45rem;
+      font-size: $clamp-h4;
       color: $blanco-humo;
       letter-spacing: 0.01rem;
       font-weight: 400;
@@ -52,7 +52,7 @@
       @include margen-laterales-bp($margen-laterales);
 
       .mielmadev-servicio {
-        font-size: 2.1rem;
+        font-size: $clamp-h3;
         font-family: $font-family-cinzel, 'Montserrat', Arial, Helvetica, sans-serif;
         color: $plata-acero;
         font-weight: 700;
@@ -65,7 +65,7 @@
 
     .mielmadev-eslogan {
       font-family: $font-family-cinzel;
-      font-size: 1.45rem;
+      font-size: $clamp-h4;
       color: $gris;
       font-weight: 600;
       letter-spacing: 0.01rem;
