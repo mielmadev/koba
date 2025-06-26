@@ -13,6 +13,11 @@
     margin: 0;
 
     @include altura-encabezado-bp($altura-encabezado);
+
+    // Solo Safari y WebKit
+    @supports (-webkit-touch-callout: none) {
+      width: 100%;
+    }
   }
 
   &__logo {
