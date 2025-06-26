@@ -6,15 +6,15 @@ import Navegador from "./Navegador.jsx"
 
 const Encabezado = () => {
   return (
-    <header className="encabezado-contenedor">
-      <div className="logo-encabezado">
-        <img src={LogoKoba} alt="Logo Koba" className="logo-img" />
+    <header className="encabezado__contenedor">
+      <div className="encabezado__logo">
+        <img src={LogoKoba} alt="Logo Koba" className="encabezado__logo-img" />
       </div>
-      <div className="encabezado-derecha">
-        <div className="encabezado-navegador">
+      <div className="encabezado__derecha">
+        <div className="encabezado__derecha-navegador">
           <Navegador />
         </div>
-        <div className="encabezado-eslogan">
+        <div className="encabezado__derecha-eslogan">
           <Eslogan />
         </div>
       </div>

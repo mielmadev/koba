@@ -1,36 +1,39 @@
-@use "@estilos/core.scss" as *;
+@use "@estilos/_core.scss" as *;
 
-.encabezado-contenedor {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  margin: 0;
+.encabezado {
+  &__contenedor {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    margin: 0;
 
-  @include altura-encabezado-bp($altura-encabezado);
+    @include altura-encabezado-bp($altura-encabezado);
+  }
 
-  .logo-encabezado {
-    @include pad-gap;
-
+  &__logo {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100%;
     flex-shrink: 0;
 
-    .logo-encabezado img {
+    @include pad-gap;
+
+    &-img {
       @include tamanio-completo;
     }
   }
 
-  .encabezado-derecha {
+  &__derecha {
     @include tamanio-completo;
 
-    .encabezado-navegador,
-    .encabezado-eslogan {
+    &-navegador,
+    &-eslogan {
       display: flex;
       flex: 1;
       align-items: center;
@@ -38,14 +41,13 @@
       height: 50%;
     }
 
-    .encabezado-navegador {
+    &-navegador {
       justify-content: flex-end;
     }
 
-    .encabezado-eslogan {
+    &-eslogan {
       justify-content: flex-start;
       padding-right: 5px;
     }
   }
-
 }
