@@ -13,20 +13,20 @@
     <!-- Estilos principales -->
     <!-- <link rel="stylesheet" href="/src/index.scss" /> -->
     <!-- Los estilos se importan en main.jsx y Vite los empaqueta automáticamente -->
+
+    <!-- Optimización: preconexión para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Importación de todas las tipografías recomendadas y alternativas del wiki -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Bebas+Neue&family=UnifrakturCook:wght@700&family=Metal+Mania&family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&family=Pirata+One&family=Fruktur&family=Staatliches&family=Rye&family=Nosifer&family=Russo+One&family=Teko:wght@400;700&family=Alfa+Slab+One&family=Bowlby+One+SC&family=Special+Elite&family=Press+Start+2P&family=Creepster&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div id="root"></div>
-    <noscript>
-      Necesitas habilitar JavaScript para ver esta web.
-    </noscript>
-    <!-- El siguiente script solo muestra el mensaje si el navegador NO soporta ES modules -->
-    <script>
-      try {
-        if (!('noModule' in HTMLScriptElement.prototype)) {
-          document.body.innerHTML = '<div style="padding:2em;text-align:center;color:#900;font-size:1.2em">Tu navegador es demasiado antiguo para esta web. Por favor, actualiza Safari o usa Chrome/Firefox.</div>';
-        }
-      } catch(e) {}
-    </script>
+    <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>
