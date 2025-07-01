@@ -2,8 +2,7 @@
 
 .modal-entradas-faq {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
@@ -12,6 +11,8 @@
   align-items: center;
   justify-content: center;
   transition: background 0.2s;
+  /* Soluciona centrado vertical si hay scroll */
+  overflow-y: auto;
 }
 
 .modal-entradas-faq__contenido {
@@ -25,11 +26,16 @@
     0 12px 56px 0 rgba($rojo-sangre, 0.48),
     0 4px 0 0 $rojo-sangre inset;
   border-radius: 6px 24px;
-  padding: 4rem 1.5rem;
-  max-width: 650px;
-  width: 90vw;
+  width: 98vw;
+  max-width: 1100px;
+  height: 60vh;
+  max-height: 600px;
   position: relative;
   color: #fff;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .modal-entradas-faq__contenido:hover {
