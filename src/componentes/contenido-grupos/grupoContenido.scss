@@ -1,23 +1,25 @@
 @use "@estilos/core.scss" as *;
 
 .grupo-contenido {
+  max-width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   @include margen-laterales-bp($margen-laterales);
 
-  .grupo-encabezado {
+  // Encabezado principal
+  &__encabezado {
     display: flex;
     flex-direction: column;
 
-    .grupo-encabezado-superior {
-      @include pad-gap;
+    &-superior {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       @include altura-encabezado-bp($altura-encabezado, height);
 
-      .grupo-encabezado-logo {
+      &-logo {
         display: flex;
         flex: 0 0 33%;
         justify-content: center;
@@ -26,15 +28,7 @@
         @include altura-encabezado-bp($altura-encabezado, max-height);
       }
 
-      .grupo-logo {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-        @include altura-encabezado-bp($altura-encabezado, max-height);
-      }
-
-      .grupo-encabezado-estilo {
+      &-estilo {
         display: flex;
         flex: 0 0 33%;
         justify-content: center;
@@ -43,7 +37,7 @@
         text-align: center;
       }
 
-      .grupo-encabezado-origen {
+      &-origen {
         flex: 0 0 33%;
         justify-content: center;
         align-items: center;
@@ -52,23 +46,31 @@
       }
     }
 
-    .grupo-encabezado-inferior {
-      @include pad-gap;
+    &-inferior {
       display: flex;
       flex-direction: column;
       align-items: center;
       height: 100%;
-      gap: 0.5em;
-
-      .grupo-resumen {
-        font-size: $font-size-grupos-resumen;
-        text-align: justify;
-      }
     }
   }
 
-  .grupo-pie {
-    @include pad-gap;
+  // Logo
+  &__logo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    @include altura-encabezado-bp($altura-encabezado, max-height);
+  }
+
+  // Resumen
+  &__resumen {
+    font-size: $font-size-grupos-resumen;
+    text-align: justify;
+  }
+
+  // Pie
+  &__pie {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -84,40 +86,40 @@
     }
   }
 
-  .grupo-integrantes-albums {
+  // Integrantes y álbumes
+  &__integrantes-albums {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 1.5rem;
-    gap: 2rem;
 
-    .grupo-integrantes {
+    .grupo-contenido__integrantes {
       display: flex;
       flex: 1;
       flex-direction: column;
       align-items: center;
-
-      .titulo-integrantes {
-        display: block;
-        margin-bottom: 0.5em;
-      }
     }
 
-    .grupo-albums {
+    .grupo-contenido__titulo-integrantes {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+
+    .grupo-contenido__albums {
       display: flex;
       flex: 2;
       flex-direction: column;
       align-items: center;
+    }
 
-      .titulo-albums {
-        display: block;
-        margin-bottom: 0.5em;
-      }
+    .grupo-contenido__titulo-albums {
+      display: block;
+      margin-bottom: 0.5em;
+    }
 
-      ul {
-        columns: 2;
-      }
+    .grupo-contenido__albums-lista {
+      columns: 2;
     }
   }
 }
