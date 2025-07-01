@@ -2,6 +2,7 @@
 
 .koba-iv-contenido {
   overflow: hidden auto;
+  width: 100dvw;
 
   @include altura-contenido-bp($altura-encabezado);
 

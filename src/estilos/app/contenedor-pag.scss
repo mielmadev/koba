@@ -1,5 +1,6 @@
 @use "@estilos/core.scss" as *;
 
+// Cambiado a 100% para evitar desbordamiento horizontal
 .contenedor-pag {
   position: relative;
   z-index: 1;
