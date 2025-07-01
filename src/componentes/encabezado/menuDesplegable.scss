@@ -11,8 +11,7 @@
   left: 0;
   z-index: 1200;
   display: none;
-  width: 100vw; // Cambiado de 100vw a 100vw para evitar solapamiento raro
-  max-width: 100vw;
+  width: 100vw;
   border-radius: $border-radius;
   background:
     linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
@@ -32,14 +31,15 @@
 
   @include altura-encabezado-bp($altura-encabezado);
 
-  // Enlace del menu, hereda estilos de navlink (usar placeholder)
-  &__link {
-    @extend %navlink;
-
+  // Enlace del menú desplegable
+  &__link,
+  a.menu-desplegable__link {
+    @include bordes;
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: calc($font-size-enlaces * 0.85);
+    font-size: clamp(0.8rem, 2.5vw, 1.3rem);
     text-align: center;
     transition:
       color 0.3s,
@@ -78,45 +78,57 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
-    max-width: 600px; // Ajusta este valor según el diseño deseado
     margin: 0 auto;
     pointer-events: auto;
     position: relative;
     z-index: 2;
+    overflow-x: visible;
+  }
+
+  @media (max-width: 700px) {
+    &__contenido {
+      max-width: 100vw;
+    }
   }
 
   // Links dentro del contenido del menu
   &__links {
     @include tamanio-completo;
 
-    display: flex;
-    flex: 1 1 0%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: stretch; // Para que todos los items tengan la misma altura
-    min-width: 0;
+    width: 100%;
   }
 
   // Fila de items del menu
   &__fila {
+
     display: flex;
-    flex-direction: row;
-    justify-content: center; // Centra los items en la fila
-    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
+    min-height: 100%; // Asegura que ocupe todo el alto disponible
   }
 
   // Item individual del menu (envoltorio de cada enlace)
   &__item {
     display: flex;
-    flex: 1 1 0%; // Hace que todos los items ocupen el mismo ancho
-    justify-content: center;
     align-items: center;
-    min-width: 0;
+    justify-content: center;
+    flex: 1 1 33.33%;
+    max-width: 33.33%;
+    height: 100%; // Ocupa todo el alto de la fila
 
+    @media (max-width: 700px) {
+      .menu-desplegable__item {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+
+    // El enlace ya está definido arriba, solo ajustar el padding aquí si es necesario
     .menu-desplegable__link {
-      width: 100%; // El enlace ocupa todo el ancho del item
+      width: 100%;
+      padding: 0 0.5rem;
     }
   }
 

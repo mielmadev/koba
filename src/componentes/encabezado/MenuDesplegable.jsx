@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import { NavLink } from "react-router-dom"
 import "./menuDesplegable.scss"
 import LogoKoba from "@imagenes/logos/logo-koba.png"
-import dividirEnFilasMenuDesplegable from "./dividirEnFilasMenuDesplegable.js"
 
 // Definir la estructura de página fuera para reutilización y limpieza
 const estructuraPagina = PropTypes.shape({
@@ -55,11 +54,6 @@ const MenuDesplegable = ({ abierto, cerrarMenu, paginas }) => {
   // Si el menú no está visible ni cerrando, no renderizar nada
   if (!visible && !cerrando) return null
 
-  // Dividir los enlaces en filas lo más equilibradas posible, máximo 4 por fila
-  // Utiliza la utilidad común, ver documentación interna: ../mapeos/dividirEnFilasMenuDesplegable.js y wiki/diccionario.md#dividirenfilas
-  const maxPorFila = 4
-  const filas = dividirEnFilasMenuDesplegable(paginas, maxPorFila)
-
   return (
     <div
       className={menuClass}
@@ -72,25 +66,23 @@ const MenuDesplegable = ({ abierto, cerrarMenu, paginas }) => {
           <img src={LogoKoba} alt="Koba Live" />
         </div>
         <div className="menu-desplegable__links">
-          {filas.map((fila, idx) => (
-            <div className="menu-desplegable__fila" key={idx}>
-              {fila.map(({ path, label }) => (
-                <div className="menu-desplegable__item" key={path}>
-                  <NavLink
-                    to={path}
-                    className={({ isActive }) =>
-                      isActive
-                        ? "menu-desplegable__link menu-desplegable__link--active"
-                        : "menu-desplegable__link"
-                    }
-                    onClick={manejarCerrarMenu}
-                  >
-                    {label}
-                  </NavLink>
-                </div>
-              ))}
-            </div>
-          ))}
+          <div className="menu-desplegable__fila">
+            {paginas.map(({ path, label }) => (
+              <div className="menu-desplegable__item" key={path}>
+                <NavLink
+                  to={path}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "menu-desplegable__link menu-desplegable__link--active"
+                      : "menu-desplegable__link"
+                  }
+                  onClick={manejarCerrarMenu}
+                >
+                  {label}
+                </NavLink>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -32,11 +32,6 @@ const PAGES_LAZY = [
     label: "Contacto",
     component: lazy(() => import("@paginas-principales/ContactoPag"))
   },
-  {
-    key: "MIELMADEV",
-    path: "/mielmadev",
-    component: lazy(() => import("@paginas-principales/MielmaDevPag"))
-  }
 ]
 
 export default PAGES_LAZY

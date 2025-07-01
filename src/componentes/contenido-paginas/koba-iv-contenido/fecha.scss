@@ -12,7 +12,6 @@
 }
 
 .fecha-contenedor {
-  @include bordes;
   @include pad-gap;
   width: 100%;
 
@@ -26,11 +25,11 @@
     $cobre-viejo 0 0 20px;
 
   .fecha {
-    @include bordes;
     @include fecha-fuente;
     width:100%;
 
     display: flex;
+    justify-content: center;
     align-items: center;
     animation: parpadeo 3s infinite;
   }
