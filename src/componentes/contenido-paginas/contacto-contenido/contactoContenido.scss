@@ -1,14 +1,12 @@
 @use "@estilos/core.scss" as *;
 
 .contenido {
-  @include pad-gap;
 
   flex-direction: column;
   align-items: stretch;
   font-size: $font-size-contacto-iconos;
 
   .contacto-contenedor {
-    @include pad-gap;
 
     display: flex;
     flex-direction: row;

@@ -34,7 +34,6 @@
   // Enlace del menú desplegable
   &__link,
   a.menu-desplegable__link {
-    @include bordes;
     text-decoration: none;
     display: flex;
     justify-content: center;
