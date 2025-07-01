@@ -29,3 +29,7 @@ body {
   color: $blanco;
   overflow-x: hidden;
 }
+
+*:focus-visible {
+  @include focus-tabulador;
+}

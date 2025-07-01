@@ -1,0 +1,32 @@
+@use "@estilos/var.scss" as *;
+
+// Mixin para focus visible accesible y coherente
+@mixin focus-tabulador {
+
+  // Estilo tipo tarjeta-contacto para enlaces y botones rectangulares
+  &:focus-visible,
+  &.active:focus,
+  &.is-active:focus,
+  &[aria-current="page"]:focus {
+    outline: none;
+    border-radius: 6px 24px;
+    border-top: 2px solid $rojo-sangre;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 6px 24px;
+    background: linear-gradient(135deg, transparent 80%, rgba($rojo-sangre, 0.7) 100%);
+    transition:
+      box-shadow 0.15s,
+      border-color 0.15s,
+      background 0.15s;
+    box-shadow:
+      0 4px 24px 0 rgba($rojo-sangre, 0.25),
+      0 1.5px 0 0 $rojo-sangre inset;
+    color: $rojo-sangre;
+    z-index: 2;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+}

@@ -8,11 +8,21 @@ import "./botonEntradas.scss"
  * Permite añadir clases y estilos personalizados.
  */
 const BotonEntradas = ({ children = "Comprar entradas", className = "", style = {}, ...props }) => {
+  // Elimina el foco tras hacer click para evitar que se quede girado
+  const handleMouseUp = (e) => {
+    e.currentTarget.blur();
+  };
   return (
-    <a href="#" className={`enlace-comprar-entradas ${className}`.trim()} style={style} {...props}>
+    <a
+      href="#"
+      className={`enlace-comprar-entradas ${className}`.trim()}
+      style={style}
+      onMouseUp={handleMouseUp}
+      {...props}
+    >
       {children}
     </a>
-  )
+  );
 }
 
 BotonEntradas.propTypes = {

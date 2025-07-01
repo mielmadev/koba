@@ -30,9 +30,13 @@
         transition:
           transform 0.2s,
           z-index 0s;
+        /* Espacio para crecer al hacer hover/focus sin salirse */
+        padding-left: 8%;
+        padding-right: 8%;
+        padding-top: 0;
+        padding-bottom: 0;
 
-        &:hover,
-        &:focus {
+        &:hover {
           z-index: 10;
           transform: scale(1.15);
           filter: drop-shadow(0 2px 12px rgb(0 0 0 / 25%));
@@ -58,7 +62,7 @@
       width: 100%;
       gap: 5rem;
 
-      & > .banda-contenedor {
+      &>.banda-contenedor {
         flex: 0 1 auto;
         min-width: 0;
         max-width: 100%;
@@ -96,7 +100,7 @@
       align-items: center;
       gap: 5rem;
 
-      & > .banda-contenedor {
+      &>.banda-contenedor {
         max-width: 30%;
       }
 

@@ -100,7 +100,7 @@ $font-weight-contacto-iconos: $font-weight-h1;
 @mixin faq-respuesta-fuente {
   color: $blanco;
   font-family: Oswald, Arial, sans-serif;
-  font-size: $clamp-p;
+  font-size: $clamp-h3-5;
 }
 
 // =====================
@@ -127,6 +127,7 @@ $font-weight-grupo-integrante: $font-weight-h1;
 // ABOUT
 // =====================
 @mixin about-seccion-fuente {
+  font-family: $font-family-cinzel;
   color: $marron;
   font-size: $clamp-h3;
   font-weight: $font-weight-h3;
@@ -142,6 +143,7 @@ $font-weight-grupo-integrante: $font-weight-h1;
 }
 
 @mixin about-subtitulo-fuente {
+  font-family: $font-family-cinzel;
   color: $marron;
   font-size: $clamp-h2;
   font-weight: $font-weight-h2;
