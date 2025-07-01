@@ -27,7 +27,7 @@
     0 1px 4px 0 rgba($plata-acero, 0.13),
     0 0 0 2px rgba($rojo-sangre, 0.1),
     inset 0 1px 8px 0 rgba($rojo-sangre, 0.09);
-  will-change: transform, box-shadow;
+  will-change: box-shadow;
 
   @include prop-bp($font-size-entradas, font-size);
 
@@ -42,6 +42,7 @@
     background: linear-gradient(135deg, rgba($rojo-sangre, 0.85) 70%, $blanco 100%);
     color: $rojo-sangre;
     transform: scale(1.13) rotate(-7deg);
+  // El botón solo gira en hover/focus, no en estado normal
     box-shadow:
       0 6px 24px 0 rgba($rojo-sangre, 0.28),
       0 0 0 8px rgba($rojo-sangre, 0.18),
