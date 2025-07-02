@@ -1,6 +1,7 @@
 @use "@estilos/core.scss" as *;
 
-.redes-sociales {
+// BEM: c-contenido__redes
+.c-contenido__redes {
   @include pad-gap;
 
   display: flex;
@@ -41,7 +42,6 @@
   @each $nombre, $color in $iconos-redes {
     .icono-#{$nombre} {
       --icono-color-original: #{$color};
-
       color: #{$color};
     }
   }

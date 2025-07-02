@@ -48,7 +48,9 @@ $tarjetas-contacto: map.merge((default: $marron), $iconos-redes);
   }
 }
 
-.tarjeta-contacto {
+
+// BEM: c-tarjeta-contacto
+.c-tarjeta-contacto {
   @include pad-gap;
   @include contacto-fuente;
   font-size: 1.7rem;
@@ -64,12 +66,12 @@ $tarjetas-contacto: map.merge((default: $marron), $iconos-redes);
 
   // Variantes de color
   @each $tipo, $color in $tarjetas-contacto {
-    &.tarjeta-#{$tipo} {
+    &.c-tarjeta-contacto--#{$tipo} {
       @include tarjeta-contacto-estilos($color);
     }
   }
 
-  .icono-contacto {
+  &__icono {
     position: relative;
     font-size: 3.5rem;
     transition:
@@ -98,7 +100,7 @@ $tarjetas-contacto: map.merge((default: $marron), $iconos-redes);
     }
   }
 
-  .info-contacto {
+  &__info {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -106,7 +108,7 @@ $tarjetas-contacto: map.merge((default: $marron), $iconos-redes);
     align-items: flex-start;
     min-width: 0;
 
-    .titulo-contacto {
+    &__titulo {
       font-size: 2.7rem;
       font-weight: 700;
       letter-spacing: 0.04em;
@@ -117,7 +119,7 @@ $tarjetas-contacto: map.merge((default: $marron), $iconos-redes);
         text-shadow 0.15s;
     }
 
-    .texto-contacto {
+    &__texto {
       @include pad-gap;
       color: $blanco;
       font-size: 1.4rem;
@@ -137,10 +139,6 @@ $tarjetas-contacto: map.merge((default: $marron), $iconos-redes);
       0 0 0 8px rgba($rojo-sangre, 0.18),
       inset 0 2px 24px 0 rgba($blanco, 0.1);
   }
-
-  width: 100%;
-  max-width: 340px;
-  min-width: 220px;
 }
 
 @keyframes brillo-metal {

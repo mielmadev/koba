@@ -7,10 +7,10 @@ import RedesSociales from "./RedesSociales.jsx"
 
 export default function ContactoContenido() {
   return (
-    <div className="contenido">
-      <RedesSociales className="redes-sociales" />
-      <div className="contacto-contenedor">
-        <div className="contacto">
+    <div className="c-contenido">
+      <RedesSociales className="c-contenido__redes" />
+      <div className="c-contenido__contenedor">
+        <div className="c-contacto">
           <TarjetaContacto
             icono={EmailIcono}
             titulo="Email"
@@ -24,7 +24,7 @@ export default function ContactoContenido() {
             tipo="whatsapp"
           />
         </div>
-        <div className="contacto-formulario">
+        <div className="c-contacto-formulario">
           <FormularioEmail />
         </div>
       </div>

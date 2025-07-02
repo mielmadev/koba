@@ -8,27 +8,27 @@ export default function TarjetaContacto({ icono: Icono, titulo, texto, tipo = "d
   if (tipo === "mielmadev") {
     return (
       <Link
-        className={`tarjeta-contacto tarjeta-${tipo}`}
+        className={`c-tarjeta-contacto c-tarjeta-contacto--${tipo}`}
         to="/mielmadev"
         tabIndex={0}
         style={{ textDecoration: "none" }}
         aria-label="Más información sobre el desarrollador MielmaDev"
       >
-        <Icono className="icono-contacto" />
-        <div className="info-contacto">
-          <span className="titulo-contacto">{titulo}</span>
-          <span className="texto-contacto">{texto}</span>
+        <Icono className="c-tarjeta-contacto__icono" />
+        <div className="c-tarjeta-contacto__info">
+          <span className="c-tarjeta-contacto__titulo">{titulo}</span>
+          <span className="c-tarjeta-contacto__texto">{texto}</span>
         </div>
       </Link>
     )
   }
 
   return (
-    <div className={`tarjeta-contacto tarjeta-${tipo}`}>
-      <Icono className="icono-contacto" />
-      <div className="info-contacto">
-        <span className="titulo-contacto">{titulo}</span>
-        <span className="texto-contacto">{texto}</span>
+    <div className={`c-tarjeta-contacto c-tarjeta-contacto--${tipo}`}>
+      <Icono className="c-tarjeta-contacto__icono" />
+      <div className="c-tarjeta-contacto__info">
+        <span className="c-tarjeta-contacto__titulo">{titulo}</span>
+        <span className="c-tarjeta-contacto__texto">{texto}</span>
       </div>
     </div>
   )

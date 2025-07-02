@@ -11,9 +11,9 @@ import {
 } from "@iconos/iconos"
 import { Link } from "react-router-dom"
 
-export default function RedesSociales() {
+export default function RedesSociales({ className = "" }) {
   return (
-    <div className="redes-sociales">
+    <div className={`c-contenido__redes ${className}`.trim()}>
       <a
         href="https://www.facebook.com/kobalive.metal/"
         target="_blank"

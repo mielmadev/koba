@@ -1,27 +1,27 @@
 @use "@estilos/core.scss" as *;
 
-.contenido {
-
+.c-contenido {
+  @include pad-gap;
+  display: flex;
   flex-direction: column;
   align-items: stretch;
   font-size: $font-size-contacto-iconos;
 
-  .contacto-contenedor {
-
+  &__contenedor {
+    @include pad-gap;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     height: 100%;
 
-    >* {
+    &>* {
       flex: 1 1 0;
       min-width: 0;
       height: 100%;
     }
 
-    .contacto {
+    .c-contacto {
       @include pad-gap;
-
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -30,34 +30,35 @@
       min-height: 0;
     }
   }
+}
 
-  @include bp-max(m) {
-    .contacto-contenedor {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 2rem;
+// Responsive: móvil
+@include bp-max(m) {
+  .c-contenido__contenedor {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
 
-      >* {
-        position: static !important;
-        z-index: auto !important;
-        flex: unset;
-        width: 100%;
-        min-width: 0;
-        max-width: 100%;
-        height: auto !important;
-        margin-bottom: 2rem;
+    &>* {
+      position: static !important;
+      z-index: auto !important;
+      flex: unset;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      height: auto !important;
+      margin-bottom: 2rem;
 
-        &:last-child {
-          margin-bottom: 0;
-        }
+      &:last-child {
+        margin-bottom: 0;
       }
+    }
 
-      .contacto-formulario {
-        position: static !important;
-        z-index: auto !important;
-        height: auto !important;
-        min-height: 0 !important;
-      }
+    .c-contacto-formulario {
+      position: static;
+      z-index: auto;
+      height: auto;
+      min-height: 0;
     }
   }
 }

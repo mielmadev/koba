@@ -48,16 +48,16 @@ export default function FormularioEmail() {
   }
 
   return (
-    <form ref={form} className="formulario-email" onSubmit={handleSubmit}>
-      <label className="campo-nombre">
+    <form ref={form} className="c-formulario-email" onSubmit={handleSubmit}>
+      <label className="c-formulario-email__campo c-formulario-email__campo--nombre">
         Nombre
         <input type="text" name="user_name" required />
       </label>
-      <label className="campo-email">
+      <label className="c-formulario-email__campo c-formulario-email__campo--email">
         Correo electrónico
         <input type="email" name="user_email" required />
       </label>
-      <label className="campo-mensaje">
+      <label className="c-formulario-email__campo c-formulario-email__campo--mensaje">
         Mensaje
         <textarea
           name="message"
@@ -70,8 +70,8 @@ export default function FormularioEmail() {
       <button type="submit" disabled={estado.cargando}>
         {estado.cargando ? "Enviando..." : "Enviar"}
       </button>
-      {estado.enviado && <p className="exito">¡Mensaje enviado correctamente!</p>}
-      {estado.error && <p className="error">Error al enviar. Inténtalo de nuevo.</p>}
+      {estado.enviado && <p className="c-formulario-email__exito">¡Mensaje enviado correctamente!</p>}
+      {estado.error && <p className="c-formulario-email__error">Error al enviar. Inténtalo de nuevo.</p>}
     </form>
   )
 }
