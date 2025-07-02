@@ -2,19 +2,26 @@
 
 .eslogan-contenedor {
   @include tamanio-completo;
-  min-width: 0; // Safari fix para hijos flex
-
+  min-width: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  flex: 1 1 0%;
 
   .eslogan {
     @include eslogan-fuente;
-
     line-height: 1;
     align-self: flex-end;
-    flex-shrink: 0; // Safari: evita que el eslogan se encoja
-
+    flex-shrink: 0;
     @include prop-bp($font-size-eslogan, font-size);
+  }
+
+  .entradas {
+    display: flex;
+    align-items: flex-end;
+    min-width: 0;
+    width: auto;
+    overflow: visible;
   }
 }

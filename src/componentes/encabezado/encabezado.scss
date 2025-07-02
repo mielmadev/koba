@@ -11,11 +11,14 @@
     align-items: center;
     width: 100%;
     margin: 0;
-
     @include altura-encabezado-bp($altura-encabezado);
-
-    // Safari fix: aseguramos que el ancho nunca cause scroll horizontal
     min-width: 0;
+
+    // Solo Safari y WebKit
+    @supports (-webkit-touch-callout: none) {
+      align-items: stretch;
+      padding-left: 0 !important;
+    }
   }
 
   &__logo {
@@ -24,7 +27,6 @@
     align-items: center;
     height: 100%;
     flex-shrink: 0;
-
     @include pad-gap;
 
     &-img {
@@ -32,6 +34,18 @@
       max-width: 180px; // Ajusta este valor según tu diseño
       object-fit: contain;
       display: block;
+    }
+
+    // Solo Safari y WebKit
+    @supports (-webkit-touch-callout: none) {
+      justify-content: flex-start;
+      align-items: stretch;
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+
+      &-img {
+        margin-left: 0 !important;
+      }
     }
   }
 
