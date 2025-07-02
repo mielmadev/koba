@@ -31,6 +31,9 @@
 
     &-img {
       @include tamanio-completo;
+      max-width: 180px; // Ajusta este valor según tu diseño
+      object-fit: contain;
+      display: block;
     }
   }
 
