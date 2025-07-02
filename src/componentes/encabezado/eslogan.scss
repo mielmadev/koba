@@ -2,6 +2,7 @@
 
 .eslogan-contenedor {
   @include tamanio-completo;
+  min-width: 0; // Safari fix para hijos flex
 
   display: flex;
   justify-content: space-between;
@@ -12,6 +13,7 @@
 
     line-height: 1;
     align-self: flex-end;
+    flex-shrink: 0; // Safari: evita que el eslogan se encoja
 
     @include prop-bp($font-size-eslogan, font-size);
   }
