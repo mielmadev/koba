@@ -32,6 +32,7 @@ const PAGES_LAZY = [
     label: "Contacto",
     component: lazy(() => import("@paginas-principales/ContactoPag"))
   },
+  // Ruta MielmaDev eliminada de PAGES_LAZY para que no aparezca en el menú ni navegación
 ]
 
 export default PAGES_LAZY

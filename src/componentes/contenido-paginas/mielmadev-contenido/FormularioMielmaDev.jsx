@@ -63,14 +63,14 @@ export default function FormularioMielmaDev() {
               style={{ overflow: "hidden", resize: "none" }}
             />
           </label>
+          <div className="formulario-email-mielmadev-boton">
+            <button type="submit" disabled={estado.cargando}>
+              {estado.cargando ? "Enviando..." : "Enviar mensaje"}
+            </button>
+            {estado.enviado && <p className="exito">¡Mensaje enviado correctamente!</p>}
+            {estado.error && <p className="error">Error al enviar. Inténtalo de nuevo.</p>}
+          </div>
         </div>
-      </div>
-      <div className="formulario-email-mielmadev-boton">
-        <button type="submit" disabled={estado.cargando}>
-          {estado.cargando ? "Enviando..." : "Enviar mensaje"}
-        </button>
-        {estado.enviado && <p className="exito">¡Mensaje enviado correctamente!</p>}
-        {estado.error && <p className="error">Error al enviar. Inténtalo de nuevo.</p>}
       </div>
     </form>
   )
