@@ -9,10 +9,9 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     margin: 0;
     @include altura-encabezado-bp($altura-encabezado);
-    min-width: 0;
 
     // Solo Safari y WebKit
     @supports (-webkit-touch-callout: none) {
