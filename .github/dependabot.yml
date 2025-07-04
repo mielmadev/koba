@@ -1,0 +1,31 @@
+updates:
+  - package-ecosystem: "npm"
+    directory: "/koba/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps"
+    reviewers:
+      - "paco"
+    labels:
+      - "dependencies"
+    ignore:
+      - dependency-name: "react"
+        versions: ["18.x"]
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/koba"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps"
+    reviewers:
+      - "paco"
+    labels:
+      - "dependencies"
+    ignore:
+      - dependency-name: "react"
+        versions: ["18.x"]
