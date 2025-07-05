@@ -1,0 +1,1 @@
+import{j as s}from"./index-BkW28COE.js";function c({Fondo:a,fondoAlt:e,claseFondo:i,children:n}){return s.jsxs("div",{className:"contenedor-pag",children:[s.jsx("div",{className:i,children:s.jsx("img",{src:a,alt:e})}),s.jsx("div",{className:"contenido-pag",children:n})]})}export{c as P};
