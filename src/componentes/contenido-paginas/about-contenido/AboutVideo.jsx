@@ -1,8 +1,8 @@
 import React from "react"
 import "./aboutVideo.scss"
 
-// URL actualizada con parámetros adicionales para mejor compatibilidad
-const videoUrl = "https://www.youtube.com/embed/Bq7QldlGt2U?rel=0&showinfo=0"
+// URL de privacidad mejorada de YouTube para evitar cookies
+const videoUrl = "https://www.youtube-nocookie.com/embed/Bq7QldlGt2U?rel=0&showinfo=0"
 
 export default function AboutVideo() {
   return (
