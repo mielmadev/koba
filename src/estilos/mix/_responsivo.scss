@@ -35,18 +35,59 @@
 }
 
 // @include altura-contenido-bp($altura-encabezado);
-@mixin altura-contenido-bp($mapa, $propiedad: height) {
-  @each $bp, $valor in $mapa {
+// Permite pasar dos mapas: encabezado y pie. Si solo se pasa uno, el segundo debe ser null.
+// Permite pasar dos mapas: encabezado y pie. Si solo se pasa uno, el segundo debe ser null.
+@mixin altura-contenido-bp($mapa-encabezado, $mapa-pie: null, $propiedad: height) {
+  @if $mapa-pie ==null {
+    @each $bp, $valor in $mapa-encabezado {
+      @if $bp ==xs {
+        #{$propiedad}: calc(100vh - #{$valor});
+      }
+
+      @else {
+        @include bp($bp) {
+          #{$propiedad}: calc(100vh - #{$valor});
+        }
+      }
+    }
+  }
+
+  @else {
+    // Unir breakpoints de ambos mapas
+    $all-bps: (
+    );
+
+  @each $bp, $v in $mapa-encabezado {
+    $all-bps: map.merge($all-bps, ($bp: true));
+  }
+
+  @each $bp, $v in $mapa-pie {
+    $all-bps: map.merge($all-bps, ($bp: true));
+  }
+
+  @each $bp, $v in $all-bps {
+    $enc: 0;
+    $pie: 0;
+
+    @if map.has-key($mapa-encabezado, $bp) {
+      $enc: map.get($mapa-encabezado, $bp);
+    }
+
+    @if map.has-key($mapa-pie, $bp) {
+      $pie: map.get($mapa-pie, $bp);
+    }
+
     @if $bp ==xs {
-      #{$propiedad}: calc(100vh - #{$valor});
+      #{$propiedad}: calc(100vh - #{$enc} - #{$pie});
     }
 
     @else {
       @include bp($bp) {
-        #{$propiedad}: calc(100vh - #{$valor});
+        #{$propiedad}: calc(100vh - #{$enc} - #{$pie});
       }
     }
   }
+}
 }
 
 // @include altura-redes-sociales-bp($alturas-redes-sociales);

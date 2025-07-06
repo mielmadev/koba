@@ -8,6 +8,7 @@ import PAGES_LAZY from "./componentes/AppComponentes/PagesLazy.jsx"
 import GRUPOS_LAZY from "./componentes/AppComponentes/GruposLazy.jsx"
 
 import "@estilos/app/appEstilosIndex.scss" // Consolidado
+import Pie from "./componentes/pie/Pie.jsx"
 
 const MielmaDevPag = lazy(() => import("@paginas-principales/MielmaDevPag"));
 
@@ -37,6 +38,7 @@ function App() {
           </Routes>
         </Suspense>
       </main>
+      <Pie />
     </Router>
   )
 }

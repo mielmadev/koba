@@ -19,6 +19,16 @@ $altura-encabezado: (
   full: 132px
 );
 
+$altura-pie: (
+  xs: 32px,
+  s: 36px,
+  m: 40px,
+  tablet: 44px,
+  laptop: 52px,
+  pc: 60px,
+  full: 66px
+);
+
 // Sombras para elementos
 $sombra-blanco: 2px 1px 3px $blanco;
 $sombra-gris: 2px 1px 3px $gris;
