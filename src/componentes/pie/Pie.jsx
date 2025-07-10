@@ -9,13 +9,22 @@ function Pie() {
       <div className="pie__container">
         <div className="pie__info">
           <span className="pie__info-copyright">© {year} KobaLive</span>
-          <span className="pie__info-developer">
+          <a
+            className="pie__info-developer"
+            href="#"
+            rel="noopener noreferrer"
+          >
             © {year} <span className="pie__info-developer-name">MielmaDev</span> Desarrollador
-          </span>
+          </a>
         </div>
         <div className="pie__sponsors">
-          <span className="pie__sponsors-title">Patrocinadores</span>
-          {/* Aquí puedes anidar logos o enlaces de patrocinadores si los hay */}
+          <a
+            className="pie__sponsors-link"
+            href="#"
+            rel="noopener noreferrer"
+          >
+            Patrocinadores
+          </a>
         </div>
         <div className="pie__legal">
           <a className="pie__legal-link pie__legal-link--privacidad" href="#" rel="noopener noreferrer">Política de privacidad</a>
