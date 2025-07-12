@@ -32,6 +32,12 @@ const PAGES_LAZY = [
     label: "Contacto",
     component: lazy(() => import("@paginas-principales/ContactoPag"))
   },
+  // {
+  //   key: "POLITICA_PRIVACIDAD",
+  //   path: "/politica-privacidad",
+  //   label: "Política de privacidad",
+  //   component: lazy(() => import("@paginas-principales/PoliticaPrivacidadPag"))
+  // },
   // Ruta MielmaDev eliminada de PAGES_LAZY para que no aparezca en el menú ni navegación
 ]
 

@@ -10,6 +10,8 @@ import GRUPOS_LAZY from "./componentes/AppComponentes/GruposLazy.jsx"
 import "@estilos/app/appEstilosIndex.scss" // Consolidado
 
 const MielmaDevPag = lazy(() => import("@paginas-principales/MielmaDevPag"));
+const PoliticaPrivacidadPag = lazy(() => import("@paginas-principales/PoliticaPrivacidadPag"));
+const AvisoLegalPag = lazy(() => import("@paginas-principales/AvisoLegalPag"));
 
 function App() {
   return (
@@ -32,6 +34,9 @@ function App() {
             ))}
             {/* Ruta oculta solo accesible desde el icono de redes sociales */}
             <Route path="/mielmadev" element={<MielmaDevPag />} />
+            {/* Rutas ocultas solo accesibles desde el pie */}
+            <Route path="/politica-privacidad" element={<PoliticaPrivacidadPag />} />
+            <Route path="/aviso-legal" element={<AvisoLegalPag />} />
             {/* Ruta catch-all al final para evitar absorber rutas dinámicas */}
             <Route path="*" element={<Navigate to={PAGES_LAZY[0].path} />} />
           </Routes>

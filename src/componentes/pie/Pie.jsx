@@ -22,8 +22,8 @@ function Pie() {
           </Link>
         </div>
         <div className="pie__legal">
-          <a className="pie__legal-link pie__legal-link--privacidad" href="#" rel="noopener noreferrer">Política de privacidad</a>
-          <a className="pie__legal-link pie__legal-link--aviso" href="#" rel="noopener noreferrer">Aviso legal</a>
+          <Link className="pie__legal-link pie__legal-link--privacidad" to="/politica-privacidad" rel="noopener noreferrer">Política de privacidad</Link>
+          <Link className="pie__legal-link pie__legal-link--aviso" to="/aviso-legal" rel="noopener noreferrer">Aviso legal</Link>
         </div>
         <div className="pie__sponsors">
           <a

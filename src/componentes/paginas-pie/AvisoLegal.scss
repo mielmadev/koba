@@ -1,0 +1,46 @@
+@use "@estilos/core.scss" as *;
+
+.aviso-legal {
+  @include margen-laterales-bp($margen-laterales);
+
+  h1 {
+    font-family: 'Metal Mania', $font-family-cinzel, serif;
+    font-size: $clamp-h1;
+    font-weight: 700;
+    color: $morado-oscuro;
+    text-align: center;
+    text-shadow:
+      0 4px 32px $blanco-humo,
+      0 2px 12px $blanco-humo,
+      0 0 2px $blanco-humo,
+      0 0 1px $blanco-humo,
+      0 1px 0 #0008;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-family: $font-family-cinzel, 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: $clamp-h3;
+    color: $plata-acero;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 12px #000, 0 0 2px #fff8;
+  }
+
+  p,
+  ul {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: $clamp-h4;
+    color: $gris;
+    font-weight: 400;
+    text-align: left;
+    text-shadow: 0 2px 8px #000, 0 0 2px #fff8;
+    margin-bottom: 1.2rem;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+    list-style: disc inside;
+  }
+}
