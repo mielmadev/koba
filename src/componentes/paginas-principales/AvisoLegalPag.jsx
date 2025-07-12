@@ -1,6 +1,6 @@
 import React from "react"
 import PaginaGenerica from "./PaginaGenerica.jsx"
-import MielmaDevAlas from "@imagenes/MielmaDev/MielmaDevAlas.png"
+import MielmaDevAlas from "@imagenes/MielmaDev/MielmaDevAlas.webp"
 import AvisoLegal from "../paginas-pie/AvisoLegal"
 
 const AvisoLegalPag = () => (

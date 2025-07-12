@@ -1,5 +1,5 @@
 import React from "react"
-import MielmaDevLogo from "@imagenes/MielmaDev/MielmaDevLogo.png"
+import MielmaDevLogo from "@imagenes/MielmaDev/MielmaDevLogo"
 
 export default function MielmaDevIcono(props) {
   return (
