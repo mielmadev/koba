@@ -166,6 +166,12 @@ $font-weight-navegador: $font-weight-p;
   line-height: $line-height-p;
 }
 
+@mixin pie-fuente {
+  font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: $clamp-h5;
+  line-height: $line-height-p;
+}
+
 $font-size-entradas: (
   xs: 1rem,
   s: 1.2rem,

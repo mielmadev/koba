@@ -1,4 +1,6 @@
+ 
 import React from "react"
+import Pie from "../pie/Pie"
 
 export default function PaginaGenerica({ Fondo, fondoAlt, claseFondo, children }) {
   return (
@@ -6,7 +8,9 @@ export default function PaginaGenerica({ Fondo, fondoAlt, claseFondo, children }
       <div className={claseFondo}>
         <img src={Fondo} alt={fondoAlt} />
       </div>
-      <div className="contenido-pag">{children}</div>
+      <div className="contenido-pag">{children}
+        <Pie />
+</div>
     </div>
   )
 }

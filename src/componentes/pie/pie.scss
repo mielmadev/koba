@@ -1,8 +1,7 @@
 @use "@estilos/core.scss" as *;
 
 .pie {
-  @include tamanio-completo;
-  @include base-fuente;
+  @include pie-fuente;
   display: flex;
   justify-content: center;
   z-index: 1000;
@@ -22,7 +21,7 @@
     align-items: center;
 
     &-developer {
-      @include base-fuente;
+      @include pie-fuente;
     }
   }
 
@@ -33,7 +32,7 @@
 
     &-link {
       text-decoration: none;
-      font-size: 0.97em;
+      font-size: 0.9em;
     }
   }
 
@@ -42,7 +41,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    font-size: 0.97em;
+    
+    &-link {
+      text-decoration: none;
+      font-size: 0.9em;
+    }
   }
 }
