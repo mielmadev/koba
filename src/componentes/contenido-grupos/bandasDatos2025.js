@@ -175,6 +175,37 @@ const bandasDatos2025 = [
       { nombre: "Winterborn", anio: 2013 }
     ]
   }
+  ,
+  {
+    // Onslaught
+    nombre: "Onslaught",
+    imagen: bandasLogo.onslaughtLogo, // Asegúrate de tener el logo en bandasLogo
+    spotify: "https://open.spotify.com/embed/artist/71lhIVHJ24x9hEcwFSWuOf?utm_source=generator&theme=0", 
+    estilo: "Thrash metal (con influencias de hardcore punk y heavy metal tradicional en sus inicios)",
+    origen: {
+      pais: "Reino Unido",
+      provincia: "Inglaterra",
+      ciudad: "Bristol"
+    },
+    anio: 1982,
+    resumen: resumenesBandas.Onslaught || "", // Agrega resumen si lo tienes
+    integrantes: {
+      cantante: "David Garnett",
+      guitarra: ["Nige Rockett (fundador)"],
+      bajo: "Jeff Williams",
+      bateria: "James Perry"
+    },
+    albums: [
+      { nombre: "Power from Hell", anio: 1985 },
+      { nombre: "The Force", anio: 1986 },
+      { nombre: "In Search of Sanity", anio: 1989 },
+      { nombre: "Killing Peace", anio: 2007 },
+      { nombre: "Sounds of Violence", anio: 2011 },
+      { nombre: "VI", anio: 2013 },
+      { nombre: "Generation Antichrist", anio: 2020 },
+      { nombre: "Origins of Aggression", anio: 2025 }
+    ]
+  }
 ]
 
 export default bandasDatos2025

@@ -9,6 +9,7 @@ import moonshinerdsFondo from "../../assets/imagenes/fondos/moonshinerdsFondo.we
 import theElectricAlleyFondo from "../../assets/imagenes/fondos/theElectricAlleyFondo.webp"
 import wolfheartFondo from "../../assets/imagenes/fondos/wolfheartFondo.webp"
 import suicidalAngelsFondo from "../../assets/imagenes/fondos/suicidalAngelsFondo.webp"
+import onslaughtFondo from "../../assets/imagenes/fondos/onslaughtFondo.webp"
 
 import SpotifyIframe from "../contenido-grupos/SpotifyIframe"
 import bandasDatos2025 from "../contenido-grupos/bandasDatos2025"
@@ -22,7 +23,7 @@ const fondos = {
   moonshinerds: moonshinerdsFondo,
   theelectricalley: theElectricAlleyFondo,
   wolfheart: wolfheartFondo,
-  suicidalangels: suicidalAngelsFondo
+  onslaught: onslaughtFondo
 }
 
 export default function GrupoPagGenerico() {

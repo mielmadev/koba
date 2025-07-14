@@ -8,6 +8,7 @@ import BannerInfoInteractivo from "./BannerInfoInteractivo.jsx"
 // Datos de bandas para el cartel, con imagen y link explícitos
 const bandasCartel = [
   { nombre: "Eclipse", imagen: bandasLogo.eclipseLogo, link: "/bandas/eclipse" },
+  { nombre: "Onslaught", imagen: bandasLogo.onslaughtLogo, link: "/bandas/onslaught" },
   { nombre: "Wolfheart", imagen: bandasLogo.wolfheartLogo, link: "/bandas/wolfheart" },
   { nombre: "Asgarth", imagen: bandasLogo.asgarthLogo, link: "/bandas/asgarth" },
   { nombre: "Ehun Kilo", imagen: bandasLogo.ehunKiloLogo, link: "/bandas/ehunkilo" },
@@ -61,6 +62,21 @@ const KobaIVContenido = () => {
               <img
                 src={getBanda("Wolfheart").imagen}
                 alt="Wolfheart"
+                loading="lazy"
+                className="banda-imagen"
+              />
+            </Link>
+          </div>
+          <div className="banda-contenedor" data-nombre="Onslaught">
+            <Link
+              to={getBanda("Onslaught").link}
+              tabIndex={0}
+              aria-label="Ver página de Onslaught"
+              className="banda-link"
+            >
+              <img
+                src={getBanda("Onslaught").imagen}
+                alt="Onslaught"
                 loading="lazy"
                 className="banda-imagen"
               />
