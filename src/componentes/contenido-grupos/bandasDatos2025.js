@@ -181,7 +181,7 @@ const bandasDatos2025 = [
     nombre: "Onslaught",
     imagen: bandasLogo.onslaughtLogo, // Asegúrate de tener el logo en bandasLogo
     spotify: "https://open.spotify.com/embed/artist/71lhIVHJ24x9hEcwFSWuOf?utm_source=generator&theme=0", 
-    estilo: "Thrash metal (con influencias de hardcore punk y heavy metal tradicional en sus inicios)",
+    estilo: "Thrash metal",
     origen: {
       pais: "Reino Unido",
       provincia: "Inglaterra",
