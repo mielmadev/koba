@@ -47,6 +47,7 @@
       max-width: 320px;
       flex: 1 1 320px;
     }
+
     &.der {
       flex: 2 1 340px;
       min-width: 220px;
@@ -75,6 +76,7 @@
     font-weight: bold;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+
     &:hover {
       text-shadow:
         0 0 6px $morado-oscuro,
@@ -91,6 +93,7 @@
     margin-top: 0.2em;
     background: #fff;
     color: $morado-oscuro;
+
     &:focus {
       outline: 2px solid $morado-oscuro;
       background: #f9f9f9;
@@ -108,11 +111,15 @@
     font-size: 1.1rem;
     cursor: pointer;
     transition: background 0.2s;
+
     &:hover {
-      background: darken($morado-oscuro, 15%);
+      background: color.adjust($morado-oscuro, $lightness: -15%);
     }
+
+    $lightness: 25%;
+
     &:disabled {
-      background: lighten($morado-oscuro, 25%);
+      background: color.adjust($morado-oscuro, $lightness: $lightness);
       cursor: not-allowed;
     }
   }
@@ -122,6 +129,7 @@
     font-weight: bold;
     margin-top: 0.7em;
   }
+
   .error {
     color: #d32f2f;
     font-weight: bold;
@@ -140,19 +148,23 @@
       min-width: 0;
       flex-wrap: wrap;
     }
+
     &-boton {
       margin: 1.2rem 0 0 0;
     }
   }
+
   @media (max-width: 700px) {
     &-inner {
       flex-direction: column;
       gap: 0.5rem;
     }
+
     &-col {
       max-width: 100%;
       min-width: 0;
     }
+
     &-boton {
       margin: 0.7rem 0 0 0;
     }

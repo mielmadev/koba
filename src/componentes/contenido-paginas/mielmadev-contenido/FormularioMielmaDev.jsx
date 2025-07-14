@@ -21,10 +21,6 @@ export default function FormularioMielmaDev() {
   const handleSubmit = (e) => {
     e.preventDefault()
     setEstado({ enviado: false, error: false, cargando: true })
-    console.log("Enviando email...");
-    console.log("USER_ID:", import.meta.env.VITE_EMAILJS_USER_ID);
-    console.log("SERVICE_ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
-    console.log("TEMPLATE_ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -34,7 +30,6 @@ export default function FormularioMielmaDev() {
       )
       .then(
         () => {
-          console.log("Email enviado correctamente");
           setEstado({ enviado: true, error: false, cargando: false })
           form.current.reset()
         },

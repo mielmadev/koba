@@ -38,6 +38,9 @@ $sombra-negro: 2px 1px 3px $negro;
 // Sombras para imágenes
 $sombra-imagen-blanco: drop-shadow(0 0 6px $blanco);
 
+// Lightness para botones deshabilitados y otros usos
+$lightness: 25%;
+
 
 // Mapa global de alturas para la barra de redes sociales
 $alturas-redes-sociales: (
