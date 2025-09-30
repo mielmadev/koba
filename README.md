@@ -66,7 +66,7 @@ Para proyectos en producción, se recomienda usar TypeScript y habilitar reglas 
 ¡Las contribuciones son bienvenidas! Por favor, abre un issue o pull request para sugerencias o mejoras.
 
 ## Licencia
-
+ 
 Este proyecto está bajo la licencia MIT.
 
 ---
