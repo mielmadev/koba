@@ -1,0 +1,26 @@
+{
+  "folders": [
+    {
+      "path": "../../../../../html-css-js",
+    },
+  ],
+  "settings": {
+    "cSpell.words": [
+      "AENOR",
+      "AEPD",
+      "autoconclusiva",
+      "Autopia",
+      "chorrito",
+      "ciberseguridad",
+      "CIBERSEGURIDAD",
+      "IFCT",
+      "INCIBE",
+      "LOPDGDD",
+      "paginación",
+      "regulatorios",
+      "RGPD",
+      "sublistas",
+    ],
+    "cSpell.ignoreWords": ["Silmarillión", "autoconclusiva"],
+  },
+}
